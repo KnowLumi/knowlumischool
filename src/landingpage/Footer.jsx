@@ -1,5 +1,6 @@
 import { Button } from "@material-tailwind/react";
 import { BsFillChatLeftFill } from "react-icons/bs";
+import footer1 from "../assets/footer1.png";
 import {
   RiInstagramFill,
   RiFacebookBoxFill,
@@ -8,8 +9,8 @@ import {
 } from "react-icons/ri";
 const Footer = () => {
   return (
-    <div className="flex flex-col font-archivo">
-      <div></div>
+    <div className="flex flex-col font-archivo bg-gray-50">
+      <img src={footer1} alt="" className="translate-y-24" />
       <footer className="bg-black flex flex-col items-center">
         <div className="flex items-center justify-between px-20 w-full h-[31rem]">
           <div className="flex flex-col gap-11">
@@ -25,10 +26,10 @@ const Footer = () => {
             <span>Terms</span>
             <span>Privacy Policy</span>
             <div className="flex justify-between items-center w-full">
-              <RiInstagramFill className="text-[#88DB1B] h-5 w-5"/>
-              <RiFacebookBoxFill className="text-[#88DB1B] h-5 w-5"/>
-              <RiYoutubeFill className="text-[#88DB1B] h-5 w-5"/>
-              <RiTwitterXFill className="text-[#88DB1B] h-5 w-5"/>
+              <RiInstagramFill className="text-[#88DB1B] h-5 w-5" />
+              <RiFacebookBoxFill className="text-[#88DB1B] h-5 w-5" />
+              <RiYoutubeFill className="text-[#88DB1B] h-5 w-5" />
+              <RiTwitterXFill className="text-[#88DB1B] h-5 w-5" />
             </div>
           </div>
         </div>

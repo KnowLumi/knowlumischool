@@ -7,7 +7,7 @@ import Learn from "./pages/Learn";
 import Earn from "./pages/Earn";
 function App() {
   return (
-    <div className="h-screen">
+    <div className="h-screen bg-gray-50">
       <Router>
         <Navigation />
         <Routes>
