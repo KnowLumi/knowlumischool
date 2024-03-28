@@ -43,7 +43,7 @@ const FaqSection = () => {
           <Accordion
             key={index + 1}
             open={open === index + 1}
-            className="bg-white my-2 px-6 rounded-2xl border-b-white md:w-[45.125rem]"
+            className="bg-white my-6 px-6 rounded-2xl border-b-white md:w-[45.125rem]"
             icon={<Icon id={index + 1} open={open} />}
           >
             <AccordionHeader

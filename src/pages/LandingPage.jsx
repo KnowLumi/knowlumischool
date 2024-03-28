@@ -6,7 +6,7 @@ import Testimonials from "../landingpage/Testimonials";
 const LandingPage = () => {
   return (
     <div className="flex flex-col">
-      {/* <HeroSection /> */}
+      <HeroSection />
       <Testimonials/>
       <FaqSection/>
       <Footer/>

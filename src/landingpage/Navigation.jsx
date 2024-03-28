@@ -21,11 +21,11 @@ const Navigation = () => {
           <span>Learn-Earn-Achieve</span>
         </div>
       </div>
-      <form className="flex items-center  h-10 rounded-lg px-2 border focus:outline-blue-500 hover:border-blue-500">
-        <IoSearchOutline size={20} />
+      <form className="flex items-center  h-10 rounded-lg px-2 border focus:outline-black hover:border-black">
+        <IoSearchOutline className="cursor-pointer" size={20} />
         <input
           type="text"
-          className="px-2 focus:outline-none placeholder:text-[#1F1F1F] placeholder:opacity-60"
+          className="px-2 focus:outline-none bg-inherit placeholder:text-[#1F1F1F] placeholder:opacity-60"
           placeholder="Search"
         />
       </form>
@@ -51,7 +51,7 @@ const Navigation = () => {
           Login
         </Button>
         <Button className="capitalize font-inter font-bold text-sm py-3 px-5">
-          Signup
+          Sign Up
         </Button>
       </div>
       <button
@@ -60,7 +60,7 @@ const Navigation = () => {
       >
         <BiMenuAltRight size={35} />
       </button>
-      <Drawer placement="right" open={open} onClose={closeDrawer} className="">
+      <Drawer placement="right" open={open} onClose={closeDrawer}>
         <div className="my-3 mx-2 flex items-center justify-end">
           <button onClick={closeDrawer}>
             <RxCross1 size={25} />
@@ -81,7 +81,7 @@ const Navigation = () => {
             Login
           </Button>
           <Button className="capitalize  font-inter font-bold text-sm">
-            Signup
+            Sign Up
           </Button>
         </div>
       </Drawer>

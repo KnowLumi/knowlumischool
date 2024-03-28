@@ -10,9 +10,9 @@ import {
 const Footer = () => {
   return (
     <div className="flex flex-col font-archivo bg-gray-50">
-      <img src={footer1} alt="" className="translate-y-24" />
+      <img src={footer1} alt="" className="translate-y-32  w-full h-full" />
       <footer className="bg-black flex flex-col items-center">
-        <div className="flex items-center justify-between px-20 w-full h-[31rem]">
+        <div className="flex items-center justify-between px-2 md:px-20 w-full h-[31rem]">
           <div className="flex flex-col gap-11">
             <span className="text-white font-semibold text-2xl tracking-wide">
               Got any Doubts?
@@ -26,7 +26,7 @@ const Footer = () => {
             <span>Terms</span>
             <span>Privacy Policy</span>
             <div className="flex justify-between items-center w-full">
-              <RiInstagramFill className="text-[#88DB1B] h-5 w-5" />
+              <RiInstagramFill className="text-[#88DB1B] h-5 w-5 " />
               <RiFacebookBoxFill className="text-[#88DB1B] h-5 w-5" />
               <RiYoutubeFill className="text-[#88DB1B] h-5 w-5" />
               <RiTwitterXFill className="text-[#88DB1B] h-5 w-5" />
