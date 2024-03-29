@@ -12,8 +12,54 @@
 
 .trapezium {
     height: 0;
-    width: 24rem; 
+    width: 24rem;
     border-bottom: 6rem solid #E6F3D6;
-    border-left: 5rem solid transparent; 
+    border-left: 5rem solid transparent;
 }
 
+.lineanime {
+    height: 0.25rem;
+    animation: linextend 2s forwards;
+}
+
+@keyframes linextend {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 11rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .lineanime {
+        animation: linextend-mobile 2s forwards;
+    }
+
+    @keyframes linextend-mobile {
+        0% {
+            width: 0;
+        }
+
+        100% {
+            width: 4rem;
+        }
+    }
+}
+
+.textanime {
+    animation: textcolorchange 2s forwards;
+}
+
+@keyframes textcolorchange {
+    0% {
+        color: black;
+    }
+
+    100% {
+        color: #88DB1B;
+    }
+}
+
+/* Vector 1 */

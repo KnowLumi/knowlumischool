@@ -5,7 +5,7 @@ const About = () => {
   return (
     <div className="flex flex-col bg-[#E6F3D6]">
       <div className="flex justify-end bg-[#F7F7F7]">
-        <div className="w-48 md:w-96 h-0 border-b-[3rem] md:border-b-[6rem] border-b-[#E6F3D6] border-l-[2.5rem] md:border-l-[5rem] border-l-transparent "></div>
+        <div className="w-36 md:w-72 h-0 border-b-[2rem] md:border-b-[4rem] border-b-[#E6F3D6] border-l-[1.5rem] md:border-l-[3rem] border-l-transparent "></div>
       </div>
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center m-20 h-full">
         <div className="flex flex-col items-start md:items-end justify-between gap-6">
@@ -33,7 +33,7 @@ const About = () => {
         </p>
       </div>
       <div className="flex justify-start bg-[#F7F7F7]">
-        <div className="w-48 md:w-96 h-0 border-t-[3rem] md:border-t-[6rem] border-t-[#E6F3D6] border-r-[2.5rem] md:border-r-[5rem] border-r-transparent "></div>
+        <div className="w-36 md:w-72 h-0 border-t-[2rem] md:border-t-[4rem] border-t-[#E6F3D6] border-r-[1.5rem] md:border-r-[3rem] border-r-transparent "></div>
       </div>
     </div>
   );

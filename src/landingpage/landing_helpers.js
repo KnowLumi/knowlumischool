@@ -1,11 +1,19 @@
-import hero1 from "../assets/hero1.jpg";
-import hero2 from "../assets/hero2.jpg";
-import hero3 from "../assets/hero3.jpg";
-import hero4 from "../assets/hero4.jpg";
+import hero1 from "../assets/hero1.png";
+import hero2 from "../assets/hero2.png";
+import hero3 from "../assets/hero3.png";
+import hero4 from "../assets/hero4.png";
 import sub1 from "../assets/hero_img_1.jpg"
 import sub2 from "../assets/hero_img_2.jpg"
 import sub3 from "../assets/hero_img_3.jpg"
 import sub4 from "../assets/hero_img_4.jpg"
+
+import icon1 from './company_icons/apple.png'
+import icon2 from './company_icons/google.png'
+import icon3 from './company_icons/icbc.png'
+import icon4 from './company_icons/microsoft.png'
+import icon5 from './company_icons/samsung.png'
+import icon6 from './company_icons/tesla.png'
+import icon7 from './company_icons/verizonlogo.png'
 
 const pages = [
     { name: "Home", route: '/' },
@@ -29,4 +37,6 @@ const heroImages = [
 
 ];
 
-export { pages, faq, heroImages }
+const companies = [icon1, icon2, icon3, icon4, icon5, icon6, icon7]
+
+export { pages, faq, heroImages, companies }

@@ -22,7 +22,7 @@ const Footer = () => {
               Drop Us a Message
             </Button>
           </div>
-          <div className="flex flex-col items-end gap-9 text-white opacity-70 w-44">
+          <div className="flex flex-col items-end gap-9 text-white opacity-70 w-fit md:w-44">
             <span>Terms</span>
             <span>Privacy Policy</span>
             <div className="flex justify-between items-center w-full">
