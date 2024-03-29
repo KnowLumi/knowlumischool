@@ -11,6 +11,7 @@ const Companies = () => {
           ))}
         </div>
       </marquee>
+      <span>Learn More</span>
     </div>
   );
 };
