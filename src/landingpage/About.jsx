@@ -21,7 +21,7 @@ const About = () => {
             <span className="font-light text-6xl">Knowlumi</span>
           </div>
         </div>
-        <p className="font-archivo mt-8 md:mt-0 font-light text-sm text-black w-96">
+        <p className="font-archivo mt-8 md:mt-0 font-light text-sm text-black md:w-96">
           Discover transformative educational opportunities with KnowLumi&apos;s
           dynamic courses and programs: Turning Aspirations into Achievements!
           Have you ever felt limited by the resources available for your
@@ -31,6 +31,9 @@ const About = () => {
           and embark on a path where your personal growth contributes to a
           thriving collective.
         </p>
+      </div>
+      <div className="flex justify-start bg-[#F7F7F7]">
+        <div className="w-48 md:w-96 h-0 border-t-[3rem] md:border-t-[6rem] border-t-[#E6F3D6] border-r-[2.5rem] md:border-r-[5rem] border-r-transparent "></div>
       </div>
     </div>
   );
