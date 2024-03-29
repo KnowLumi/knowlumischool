@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Drawer, Button } from "@material-tailwind/react";
 import { IoSearchOutline } from "react-icons/io5";
-import { BiMenuAltRight } from "react-icons/bi";
+import { CgMenuLeftAlt } from "react-icons/cg";
 import { RxCross1 } from "react-icons/rx";
 import { pages } from "./landing_helpers";
 import { NavLink } from "react-router-dom";
@@ -21,7 +21,7 @@ const Navigation = () => {
           <span>Learn-Earn-Achieve</span>
         </div>
       </div>
-      <form className="flex items-center  h-10 rounded-lg px-2 border focus:outline-black hover:border-black">
+      <form className="hidden md:flex items-center  h-10 rounded-lg px-2 border focus:outline-black hover:border-black">
         <IoSearchOutline className="cursor-pointer" size={20} />
         <input
           type="text"
@@ -58,7 +58,7 @@ const Navigation = () => {
         onClick={openDrawer}
         className="md:hidden block rounded-lg hover:bg-gray-500 p-1"
       >
-        <BiMenuAltRight size={35} />
+        <CgMenuLeftAlt size={35} />
       </button>
       <Drawer placement="right" open={open} onClose={closeDrawer}>
         <div className="my-3 mx-2 flex items-center justify-end">
