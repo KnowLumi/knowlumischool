@@ -47,7 +47,7 @@ const Footer = () => {
               </IconButton>
             </button>
           </div>
-          <ul className="flex flex-col py-0 md:py-14 items-start md:items-end gap-2">
+          <ul className="flex flex-col pt-6 md:py-14 items-start md:items-end gap-2">
             {footerLinks.map((link, index) => (
               <li
                 key={`footer_link_${index}`}
