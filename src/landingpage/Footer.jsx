@@ -1,41 +1,74 @@
-import { Button } from "@material-tailwind/react";
 import { BsFillChatLeftFill } from "react-icons/bs";
-import footer1 from "../assets/footer1.png";
 import {
   RiInstagramFill,
   RiFacebookBoxFill,
   RiTwitterXFill,
-  RiYoutubeFill,
+  RiWhatsappFill,
+  RiDiscordFill,
 } from "react-icons/ri";
+import { MdHdrStrong } from "react-icons/md";
+import footer from "../assets/footer.png";
+import logo1 from "../assets/logo1.png";
+import { IconButton } from "@material-tailwind/react";
+import { footerLinks } from "./landing_helpers";
+import "./landing.css";
+import { Button } from "@material-tailwind/react";
 const Footer = () => {
   return (
-    <div className="flex flex-col font-archivo bg-gray-50">
-      <img src={footer1} alt="" className="translate-y-32  w-full h-full" />
-      <footer className="bg-black flex flex-col items-center">
-        <div className="flex items-center justify-between px-2 md:px-20 w-full h-[31rem]">
-          <div className="flex flex-col gap-11">
-            <span className="text-white font-semibold text-2xl tracking-wide">
-              Got any Doubts?
-            </span>
-            <Button className="flex px-8 w-72 justify-center items-center text-sm tracking-wide rounded-xl font-archivo font-bold gap-3 text-black capitalize bg-[#88DB1B]">
-              <BsFillChatLeftFill className="w-4 h-4 text-black" />
-              Drop Us a Message
-            </Button>
-          </div>
-          <div className="flex flex-col items-end gap-9 text-white opacity-70 w-fit md:w-44">
-            <span>Terms</span>
-            <span>Privacy Policy</span>
-            <div className="flex justify-between items-center w-full">
-              <RiInstagramFill className="text-[#88DB1B] h-5 w-5 " />
-              <RiFacebookBoxFill className="text-[#88DB1B] h-5 w-5" />
-              <RiYoutubeFill className="text-[#88DB1B] h-5 w-5" />
-              <RiTwitterXFill className="text-[#88DB1B] h-5 w-5" />
+    <div className="w-full flex flex-col font-archivo bg-gray-50">
+      <div className="w-full flex justify-end">
+        <img src={footer} alt="" className="w-fit h-10 md:h-20" />
+      </div>
+      <footer className="bg-[#DFDFD7] flex flex-col">
+        <div className="flex flex-col md:flex-row border-b-2 border-b-gray-500 justify-between py-6 md:py-14 mx-8 md:mx-16">
+          <div className="flex flex-col w-80 gap-8">
+            <div className="flex items-center gap-2 p-1">
+              <img src={logo1} className="h-10 w-10" alt="" />
+              <div className="flex flex-col px-3 border-black border-l-2">
+                <span className="font-extrabold text-lg">KNOWLUMI</span>
+                <span className="font-light text-xs">Learn-Earn-Achieve</span>
+              </div>
             </div>
+            <p className="text-xs">
+              With KnowLumi, we go beyond learning, empowering you to create
+              opportunities and achieve your goals.
+            </p>
+            <div className="flex items-center gap-8 text-black">
+              <RiInstagramFill className="w-4 h-4" />
+              <RiWhatsappFill className="w-4 h-4" />
+              <RiDiscordFill className="w-4 h-4" />
+              <RiFacebookBoxFill className="w-4 h-4" />
+              <RiTwitterXFill className="w-4 h-4" />
+            </div>
+            <button className="bg-white w-fit flex rounded-full items-center py-1 pr-1 pl-5 gap-1">
+              <span className="font-medium text-xs">Drop us a message</span>
+              <IconButton className="rounded-full bg-gray-300 w-7 h-7">
+                <BsFillChatLeftFill className="text-black w-2.5 h-2.5" />
+              </IconButton>
+            </button>
           </div>
+          <ul className="flex flex-col py-0 md:py-14 items-start md:items-end gap-2">
+            {footerLinks.map((link, index) => (
+              <li
+                key={`footer_link_${index}`}
+                className="font-normal text-black opacity-60 footer-link"
+              >
+                {link}
+              </li>
+            ))}
+          </ul>
         </div>
-        <span className="text-white opacity-50 py-5 font-semibold text-xs tracking-[0.4em]">
-          © Copyright 2024 KnowLumi - All Rights Reserved
-        </span>
+        <div className="flex flex-col md:flex-row items-center gap-6 md:gap-0 justify-between mx-8 md:mx-16 py-8">
+          <span className="font-semibold opacity-40 text-xs tracking-widest">
+            © Copyright 2024 KnowLumi - All Rights Reserved
+          </span>
+          <Button className="bg-white font-bold text-sm py-2 px-6 rounded-full gap-6 flex items-center">
+            <MdHdrStrong className="text-[#88DB1B]" />
+            <span className="text-black opacity-60">PRIVACY POLICY</span>
+            <div className="w-2.5 h-2.5 bg-[#88DB1B] rounded-full"></div>
+            <span className="text-black opacity-60">TERMS</span>
+          </Button>
+        </div>
       </footer>
     </div>
   );

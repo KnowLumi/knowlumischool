@@ -39,4 +39,6 @@ const heroImages = [
 
 const companies = [icon1, icon2, icon3, icon4, icon5, icon6, icon7]
 
-export { pages, faq, heroImages, companies }
+const footerLinks = "Home,Career Tracks,Courses,How Knowlumi works,Privacy Policy,Contact Us".split(",")
+
+export { pages, faq, heroImages, companies, footerLinks }
