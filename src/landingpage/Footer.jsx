@@ -17,9 +17,9 @@ const Footer = () => {
   return (
     <div className="w-full flex flex-col font-archivo bg-gray-50">
       <div className="w-full flex justify-end">
-        <img src={footer} alt="" className="w-fit h-10 md:h-20" />
+        <img src={footer} alt="" className="w-fit translate-y-0.5 h-10 md:h-20" />
       </div>
-      <footer className="bg-[#DFDFD7] flex flex-col">
+      <footer className="bg-[#DFDFD7] z-10 flex flex-col">
         <div className="flex flex-col md:flex-row border-b-2 border-b-gray-500 justify-between py-6 md:py-14 mx-8 md:mx-16">
           <div className="flex flex-col w-80 gap-8">
             <div className="flex items-center gap-2 p-1">
