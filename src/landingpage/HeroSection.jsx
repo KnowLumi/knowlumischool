@@ -77,8 +77,8 @@ const HeroSection = () => {
       <Carousel
         autoplayDelay={2000}
         loop
-        prevArrow={({ handlePrev }) => <i></i>}
-        nextArrow={({ handleNext }) => <i></i>}
+        prevArrow={({ handlePrev }) => <i className="hidden" onClick={handlePrev}></i>}
+        nextArrow={({ handleNext }) => <i className="hidden" onClick={handleNext}></i>}
         className="w-full md:w-[38rem] h-full  md:mr-3"
         navigation={({ setActiveIndex, activeIndex, length }) => (
           <div className="absolute bottom-1/3 left-1/3 z-50 flex -translate-x-2/4 gap-1">

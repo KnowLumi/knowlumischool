@@ -43,17 +43,11 @@ const Navigation = () => {
           </li>
         ))}
       </ul>
-      <div className="md:flex gap-2 items-center hidden">
-        <Button
-          variant="text"
-          className="capitalize font-inter font-bold text-sm"
-        >
-          Login
-        </Button>
-        <Button className="capitalize font-inter font-bold text-sm py-3 px-5">
-          Sign Up
-        </Button>
-      </div>
+
+      <Button  className="capitalize font-archivo font-semibold bg-black rounded-full text-sm py-3 px-5">
+        Login/Sign Up
+      </Button>
+
       <button
         onClick={openDrawer}
         className="md:hidden block rounded-lg hover:bg-gray-500 p-1"
@@ -73,17 +67,9 @@ const Navigation = () => {
             </li>
           ))}
         </ul>
-        <div className="flex gap-4 m-5 items-center">
-          <Button
-            variant="text"
-            className="capitalize  font-inter font-bold text-sm"
-          >
-            Login
-          </Button>
-          <Button className="capitalize  font-inter font-bold text-sm">
-            Sign Up
-          </Button>
-        </div>
+        <Button className="capitalize font-archivo font-semibold bg-black text-sm">
+          Sign Up
+        </Button>
       </Drawer>
     </nav>
   );
