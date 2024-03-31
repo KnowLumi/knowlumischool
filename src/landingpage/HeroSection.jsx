@@ -14,7 +14,7 @@ const HeroSection = () => {
         className="hidden md:block absolute z-20 bottom-16"
       />
       <div className="w-full md:w-fit flex flex-col items-center md:items-start p-4 ml-0 md:ml-16 mt-12">
-        <div className="flex flex-col md:items-end herogradient p-4 rounded-lg">
+        <div className="flex flex-col md:items-end herogradient p-4 rounded-2xl">
           <span className="font-medium text-3xl md:text-6xl">
             Transform dreams
           </span>
@@ -40,7 +40,7 @@ const HeroSection = () => {
           <br className="hidden md:inline" />
           join a community where individual success fuels collective growth.
         </span>
-        <Button className="font-archivo text-xs bg-black py-1.5 pr-1.5 pl-6 mt-12 gap-2 text-[#F7F7F7] font-medium md:text-lg flex items-center w-fit rounded-full">
+        <Button className="font-archivo text-xs bg-black hover:bg-[#F7F7F7] hover:border hover:border-black py-1.5 pr-1.5 pl-6 mt-12 gap-2 text-[#F7F7F7] hover:text-black font-medium md:text-lg flex items-center w-fit rounded-full">
           get started
           <i className="bg-gray-800 p-1 rounded-full">
             <IoArrowForwardSharp size={20} className="text-white -rotate-45" />

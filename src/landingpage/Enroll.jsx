@@ -1,17 +1,17 @@
 import { Button } from "@material-tailwind/react";
-import line from "../assets/enroll_line.png";
+// import line from "../assets/enroll_line.png";
 import logo from "../assets/enroll_logo.png";
 import { MdHdrStrong } from "react-icons/md";
 import { IoArrowForwardSharp } from "react-icons/io5";
 const Enroll = () => {
   return (
     <div className="flex flex-col items-center ">
-      <div
+      {/* <div
         style={{ backgroundImage: `url('${line}')` }}
         className="w-[71rem] h-20 bg-contain bg-no-repeat hidden md:flex flex-col justify-end"
       >
         <i className="w-4 h-4 rounded-full bg-[#88DB1B] translate-x-[70rem] -translate-y-[4rem] enroll-anime"></i>
-      </div>
+      </div> */}
       <div className="w-full h-full flex justify-center font-archivo">
         <div className="enroll-banner w-80 md:w-[71rem] mx-0 md:mx-12 bg-contain h-[36rem] md:h-[40rem] bg-no-repeat flex flex-col justify-between p-4 md:p-8">
           <div className="flex flex-col mt-12 gap-5">
@@ -25,7 +25,7 @@ const Enroll = () => {
               Ready to Ignite Your Future?
             </span>
           </div>
-          <div className="enroll1 bg-cover md:bg-contain bg-no-repeat h-[7.5rem] md:h-40  flex justify-between items-center">
+          <div className="enroll1 bg-cover md:bg-contain bg-no-repeat h-[7.4rem] md:h-40  flex justify-between items-center">
             <div className="flex flex-col justify-between gap-4 mt-2 mx-1.5 md:mx-4">
               <div className="flex gap-4 items-center">
                 <img src={logo} className="w-9 h-9 md:w-14 md:h-14" alt="" />

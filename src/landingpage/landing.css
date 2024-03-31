@@ -8,7 +8,8 @@
 }
 
 .herogradient {
-    animation: gradientanime 4s forwards;
+    animation: gradientanime 8s ease-out 100ms forwards;
+    
 
 }
 
@@ -70,6 +71,10 @@
 
 .enroll2 {
     background-image: url('../assets/enroll2.png');
+}
+
+.action-banner {
+    background-image: url('../assets/action.png');
 }
 
 /* bg-[url('src/assets/rect1_mobile.png')]  */

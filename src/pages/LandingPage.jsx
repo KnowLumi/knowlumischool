@@ -5,6 +5,7 @@ import Testimonials from "../landingpage/Testimonials";
 import About from "../landingpage/About";
 import Companies from "../landingpage/Companies";
 import Enroll from "../landingpage/Enroll";
+import Action from "../landingpage/Action";
 
 const LandingPage = () => {
   return (
@@ -13,6 +14,7 @@ const LandingPage = () => {
       <About />
       <Companies />
       <Testimonials />
+      <Action />
       <Enroll />
       <FaqSection />
       <Footer />
