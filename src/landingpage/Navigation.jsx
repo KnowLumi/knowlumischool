@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Drawer, Button } from "@material-tailwind/react";
-import { IoSearchOutline } from "react-icons/io5";
 import { CgMenuLeftAlt } from "react-icons/cg";
 import { RxCross1 } from "react-icons/rx";
+import { FaArrowRight } from "react-icons/fa6";
 import { pages } from "./landing_helpers";
 import { NavLink } from "react-router-dom";
 import logo1 from "../assets/logo1.png";
@@ -21,14 +21,14 @@ const Navigation = () => {
           <span>Learn-Earn-Achieve</span>
         </div>
       </div>
-      <form className="hidden md:flex items-center  h-10 rounded-lg px-2 border focus:outline-black hover:border-black">
+      {/* <form className="hidden md:flex items-center  h-10 rounded-lg px-2 border focus:outline-black hover:border-black">
         <IoSearchOutline className="cursor-pointer" size={20} />
         <input
           type="text"
           className="px-2 focus:outline-none bg-inherit placeholder:text-[#1F1F1F] placeholder:opacity-60"
           placeholder="Search"
         />
-      </form>
+      </form> */}
       <ul className="md:flex gap-8 items-center hidden">
         {pages.map((page, index) => (
           <li key={index}>
@@ -42,9 +42,15 @@ const Navigation = () => {
             </NavLink>
           </li>
         ))}
+        <Button className="flex items-center py-1 pr-1 pl-3 capitalize bg-black font-archivo  font-medium text-xs rounded-full">
+          Explore&nbsp;<span className="lowercase"> our programs</span>
+          <i className="rounded-full bg-gray-800 ml-2 w-6 h-6 flex items-center justify-center">
+            <FaArrowRight className="text-[#F7F7F7] -rotate-45" />
+          </i>
+        </Button>
       </ul>
 
-      <Button  className="capitalize font-archivo font-semibold bg-black rounded-full text-sm py-3 px-5">
+      <Button className="hidden md:block capitalize font-archivo font-semibold bg-black rounded-full text-sm py-1.5 px-4">
         Login/Sign Up
       </Button>
 
@@ -54,6 +60,7 @@ const Navigation = () => {
       >
         <CgMenuLeftAlt size={35} />
       </button>
+  
       <Drawer placement="right" open={open} onClose={closeDrawer}>
         <div className="my-3 mx-2 flex items-center justify-end">
           <button onClick={closeDrawer}>

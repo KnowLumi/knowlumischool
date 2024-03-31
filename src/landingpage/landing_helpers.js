@@ -2,6 +2,7 @@ import hero1 from "../assets/hero1.png";
 import hero2 from "../assets/hero2.png";
 import hero3 from "../assets/hero3.png";
 import hero4 from "../assets/hero4.png";
+
 import sub1 from "../assets/hero_img_1.jpg"
 import sub2 from "../assets/hero_img_2.jpg"
 import sub3 from "../assets/hero_img_3.jpg"
@@ -18,9 +19,8 @@ import icon7 from './company_icons/verizonlogo.png'
 const pages = [
     { name: "Home", route: '/' },
     { name: "About", route: '/about' },
-    { name: "Community", route: '/community' },
-    { name: "Learn", route: '/learn' },
-    { name: "Earn", route: '/earn' },
+    { name: "Join Community", route: '/community' },
+    { name: "Refer & Earn", route: '/refer&earn' },
 ]
 
 const faq = [{ title: "What is KnowLumi?", desc: "Rorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per" },

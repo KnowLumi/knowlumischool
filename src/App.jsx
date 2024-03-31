@@ -3,7 +3,6 @@ import About from "./pages/About";
 import Community from "./pages/Community";
 import LandingPage from "./pages/LandingPage";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Learn from "./pages/Learn";
 import Earn from "./pages/Earn";
 function App() {
   return (
@@ -14,8 +13,7 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="/about" element={<About/> } />
           <Route path="/community" element={ <Community/> } />
-          <Route path="/learn" element={ <Learn/> } />
-          <Route path="/earn" element={ <Earn/> } />
+          <Route path="/refer&earn" element={ <Earn/> } />
         </Routes>
       </Router>
     </div>

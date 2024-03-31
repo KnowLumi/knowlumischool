@@ -62,7 +62,7 @@ const Footer = () => {
           <span className="font-semibold opacity-40 text-xs tracking-widest">
             © Copyright 2024 KnowLumi - All Rights Reserved
           </span>
-          <Button className="bg-white font-bold text-sm py-2 px-6 rounded-full gap-6 flex items-center">
+          <Button className="bg-white font-bold text-sm py-2 px-3 md:px-6 rounded-full gap-6 flex items-center">
             <MdHdrStrong className="text-[#88DB1B]" />
             <span className="text-black opacity-60">PRIVACY POLICY</span>
             <div className="w-2.5 h-2.5 bg-[#88DB1B] rounded-full"></div>

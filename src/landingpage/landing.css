@@ -1,4 +1,4 @@
-.aboutbar{
+.aboutbar {
     background-size: 100% 100%;
 }
 
@@ -17,7 +17,15 @@
     }
 }
 
+.enroll-banner {
+    background-image: url('../assets/enroll.png');
+}
+
 @media (max-width: 640px) {
+    .enroll-banner {
+        background-image: url('../assets/enroll_mobile.png');
+    }
+
     .lineanime {
         animation: linextend-mobile 2s forwards;
     }
@@ -31,6 +39,7 @@
             width: 4rem;
         }
     }
+
 }
 
 .textanime {
@@ -42,12 +51,16 @@
         color: black;
     }
 
-    100% {
+    50% {
         color: #88DB1B;
+    }
+
+    100% {
+        color: black;
     }
 }
 
-.footer-link{
+.footer-link {
     font-size: 12px;
     line-height: 24px;
 }

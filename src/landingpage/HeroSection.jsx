@@ -42,7 +42,7 @@ const HeroSection = () => {
           <br className="hidden md:inline" />
           join a community where individual success fuels collective growth.
         </span>
-        <Button className="font-archivo bg-black p-1.5 mt-12 gap-2 text-[#F7F7F7] font-semibold  text-lg flex items-center w-fit rounded-full">
+        <Button className="font-archivo bg-black py-1.5 pr-1.5 pl-6 mt-12 gap-2 text-[#F7F7F7] font-semibold  text-lg flex items-center w-fit rounded-full">
           get started
           <IconButton className="bg-gray-800 p-1 rounded-full">
             <IoArrowForwardSharp size={20} className="text-white -rotate-45" />
@@ -77,8 +77,12 @@ const HeroSection = () => {
       <Carousel
         autoplayDelay={2000}
         loop
-        prevArrow={({ handlePrev }) => <i className="hidden" onClick={handlePrev}></i>}
-        nextArrow={({ handleNext }) => <i className="hidden" onClick={handleNext}></i>}
+        prevArrow={({ handlePrev }) => (
+          <i className="hidden" onClick={handlePrev}></i>
+        )}
+        nextArrow={({ handleNext }) => (
+          <i className="hidden" onClick={handleNext}></i>
+        )}
         className="w-full md:w-[38rem] h-full  md:mr-3"
         navigation={({ setActiveIndex, activeIndex, length }) => (
           <div className="absolute bottom-1/3 left-1/3 z-50 flex -translate-x-2/4 gap-1">
@@ -116,19 +120,16 @@ const HeroSection = () => {
                 </div>
               </div>
               {/* place rectangle here */}
-              <div
-                style={{ backgroundImage: `url('${rect1}')` }}
-                className="w-[18.3rem] md:w-[31rem] h-[5.3rem] md:h-36 z-40 p-2 bg-cover object-cover flex flex-col justify-evenly items-start"
-              >
+              <div className="bg-[url('src/assets/rect1_mobile.png')] md:bg-[url('src/assets/rect1.png')] w-[18.4rem] md:w-[31rem] h-[6.25rem] md:h-36 z-40 p-2 bg-cover object-cover flex flex-col justify-evenly items-start">
                 <div className="w-full z-10 flex items-center gap-3">
                   <i className="rounded-full bg-[#88DB1B] p-2.5">
                     <MdOutlineLocalLibrary className="text-white w-4 h-4" />
                   </i>
                   <div className="flex flex-col items-start text-black text-wrap">
-                    <span className="font-semibold text-xs md:text-sm uppercase">
+                    <span className="font-semibold text-[10px] md:text-sm uppercase">
                       {item.title}
                     </span>
-                    <span className="font-light text-xs md:text-sm">
+                    <span className="font-light text-[10px] md:text-sm">
                       {item.desc}
                     </span>
                   </div>
@@ -137,12 +138,12 @@ const HeroSection = () => {
                   <div className="md:w-56 h-full md:h-12">
                     <Button
                       variant="outlined"
-                      className=" capitalize font-archivo text-black p-0 border-gray-300  flex w-fit justify-end gap-3 items-center rounded-full"
+                      className=" capitalize font-archivo text-black p-1 border-gray-300  flex w-fit justify-end gap-3 items-center rounded-full"
                     >
                       <span className="font-medium text-[8px] md:text-xs">
                         Explore our programs
                       </span>
-                      <IconButton className="bg-gray-200 border p-0  border-white rounded-full">
+                      <IconButton className="bg-gray-200 border p-0 w-4 h-4 md:w-7 md:h-7 border-white rounded-full">
                         <IoArrowForwardSharp className="text-black -rotate-45 w-1.5 h-1.5 md:w-3.5 md:h-3.5" />
                       </IconButton>
                     </Button>
