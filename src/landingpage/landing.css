@@ -20,12 +20,17 @@
 .enroll-banner {
     background-image: url('../assets/enroll.png');
 }
-
+.rectangle{
+    background-image: url('../assets/rect1.png');
+}
+/* bg-[url('src/assets/rect1_mobile.png')]  */
 @media (max-width: 640px) {
     .enroll-banner {
         background-image: url('../assets/enroll_mobile.png');
     }
-
+    .rectangle{
+        background-image: url('../assets/rect1_mobile.png');
+    }
     .lineanime {
         animation: linextend-mobile 2s forwards;
     }

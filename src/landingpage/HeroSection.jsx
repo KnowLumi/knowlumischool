@@ -120,7 +120,7 @@ const HeroSection = () => {
                 </div>
               </div>
               {/* place rectangle here */}
-              <div className="bg-[url('src/assets/rect1_mobile.png')] md:bg-[url('src/assets/rect1.png')] w-[18.4rem] md:w-[31rem] h-[6.25rem] md:h-36 z-40 p-2 bg-cover object-cover flex flex-col justify-evenly items-start">
+              <div className="rectangle w-[18.4rem] md:w-[31rem] h-[6.25rem] md:h-36 z-40 p-2 bg-cover object-cover flex flex-col justify-evenly items-start">
                 <div className="w-full z-10 flex items-center gap-3">
                   <i className="rounded-full bg-[#88DB1B] p-2.5">
                     <MdOutlineLocalLibrary className="text-white w-4 h-4" />
