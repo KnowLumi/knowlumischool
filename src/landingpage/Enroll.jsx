@@ -1,4 +1,4 @@
-import { Button, IconButton } from "@material-tailwind/react";
+import { Button } from "@material-tailwind/react";
 import line from "../assets/enroll_line.png";
 import logo from "../assets/enroll_logo.png";
 import { MdHdrStrong } from "react-icons/md";
@@ -8,8 +8,10 @@ const Enroll = () => {
     <div className="flex flex-col items-center ">
       <div
         style={{ backgroundImage: `url('${line}')` }}
-        className="w-[71rem] h-20 bg-contain bg-no-repeat hidden md:flex flex-col justify-between"
-      ></div>
+        className="w-[71rem] h-20 bg-contain bg-no-repeat hidden md:flex flex-col justify-end"
+      >
+        <i className="w-4 h-4 rounded-full bg-[#88DB1B] translate-x-[70rem] -translate-y-[4rem] enroll-anime"></i>
+      </div>
       <div className="w-full h-full flex justify-center font-archivo">
         <div className="enroll-banner w-80 md:w-[71rem] mx-0 md:mx-12 bg-contain h-[36rem] md:h-[40rem] bg-no-repeat flex flex-col justify-between p-4 md:p-8">
           <div className="flex flex-col mt-12 gap-5">

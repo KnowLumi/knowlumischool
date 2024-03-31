@@ -14,7 +14,7 @@ const HeroSection = () => {
         className="hidden md:block absolute z-20 bottom-16"
       />
       <div className="w-full md:w-fit flex flex-col items-center md:items-start p-4 ml-0 md:ml-16 mt-12">
-        <div className="flex flex-col md:items-end">
+        <div className="flex flex-col md:items-end herogradient p-4 rounded-lg">
           <span className="font-medium text-3xl md:text-6xl">
             Transform dreams
           </span>
