@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { Drawer, Button } from "@material-tailwind/react";
-import { CgMenuLeftAlt } from "react-icons/cg";
+import { Drawer, Button, IconButton } from "@material-tailwind/react";
+import { CgMenuLeftAlt, CgSearch } from "react-icons/cg";
 import { RxCross1 } from "react-icons/rx";
 import { FaArrowRight } from "react-icons/fa6";
 import { pages } from "./landing_helpers";
 import { NavLink } from "react-router-dom";
-import logo1 from "../assets/logo1.png";
+import logo1 from "../assets/navlogo.png";
 
 const Navigation = () => {
   const [open, setOpen] = useState(false);
@@ -14,13 +14,11 @@ const Navigation = () => {
   const closeDrawer = () => setOpen(false);
   return (
     <nav className="flex justify-between items-center w-full py-6 px-3 md:px-12 font-archivo border-b-2">
-      <div className="flex items-center gap-2">
-        <img src={logo1} className="h-10 w-10" alt="" />
-        <div className="flex flex-col px-3 border-l-2">
-          <span className="font-extrabold">KNOWLUMI</span>
-          <span>Learn-Earn-Achieve</span>
-        </div>
-      </div>
+      <img
+        src={logo1}
+        alt=""
+        className="w-[126px] h-[34px] md:w-[169px] md:h-[46px]"
+      />
       {/* <form className="hidden md:flex items-center  h-10 rounded-lg px-2 border focus:outline-black hover:border-black">
         <IoSearchOutline className="cursor-pointer" size={20} />
         <input
@@ -54,13 +52,19 @@ const Navigation = () => {
         Login/Sign Up
       </Button>
 
-      <button
-        onClick={openDrawer}
-        className="md:hidden block rounded-lg hover:bg-gray-500 p-1"
-      >
-        <CgMenuLeftAlt size={35} />
-      </button>
-  
+      <div className="md:hidden flex items-center gap-2">
+        <IconButton variant="text" className="">
+          <CgSearch size={35}/>
+        </IconButton>
+        <IconButton
+          variant="text"
+          onClick={openDrawer}
+          className="rounded-lg p-1"
+        >
+          <CgMenuLeftAlt size={35} />
+        </IconButton>
+      </div>
+
       <Drawer placement="right" open={open} onClose={closeDrawer}>
         <div className="my-3 mx-2 flex items-center justify-end">
           <button onClick={closeDrawer}>

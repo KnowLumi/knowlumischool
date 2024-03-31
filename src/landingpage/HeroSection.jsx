@@ -1,20 +1,18 @@
 import heroline from "./hero_line.png";
-import rect1 from "../assets/rect1.png";
 import { heroImages } from "./landing_helpers";
 import "./landing.css";
 import { MdOutlineLocalLibrary } from "react-icons/md";
 import { IoArrowForwardSharp } from "react-icons/io5";
-import {
-  IconButton,
-  Button,
-  Avatar,
-  Rating,
-  Carousel,
-} from "@material-tailwind/react";
+import { IconButton, Button, Avatar, Carousel } from "@material-tailwind/react";
+import rating from "../assets/rating.png";
 const HeroSection = () => {
   return (
     <div className="w-full relative flex flex-wrap font-archivo justify-between bg-[#F7F7F7]">
-      <img src={heroline} alt="" className="absolute z-20 bottom-16" />
+      <img
+        src={heroline}
+        alt=""
+        className="hidden md:block absolute z-20 bottom-16"
+      />
       <div className="w-full md:w-fit flex flex-col items-center md:items-start p-4 ml-0 md:ml-16 mt-12">
         <div className="flex flex-col md:items-end">
           <span className="font-medium text-3xl md:text-6xl">
@@ -42,11 +40,11 @@ const HeroSection = () => {
           <br className="hidden md:inline" />
           join a community where individual success fuels collective growth.
         </span>
-        <Button className="font-archivo bg-black py-1.5 pr-1.5 pl-6 mt-12 gap-2 text-[#F7F7F7] font-semibold  text-lg flex items-center w-fit rounded-full">
+        <Button className="font-archivo text-xs bg-black py-1.5 pr-1.5 pl-6 mt-12 gap-2 text-[#F7F7F7] font-medium md:text-lg flex items-center w-fit rounded-full">
           get started
-          <IconButton className="bg-gray-800 p-1 rounded-full">
+          <i className="bg-gray-800 p-1 rounded-full">
             <IoArrowForwardSharp size={20} className="text-white -rotate-45" />
-          </IconButton>
+          </i>
         </Button>
         <div className="flex mt-6 md:mt-12 items-center gap-4">
           <div className="flex items-center -space-x-4">
@@ -61,14 +59,18 @@ const HeroSection = () => {
               />
             ))}
           </div>
-          <span className="font-medium text-lg">204 Reviews</span>
-          <Rating
+          <span className="font-medium text-[10px] md:text-lg">
+            204 Reviews
+          </span>
+          {/* <Rating
             unratedColor="#88DB1B"
             ratedColor="#88DB1B"
             value={4}
             readonly
-          />
-          <span className="font-medium text-lg">4.7</span>
+            className="w-14 h-2.5"
+          /> */}
+          <img src={rating} className="w-14 md:w-24 h-2.5 md:h-5" alt="" />
+          <span className="font-medium text-[10px] md:text-lg">4.7</span>
         </div>
         <span className="hidden md:block mt-12 text-[7.5rem] font-medium text-[#E7E7E7] opacity-65">
           KnowLumi
@@ -83,31 +85,34 @@ const HeroSection = () => {
         nextArrow={({ handleNext }) => (
           <i className="hidden" onClick={handleNext}></i>
         )}
-        className="w-full md:w-[38rem] h-full  md:mr-3"
+        className="relative w-full md:w-[38rem] h-full md:mr-3"
+        transition={{ ease:"easeIn" }}
         navigation={({ setActiveIndex, activeIndex, length }) => (
-          <div className="absolute bottom-1/3 left-1/3 z-50 flex -translate-x-2/4 gap-1">
-            {new Array(length).fill("").map((_, i) => (
-              <span
-                key={i}
-                className={`block h-1 cursor-pointer rounded-2xl transition-all content-[''] ${
-                  activeIndex === i ? "w-6 bg-white" : "w-3 bg-white/50"
-                }`}
-                onClick={() => {
-                  setActiveIndex(i);
-                }}
-              />
-            ))}
+          <div className="absolute bottom-[41%] md:bottom-[31%] left-[40%] md:left-[35%] z-50  flex -translate-x-2/4 gap-1">
+            {new Array(length).fill("").map((_, i) => {
+              return (
+                <span
+                  key={i}
+                  className={`block h-1 cursor-pointer rounded-2xl transition-all content-[''] ${
+                    activeIndex === i ? "w-6 bg-white" : "w-3 bg-white/50"
+                  }`}
+                  onClick={() => {
+                    setActiveIndex(i);
+                  }}
+                />
+              );
+            })}
           </div>
         )}
       >
         {heroImages.map((item, index) => (
           <div
             key={index}
-            className="bg-cover relative  flex flex-col gap-4 mx-6 md:mx-0 justify-end items-center bg-center object-cover rounded-3xl h-96 md:h-[45.5rem] my-12 w-80 md:w-[38rem] pb-6"
+            className="bg-cover relative flex flex-col gap-4 mx-6 md:mx-0 justify-end items-center bg-center object-cover rounded-3xl h-96 md:h-[45.5rem] my-12 w-80 md:w-[38rem] pb-6"
             style={{ backgroundImage: `url('${item.main}')` }}
           >
             <div className="flex flex-col items-start gap-4">
-              <div className="backdrop-blur-lg w-40 md:w-60 rounded-xl flex p-3 items-center">
+              <div className=" backdrop-blur-lg w-40 md:w-60 rounded-xl flex p-3 items-center">
                 <img
                   src={item.sub}
                   className="w-12 h-12 md:w-24 md:h-24 rounded-xl"

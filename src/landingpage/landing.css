@@ -20,17 +20,37 @@
 .enroll-banner {
     background-image: url('../assets/enroll.png');
 }
-.rectangle{
+
+.rectangle {
     background-image: url('../assets/rect1.png');
 }
+
+.enroll1 {
+    background-image: url('../assets/enroll1.png');
+}
+
+.enroll2 {
+    background-image: url('../assets/enroll2.png');
+}
+
 /* bg-[url('src/assets/rect1_mobile.png')]  */
 @media (max-width: 640px) {
     .enroll-banner {
         background-image: url('../assets/enroll_mobile.png');
     }
-    .rectangle{
+
+    .rectangle {
         background-image: url('../assets/rect1_mobile.png');
     }
+
+    .enroll1 {
+        background-image: url('../assets/enroll1_mobile.png');
+    }
+
+    .enroll2 {
+        background-image: url('../assets/enroll2_mobile.png');
+    }
+
     .lineanime {
         animation: linextend-mobile 2s forwards;
     }
