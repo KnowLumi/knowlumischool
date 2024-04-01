@@ -1,4 +1,4 @@
-import line from "../assets/enroll_line.png";
+
 import people from "../assets/people.png";
 import "./landing.css";
 const Action = () => {
@@ -10,11 +10,8 @@ const Action = () => {
           className="bg-contain bg-no-repeat w-[22rem] flex flex-col justify-end rounded-l-2xl  h-[19.1rem] translate-y-[2.8rem]"
         ></div>
       </div>
-      <div
-        style={{ backgroundImage: `url('${line}')` }}
-        className="w-80 md:w-[71rem] h-5 md:h-20 ml-5 md:ml-0 bg-contain bg-no-repeat flex flex-col justify-end"
-      >
-        <i className="w-1 md:w-4 h-1 md:h-4 rounded-full bg-[#88DB1B] enroll-anime"></i>
+      <div className="action-line w-80 md:w-[71rem] h-7 md:h-20  bg-cover md:bg-contain bg-no-repeat flex flex-col justify-end">
+        <i className="w-3 md:w-4 h-3 md:h-4 rounded-full bg-[#88DB1B] enroll-anime"></i>
       </div>
     </div>
   );

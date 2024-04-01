@@ -63,11 +63,11 @@ const FaqSection = () => {
         elit sed risus. Maecenas eget condimentum velit, sit amet feugiat
         lectus.
       </p>
-      <div className="flex text-lg font-normal gap-1 items-center my-8">
+      <button className="flex text-lg font-normal gap-1 items-center my-8">
         <span className="text-gray-500">Not yet resolved?</span>
         <span>Find help!</span>
         <IoChevronForwardOutline className="ml-3"/>
-      </div>
+      </button>
     </div>
   );
 };

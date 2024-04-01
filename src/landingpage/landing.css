@@ -10,12 +10,30 @@
 .herogradient {
     animation: gradientanime 8s ease-out 100ms forwards;
 
-
 }
 
 .enroll-anime {
     animation: ballmove 8s linear 1ms forwards infinite;
 }
+
+.slider-anime {
+    animation: slidermove 2s linear 1ms forwards;
+}
+
+.review-bg {
+    background: linear-gradient(270deg, #010101 4.14%, rgba(1, 1, 1, 0) 22%, rgba(1, 1, 1, 0) 76.14%, #010101 94.62%);
+}
+
+@keyframes slidermove {
+    0% {
+        transform: translateX(88px);
+    }
+
+    100% {
+        transform: translateX(304px);
+    }
+}
+
 
 @keyframes ballmove {
     0% {
@@ -76,6 +94,10 @@
     background-image: url('../assets/action.png');
 }
 
+.action-line {
+    background-image: url('../assets/enroll_line.png');
+}
+
 /* bg-[url('src/assets/rect1_mobile.png')]  */
 @media (max-width: 640px) {
     .enroll-banner {
@@ -92,6 +114,10 @@
 
     .enroll2 {
         background-image: url('../assets/enroll2_mobile.png');
+    }
+
+    .action-line {
+        background-image: url('../assets/enroll_line_mobile.png');
     }
 
     .lineanime {
@@ -118,15 +144,15 @@
         }
 
         45% {
-            transform: translate(8.7rem, 0);
+            transform: translate(9.2rem, 0);
         }
 
         55% {
-            transform: translate(9.5rem, -1rem);
+            transform: translate(9.8rem, -1rem);
         }
 
         100% {
-            transform: translate(18.4rem, -1rem);
+            transform: translate(19.2rem, -1rem);
         }
     }
 

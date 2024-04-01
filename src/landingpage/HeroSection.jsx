@@ -1,18 +1,32 @@
-import heroline from "./hero_line.png";
 import { heroImages } from "./landing_helpers";
 import "./landing.css";
-import { MdOutlineLocalLibrary } from "react-icons/md";
+import {
+  MdOutlineLocalLibrary,
+  MdKeyboardDoubleArrowRight,
+} from "react-icons/md";
 import { IoArrowForwardSharp } from "react-icons/io5";
 import { IconButton, Button, Avatar, Carousel } from "@material-tailwind/react";
 import rating from "../assets/rating.png";
 const HeroSection = () => {
   return (
     <div className="w-full relative flex flex-wrap font-archivo justify-between bg-[#F7F7F7]">
-      <img
-        src={heroline}
-        alt=""
-        className="hidden md:block absolute z-20 bottom-16"
-      />
+      <svg
+        width="1279"
+        height="123"
+        viewBox="0 0 1279 123"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className="absolute z-[10] bottom-36 w-full hidden md:flex"
+      >
+        <path
+          d="M-69 122.5H617C635.778 122.5 651 107.278 651 88.5V67.75V35C651 16.2223 666.222 1 685 1H1001.5H1352"
+          stroke="black"
+          strokeOpacity="0.5"
+        />
+      </svg>
+      <i className="slider-anime w-7 h-5 text-white z-10 p-1.5 flex justify-center items-center rounded-full bg-[#88DB1B] absolute bottom-[8.5rem] translate-x-[88px]">
+        <MdKeyboardDoubleArrowRight />
+      </i>
       <div className="w-full md:w-fit flex flex-col items-center md:items-start p-4 ml-0 md:ml-16 mt-12">
         <div className="flex flex-col md:items-end herogradient p-4 rounded-2xl">
           <span className="font-medium text-3xl md:text-6xl">
@@ -72,7 +86,7 @@ const HeroSection = () => {
           <img src={rating} className="w-14 md:w-24 h-2.5 md:h-5" alt="" />
           <span className="font-medium text-[10px] md:text-lg">4.7</span>
         </div>
-        <span className="hidden md:block mt-12 text-[7.5rem] font-medium text-[#E7E7E7] opacity-65">
+        <span className="hidden z-20 md:block mt-12 text-[7.5rem] font-medium text-[#E7E7E7] opacity-65">
           KnowLumi
         </span>
       </div>
@@ -85,8 +99,8 @@ const HeroSection = () => {
         nextArrow={({ handleNext }) => (
           <i className="hidden" onClick={handleNext}></i>
         )}
-        className="relative w-full md:w-[38rem] h-full md:mr-3"
-        transition={{ ease:"easeIn" }}
+        className="relative z-20 w-full md:w-[38rem] h-full md:mr-3"
+        transition={{ ease: "easeIn" }}
         navigation={({ setActiveIndex, activeIndex, length }) => (
           <div className="absolute bottom-[41%] md:bottom-[31%] left-[40%] md:left-[35%] z-50  flex -translate-x-2/4 gap-1">
             {new Array(length).fill("").map((_, i) => {

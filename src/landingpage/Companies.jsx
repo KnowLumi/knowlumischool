@@ -46,10 +46,12 @@ const Companies = () => {
           ))}
         </Marquee>
       </div>
-      <div className="flex gap-2 items-center">
-        <span className="text-black opacity-60 font-normal text-sm">View More</span>
-        <MdOutlineChevronRight className=""/>
-      </div>
+      <button className="flex gap-2 items-center">
+        <span className="text-black opacity-60 font-normal text-sm">
+          View More
+        </span>
+        <MdOutlineChevronRight className="" />
+      </button>
     </div>
   );
 };

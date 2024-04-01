@@ -39,6 +39,24 @@ const heroImages = [
 
 const companies = [icon1, icon2, icon3, icon4, icon5, icon6, icon7]
 
+const reviews = [
+    {
+        name: "John Samuel", role: "UX/UI Design", review: "KnowLumi transformed my college experience! The personalized learning approach helped me grasp tech concepts effortlessly. Building real projects gave me hands-on skills crucial for my career. Now, I feel confident and ready for whatever comes my way."
+    },
+    {
+        name: "John Rodriguez", role: "Cybersecurity", review: "KnowLumi's mentorship program exceeded my expectations. The guidance I received was invaluable in navigating my career path. The platform's focus on real-world projects enhanced my practical skills immensely. I highly recommend KnowLumi to any college student looking to kickstart their career."
+    },
+    {
+        name: "Jessica Nguyen", role: "Student", review: "Enrolling in KnowLumi during my first year was a game-changer. The personalized tasks tailored to my learning style helped me grasp complex concepts with ease. The mentorship I received guided me towards my career goals. KnowLumi truly set me up for success in college and beyond."
+    },
+    {
+        name: "John Samuel", role: "UX/UI Design", review: "KnowLumi transformed my college experience! The personalized learning approach helped me grasp tech concepts effortlessly. Building real projects gave me hands-on skills crucial for my career. Now, I feel confident and ready for whatever comes my way."
+    },
+    {
+        name: "Rachel Wong", role: "Full stack development", review: "KnowLumi's approach to learning is unmatched. The platform's combination of AI-driven tasks and real-world projects provided a holistic learning experience. The community support fostered a collaborative environment where I thrived. I feel confident and prepared for my future endeavors."
+    },
+]
+
 const footerLinks = "Home,Career Tracks,Courses,How Knowlumi works,Privacy Policy,Contact Us".split(",")
 
-export { pages, faq, heroImages, companies, footerLinks }
+export { pages, faq, heroImages, companies, footerLinks, reviews }
