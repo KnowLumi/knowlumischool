@@ -4,6 +4,7 @@ import Community from "./pages/Community";
 import LandingPage from "./pages/LandingPage";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Earn from "./pages/Earn";
+import "./App.css"
 function App() {
   return (
     <div className="h-screen bg-gray-50">

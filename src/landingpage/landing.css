@@ -9,13 +9,12 @@
 
 .herogradient {
     animation: gradientanime 8s ease-out 100ms forwards;
-    
+
 
 }
 
 .enroll-anime {
     animation: ballmove 8s linear 1ms forwards infinite;
-
 }
 
 @keyframes ballmove {
@@ -99,6 +98,10 @@
         animation: linextend-mobile 2s forwards;
     }
 
+    .enroll-anime {
+        animation: ballmove_mobile 8s linear 1ms forwards infinite;
+    }
+
     @keyframes linextend-mobile {
         0% {
             width: 0;
@@ -106,6 +109,24 @@
 
         100% {
             width: 4rem;
+        }
+    }
+
+    @keyframes ballmove_mobile {
+        0% {
+            transform: translate(0, 0);
+        }
+
+        45% {
+            transform: translate(8.7rem, 0);
+        }
+
+        55% {
+            transform: translate(9.5rem, -1rem);
+        }
+
+        100% {
+            transform: translate(18.4rem, -1rem);
         }
     }
 
