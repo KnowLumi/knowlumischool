@@ -108,7 +108,7 @@ const Testimonials = () => {
         </Marquee>
         <button className="flex text-[#F7F7F7] items-center font-normal text-xs md:text-[18px] my-16">
           <span className="opacity-60 tracking-wide">Give a review.&nbsp;</span>
-          <span className=" tracking-wide">Express your Love!</span>
+          <span className=" tracking-wide hover:text-[#88DB1B] transition">Express your Love!</span>
           <i className="w-6 h-6 flex justify-center items-center">
             <MdChevronRight />
           </i>

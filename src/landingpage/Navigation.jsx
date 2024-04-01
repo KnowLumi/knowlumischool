@@ -52,17 +52,13 @@ const Navigation = () => {
         Login/Sign Up
       </Button>
 
-      <div className="md:hidden flex items-center gap-2">
-        <IconButton variant="text" className="">
-          <CgSearch size={35}/>
-        </IconButton>
-        <IconButton
-          variant="text"
-          onClick={openDrawer}
-          className="rounded-lg p-1"
-        >
-          <CgMenuLeftAlt size={35} />
-        </IconButton>
+      <div className="md:hidden flex items-center gap-4">
+        <i className="h-5 w-5 p-0 flex justify-center items-center">
+          <CgSearch />
+        </i>
+        <i onClick={openDrawer} className="rounded-lg h-4 w-4 p-0">
+          <CgMenuLeftAlt />
+        </i>
       </div>
 
       <Drawer placement="right" open={open} onClose={closeDrawer}>

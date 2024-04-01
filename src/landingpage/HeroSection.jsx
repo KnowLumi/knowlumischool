@@ -93,6 +93,7 @@ const HeroSection = () => {
       <Carousel
         autoplayDelay={2000}
         loop
+        autoplay
         prevArrow={({ handlePrev }) => (
           <i className="hidden" onClick={handlePrev}></i>
         )}
@@ -100,7 +101,6 @@ const HeroSection = () => {
           <i className="hidden" onClick={handleNext}></i>
         )}
         className="relative z-20 w-full md:w-[38rem] h-full md:mr-3"
-        transition={{ ease: "easeIn" }}
         navigation={({ setActiveIndex, activeIndex, length }) => (
           <div className="absolute bottom-[41%] md:bottom-[31%] left-[40%] md:left-[35%] z-50  flex -translate-x-2/4 gap-1">
             {new Array(length).fill("").map((_, i) => {
