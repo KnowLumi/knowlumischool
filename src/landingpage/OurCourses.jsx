@@ -12,7 +12,7 @@ const OurCourses = () => {
   //bg-[#88DB1B26]
   return (
     <div className="flex flex-col items-center md:px-28 font-archivo">
-      <div className="flex justify-between w-full py-20">
+      <div className="flex flex-wrap justify-between w-full py-20">
         <div className="flex flex-col gap-5">
           <Button
             className="flex justify-around items-center gap-2 font-archivo text-black opacity-60 rounded-full tracking-wider"
@@ -38,15 +38,20 @@ const OurCourses = () => {
         </p>
       </div>
 
-      <div className="our-courses z-10 w-[71rem] h-[32.25rem] bg-no-repeat bg-contain">
+      <div className="our-courses z-10 w-80 h-full md:w-[71rem] md:h-[32.25rem] bg-no-repeat bg-cover md:bg-contain">
         <div className="w-full flex flex-col items-center py-24 h-full">
           <div className="flex items-center justify-between"></div>
-          <div className="rounded-2xl bg-white w-80 h-[25rem] flex flex-col pb-5 items-center px-5">
+          <div className="rounded-2xl bg-white md:w-80 w-[17.25rem] md:h-[25rem] flex flex-col pb-5 items-center px-5">
             <div className="relative w-64 h-[6.25rem] bg-[#88DB1B66] mt-9 rounded-xl">
               <div
                 style={{ backgroundImage: `url('${course}')` }}
-                className="absolute -translate-x-4 -translate-y-3 bg-contain bg-no-repeat w-72 h-[7.25rem]"
-              ></div>
+                className="absolute flex justify-end items-start -translate-x-4 -translate-y-3 bg-contain bg-no-repeat w-72 h-[7.25rem]"
+              >
+                <Button className="flex justify-around items-center m-2 py-1 px-1.5 gap-2 bg-[#FFFFFF33] font-archivo text-black opacity-60 rounded-full tracking-wider">
+                  <MdHdrStrong className="w-6 h-3 p-0 text-[#FFFFFFCC]" />
+                  <span className="text-[#FFFFFFCC]">NEW</span>
+                </Button>
+              </div>
             </div>
             <span className="font-normal text-[16px] tracking-wide my-5">
               Full-Stack Web Development with MERN Stack
@@ -88,7 +93,7 @@ const OurCourses = () => {
                 </span>
               </div>
             </div>
-            <div className="flex items-center gap-3 mt-3">
+            <div className="flex flex-wrap items-center gap-3 mt-3">
               <Button className="bg-[#88DB1B] text-white capitalize font-archivo font-semibold text-sm py-2.5 px-7">
                 Enroll now
               </Button>
@@ -100,7 +105,7 @@ const OurCourses = () => {
               </Button>
             </div>
           </div>
-          <Link to='/courses'>
+          <Link to="/courses">
             <button className="flex items-center my-12 bg-white hover:bg-transparent rounded-full py-1 pr-1 pl-6 gap-2 border border-[#01010126]">
               <span className="text-sm">View all courses</span>
               <i className="flex w-8 h-8 text-white border border-[#0101010D] bg-[#88DB1B] justify-center items-center rounded-full -rotate-45">
@@ -111,7 +116,7 @@ const OurCourses = () => {
         </div>
       </div>
 
-      <div className="our-courses  w-[71rem] h-[32.25rem] -translate-y-80 rotate-180 bg-no-repeat bg-contain"></div>
+      <div className="our-courses md:w-[71rem] md:h-[32.25rem] md:-translate-y-80 rotate-180 bg-no-repeat bg-contain"></div>
     </div>
   );
 };

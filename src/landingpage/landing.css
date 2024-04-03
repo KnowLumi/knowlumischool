@@ -143,7 +143,9 @@
     .action-line {
         background-image: url('../assets/enroll_line_mobile.png');
     }
-
+    .our-courses{
+        background-image: url('../assets/our_courses_mobile.png');
+    }
     .lineanime {
         animation: linextend-mobile 2s forwards;
     }
