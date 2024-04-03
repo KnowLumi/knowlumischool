@@ -5,6 +5,7 @@ import LandingPage from "./pages/LandingPage";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Earn from "./pages/Earn";
 import "./App.css"
+import Courses from "./pages/Courses";
 function App() {
   return (
     <div className="h-screen bg-gray-50">
@@ -12,9 +13,10 @@ function App() {
         <Navigation />
         <Routes>
           <Route path="/" element={<LandingPage />} />
-          <Route path="/about" element={<About/> } />
-          <Route path="/community" element={ <Community/> } />
-          <Route path="/refer&earn" element={ <Earn/> } />
+          <Route path="/about" element={<About />} />
+          <Route path="/community" element={<Community />} />
+          <Route path="/refer&earn" element={<Earn />} />
+          <Route path="/courses" element={<Courses />} />
         </Routes>
       </Router>
     </div>

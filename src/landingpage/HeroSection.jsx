@@ -93,6 +93,7 @@ const HeroSection = () => {
       <Carousel
         autoplayDelay={2000}
         loop
+        
         autoplay
         prevArrow={({ handlePrev }) => (
           <i className="hidden" onClick={handlePrev}></i>

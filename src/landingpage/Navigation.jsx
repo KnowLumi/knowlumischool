@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Drawer, Button, IconButton } from "@material-tailwind/react";
+import { Drawer, Button } from "@material-tailwind/react";
 import { CgMenuLeftAlt, CgSearch } from "react-icons/cg";
 import { RxCross1 } from "react-icons/rx";
 import { FaArrowRight } from "react-icons/fa6";
