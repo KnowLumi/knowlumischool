@@ -5,7 +5,7 @@ import {
   MdKeyboardDoubleArrowRight,
 } from "react-icons/md";
 import { IoArrowForwardSharp } from "react-icons/io5";
-import { IconButton, Button, Avatar, Carousel } from "@material-tailwind/react";
+import { Button, Avatar, Carousel } from "@material-tailwind/react";
 import rating from "../assets/rating.png";
 const HeroSection = () => {
   return (
@@ -54,10 +54,10 @@ const HeroSection = () => {
           <br className="hidden md:inline" />
           join a community where individual success fuels collective growth.
         </span>
-        <Button className="font-archivo text-xs bg-black hover:bg-[#F7F7F7] hover:border hover:border-black py-1.5 pr-1.5 pl-6 mt-12 gap-2 text-[#F7F7F7] hover:text-black font-medium md:text-lg flex items-center w-fit rounded-full">
+        <Button className="my-button font-archivo text-xs bg-black hover:bg-[#F7F7F7] hover:border hover:border-black py-1.5 pr-1.5 pl-6 mt-12 gap-2 text-[#F7F7F7] hover:text-black font-medium md:text-lg flex items-center w-fit rounded-full">
           get started
           <i className="bg-gray-800 p-1 rounded-full">
-            <IoArrowForwardSharp size={20} className="text-white -rotate-45" />
+            <IoArrowForwardSharp size={20} className="text-white icon" />
           </i>
         </Button>
         <div className="flex mt-6 md:mt-12 items-center gap-4">
@@ -76,13 +76,6 @@ const HeroSection = () => {
           <span className="font-medium text-[10px] md:text-lg">
             204 Reviews
           </span>
-          {/* <Rating
-            unratedColor="#88DB1B"
-            ratedColor="#88DB1B"
-            value={4}
-            readonly
-            className="w-14 h-2.5"
-          /> */}
           <img src={rating} className="w-14 md:w-24 h-2.5 md:h-5" alt="" />
           <span className="font-medium text-[10px] md:text-lg">4.7</span>
         </div>
@@ -93,7 +86,7 @@ const HeroSection = () => {
       <Carousel
         autoplayDelay={2000}
         loop
-        
+
         autoplay
         prevArrow={({ handlePrev }) => (
           <i className="hidden" onClick={handlePrev}></i>
@@ -108,9 +101,8 @@ const HeroSection = () => {
               return (
                 <span
                   key={i}
-                  className={`block h-1 cursor-pointer rounded-2xl transition-all content-[''] ${
-                    activeIndex === i ? "w-6 bg-white" : "w-3 bg-white/50"
-                  }`}
+                  className={`block h-1 cursor-pointer rounded-2xl transition-all content-[''] ${activeIndex === i ? "w-6 bg-white" : "w-3 bg-white/50"
+                    }`}
                   onClick={() => {
                     setActiveIndex(i);
                   }}
@@ -158,14 +150,14 @@ const HeroSection = () => {
                   <div className="md:w-56 h-full md:h-12">
                     <Button
                       variant="outlined"
-                      className=" capitalize font-archivo text-black p-1 border-gray-300  flex w-fit justify-end gap-3 items-center rounded-full"
+                      className="my-button capitalize font-archivo text-black p-1 border-gray-300  flex w-fit justify-end gap-3 items-center rounded-full"
                     >
                       <span className="font-medium text-[8px] md:text-xs">
                         Explore our programs
                       </span>
-                      <IconButton className="bg-gray-200 border p-0 w-4 h-4 md:w-7 md:h-7 border-white rounded-full">
-                        <IoArrowForwardSharp className="text-black -rotate-45 w-1.5 h-1.5 md:w-3.5 md:h-3.5" />
-                      </IconButton>
+                      <i className="bg-gray-200 icon flex justify-center items-center border p-0 w-4 h-4 md:w-7 md:h-7 border-white rounded-full">
+                        <IoArrowForwardSharp className="text-black" />
+                      </i>
                     </Button>
                   </div>
                 </div>

@@ -10,7 +10,7 @@ const About = () => {
         <img src={aboutbar} className="w-fit h-8 md:h-16" alt="" />
       </div>
       <div className="flex flex-col w-full bg-[#E6F3D6] items-start">
-        <div className="z-10 flex flex-col md:flex-row justify-between items-start md:items-center m-9 md:m-20 h-fit">
+        <div className="z-10 w-full flex flex-col md:flex-row justify-between items-start md:items-center px-6 mx-0 my-9 md:my-20 h-fit">
           <div className="flex flex-col items-start md:items-end justify-between gap-6">
             <Button
               className="flex justify-around items-center gap-2 font-archivo text-black opacity-60 rounded-full tracking-wider"

@@ -28,8 +28,34 @@
     animation: arrowanime 500ms linear forwards infinite;
 }
 
-.our-courses{
+.our-courses {
     background-image: url('../assets/our_courses.png');
+}
+
+.my-button {
+    transition: background-color 0.1s ease;
+}
+
+.my-button:hover {
+    background-color: transparent;
+}
+
+.icon {
+    transform: rotate(-45deg);
+    transition: transform 0.1s ease;
+}
+
+.my-button:hover .icon {
+    transform: rotate(0deg);
+    /* Rotate by 45 degrees on hover */
+}
+
+.course1 {
+    background-image: url('../assets/course1.png');
+}
+
+.people {
+    background-image: url('../assets/people.png');
 }
 
 @keyframes arrowanime {
@@ -143,9 +169,11 @@
     .action-line {
         background-image: url('../assets/enroll_line_mobile.png');
     }
-    .our-courses{
+
+    .our-courses {
         background-image: url('../assets/our_courses_mobile.png');
     }
+
     .lineanime {
         animation: linextend-mobile 2s forwards;
     }
@@ -154,38 +182,48 @@
         animation: ballmove_mobile 8s linear 1ms forwards infinite;
     }
 
-    @keyframes linextend-mobile {
-        0% {
-            width: 0;
-        }
-
-        100% {
-            width: 4rem;
-        }
+    .course1 {
+        background-image: url('../assets/course1_mobile.png');
     }
 
-    @keyframes ballmove_mobile {
-        0% {
-            transform: translate(0, 0);
-        }
-
-        45% {
-            transform: translate(9.2rem, 0);
-        }
-
-        55% {
-            transform: translate(9.8rem, -1rem);
-        }
-
-        100% {
-            transform: translate(19.2rem, -1rem);
-        }
+    .people {
+        background-image: url('../assets/people_mobile.png');
     }
-
+    .action-banner {
+        background-image: url('../assets/our_courses_mobile.png');
+    }
 }
 
 .textanime {
     animation: textcolorchange linear 2s forwards infinite;
+}
+
+@keyframes linextend-mobile {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 4rem;
+    }
+}
+
+@keyframes ballmove_mobile {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    45% {
+        transform: translate(9.2rem, 0);
+    }
+
+    55% {
+        transform: translate(9.8rem, -1rem);
+    }
+
+    100% {
+        transform: translate(19.2rem, -1rem);
+    }
 }
 
 @keyframes textcolorchange {

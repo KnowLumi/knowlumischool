@@ -13,7 +13,7 @@ const Navigation = () => {
   const openDrawer = () => setOpen(true);
   const closeDrawer = () => setOpen(false);
   return (
-    <nav className="flex justify-between items-center w-full py-6 px-3 md:px-12 font-archivo border-b-2">
+    <nav className="flex justify-between items-center w-full py-3 md:py-6 px-3 md:px-12 font-archivo border-b-2">
       <img
         src={logo1}
         alt=""
@@ -53,11 +53,14 @@ const Navigation = () => {
       </Button>
 
       <div className="md:hidden flex items-center gap-4">
-        <i className="h-5 w-5 p-0 flex justify-center items-center">
-          <CgSearch />
+        <i className="h-5 w-5 flex justify-center items-center">
+          <CgSearch size={20} />
         </i>
-        <i onClick={openDrawer} className="rounded-lg h-4 w-4 p-0">
-          <CgMenuLeftAlt />
+        <i
+          onClick={openDrawer}
+          className="rounded-lg h-5 w-5 flex justify-center items-center"
+        >
+          <CgMenuLeftAlt size={20} />
         </i>
       </div>
 
@@ -67,14 +70,21 @@ const Navigation = () => {
             <RxCross1 size={25} />
           </button>
         </div>
-        <ul className="flex flex-col gap-5 mx-5">
+        <ul className="flex flex-col gap-8 mx-5 my-8">
           {pages.map((page, index) => (
             <li key={index}>
-              <NavLink to={page.route}>{page.name}</NavLink>
+              <NavLink
+                to={page.route}
+                className={({ isActive }) =>
+                  isActive ? "text-black" : "text-gray-500"
+                }
+              >
+                {page.name}
+              </NavLink>
             </li>
           ))}
         </ul>
-        <Button className="capitalize font-archivo font-semibold bg-black text-sm">
+        <Button className="capitalize font-archivo font-semibold bg-black text-sm mx-5">
           Sign Up
         </Button>
       </Drawer>
