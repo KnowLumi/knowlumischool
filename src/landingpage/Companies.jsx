@@ -1,11 +1,9 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { companies } from "./landing_helpers";
 import { MdOutlineChevronRight } from "react-icons/md";
 import Marquee from "react-fast-marquee";
 const Companies = () => {
-  const [isHovered, setIsHovered] = useState(false);
-  const [isRight, setIsRight] = useState(true);
-  const marqueeRef = useRef(null);
+  const [hoveredImageIndex, setHoveredImageIndex] = useState(null);
 
   return (
     <div className="flex flex-col items-center font-archivo gap-16 my-16">
@@ -17,31 +15,22 @@ const Companies = () => {
           We have our mentors from top tech companies
         </span>
       </div>
-      <div
-        className="w-full px-4 md:px-24"
-        onMouseOver={() => {
-          setIsHovered(true);
-          setIsRight(!isRight);
-        }}
-        onMouseOut={() => {
-          setIsHovered(false);
-        }}
-      >
+      <div className="w-full px-4 md:px-24">
         <Marquee
-          ref={marqueeRef}
-          speed={150}
+          speed={50}
           pauseOnClick
           pauseOnHover
-          autoFill
-          className={`w-full flex items-center ${isHovered ? "" : "grayscale"}`}
-          direction={`${isRight ? "right" : "left"}`}
+          className="w-full flex items-center"
+          direction="right"
         >
           {companies.map((item, index) => (
             <img
               key={`marquee_item_${index}`}
               src={item}
               alt=""
-              className="w-20 h-full mx-14"
+              className={`w-20 h-full mx-14 ${hoveredImageIndex === index ? "grayscale-0" : "grayscale"}`}
+              onMouseEnter={() => setHoveredImageIndex(index)}
+              onMouseLeave={() => setHoveredImageIndex(null)}
             />
           ))}
         </Marquee>
