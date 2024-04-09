@@ -49,9 +49,11 @@ const Action = () => {
           </svg>
         </div>
         <div className="flex w-full gap-6">
-          <div className="people  bg-cover md:bg-contain bg-no-repeat w-80 md:w-[23.5rem] h-80 md:h-[20.25rem] flex flex-col justify-end"></div>
-          <div className="flex flex-col text-wrap px-8 pt-4">
-            <div className="flex flex-col gap-4 pb-6 border-b border-b-[#FFFFFF80] md:text-[#F7F7F7]">
+          <div className="people bg-cover md:bg-contain bg-no-repeat w-80 md:w-[23.5rem] h-80 md:h-[20.25rem] flex items-center justify-center">
+            <BsDiscord className="text-[#F7F7F7] w-14 h-14" />
+          </div>
+          <div className="flex flex-col text-wrap px-8 w-[44.5rem]">
+            <div className="flex flex-col gap-4 pb-3 border-b border-b-[#FFFFFF80] md:text-[#F7F7F7]">
               <h1 className="font-bold text-2xl tracking-wider">
                 Join Our Thriving Community of Ambitious Learners!
               </h1>
@@ -62,9 +64,9 @@ const Action = () => {
                 innovation. Together, let&apos;s build a brighter future!
               </p>
             </div>
-            <div className="flex gap-8">
-              <button className="flex items-center my-12 bg-white rounded-full py-1 pr-1 pl-6 gap-2 border border-[#01010126]">
-                <span className="text-sm">View all courses</span>
+            <div className="flex gap-8 mt-5">
+              <button className="flex items-center  bg-white rounded-full py-1 pr-1 pl-6 gap-2 border border-[#01010126]">
+                <span className="text-sm font-medium">Join the community</span>
                 <i className="flex w-8 h-8 text-white border border-[#0101010D] bg-[#01010133] justify-center items-center rounded-full">
                   <MdArrowForward />
                 </i>
@@ -77,7 +79,7 @@ const Action = () => {
                       key={i}
                       size="xs"
                       alt="user 1"
-                      className=" hover:z-10 focus:z-10"
+                      className=" border cursor-pointer hover:z-10 focus:z-10"
                       src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80"
                     />
                   ))}
