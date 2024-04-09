@@ -48,11 +48,11 @@ const Action = () => {
             />
           </svg>
         </div>
-        <div className="flex w-full gap-6">
+        <div className="flex flex-col md:flex-row w-full gap-6">
           <div className="people bg-cover md:bg-contain bg-no-repeat w-80 md:w-[23.5rem] h-80 md:h-[20.25rem] flex items-center justify-center">
             <BsDiscord className="text-[#F7F7F7] w-14 h-14" />
           </div>
-          <div className="flex flex-col text-wrap px-8 w-[44.5rem]">
+          <div className="flex flex-col text-wrap px-8 w-[16.5rem] md:w-[44.5rem]">
             <div className="flex flex-col gap-4 pb-3 border-b border-b-[#FFFFFF80] md:text-[#F7F7F7]">
               <h1 className="font-bold text-2xl tracking-wider">
                 Join Our Thriving Community of Ambitious Learners!
@@ -64,9 +64,9 @@ const Action = () => {
                 innovation. Together, let&apos;s build a brighter future!
               </p>
             </div>
-            <div className="flex gap-8 mt-5">
-              <button className="flex items-center  bg-white rounded-full py-1 pr-1 pl-6 gap-2 border border-[#01010126]">
-                <span className="text-sm font-medium">Join the community</span>
+            <div className="flex flex-col md:flex-row gap-8 md:mt-5">
+              <button className="flex items-center bg-black md:bg-white rounded-full py-1 pr-1 pl-6 gap-2 border border-[#01010126]">
+                <span className="text-sm font-medium text-white md:text-black">Join the community</span>
                 <i className="flex w-8 h-8 text-white border border-[#0101010D] bg-[#01010133] justify-center items-center rounded-full">
                   <MdArrowForward />
                 </i>
@@ -84,10 +84,10 @@ const Action = () => {
                     />
                   ))}
                 </div>
-                <span className="text-[#F7F7F7] font-normal text-[16px] tracking-wide">
+                <span className="text-black md:text-[#F7F7F7] font-normal text-[16px] tracking-wide">
                   1700+ members
                 </span>
-                <BsDiscord className="text-[#F7F7F7] w-6 h-6" />
+                <BsDiscord className="text-black md:text-[#F7F7F7] w-6 h-6" />
               </div>
             </div>
           </div>
