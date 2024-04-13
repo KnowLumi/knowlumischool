@@ -6,7 +6,7 @@ const Companies = () => {
   const [hoveredImageIndex, setHoveredImageIndex] = useState(null);
 
   return (
-    <div className="flex flex-col items-center font-archivo gap-16 my-16">
+    <div className="flex flex-col items-center font-archivo gap-16 my-24">
       <div className="flex flex-col items-center gap-4 px-4">
         <span className="text-[#88DB1B] font-bold text-[20px] leading-5 tracking-wide">
           Exceptional Mentors

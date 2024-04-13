@@ -2,6 +2,11 @@
     background-size: 100% 100%;
 }
 
+.hero-border {
+    border: 1px solid;
+    border-image-source: linear-gradient(91.19deg, rgba(0, 0, 0, 0.24) 0.75%, rgba(0, 0, 0, 0.17) 0.76%, rgba(102, 102, 102, 0.43) 99%);
+}
+
 .lineanime {
     height: 0.25rem;
     animation: linextend 2s forwards;
@@ -175,6 +180,7 @@
     }
 
     .lineanime {
+        height: 0.25rem;
         animation: linextend-mobile 2s forwards;
     }
 
@@ -189,6 +195,7 @@
     .people {
         background-image: url('../assets/people_mobile.png');
     }
+
     .action-banner {
         background-image: url('../assets/our_courses_mobile.png');
     }

@@ -5,7 +5,9 @@ import {
   MdKeyboardDoubleArrowRight,
 } from "react-icons/md";
 import { MdArrowForward } from "react-icons/md";
-import { Button, Avatar, Carousel } from "@material-tailwind/react";
+import { Button, Avatar } from "@material-tailwind/react";
+import { Fade } from "react-slideshow-image";
+import "react-slideshow-image/dist/styles.css";
 import rating from "../assets/rating.png";
 const HeroSection = () => {
   return (
@@ -35,7 +37,7 @@ const HeroSection = () => {
           <div className="flex justify-between w-full items-center">
             <div className="flex items-center gap-0">
               <span className=" bg-black lineanime"></span>
-              <MdArrowForward className="h-10 w-10 text-black -translate-x-2" />
+              <MdArrowForward className="h-12 md:h-10 w-12 md:w-10 text-black -translate-x-2" />
             </div>
             <span className="font-medium text-3xl md:text-6xl">
               into reality
@@ -83,89 +85,62 @@ const HeroSection = () => {
           KnowLumi
         </span>
       </div>
-      <Carousel
-        autoplayDelay={4000}
-        loop
-
-        autoplay
-        prevArrow={({ handlePrev }) => (
-          <i className="hidden" onClick={handlePrev}></i>
-        )}
-        nextArrow={({ handleNext }) => (
-          <i className="hidden" onClick={handleNext}></i>
-        )}
-        className="relative z-20 w-full md:w-[38rem] h-full md:mr-3"
-        navigation={({ setActiveIndex, activeIndex, length }) => (
-          <div className="absolute bottom-[41%] md:bottom-[31%] left-[40%] md:left-[35%] z-50  flex -translate-x-2/4 gap-1">
-            {new Array(length).fill("").map((_, i) => {
-              return (
-                <span
-                  key={i}
-                  className={`block h-1 cursor-pointer rounded-2xl transition-all content-[''] ${activeIndex === i ? "w-6 bg-white" : "w-3 bg-white/50"
-                    }`}
-                  onClick={() => {
-                    setActiveIndex(i);
-                  }}
-                />
-              );
-            })}
-          </div>
-        )}
-      >
-        {heroImages.map((item, index) => (
-          <div
-            key={index}
-            className="bg-cover relative flex flex-col gap-4 mx-6 md:mx-0 justify-end items-center bg-center object-cover rounded-3xl h-96 md:h-[45.5rem] my-12 w-80 md:w-[38rem] pb-6"
-            style={{ backgroundImage: `url('${item.main}')` }}
-          >
-            <div className="flex flex-col items-start gap-4">
-              <div className=" backdrop-blur-lg w-40 md:w-60 rounded-xl flex p-3 items-center">
-                <img
-                  src={item.sub}
-                  className="w-12 h-12 md:w-24 md:h-24 rounded-xl"
-                  alt=""
-                />
-                <div className="flex flex-col justify-center ml-3">
-                  <span className="text-white text-sm font-medium tracking-wider">
-                    {item.title}
-                  </span>
-                </div>
-              </div>
-              {/* place rectangle here */}
-              <div className="rectangle w-[18.4rem] md:w-[31rem] h-[6.25rem] md:h-36 z-40 p-2 bg-cover object-cover flex flex-col justify-evenly items-start">
-                <div className="w-full z-10 flex items-center gap-3">
-                  <i className="rounded-full bg-[#88DB1B] p-2.5">
-                    <MdOutlineLocalLibrary className="text-white w-4 h-4" />
-                  </i>
-                  <div className="flex flex-col items-start text-black text-wrap">
-                    <span className="font-semibold text-[10px] md:text-sm uppercase">
+      <div className="relative z-20 w-full md:w-[38rem] h-full md:mr-3">
+        <Fade arrows={false} infinite autoplay duration={1000} easing="linear">
+          {heroImages.map((item, index) => (
+            <div
+              key={index}
+              className="bg-cover relative flex flex-col gap-4 mx-6 md:mx-0 justify-end items-center bg-center object-cover rounded-3xl h-96 md:h-[45.5rem] my-12 w-80 md:w-[38rem] pb-6"
+              style={{ backgroundImage: `url('${item.main}')` }}
+            >
+              <div className="flex flex-col items-start gap-4">
+                <div className=" backdrop-blur-lg hero-border w-40 md:w-60 rounded-xl flex p-3 items-center">
+                  <img
+                    src={item.sub}
+                    className="w-12 h-12 md:w-24 md:h-24 rounded-xl object-cover"
+                    alt=""
+                  />
+                  <div className="flex flex-col justify-center ml-3">
+                    <span className="text-white text-sm font-medium tracking-wider">
                       {item.title}
-                    </span>
-                    <span className="font-light text-[10px] md:text-sm">
-                      {item.desc}
                     </span>
                   </div>
                 </div>
-                <div className="flex">
-                  <div className="md:w-56 h-full md:h-12">
-                    <Button
-                      variant="outlined"
-                      className="my-button capitalize font-archivo text-black p-1 border-gray-300  flex w-fit justify-end gap-3 items-center rounded-full"
-                    >
-                      <span className="font-medium text-[8px] md:text-xs">
-                        Explore our programs
+                <div className="rectangle w-[18.4rem] md:w-[31rem] h-[6.25rem] md:h-36 z-40 p-2 bg-cover object-cover flex flex-col justify-evenly items-start">
+                  <div className="w-full z-10 flex items-center gap-3">
+                    <i className="rounded-full bg-[#88DB1B] p-2.5">
+                      <MdOutlineLocalLibrary className="text-white w-4 h-4" />
+                    </i>
+                    <div className="flex flex-col items-start text-black text-wrap">
+                      <span className="font-semibold text-[10px] md:text-sm uppercase">
+                        {item.title}
                       </span>
-                      <i className="bg-gray-200 icon flex justify-center items-center border p-0 w-4 h-4 md:w-7 md:h-7 border-white rounded-full">
-                        <MdArrowForward className="text-black" />
-                      </i>
-                    </Button>
+                      <span className="font-light text-[10px] md:text-sm">
+                        {item.desc}
+                      </span>
+                    </div>
+                  </div>
+                  <div className="flex">
+                    <div className="md:w-56 h-full md:h-12">
+                      <Button
+                        variant="outlined"
+                        className="my-button capitalize font-archivo text-black p-1 border-gray-300  flex w-fit justify-end gap-3 items-center rounded-full"
+                      >
+                        <span className="font-medium text-[8px] md:text-xs">
+                          Explore our programs
+                        </span>
+                        <i className="bg-gray-200 icon flex justify-center items-center border p-0 w-4 h-4 md:w-7 md:h-7 border-white rounded-full">
+                          <MdArrowForward className="text-black" />
+                        </i>
+                      </Button>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        ))}
-      </Carousel>
+          ))}
+        </Fade>
+      </div>
     </div>
   );
 };

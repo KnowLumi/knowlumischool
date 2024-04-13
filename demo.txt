@@ -39,3 +39,21 @@
               <svg width="1280" height="197" viewBox="0 0 1280 197" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M-30 90C-30 76.7452 -19.2548 66 -6 66H640H938.473C946.322 66 953.675 62.1622 958.163 55.723L989.837 10.277C994.325 3.83784 1001.68 0 1009.53 0H1286C1299.25 0 1310 10.7452 1310 24V173C1310 186.255 1299.25 197 1286 197H-6.00004C-19.2549 197 -30 186.255 -30 173V90Z" fill="#DFDFD7"/>
 </svg>
+
+        navigation={({ setActiveIndex, activeIndex, length }) => (
+          <div className="absolute bottom-[41%] md:bottom-[31%] left-[40%] md:left-[35%] z-50  flex -translate-x-2/4 gap-1">
+            {new Array(length).fill("").map((_, i) => {
+              return (
+                <span
+                  key={i}
+                  className={`block h-1 cursor-pointer rounded-2xl transition-all content-[''] ${
+                    activeIndex === i ? "w-6 bg-white" : "w-3 bg-white/50"
+                  }`}
+                  onClick={() => {
+                    setActiveIndex(i);
+                  }}
+                />
+              );
+            })}
+          </div>
+        )}
