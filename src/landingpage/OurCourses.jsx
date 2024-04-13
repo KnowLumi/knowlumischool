@@ -92,18 +92,22 @@ const OurCourses = () => {
               </div>
             </div>
             <div className="flex flex-wrap items-center gap-3 mt-3">
-              <Button className="bg-[#88DB1B] rounded-lg text-white capitalize font-archivo font-semibold text-sm py-2.5 px-7">
-                Enroll now
-              </Button>
-              <Button
-                variant="outlined"
-                className="border-[#88DB1B] rounded-lg text-[#88DB1B] capitalize font-archivo font-semibold text-sm py-2.5 px-7"
-              >
-                Learn More
-              </Button>
+              <Link to="/course:id">
+                <Button className="bg-[#88DB1B] rounded-lg text-white capitalize font-archivo font-semibold text-sm py-2.5 px-7">
+                  Enroll now
+                </Button>
+              </Link>
+              <Link to="/course:id">
+                <Button
+                  variant="outlined"
+                  className="border-[#88DB1B] rounded-lg text-[#88DB1B] capitalize font-archivo font-semibold text-sm py-2.5 px-7"
+                >
+                  Learn More
+                </Button>
+              </Link>
             </div>
           </div>
-          <Link to="/courses">
+          <Link to="/all-courses">
             <button className="my-button flex items-center my-12 bg-white rounded-full py-1 pr-1 pl-6 gap-2 border border-[#01010126]">
               <span className="text-sm">View all courses</span>
               <i className="flex icon w-8 h-8 text-white border border-[#0101010D] bg-[#88DB1B] justify-center items-center rounded-full">
