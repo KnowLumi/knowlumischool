@@ -4,7 +4,7 @@ import {
   MdOutlineLocalLibrary,
   MdKeyboardDoubleArrowRight,
 } from "react-icons/md";
-import { IoArrowForwardSharp } from "react-icons/io5";
+import { MdArrowForward } from "react-icons/md";
 import { Button, Avatar, Carousel } from "@material-tailwind/react";
 import rating from "../assets/rating.png";
 const HeroSection = () => {
@@ -35,7 +35,7 @@ const HeroSection = () => {
           <div className="flex justify-between w-full items-center">
             <div className="flex items-center gap-0">
               <span className=" bg-black lineanime"></span>
-              <IoArrowForwardSharp className="h-8 w-8 text-black -translate-x-2" />
+              <MdArrowForward className="h-10 w-10 text-black -translate-x-2" />
             </div>
             <span className="font-medium text-3xl md:text-6xl">
               into reality
@@ -57,7 +57,7 @@ const HeroSection = () => {
         <Button className="my-button font-archivo text-xs bg-black hover:bg-[#F7F7F7] hover:border hover:border-black py-1.5 pr-1.5 pl-6 mt-12 gap-2 text-[#F7F7F7] hover:text-black font-medium md:text-lg flex items-center w-fit rounded-full">
           get started
           <i className="bg-gray-800 p-1 rounded-full">
-            <IoArrowForwardSharp size={20} className="text-white icon" />
+            <MdArrowForward size={20} className="text-white icon" />
           </i>
         </Button>
         <div className="flex mt-6 md:mt-12 items-center gap-4">
@@ -84,7 +84,7 @@ const HeroSection = () => {
         </span>
       </div>
       <Carousel
-        autoplayDelay={2000}
+        autoplayDelay={4000}
         loop
 
         autoplay
@@ -156,7 +156,7 @@ const HeroSection = () => {
                         Explore our programs
                       </span>
                       <i className="bg-gray-200 icon flex justify-center items-center border p-0 w-4 h-4 md:w-7 md:h-7 border-white rounded-full">
-                        <IoArrowForwardSharp className="text-black" />
+                        <MdArrowForward className="text-black" />
                       </i>
                     </Button>
                   </div>
