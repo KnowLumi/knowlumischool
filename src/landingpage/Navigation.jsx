@@ -17,16 +17,8 @@ const Navigation = () => {
       <img
         src={logo1}
         alt=""
-        className="w-[126px] h-[34px] md:w-[169px] md:h-[46px]"
+        className="object-contain w-[126px] h-[34px] md:w-[169px] md:h-[46px]"
       />
-      {/* <form className="hidden md:flex items-center  h-10 rounded-lg px-2 border focus:outline-black hover:border-black">
-        <IoSearchOutline className="cursor-pointer" size={20} />
-        <input
-          type="text"
-          className="px-2 focus:outline-none bg-inherit placeholder:text-[#1F1F1F] placeholder:opacity-60"
-          placeholder="Search"
-        />
-      </form> */}
       <ul className="md:flex gap-8 items-center hidden">
         {pages.map((page, index) => (
           <li key={index}>

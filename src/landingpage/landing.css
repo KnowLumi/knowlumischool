@@ -85,7 +85,7 @@
     }
 
     100% {
-        transform: translateX(304px);
+        transform: translateX(250px);
     }
 }
 
@@ -180,7 +180,7 @@
     }
 
     .lineanime {
-        height: 0.25rem;
+        height: 0.18rem;
         animation: linextend-mobile 2s forwards;
     }
 

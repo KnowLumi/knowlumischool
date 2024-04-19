@@ -18,7 +18,7 @@ const HeroSection = () => {
         viewBox="0 0 1279 123"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="absolute z-[10] bottom-36 w-full hidden md:flex"
+        className="absolute z-[10] bottom-24 w-full hidden md:flex"
       >
         <path
           d="M-69 122.5H617C635.778 122.5 651 107.278 651 88.5V67.75V35C651 16.2223 666.222 1 685 1H1001.5H1352"
@@ -26,18 +26,18 @@ const HeroSection = () => {
           strokeOpacity="0.5"
         />
       </svg>
-      <i className="slider-anime w-7 h-5 text-white z-10 p-1.5 flex justify-center items-center rounded-full bg-[#88DB1B] absolute bottom-[8.5rem] translate-x-[88px]">
+      <i className="slider-anime w-7 h-5 text-white z-10 p-1.5 flex justify-center items-center rounded-full bg-[#88DB1B] absolute bottom-[5.5rem] translate-x-[88px]">
         <MdKeyboardDoubleArrowRight />
       </i>
-      <div className="w-full md:w-fit flex flex-col items-center md:items-start p-4 ml-0 md:ml-16 mt-12">
-        <div className="flex flex-col md:items-end herogradient p-4 rounded-2xl">
+      <div className="w-full md:w-fit flex flex-col items-center md:items-start p-4 ml-0 md:ml-16 mt-8">
+        <div className="flex flex-col md:items-end herogradient p-6 md:px-16 md:py-8 rounded-2xl">
           <span className="font-medium text-3xl md:text-6xl">
             Transform dreams
           </span>
           <div className="flex justify-between w-full items-center">
             <div className="flex items-center gap-0">
-              <span className=" bg-black lineanime"></span>
-              <MdArrowForward className="h-12 md:h-10 w-12 md:w-10 text-black -translate-x-2" />
+              <span className="bg-black lineanime"></span>
+              <MdArrowForward className="h-6 md:h-10 w-6 md:w-10 text-black -translate-x-2" />
             </div>
             <span className="font-medium text-3xl md:text-6xl">
               into reality
@@ -51,7 +51,7 @@ const HeroSection = () => {
             for Dreamers
           </span>
         </div>
-        <span className="text-left mt-8">
+        <span className="text-left mt-4">
           Connect with seasoned mentors, access top-notch resources, and{" "}
           <br className="hidden md:inline" />
           join a community where individual success fuels collective growth.
@@ -62,7 +62,7 @@ const HeroSection = () => {
             <MdArrowForward size={20} className="text-white icon" />
           </i>
         </Button>
-        <div className="flex mt-6 md:mt-12 items-center gap-4">
+        <div className="flex mt-6 items-center gap-4">
           <div className="flex items-center -space-x-4">
             {new Array(3).fill("").map((_, i) => (
               <Avatar
@@ -75,39 +75,39 @@ const HeroSection = () => {
               />
             ))}
           </div>
-          <span className="font-medium text-[10px] md:text-lg">
+          <span className="font-medium text-[10px] md:text-lg underline">
             204 Reviews
           </span>
           <img src={rating} className="w-14 md:w-24 h-2.5 md:h-5" alt="" />
           <span className="font-medium text-[10px] md:text-lg">4.7</span>
         </div>
-        <span className="hidden z-20 md:block mt-12 text-[7.5rem] font-medium text-[#E7E7E7] opacity-65">
+        <span className="hidden z-20 md:block mt-5 text-[7.5rem] font-medium text-[#E7E7E7] opacity-65">
           KnowLumi
         </span>
       </div>
-      <div className="relative z-20 w-full md:w-[38rem] h-full md:mr-3">
-        <Fade arrows={false} infinite autoplay duration={1000} easing="linear">
+      <div className="relative z-20 w-full md:w-[33rem] bg-[#F7F7F7] h-full md:mr-10">
+        <Fade arrows={false} infinite autoplay duration={3000} easing="linear">
           {heroImages.map((item, index) => (
             <div
               key={index}
-              className="bg-cover relative flex flex-col gap-4 mx-6 md:mx-0 justify-end items-center bg-center object-cover rounded-3xl h-96 md:h-[45.5rem] my-12 w-80 md:w-[38rem] pb-6"
+              className="bg-cover relative flex flex-col gap-4 mx-6 md:mx-0 justify-end items-center bg-center object-cover rounded-3xl h-96 md:h-[40rem] my-12 w-80 md:w-[33rem] pb-6"
               style={{ backgroundImage: `url('${item.main}')` }}
             >
               <div className="flex flex-col items-start gap-4">
-                <div className=" backdrop-blur-lg hero-border w-40 md:w-60 rounded-xl flex p-3 items-center">
+                <div className="backdrop-blur-lg gap-3 hero-border w-40 md:w-64 rounded-xl flex p-3 items-center">
                   <img
                     src={item.sub}
                     className="w-12 h-12 md:w-24 md:h-24 rounded-xl object-cover"
                     alt=""
                   />
-                  <div className="flex flex-col justify-center ml-3">
-                    <span className="text-white text-sm font-medium tracking-wider">
+                  <div className="flex flex-col justify-center">
+                    <span className="text-white text-sm font-medium tracking-wider text-justify">
                       {item.title}
                     </span>
                   </div>
                 </div>
-                <div className="rectangle w-[18.4rem] md:w-[31rem] h-[6.25rem] md:h-36 z-40 p-2 bg-cover object-cover flex flex-col justify-evenly items-start">
-                  <div className="w-full z-10 flex items-center gap-3">
+                <div className="rectangle w-[18.4rem] md:w-[31rem] h-[6.25rem] md:h-36 z-40 p-3 md:p-6 gap-2 bg-cover object-cover flex flex-col justify-between items-start">
+                  <div className="w-full z-10 flex items-start gap-3">
                     <i className="rounded-full bg-[#88DB1B] p-2.5">
                       <MdOutlineLocalLibrary className="text-white w-4 h-4" />
                     </i>
@@ -120,20 +120,19 @@ const HeroSection = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="flex">
-                    <div className="md:w-56 h-full md:h-12">
-                      <Button
-                        variant="outlined"
-                        className="my-button capitalize font-archivo text-black p-1 border-gray-300  flex w-fit justify-end gap-3 items-center rounded-full"
-                      >
-                        <span className="font-medium text-[8px] md:text-xs">
-                          Explore our programs
-                        </span>
-                        <i className="bg-gray-200 icon flex justify-center items-center border p-0 w-4 h-4 md:w-7 md:h-7 border-white rounded-full">
-                          <MdArrowForward className="text-black" />
-                        </i>
-                      </Button>
-                    </div>
+
+                  <div className="md:w-56 flex">
+                    <Button
+                      variant="outlined"
+                      className="my-button capitalize font-archivo text-black p-1 border-gray-300  flex w-fit justify-end gap-3 items-center rounded-full"
+                    >
+                      <span className="font-medium text-[8px] md:text-xs">
+                        Explore our programs
+                      </span>
+                      <i className="bg-gray-200 icon flex justify-center items-center border p-0 w-4 h-4 md:w-7 md:h-7 border-white rounded-full">
+                        <MdArrowForward className="text-black" />
+                      </i>
+                    </Button>
                   </div>
                 </div>
               </div>

@@ -10,7 +10,7 @@ import Course from "./pages/Course";
 
 function App() {
   return (
-    <div className="h-screen bg-gray-50">
+    <div className="h-screen bg-gray-50 font-archivo">
       <Router>
         <Navigation />
         <Routes>
