@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { companies } from "./landing_helpers";
-import { MdOutlineChevronRight } from "react-icons/md";
+import recog from '../assets/recog.png'
 import Marquee from "react-fast-marquee";
 const Companies = () => {
   const [hoveredImageIndex, setHoveredImageIndex] = useState(null);
@@ -35,12 +35,10 @@ const Companies = () => {
           ))}
         </Marquee>
       </div>
-      <button className="flex gap-2 items-center">
-        <span className="text-black opacity-60 font-normal text-sm">
-          View More
-        </span>
-        <MdOutlineChevronRight className="" />
-      </button>
+      <div className="bg-white rounded-2xl flex flex-col items-center mx-24 py-8">
+          <span className="font-medium text-lg">Recognized by</span>
+          <img src={recog} className="mt-6" alt="" />
+      </div>
     </div>
   );
 };

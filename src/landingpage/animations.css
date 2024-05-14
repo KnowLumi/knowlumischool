@@ -1,0 +1,16 @@
+.about-tilt {
+    animation: tilting 3s forwards infinite;
+}
+
+@keyframes tilting {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(5deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}

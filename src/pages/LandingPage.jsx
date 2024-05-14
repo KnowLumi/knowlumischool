@@ -8,12 +8,14 @@ import Enroll from "../landingpage/Enroll";
 import Action from "../landingpage/Action";
 import OurCourses from "../landingpage/OurCourses";
 import Process from "../landingpage/Process";
+import Program from "../landingpage/Program";
 
 const LandingPage = () => {
   return (
     <div className="flex flex-col bg-[#F7F7F7]">
       <HeroSection />
       <About />
+      <Program /> 
       <Companies />
       <Process />
       <OurCourses />

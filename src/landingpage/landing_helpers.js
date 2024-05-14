@@ -16,6 +16,9 @@ import icon5 from './company_icons/samsung.png'
 import icon6 from './company_icons/tesla.png'
 import icon7 from './company_icons/verizonlogo.png'
 
+import logo1 from "../assets/hat.png"
+import logo2 from "../../public/logo.png"
+
 const pages = [
     { name: "Home", route: '/' },
     { name: "About", route: '/about' },
@@ -36,6 +39,31 @@ const heroImages = [
     { main: hero4, sub: sub4, title: "Resource Oasis", desc: "Dive into a pool of high-quality resources to propel your journey." },
 
 ];
+
+const program = [
+    {
+        icon: logo1,
+        bg:"#F0F1EC",
+        title: "College Degree",
+        desc: `Dorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Dorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum,ac aliquet odio mattis.
+            Nunc vulputate libero et velit interdum, ac aliquet odio mattis.`,
+        points: ["Limited practical skills", "Minimal industry exposure", "Traditional learning with a focus on theory"],
+        color: "#DC552A",
+        text: "LIMITED CARRER TRAJECTORY"
+    },
+    {
+        icon: logo2,
+        bg:"#E8FFCD",
+        title: "Knowlumi program along with a college degree",
+        desc: `Dorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Dorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum,ac aliquet odio mattis.
+            Nunc vulputate libero et velit interdum, ac aliquet odio mattis.`,
+        points: ["Hands-on projects", "Access to industry experts", "Internships and job referrals"],
+        color: "#2FC34F",
+        text: "ACCELERATED CARRER TRAJECTORY"
+    },
+]
 
 const companies = [icon1, icon2, icon3, icon4, icon5, icon6, icon7]
 
@@ -59,4 +87,4 @@ const reviews = [
 
 const footerLinks = "Home,Career Tracks,Courses,How Knowlumi works,Privacy Policy,Contact Us".split(",")
 
-export { pages, faq, heroImages, companies, footerLinks, reviews }
+export { pages, faq, heroImages, companies, footerLinks, reviews, program }

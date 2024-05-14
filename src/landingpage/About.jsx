@@ -2,6 +2,7 @@ import { Button } from "@material-tailwind/react";
 import { MdHdrStrong, MdShoppingBag, MdLocalLibrary } from "react-icons/md";
 import aboutbar from "../assets/about_bar1.png";
 import "./landing.css";
+import "./animations.css";
 import curly from "../assets/curly.png";
 import about from "../assets/about.png";
 import des from "../assets/about_des.png";
@@ -39,14 +40,14 @@ const About = () => {
             applications.
           </p>
           <div className="flex items-center gap-3.5 mt-8">
-            <img src={logo} alt="" className="w-7 h-7"/>
+            <img src={logo} alt="" className="w-7 h-7" />
             <span className="font-extrabold text-lg">Introducing KnowLumi</span>
           </div>
           <div
             style={{ backgroundImage: `url('${curly}')` }}
             className="flex items-center justify-around w-full h-80 bg-cover bg-no-repeat"
           >
-            <div className="flex items-center bg-[#2F342A] mb-20 rounded-lg gap-3 px-3 h-12">
+            <div className="flex items-center bg-[#2F342A] about-tilt mb-20 rounded-lg gap-3 px-3 h-12">
               <MdShoppingBag className="text-[#88DB1B]" />
               <span className="text-white font-semibold text-xs tracking-wider">
                 Placement Assistance
