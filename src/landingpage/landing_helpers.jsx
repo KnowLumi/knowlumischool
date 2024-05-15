@@ -43,7 +43,7 @@ const heroImages = [
 const program = [
     {
         icon: logo1,
-        bg:"#F0F1EC",
+        bg: "#F0F1EC",
         title: "College Degree",
         desc: `Dorem ipsum dolor sit amet, consectetur adipiscing elit. 
             Dorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum,ac aliquet odio mattis.
@@ -54,7 +54,7 @@ const program = [
     },
     {
         icon: logo2,
-        bg:"#E8FFCD",
+        bg: "#E8FFCD",
         title: "Knowlumi program along with a college degree",
         desc: `Dorem ipsum dolor sit amet, consectetur adipiscing elit. 
             Dorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum,ac aliquet odio mattis.
@@ -85,6 +85,28 @@ const reviews = [
     },
 ]
 
+const WhyKnowlumi = [
+    {
+        badge: "LOREM IPSUM",
+        title: "KNOWLUMI",
+        points: ["Horem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
+            "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. .",
+            "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. .",
+            "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. .",]
+    },
+    {
+        badge: "LOREM IPSUM",
+        title: "OTHER COURSES",
+        points: ["Horem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
+            "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. .",
+            "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. .",
+            "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. .",]
+    },
+]
+
 const footerLinks = "Home,Career Tracks,Courses,How Knowlumi works,Privacy Policy,Contact Us".split(",")
 
-export { pages, faq, heroImages, companies, footerLinks, reviews, program }
+export { pages, faq, heroImages, companies, footerLinks, reviews, program, WhyKnowlumi }
+

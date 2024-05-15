@@ -6,21 +6,23 @@ import About from "../landingpage/About";
 import Companies from "../landingpage/Companies";
 import Enroll from "../landingpage/Enroll";
 import Action from "../landingpage/Action";
-import OurCourses from "../landingpage/OurCourses";
 import Process from "../landingpage/Process";
 import Program from "../landingpage/Program";
+import WhyKnowLumi from "../landingpage/WhyKnowLumi";
+import Included from "../landingpage/Included";
 
 const LandingPage = () => {
   return (
     <div className="flex flex-col bg-[#F7F7F7]">
       <HeroSection />
       <About />
-      <Program /> 
+      <Program />
       <Companies />
       <Process />
-      <OurCourses />
       <Testimonials />
       <Action />
+      <WhyKnowLumi />
+      <Included />
       <Enroll />
       <FaqSection />
       <Footer />

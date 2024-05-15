@@ -10,7 +10,26 @@
     50% {
         transform: rotate(5deg);
     }
-    100%{
+
+    100% {
         transform: rotate(0deg);
+    }
+}
+
+.process-line path {
+    animation: change_color 0.6s ease-out 0.1s forwards infinite;
+}
+
+@keyframes change_color {
+    0% {
+        fill: #4258BE;
+    }
+
+    50% {
+        fill: #88DB1B;
+    }
+
+    100% {
+        fill: #4258BE;
     }
 }

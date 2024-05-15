@@ -93,9 +93,6 @@ const Action = () => {
           </div>
         </div>
       </div>
-      <div className="action-line w-80 md:w-[71rem] h-7 md:h-20 bg-cover md:bg-contain bg-no-repeat flex flex-col justify-end mt-8">
-        <i className="w-3 md:w-4 h-3 md:h-4 rounded-full bg-[#88DB1B] enroll-anime"></i>
-      </div>
     </div>
   );
 };

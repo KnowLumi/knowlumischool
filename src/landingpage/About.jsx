@@ -6,7 +6,7 @@ import "./animations.css";
 import curly from "../assets/curly.png";
 import about from "../assets/about.png";
 import des from "../assets/about_des.png";
-import logo from "../../public/knowlumi.png";
+import logo from "../../knowlumi.png";
 //bg-[#E6F3D6]
 const About = () => {
   return (
