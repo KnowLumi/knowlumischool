@@ -9,3 +9,9 @@
 .rect {
     background-image: url('./Included_images/rect.png');
 }
+
+@media (max-width: 640px) {
+    .rect {
+        background-image: url('./Included_images/rect_mobile.png');
+    }
+}

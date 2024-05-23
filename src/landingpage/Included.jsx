@@ -4,15 +4,15 @@ import { Button } from "@material-tailwind/react";
 import "./included.css";
 const Included = () => {
   return (
-    <div className="flex flex-col items-center">
-      <div className="rect bg-cover w-[71rem] mb-4 h-[14.7rem] bg-no-repeat translate-y-48" />
+    <div className="flex flex-col items-center w-full h-full">
+      <div className="rect bg-contain md:bg-cover w-80 md:w-[71rem] mb-4 h-[8.5rem] md:h-[14.7rem] bg-no-repeat translate-y-24 md:translate-y-48" />
 
-      <div className="flex flex-col gap-8 w-[71rem] z-10 bg-white py-5  px-16 rounded-2xl">
-        <h2 className="font-bold text-3xl text-[#4258BE] tracking-wide ">
+      <div className="flex flex-col items-center gap-8 w-80 md:w-[71rem] z-10 bg-white py-5 px-0 md:px-16 rounded-2xl">
+        <h2 className="font-bold text-3xl text-[#4258BE] tracking-wide">
           What&apos;s Included?
         </h2>
         <div className="flex flex-col gap-12">
-          <div className="flex w-[63.5rem] justify-between items-center">
+          <div className="flex flex-col md:flex-row gap-8 w-full md:w-[63.5rem] md:justify-between items-center">
             {included.map((item, i) => (
               <div
                 key={`included-${i + 1}`}
@@ -47,10 +47,10 @@ const Included = () => {
               </div>
             ))}
           </div>
-          <span className="h-[1px] w-full bg-[#4258BE66]"></span>
+          <span className="h-[1px] w-64 md:w-full bg-[#4258BE66] "></span>
           <div className="flex flex-col gap-9">
-            <div className="flex w-full h-[5.5rem]">
-              <div className="rect1 bg-contain w-full bg-no-repeat flex">
+            <div className="flex flex-wrap w-full h-full md:h-[5.5rem]">
+              <div className="md:rect1 bg-cover md:bg-contain w-full md:w-[16.25rem] h-full bg-no-repeat flex">
                 <svg
                   width="55"
                   height="55"
@@ -63,20 +63,20 @@ const Included = () => {
                     fill="#88DB1B"
                   />
                 </svg>
-                <div className="flex gap-9 py-3 items-center">
+                <div className="flex flex-col md:flex-row gap-6 md:gap-9 py-3 items-center">
                   <div className="flex flex-col gap-2">
-                    <span className="text-[#4258BE] font-semibold text-3xl p-0">
+                    <span className="text-[#4258BE] font-semibold text-2xl md:text-3xl p-0">
                       &#8377; 5000/-
                     </span>
                     <span className="font-light text-xs tracking-wider">
                       Non-refundable Upfront Fee
                     </span>
                   </div>
-                  <span className="text-[#4258BE] font-semibold text-3xl p-0">
+                  <span className="text-[#4258BE] font-semibold text-2xl md:text-3xl p-0">
                     +
                   </span>
                   <div className="flex flex-col gap-2">
-                    <span className="text-[#4258BE] font-semibold text-3xl p-0">
+                    <span className="text-[#4258BE] font-semibold text-2xl md:text-3xl p-0">
                       12% of Annual CTC
                     </span>
                     <div className="flex items-center gap-1">
@@ -88,15 +88,15 @@ const Included = () => {
                   </div>
                 </div>
               </div>
-              <div className="rect2 bg-contain h-[5.5rem] w-[41rem] bg-no-repeat flex items-center gap-2 justify-center">
-                <span className="font-bold text-lg tracking-wider text-white">
+              <div className="rect2 bg-cover md:bg-contain h-[4.75rem] md:h-[5.5rem]  w-64 md:w-[41rem] bg-no-repeat flex items-center gap-2 justify-center">
+                <span className="font-bold text-sm md:text-lg w-[8.75rem] md:w-fit tracking-wider text-white">
                   ENROLL NOW WITH KNOWLUMI
                 </span>
                 <MdArrowForward className="-rotate-45 text-white w-6 h-6" />
               </div>
             </div>
           </div>
-          <div className="flex gap-6">
+          <div className="flex flex-wrap gap-6">
             <Button className="rounded-full bg-[#4258BE] flex items-center gap-3 capitalize font-archivo font-medium text-xs py-[3px] pr-[3px] pl-6">
               Enroll Now
               <i className="flex icon w-8 h-8 text-white border border-[#0101010D] bg-[#FFFFFF1A] justify-center items-center rounded-full">
@@ -112,7 +112,7 @@ const Included = () => {
           </div>
         </div>
       </div>
-      <div className="rect bg-cover rotate-180 w-[71rem] mb-4 h-[14.7rem] bg-no-repeat -translate-y-44" />
+      <div className="rect bg-contain md:bg-cover rotate-180 w-80 md:w-[71rem] mb-4 h-[8.5rem] md:h-[14.7rem] bg-no-repeat -translate-y-20  md:-translate-y-44" />
     </div>
   );
 };

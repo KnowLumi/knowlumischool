@@ -11,7 +11,7 @@ import "react-slideshow-image/dist/styles.css";
 import rating from "../assets/rating.png";
 const HeroSection = () => {
   return (
-    <div className="w-full relative mt-24 flex flex-wrap font-archivo justify-between bg-[#F7F7F7]">
+    <div className="w-full relative mt-10 md:mt-24 flex flex-wrap font-archivo justify-between bg-[#F7F7F7]">
       <svg
         width="1279"
         height="123"

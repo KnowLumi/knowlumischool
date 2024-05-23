@@ -6,7 +6,7 @@ import { Button, Avatar } from "@material-tailwind/react";
 const CommunityEngagement = () => {
   return (
     <div className="flex flex-col w-full h-fit mb-20">
-      <h1 className="font-normal text-4xl md:text-5xl md:w-full w-[19.25rem]">Community Engagement</h1>
+      <h1 className="font-normal text-4xl md:text-5xl md:w-fit w-fit">Community Engagement</h1>
       <p className="w-52 md:w-[32rem] text-xs font-light tracking-wider mt-8">
         Join a network of like-minded individuals, access mentorship from
         seasoned professionals, and embark on a journey where shared success
@@ -44,7 +44,7 @@ const CommunityEngagement = () => {
       </div>
       <div className="mt-9 flex flex-col gap-4">
         <h3 className="text-[#4258BE] font-semibold text-xl">Masterclasses</h3>
-        <span className="font-light text-xs tracking-wider text-black">
+        <span className="font-light text-xs tracking-wider text-black w-60 md:w-fit">
           Learn with masterclasses from experts to remaster your specific skill.
         </span>
         <div className="flex gap-3.5 items-center">
@@ -83,7 +83,7 @@ const CommunityEngagement = () => {
           <span className="font-light text-sm">Add-ons to your skills</span>
         </div>
       </div>
-      <div className="flex gap-8 items-center mt-9">
+      <div className="flex flex-col md:flex-row w-fit gap-8 items-center mt-9">
         <Button className="rounded-full flex items-center gap-3 capitalize font-archivo font-medium text-[16px] bg-black text-white py-1 pr-1 pl-6">
           Join Our Community
           <i className="flex w-8 h-8 text-white -rotate-45 border border-[#0101010D] bg-[#FFFFFF4D] justify-center items-center rounded-full">

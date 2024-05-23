@@ -3,17 +3,17 @@ import { freeAddons } from "./process_helpers";
 import { MdArrowForward } from "react-icons/md";
 const PlacementAssistance = () => {
   return (
-    <div className="flex flex-col h-fit mb-20">
-      <h1 className="font-normal text-5xl">Placement Assistance</h1>
-      <p className="w-[32rem] text-xs font-light tracking-wider mt-8">
+    <div className="flex flex-col h-fit w-full mb-20">
+      <h1 className="font-normal text-4xl md:text-5xl md:w-full w-fit">Placement Assistance</h1>
+      <p className="w-[13.25rem] md:w-[27.5rem] text-xs font-light tracking-wider mt-8">
         Gain Access to Top Companies and Personalized Training with Our
         Comprehensive Placement Assistance Program!
       </p>
-      <div className="flex flex-col mt-9 gap-4">
+      <div className="flex flex-col mt-9 w-fit gap-4">
         <h3 className="text-[#4258BE] font-semibold text-xl">
           Referrals to top companies
         </h3>
-        <div className="flex items-center gap-7">
+        <div className="flex items-center gap-2 md:gap-7">
           <div className="bg-white rounded-2xl w-[8.25rem] h-20 border border-[#0101011A]">
             <Carousel
               className="rounded-xl"
@@ -28,13 +28,13 @@ const PlacementAssistance = () => {
               />
             </Carousel>
           </div>
-          <p className="w-[16.5rem] text-xs font-light tracking-wider">
+          <p className="w-24 md:w-[16.5rem] text-[10px] md:text-xs font-light tracking-wider">
             Unlock Referral Opportunities to Top Companies and Propel Your
             Career Forward
           </p>
         </div>
       </div>
-      <div className="flex flex-col relative items-center mt-9 gap-4 rounded-2xl bg-[#88DB1B0D] p-6">
+      <div className="flex flex-col relative items-center mt-9 gap-4 rounded-2xl bg-[#88DB1B0D] md:p-6">
         <h3 className="text-[#4258BE] font-semibold text-xl tracking-wider">
           Our Exceptional Mentors
         </h3>
@@ -45,7 +45,7 @@ const PlacementAssistance = () => {
           prevArrow={""}
           nextArrow={""}
           navigation={({ setActiveIndex, activeIndex, length }) => (
-            <div className="absolute bottom-0 left-2/4 z-50 flex -translate-x-2/4 gap-2">
+            <div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">
               {new Array(length).fill("").map((_, i) => (
                 <span
                   key={i}
@@ -60,7 +60,7 @@ const PlacementAssistance = () => {
             </div>
           )}
         >
-          <div className="flex pb-7 justify-between gap-5">
+          <div className="flex flex-wrap pb-7 justify-between gap-5">
             <div className="flex flex-col h-40 bg-white rounded-xl px-7 py-5">
               <div className="flex w-[11.5rem] justify-between">
                 <Badge
@@ -100,7 +100,7 @@ const PlacementAssistance = () => {
         <h3 className="text-[#4258BE] font-semibold text-xl tracking-wider">
           Free Add-ons:
         </h3>
-        <ul className="w-[33.5rem] flex flex-wrap gap-7">
+        <ul className="md:w-[33.5rem] flex flex-wrap gap-7">
           {freeAddons.map((item, i) => (
             <li key={`freeAddon_${i}`} className="flex gap-3.5 w-60">
               {item.icon}
@@ -111,7 +111,7 @@ const PlacementAssistance = () => {
           ))}
         </ul>
       </div>
-      <div className="flex gap-8 items-center mt-9">
+      <div className="flex flex-col md:flex-row w-fit gap-8 items-center mt-9">
         <Button className="rounded-full flex items-center gap-3 capitalize font-archivo font-medium text-[16px] bg-black text-white py-1 pr-1 pl-6">
           Join Our Program
           <i className="flex w-8 h-8 text-white -rotate-45 border border-[#0101010D] bg-[#FFFFFF4D] justify-center items-center rounded-full">
