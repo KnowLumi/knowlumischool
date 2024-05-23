@@ -11,38 +11,30 @@ import CommunityEngagement from "./Process_Components/CommunityEngagement";
 import Earning from "./Process_Components/Earning";
 import "./landing.css";
 import cash from "./Process_svg/cash.png";
-const ProcessContent = (i) => {
-  switch (i) {
-    case 0:
-      return <Learning />;
-    case 1:
-      return <CommunityEngagement />;
-    case 2:
-      return <PlacementAssistance />;
-    case 3:
-      return <Earning />;
-    default:
-      break;
-  }
-};
 const Process = () => {
+  const Processes = [
+    <Learning key={"process-1"} />,
+    <CommunityEngagement key={"process-2"} />,
+    <PlacementAssistance key={"process-3"} />,
+    <Earning key={"process-4"} />,
+  ];
   return (
-    <div className="flex w-full px-16 relative">
-      <div className="flex flex-col gap-10 absolute z-10 left-16 top-0">
+    <div className="flex flex-wrap w-full px-16 relative">
+      <div className="flex flex-col gap-10 md:absolute z-10 left-16 top-0">
         <div className="flex items-center w-fit bg-white rounded-full py-2 px-6 gap-4">
           <MdHdrStrong className="text-[#4258BE]" />
           <span className="font-bold text-xs text-[#01010199]">
             THE PROCESS
           </span>
         </div>
-        <span className="w-80 font-light text-5xl">How Knowlumi Works</span>
+        <span className="w-72 md:w-80 font-light text-5xl">How Knowlumi Works</span>
         <div className="flex flex-col  text-sm">
-          <p className="w-[22.75rem] font-light">
+          <p className="md:w-[22.75rem] font-light">
             Join the program and turn dreams into reality with expert mentors
             and top resources!
           </p>
         </div>
-        <div className="flex gap-6">
+        <div className="flex flex-wrap justify-center gap-6">
           <Button className="rounded-full flex items-center gap-3 capitalize font-archivo font-medium text-[16px] py-2 pr-2 pl-6">
             Enroll Now
             <i className="flex icon w-8 h-8 text-white border border-[#0101010D] bg-[#FFFFFF33] justify-center items-center rounded-full">
@@ -60,23 +52,23 @@ const Process = () => {
           </Button>
         </div>
       </div>
-      <div className="w-full flex flex-col  h-[32rem] overflow-y-scroll">
+      <div className="w-full  flex flex-col process h-full md:h-[32rem] md:overflow-y-scroll">
         <div className="w-full flex flex-col items-end">
-          <div className="flex flex-col w-[39rem] h-full gap-6 py-12">
-            <img src={line1} className="" alt="" />
+          <div className="flex flex-col w-full md:w-[39rem] h-full gap-6 py-12">
+            <img src={line1} className="w-full" alt="" />
             <div className="flex w-full">
               <div className="flex flex-col gap-6">
-                {new Array(4).fill("").map((_, i) => (
+                {Processes.map((process, i) => (
                   <div
                     key={`p_no_${i}`}
                     className="flex gap-3 border-l-[3px] border-dashed border-l-[#4258BE]"
                   >
                     <div className="flex flex-col h-fit">
-                      <i className="rounded-full -translate-x-7 w-14 h-14 bg-[#4258BE] flex justify-center items-center text-white font-extrabold">
+                      <i className="rounded-full -translate-x-6 md:-translate-x-7 h-10 w-10 md:w-14 md:h-14 bg-[#4258BE] flex justify-center items-center text-white font-extrabold">
                         {i + 1}
                       </i>
                     </div>
-                    {ProcessContent(i)}
+                    {process}
                   </div>
                 ))}
                 <div className="w-full">
@@ -85,7 +77,7 @@ const Process = () => {
               </div>
             </div>
           </div>
-          <div className="action-line w-80 relative md:w-[71rem] h-7 md:h-20 bg-cover md:bg-contain bg-no-repeat flex flex-col justify-end ">
+          <div className="action-line  w-80 relative md:w-[71rem] h-7 md:h-20 bg-cover md:bg-contain bg-no-repeat flex flex-col justify-end ">
             <div className="absolute left-0 top-6 bg-[#F7F7F7] flex gap-3.5 items-center z-10">
               <div className="flex gap-7 py-4 px-6 bg-[#4258BE] rounded-lg">
                 <img src={cash} className="w-14 h-14" alt="" />

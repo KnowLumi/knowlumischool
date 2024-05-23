@@ -39,15 +39,15 @@ const About = () => {
             experience, limiting students&apos; exposure to real-world
             applications.
           </p>
-          <div className="flex items-center gap-3.5 mt-8">
+          <div className="flex items-center gap-3.5 mt-8 w-full">
             <img src={logo} alt="" className="w-7 h-7" />
             <span className="font-extrabold text-lg">Introducing KnowLumi</span>
           </div>
           <div
             style={{ backgroundImage: `url('${curly}')` }}
-            className="flex items-center justify-around w-full h-80 bg-cover bg-no-repeat"
+            className="flex items-center justify-around md:w-full md:h-80 bg-cover bg-no-repeat"
           >
-            <div className="flex items-center bg-[#2F342A] about-tilt mb-20 rounded-lg gap-3 px-3 h-12">
+            <div className="hidden md:flex items-center bg-[#2F342A] about-tilt mb-20 rounded-lg gap-3 px-3 h-12">
               <MdShoppingBag className="text-[#88DB1B]" />
               <span className="text-white font-semibold text-xs tracking-wider">
                 Placement Assistance
@@ -55,7 +55,7 @@ const About = () => {
               <img src={des} className="h-full pt-2" alt="" />
             </div>
             <img src={about} alt="" className="h-full" />
-            <div className="flex items-center bg-[#2F342A] mt-20 rounded-lg gap-3 px-3 h-12">
+            <div className="hidden md:flex items-center bg-[#2F342A] mt-20 rounded-lg gap-3 px-3 h-12">
               <MdLocalLibrary className="text-[#88DB1B]" />
               <span className="text-white font-semibold text-xs tracking-wider">
                 Personal Mentorship
@@ -72,9 +72,7 @@ const About = () => {
           </p>
         </div>
       </div>
-      <div className="w-full flex justify-start">
-        <img src={aboutbar} className="w-fit h-8 md:h-16 rotate-180" alt="" />
-      </div>
+
     </div>
   );
 };

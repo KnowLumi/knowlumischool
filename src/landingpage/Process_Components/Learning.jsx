@@ -16,7 +16,7 @@ const Learning = () => {
   return (
     <div className="flex flex-col mb-20">
       <h1 className="font-normal text-5xl">Learning</h1>
-      <p className="w-[27.5rem] text-xs font-light tracking-wider mt-8">
+      <p className="w-[13.25rem] md:w-[27.5rem] text-xs font-light tracking-wider mt-8">
         At KnowLumi, students engage in personalized learning, foster community
         connections, and leverage their skills to secure internships, jobs, or
         start-ups.
@@ -35,11 +35,11 @@ const Learning = () => {
           <MdAlarm className="w-5 h-5 text-[#88DB1B]" />
           <span className="font-light text-sm">3 month duration</span>
         </div>
-        <span className="font-light text-xs tracking-wider text-black">
+        <span className="font-light text-xs tracking-wider text-black bg-yellow-400pr-4 w-fit">
           Learn the fundamentals of the tech future
         </span>
         <div className="bg-white rounded-2xl"></div>
-        <div className="flex gap-3.5 items-center mt-5">
+        <div className="flex gap-3.5 items-center mt-5 ">
           <svg
             width="19"
             height="18"
@@ -53,11 +53,11 @@ const Learning = () => {
               fill="#88DB1B"
             />
           </svg>
-          <span className="font-light text-sm">
+          <span className="font-light text-sm w-[11.25rem] md:w-full">
             Assessment - to choose your career track
           </span>
         </div>
-        <div className="flex gap-8 items-center">
+        <div className="flex flex-col w-fit md:flex-row gap-8 items-center">
           <Button className="rounded-full flex items-center gap-3 capitalize font-archivo font-medium text-[16px] bg-[#4258BE] text-white py-1 pr-1 pl-6">
             Join Our Community
             <i className="flex w-8 h-8 text-[#4258BE] -rotate-45 border border-[#0101010D] bg-white justify-center items-center rounded-full">
@@ -87,7 +87,7 @@ const Learning = () => {
         <h3 className="text-[#4258BE] font-semibold text-xl">
           Mastering Tracks
         </h3>
-        <span className="font-light text-sm">
+        <span className="font-light text-sm w-60">
           Choose your career track, or let us choose it for you!
         </span>
         <div className="flex flex-wrap gap-5">

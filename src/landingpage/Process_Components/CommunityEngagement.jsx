@@ -5,19 +5,19 @@ import { MdKeyboardDoubleArrowRight,MdArrowForward } from "react-icons/md";
 import { Button, Avatar } from "@material-tailwind/react";
 const CommunityEngagement = () => {
   return (
-    <div className="flex flex-col h-fit mb-20">
-      <h1 className="font-normal text-5xl">Community Engagement</h1>
-      <p className="w-[32rem] text-xs font-light tracking-wider mt-8">
+    <div className="flex flex-col w-full h-fit mb-20">
+      <h1 className="font-normal text-4xl md:text-5xl md:w-full w-[19.25rem]">Community Engagement</h1>
+      <p className="w-52 md:w-[32rem] text-xs font-light tracking-wider mt-8">
         Join a network of like-minded individuals, access mentorship from
         seasoned professionals, and embark on a journey where shared success
         propels everyone forward.
       </p>
       <div className="mt-9 flex flex-col gap-4">
         <h3 className="text-[#4258BE] font-semibold text-xl">Hackathons</h3>
-        <span className="font-light text-xs tracking-wider text-black">
+        <span className="font-light text-xs w-fit tracking-wider text-black">
           Hackathons, Ideathons and much more!
         </span>
-        <div className="bg-white rounded-2xl p-4 w-[27rem] h-[11rem]">
+        <div className="bg-white rounded-2xl p-4 w-56  md:w-[27rem] md:h-[11rem]">
           <Fade
             arrows={false}
             infinite
@@ -28,7 +28,7 @@ const CommunityEngagement = () => {
             {community.map((item, index) => (
               <div
                 key={index}
-                className="bg-cover relative flex flex-col gap-4 md:mx-0 justify-end bg-center object-cover rounded-lg w-[24.5rem] h-[9rem]"
+                className="bg-cover relative flex flex-col gap-4 md:mx-0 justify-end bg-center object-cover rounded-lg w-48 h-[8.25rem] md:w-[24.5rem] md:h-[9rem]"
                 style={{ backgroundImage: `url('${item.image}')` }}
               >
                 <div className="flex items-center w-fit rounded-md ml-2.5 mb-2.5 p-2 gap-2 bg-gradient-to-r from-[#FFFFFF24] to-[#FFFFFF2E]">

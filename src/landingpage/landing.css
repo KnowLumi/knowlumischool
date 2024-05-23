@@ -153,7 +153,10 @@
     background-image: url('../assets/enroll_line.png');
 }
 
-/* bg-[url('src/assets/rect1_mobile.png')]  */
+.process::-webkit-scrollbar {
+    display: none;
+}
+
 @media (max-width: 640px) {
     .enroll-banner {
         background-image: url('../assets/enroll_mobile.png');

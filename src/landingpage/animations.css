@@ -33,3 +33,19 @@
         fill: #4258BE;
     }
 }
+
+.program-anime {
+    width: 0rem;
+    animation: slide 1s linear both infinite;
+    animation-delay: 1ms;
+}
+
+@keyframes slide {
+    0% {
+        width: 0rem;
+    }
+
+    100% {
+        width: 27.25rem;
+    }
+}

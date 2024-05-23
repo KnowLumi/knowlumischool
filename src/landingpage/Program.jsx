@@ -8,6 +8,11 @@ import {
   MdOutlinePhoneCallback,
 } from "react-icons/md";
 import { program } from "./landing_helpers";
+import lines from "../assets/program_lines.png";
+import unemployed from "../assets/unemployed.png";
+import "./animations.css";
+import aboutbar from "../assets/about_bar1.png";
+
 const PointIcon = (index) => {
   switch (index) {
     case 0:
@@ -23,12 +28,13 @@ const PointIcon = (index) => {
 
 const Program = () => {
   return (
-    <div className="flex flex-col items-center">
-      <div className="flex gap-7 justify-center">
+    <div className="flex flex-col bg-white items-center">
+      <div className="flex flex-wrap gap-7 justify-center">
         {program.map((item, index) => (
           <div
             key={`program_${index}`}
-            className={`flex flex-col bg-[${item.bg}] w-[33.5rem] p-6 rounded-xl gap-6`}
+            style={{ backgroundColor: item.bg }}
+            className="flex flex-col w-80 md:w-[33.5rem] p-6 rounded-xl gap-6"
           >
             <div className="flex bg-white rounded-lg w-full items-center gap-5">
               <i className="flex items-center justify-center bg-black w-16 h-10 p-2.5 rounded-lg">
@@ -36,10 +42,10 @@ const Program = () => {
               </i>
               <span className="font-bold text-sm">{item.title}</span>
             </div>
-            <p className="w-[24rem] text-[#01010199] font-light text-xs tracking-[4%]">
+            <p className="md:w-[24rem] text-[#01010199] font-light text-xs tracking-[4%]">
               {item.desc}
             </p>
-            <div className="flex flex-wrap gap-2 justify-">
+            <div className="flex flex-wrap gap-2">
               {item.points.map((p, i) => (
                 <div
                   key={`point-${i + 1}`}
@@ -50,7 +56,7 @@ const Program = () => {
                 </div>
               ))}
             </div>
-            <div className="bg-white py-4 px-6 rounded-lg">
+            <div className="bg-white py-4 px-6 rounded-lg flex flex-col">
               <div className="flex justify-between">
                 <span className="font-bold text-sm text-[#414D55]">
                   Carrer Growth
@@ -61,16 +67,23 @@ const Program = () => {
                   <MdTrendingUp className="w-5 h-5" />
                 )}
               </div>
+              <div
+                style={{ backgroundImage: `url('${lines}')` }}
+                className="md:w-[440px] md:h-[234.58px] bg-cover bg-no-repeat flex items-center"
+              >
+                <img src={unemployed} alt="" className=" h-[15.5rem]" />
+              </div>
             </div>
             <span
-              className={`rounded-md bg-[${item.color}] w-fit px-2.5 py-1 text-white font-bold text-[8px]`}
+              style={{ backgroundColor: item.color }}
+              className="rounded-md w-fit px-2.5 py-1 text-white font-bold text-[8px]"
             >
               {item.text}
             </span>
           </div>
         ))}
       </div>
-      <div className="flex gap-5 mt-9">
+      <div className="flex flex-wrap gap-5 my-9 justify-center">
         <Button className="rounded-full bg-black flex items-center gap-3 capitalize font-archivo font-medium text-[16px] py-2 pr-2 pl-6">
           Enroll in the Program
           <i className="flex icon w-8 h-8 text-white border border-[#0101010D] bg-[#FFFFFF33] justify-center items-center rounded-full">
@@ -86,6 +99,9 @@ const Program = () => {
             <MdOutlinePhoneCallback />
           </i>
         </Button>
+      </div>
+      <div className="w-full flex bg-[#F7F7F7] justify-start">
+        <img src={aboutbar} className="w-fit h-8 md:h-16 rotate-180" alt="" />
       </div>
     </div>
   );
