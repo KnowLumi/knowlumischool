@@ -1,7 +1,9 @@
 
 const Course = () => {
   return (
-    <div>Course</div>
+    <div className="flex">
+      
+    </div>
   )
 }
 

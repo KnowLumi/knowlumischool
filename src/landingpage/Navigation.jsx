@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState } from "react"
+import { useLocation } from "react-router-dom";
 import { Drawer, Button } from "@material-tailwind/react";
 import { CgMenuLeftAlt, CgSearch } from "react-icons/cg";
 import { RxCross1 } from "react-icons/rx";
@@ -9,11 +10,11 @@ import logo1 from "../assets/navlogo.png";
 
 const Navigation = () => {
   const [open, setOpen] = useState(false);
-
   const openDrawer = () => setOpen(true);
   const closeDrawer = () => setOpen(false);
+  const location = useLocation();
   return (
-    <nav className="flex justify-between fixed z-50 bg-[#FEFEFE] items-center w-full py-3 md:py-6 px-3 md:px-12 font-archivo border-b-2">
+    <nav className={`${location.pathname === '/otp' ? 'hidden' : 'flex'} justify-between fixed z-50 bg-[#FEFEFE] items-center w-full py-3 md:py-6 px-3 md:px-12 font-archivo border-b-2`}>
       <img
         src={logo1}
         alt=""

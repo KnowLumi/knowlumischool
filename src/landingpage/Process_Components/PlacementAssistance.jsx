@@ -1,10 +1,13 @@
 import { Carousel, Badge, Avatar, Button } from "@material-tailwind/react";
 import { freeAddons } from "./process_helpers";
 import { MdArrowForward } from "react-icons/md";
+import { companies } from "../landing_helpers";
 const PlacementAssistance = () => {
   return (
     <div className="flex flex-col h-fit w-full mb-20">
-      <h1 className="font-normal text-4xl md:text-5xl md:w-full w-fit">Placement Assistance</h1>
+      <h1 className="font-normal text-4xl md:text-5xl md:w-full w-fit">
+        Placement Assistance
+      </h1>
       <p className="w-[13.25rem] md:w-[27.5rem] text-xs font-light tracking-wider mt-8">
         Gain Access to Top Companies and Personalized Training with Our
         Comprehensive Placement Assistance Program!
@@ -14,18 +17,23 @@ const PlacementAssistance = () => {
           Referrals to top companies
         </h3>
         <div className="flex items-center gap-2 md:gap-7">
-          <div className="bg-white rounded-2xl w-[8.25rem] h-20 border border-[#0101011A]">
+          <div className="bg-white flex items-center justify-center rounded-2xl w-[8.25rem] h-20 border border-[#0101011A]">
             <Carousel
-              className="rounded-xl"
+              className="h-fit w-12"
+              autoplay
+              loop
               prevArrow={""}
               nextArrow={""}
               navigation={""}
             >
-              <img
-                src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2560&q=80"
-                alt="image 1"
-                className="h-full w-full object-cover"
-              />
+              {companies.map((comp, i) => (
+                <img
+                  key={`company_p_${i}`}
+                  className="w-12"
+                  src={comp}
+                  alt=""
+                />
+              ))}
             </Carousel>
           </div>
           <p className="w-24 md:w-[16.5rem] text-[10px] md:text-xs font-light tracking-wider">
