@@ -140,7 +140,11 @@ const OtpPage = () => {
                     />
                   ))}
                 </div>
-                <Button type="submit" ref={submitRef} className="font-archivo bg-black mt-7 w-full capitalize font-light text-white">
+                <Button
+                  type="submit"
+                  ref={submitRef}
+                  className="font-archivo bg-black mt-7 w-full capitalize font-light text-white"
+                >
                   Submit
                 </Button>
               </form>
@@ -150,8 +154,10 @@ const OtpPage = () => {
       </div>
       <div
         style={{ backgroundImage: `url(${banner})` }}
-        className="bg-cover bg-no-repeat w-[33rem] h-full"
-      ></div>
+        className="bg-cover bg-no-repeat w-[33rem] h-full flex items-end"
+      >
+        <h1 className="text-[#FFFFFF66] text-8xl w-fit mb-14 ml-4">KnowLumi</h1>
+      </div>
     </div>
   );
 };
