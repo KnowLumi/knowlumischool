@@ -4,10 +4,14 @@ import Navigation from "../landingpage/Navigation";
 import { Link } from "react-router-dom";
 import { MdElectricBolt, MdArrowForward } from "react-icons/md";
 import { Button, Avatar } from "@material-tailwind/react";
+// import OurCourses from "../landingpage/OurCourses";
+import Roadmap from "./Fundamentals/Roadmap";
 const Fundamentals = () => {
   return (
     <div className="flex flex-col w-full">
-      <Navigation />
+      {/* <Navigation /> */}
+      {/* <OurCourses/> */}
+      <Roadmap/>
       <Companies />
       <div className="rounded-3xl bg-[#DFDFD7] flex items-center justify-between py-9 px-12 mx-20">
         <div className="flex flex-col gap-6">
@@ -27,7 +31,7 @@ const Fundamentals = () => {
         </div>
         <div className="flex flex-col w-fit md:flex-row gap-11 items-center">
           <Link to="/fundamentals">
-            <Button className="rounded-full flex items-center gap-3 capitalize font-archivo font-medium text-[16px] bg-black text-white py-1 pr-1 pl-6">
+            <Button className="rounded-full flex items-center gap-3 capitalize font-archivo text-sm tracking-widest font-medium text-[16px] bg-black text-white py-2 pr-2 pl-6">
               ENROLL NOW
               <i className="flex w-8 h-8 text-white -rotate-45 border border-[#FFFFFF33] bg-[#FFFFFF4D] justify-center items-center rounded-full">
                 <MdArrowForward />

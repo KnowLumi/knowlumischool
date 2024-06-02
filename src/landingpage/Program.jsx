@@ -9,7 +9,6 @@ import {
 } from "react-icons/md";
 import { program } from "./landing_helpers";
 import lines from "../assets/program_lines.png";
-import unemployed from "../assets/unemployed.png";
 import "./animations.css";
 import aboutbar from "../assets/about_bar1.png";
 
