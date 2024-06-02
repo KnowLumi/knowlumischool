@@ -2,8 +2,8 @@ import React from "react";
 import { IoNavigateCircleOutline } from "react-icons/io5";
 import { MdKeyboardArrowDown, MdArrowForward } from "react-icons/md";
 import { Link } from "react-router-dom";
-import { roadmap } from "../helpers/fundamentalhelpers";
-import bg from "./Images/roadmap.png";
+import { roadmap } from "../helpers/fundamentalhelpers";    
+import "./fundamentals.css";
 import {
   Accordion,
   AccordionHeader,
@@ -15,23 +15,22 @@ const Roadmap = () => {
   const [open, setOpen] = React.useState(-1);
   const handleOpen = (value) => setOpen(open === value ? -1 : value);
   return (
-    <div className="flex flex-col gap-12 py-9 px-12 mx-20 bg-white rounded-3xl">
+    <div className="flex flex-col gap-12 py-6 md:py-9 px-4 md:px-12 mx-6 md:mx-20 bg-white rounded-3xl">
       <div className="flex gap-4 items-center">
         <i className="flex justify-center items-center w-11 h-11 bg-[#F3FEE6] rounded-full p-2.5">
           <IoNavigateCircleOutline className="-rotate-45 w-5 h-5" />
         </i>
-        <h3 className="font-normal text-4xl text-[#010101E5]">Roadmap</h3>
+        <h3 className="font-normal text-2xl md:text-4xl text-[#010101E5]">
+          Roadmap
+        </h3>
       </div>
       <span className="font-light text-sm tracking-wider">
         Here&apos;s your Actionable Roadmap to learn the fundamentals of Coding
       </span>
-      <div className="flex flex-wrap gap-14 justify-between">
+      <div className="flex flex-wrap gap-7 justify-between">
         {roadmap.map((item, index) => (
           <div key={`week-${index + 1}`} className="flex flex-col items-center">
-            <div
-              style={{ backgroundImage: `url('${bg}')` }}
-              className="h-[8.75rem] w-[30.375rem] bg-contain z-10 bg-no-repeat"
-            >
+            <div className="roadmap-items h-[9.25rem] md:h-[8.75rem] w-[17.375rem] md:w-[30.375rem] bg-contain z-10 bg-no-repeat">
               <div className="mt-5 mx-5 flex flex-col gap-3">
                 <div className="flex justify-between items-center">
                   <span className="font-extrabold text-sm tracking-wider">
@@ -49,7 +48,7 @@ const Roadmap = () => {
             </div>
             <Accordion
               open={open === index}
-              className="w-[26.75rem] rounded-lg bg-[#88DB1B] -translate-y-11"
+              className="md:w-[26.75rem] w-60 rounded-lg bg-[#88DB1B] -translate-y-11"
             >
               <AccordionHeader className="border-0 h-8 rounded-lg">
                 head

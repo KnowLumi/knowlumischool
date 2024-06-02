@@ -15,7 +15,7 @@ import "./landing.css";
 import { Button } from "@material-tailwind/react";
 const Footer = () => {
   return (
-    <div className="w-full flex flex-col font-archivo bg-gray-50">
+    <div className="w-full flex flex-col font-archivo">
       <div className="w-full flex justify-end">
         <img src={footer} alt="" className="w-fit translate-y-0.5 h-10 md:h-20" />
       </div>

@@ -12,7 +12,7 @@ const Navigation = () => {
   const openDrawer = () => setOpen(true);
   const closeDrawer = () => setOpen(false);
   return (
-    <nav className={`flex justify-between fixed z-50 bg-[#FEFEFE] items-center w-full py-3 md:py-6 px-3 md:px-12 font-archivo border-b-2`}>
+    <nav className={`flex justify-between fixed z-50 bg-[#FEFEFE] items-center w-full py-3 md:py-4 px-3 md:px-12 font-archivo border-b-2`}>
       <img
         src={logo1}
         alt=""
