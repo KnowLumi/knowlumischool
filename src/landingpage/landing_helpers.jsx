@@ -19,6 +19,9 @@ import icon7 from './company_icons/verizonlogo.png'
 import logo1 from "../assets/hat.png"
 import logo2 from "../../public/logo.png"
 
+import unemployed from "../assets/unemployed.png";
+import dreamjob from "../assets/dreamjob.png";
+
 const pages = [
     { name: "Home", route: '/' },
     { name: "About", route: '/about' },
@@ -50,6 +53,7 @@ const program = [
             Nunc vulputate libero et velit interdum, ac aliquet odio mattis.`,
         points: ["Limited practical skills", "Minimal industry exposure", "Traditional learning with a focus on theory"],
         color: "#DC552A",
+        image: unemployed,
         text: "LIMITED CARRER TRAJECTORY"
     },
     {
@@ -61,6 +65,7 @@ const program = [
             Nunc vulputate libero et velit interdum, ac aliquet odio mattis.`,
         points: ["Hands-on projects", "Access to industry experts", "Internships and job referrals"],
         color: "#2FC34F",
+        image: dreamjob,
         text: "ACCELERATED CARRER TRAJECTORY"
     },
 ]

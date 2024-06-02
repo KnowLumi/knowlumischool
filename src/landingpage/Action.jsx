@@ -2,10 +2,12 @@ import "./landing.css";
 import { MdArrowForward } from "react-icons/md";
 import { BsDiscord } from "react-icons/bs";
 import { Avatar } from "@material-tailwind/react";
+import actionbottom from "../assets/action_bottom.png";
 const Action = () => {
   return (
     <div className="flex flex-col-reverse md:flex-col w-full mb-12 items-center font-archivo">
-      <div className="w-80 md:w-[71rem] h-[55.25rem] md:h-[22rem] action-banner flex flex-col bg-cover mt-12 md:mt-0 md:bg-contain bg-no-repeat">
+      <img src={actionbottom} className="w-80 block md:hidden -translate-y-5" alt="" />
+      <div className="z-10 w-80 md:w-[71rem] md:h-[22rem] action-banner flex flex-col bg-cover mt-12 md:mt-0 md:bg-contain bg-no-repeat">
         <div className="w-full hidden md:flex justify-end gap-8 items-center pr-8 py-3.5">
           <svg
             width="16"
@@ -48,25 +50,26 @@ const Action = () => {
             />
           </svg>
         </div>
-        <div className="flex flex-col md:flex-row w-full gap-6">
-          <div className="people bg-cover md:bg-contain bg-no-repeat w-80 md:w-[23.5rem] h-80 md:h-[20.25rem] flex items-center justify-center">
-            <BsDiscord className="text-[#F7F7F7] w-14 h-14" />
+        <div className="flex flex-col md:flex-row w-full md:gap-6  text-[#F7F7F7]">
+          <div className="people bg-center bg-contain bg-no-repeat w-80 md:w-[23.5rem] h-[17.35rem] md:h-[20.25rem] flex items-center justify-center">
           </div>
-          <div className="flex flex-col text-wrap px-8 w-[16.5rem] md:w-[44.5rem]">
-            <div className="flex flex-col gap-4 pb-3 border-b border-b-[#FFFFFF80] md:text-[#F7F7F7]">
-              <h1 className="font-bold text-2xl tracking-wider">
+          <div className="flex flex-col text-wrap px-8 w-full bg-black md:bg-transparent md:w-[44.5rem]">
+            <div className="flex flex-col gap-4 pt-6 md:pt-0 pb-3 border-b border-b-[#FFFFFF80] md:text-[#F7F7F7]">
+              <h1 className="font-bold text-[16px] md:text-2xl tracking-wider">
                 Join Our Thriving Community of Ambitious Learners!
               </h1>
-              <p className=" font-light text-[16px] leading-6">
+              <p className=" font-light text-xs md:text-[16px] leading-6">
                 Discover a supportive network of learners, mentors, and
                 professionals at KnowLumi. Connect, collaborate, and grow with
                 like-minded individuals passionate about education and
                 innovation. Together, let&apos;s build a brighter future!
               </p>
             </div>
-            <div className="flex flex-col md:flex-row gap-8 md:mt-5">
-              <button className="flex items-center bg-black md:bg-white rounded-full py-1 pr-1 pl-6 gap-2 border border-[#01010126]">
-                <span className="text-sm font-medium text-white md:text-black">Join the community</span>
+            <div className="flex flex-col md:flex-row gap-8 mt-5">
+              <button className="flex items-center w-fit bg-white rounded-full py-1 pr-1 pl-6 gap-2 border border-[#01010126]">
+                <span className="text-sm font-medium text-black">
+                  Join the community
+                </span>
                 <i className="flex w-8 h-8 text-white border border-[#0101010D] bg-[#01010133] justify-center items-center rounded-full">
                   <MdArrowForward />
                 </i>
@@ -84,10 +87,10 @@ const Action = () => {
                     />
                   ))}
                 </div>
-                <span className="text-black md:text-[#F7F7F7] font-normal text-[16px] tracking-wide">
+                <span className="text-[#F7F7F7] font-normal text-[16px] tracking-wide">
                   1700+ members
                 </span>
-                <BsDiscord className="text-black md:text-[#F7F7F7] w-6 h-6" />
+                <BsDiscord className="text-[#F7F7F7] w-6 h-6" />
               </div>
             </div>
           </div>

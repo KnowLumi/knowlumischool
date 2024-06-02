@@ -1,5 +1,4 @@
 import { useState } from "react"
-import { useLocation } from "react-router-dom";
 import { Drawer, Button } from "@material-tailwind/react";
 import { CgMenuLeftAlt, CgSearch } from "react-icons/cg";
 import { RxCross1 } from "react-icons/rx";
@@ -12,9 +11,8 @@ const Navigation = () => {
   const [open, setOpen] = useState(false);
   const openDrawer = () => setOpen(true);
   const closeDrawer = () => setOpen(false);
-  const location = useLocation();
   return (
-    <nav className={`${location.pathname === '/otp' ? 'hidden' : 'flex'} justify-between fixed z-50 bg-[#FEFEFE] items-center w-full py-3 md:py-6 px-3 md:px-12 font-archivo border-b-2`}>
+    <nav className={`flex justify-between fixed z-50 bg-[#FEFEFE] items-center w-full py-3 md:py-6 px-3 md:px-12 font-archivo border-b-2`}>
       <img
         src={logo1}
         alt=""
@@ -40,7 +38,7 @@ const Navigation = () => {
           </i>
         </Button>
       </ul>
-
+      
       <Button className="hidden md:block capitalize font-archivo font-semibold bg-black rounded-full text-sm py-1.5 px-4">
         Login/Sign Up
       </Button>
@@ -78,7 +76,7 @@ const Navigation = () => {
           ))}
         </ul>
         <Button className="capitalize font-archivo font-semibold bg-black text-sm mx-5">
-          Sign Up
+          Login/Sign Up
         </Button>
       </Drawer>
     </nav>

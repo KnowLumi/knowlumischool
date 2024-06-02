@@ -12,6 +12,7 @@ import { Button, Avatar } from "@material-tailwind/react";
 import mongo from "./logos/mongo.png";
 import node from "./logos/node.png";
 import reactjs from "./logos/react.png";
+import { Link } from "react-router-dom";
 const Learning = () => {
   return (
     <div className="flex flex-col w-full mb-20">
@@ -38,7 +39,7 @@ const Learning = () => {
         <span className="font-light text-xs tracking-wider text-black bg-yellow-400pr-4 w-fit">
           Learn the fundamentals of the tech future
         </span>
-        <div className="bg-white rounded-2xl"></div>
+        <div className="bg-white rounded-2xl">{/* logos here */}</div>
         <div className="flex gap-3.5 items-center mt-5 ">
           <svg
             width="19"
@@ -58,12 +59,14 @@ const Learning = () => {
           </span>
         </div>
         <div className="flex flex-col w-fit md:flex-row gap-8 items-center">
-          <Button className="rounded-full flex items-center gap-3 capitalize font-archivo font-medium text-[16px] bg-[#4258BE] text-white py-1 pr-1 pl-6">
-            Join Our Community
-            <i className="flex w-8 h-8 text-[#4258BE] -rotate-45 border border-[#0101010D] bg-white justify-center items-center rounded-full">
-              <MdArrowForward />
-            </i>
-          </Button>
+          <Link to='/fundamentals'>
+            <Button className="rounded-full flex items-center gap-3 capitalize font-archivo font-medium text-[16px] bg-[#4258BE] text-white py-1 pr-1 pl-6">
+              Know More
+              <i className="flex w-8 h-8 text-[#4258BE] -rotate-45 border border-[#0101010D] bg-white justify-center items-center rounded-full">
+                <MdArrowForward />
+              </i>
+            </Button>
+          </Link>
           <div className="flex items-center gap-5">
             <div className="flex items-center -space-x-2">
               {new Array(3).fill("").map((_, i) => (
@@ -122,7 +125,7 @@ const Learning = () => {
               <span className="text-[#88DB1B] font-normal text-xs">
                 View More
               </span>
-              <MdKeyboardDoubleArrowRight className="w-3.5 h-3.5 text-[#FF9F1C]"/>
+              <MdKeyboardDoubleArrowRight className="w-3.5 h-3.5 text-[#FF9F1C]" />
             </div>
           </div>
         </div>

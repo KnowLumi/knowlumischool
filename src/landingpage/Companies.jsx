@@ -1,7 +1,5 @@
 import { useState } from "react";
 import { companies } from "./landing_helpers";
-import recog1 from "../assets/recog1.png";
-import recog2 from "../assets/recog2.png";
 import Marquee from "react-fast-marquee";
 const Companies = () => {
   const [hoveredImageIndex, setHoveredImageIndex] = useState(null);
@@ -37,13 +35,6 @@ const Companies = () => {
             />
           ))}
         </Marquee>
-      </div>
-      <div className="bg-white rounded-2xl w-fit flex flex-col items-center mx-8 py-8">
-        <span className="font-medium text-lg">Recognized by</span>
-        <div className="flex flex-wrap mt-6">
-          <img src={recog1} alt="" />
-          <img src={recog2} alt="" />
-        </div>
       </div>
     </div>
   );
