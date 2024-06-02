@@ -19,7 +19,7 @@ const roadmap = [
 
 const skills = [
     {
-        name: "HTML",
+        name: "Html",
         icon: ""
     },
     {
@@ -27,11 +27,11 @@ const skills = [
         icon: ""
     },
     {
-        name: "PYTHON",
+        name: "Python",
         icon: ""
     },
     {
-        name: "GITHUB",
+        name: "Github",
         icon: ""
     },
 ]

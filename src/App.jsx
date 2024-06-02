@@ -9,6 +9,7 @@ import Course from "./pages/Course";
 import OtpPage from "./pages/OtpPage";
 import Admin from "./pages/Admin";
 import Fundamentals from "./pages/Fundamentals";
+import Progress from "./pages/ProgressPage";
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
           <Route path="/all-courses" element={<AllCourses />} />
           <Route path="/otp" element={<OtpPage />} />
           <Route path="/fundamentals" element={<Fundamentals />} />
+          <Route path="/progress" element={<Progress />} />
           <Route path="/admin" element={<Admin />} />
           <Route path="/course:id" element={<Course />} />
         </Routes>
