@@ -10,6 +10,7 @@ import OtpPage from "./pages/OtpPage";
 import Admin from "./pages/Admin";
 import Fundamentals from "./pages/Fundamentals";
 import Progress from "./pages/ProgressPage";
+import MyLearning from "./pages/MyLearning";
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
           <Route path="/otp" element={<OtpPage />} />
           <Route path="/fundamentals" element={<Fundamentals />} />
           <Route path="/progress" element={<Progress />} />
+          <Route path="/learning" element={<MyLearning />} />
           <Route path="/admin" element={<Admin />} />
           <Route path="/course:id" element={<Course />} />
         </Routes>
