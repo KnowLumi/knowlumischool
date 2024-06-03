@@ -1,6 +1,6 @@
 import Footer from "../landingpage/Footer";
 import Navigation from "../landingpage/Navigation";
-import { MdHdrStrong } from "react-icons/md";
+import { MdHdrStrong, MdArrowForward } from "react-icons/md";
 import "../landingpage/landing.css";
 import { Button, Progress } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
@@ -9,7 +9,7 @@ const ProgressPage = () => {
   return (
     <div className="flex flex-col bg-[#F7F7F7]">
       <Navigation />
-      <div className="flex flex-col mx-6 md:mx-20 gap-8 mt-20">
+      <div className="flex flex-col mx-6 md:mx-20 gap-8 mt-20 md:mt-28">
         <h1 className="font-medium text-4xl md:text-6xl">My Progress</h1>
         <p className="md:w-[47.625rem] text-xs md:text-sm tracking-wider">
           Monitor your journey from fundamentals to master tracks and
@@ -48,13 +48,16 @@ const ProgressPage = () => {
               ))}
             </div>
             <div className="flex flex-col gap-3 my-5">
-            <span className="text-[#696D6E] text-xs font-normal">10% Complete</span>
-              <Progress value={25} size="sm" color="indigo"/>
+              <span className="text-[#696D6E] text-xs font-normal">
+                10% Complete
+              </span>
+              <Progress value={25} size="sm" color="indigo" />
             </div>
-            <div className="flex flex-wrap items-center gap-3 mt-3 w-full">
+            <div className="flex items-center gap-3 mt-3 w-full">
               <Link to="/course:id" className="w-full">
-                <Button className="bg-[#88DB1B] w-full rounded-lg text-white capitalize font-archivo font-semibold text-sm py-2.5 px-7">
-                  Continue
+                <Button className="bg-[#88DB1B] flex justify-center items-center gap-2 w-full rounded-lg text-white capitalize font-archivo font-semibold text-sm py-2.5 px-7">
+                  <span className="w-fit">Continue</span>
+                  <MdArrowForward className="w-4 h-4"/>
                 </Button>
               </Link>
             </div>
