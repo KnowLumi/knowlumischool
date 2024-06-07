@@ -25,7 +25,7 @@ function App() {
           <Route path="/community" element={<Community />} />
           <Route path="/refer&earn" element={<Earn />} />
           <Route path="/all-courses" element={<AllCourses />} />
-          <Route path="/otp" element={<OtpPage />} />
+          <Route path="/signin" element={<OtpPage />} />
           <Route path="/fundamentals" element={<Fundamentals />} />
           <Route path="/progress" element={<Progress />} />
           <Route path="/learning" element={<MyLearning />} />

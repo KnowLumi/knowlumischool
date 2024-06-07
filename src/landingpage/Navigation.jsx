@@ -4,7 +4,7 @@ import { CgMenuLeftAlt, CgSearch } from "react-icons/cg";
 import { RxCross1 } from "react-icons/rx";
 import { FaArrowRight } from "react-icons/fa6";
 import { pages } from "./landing_helpers";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import logo1 from "../assets/navlogo.png";
 
 const Navigation = () => {
@@ -38,10 +38,12 @@ const Navigation = () => {
           </i>
         </Button>
       </ul>
-      
-      <Button className="hidden md:block capitalize font-archivo font-semibold bg-black rounded-full text-sm py-1.5 px-4">
-        Login/Sign Up
-      </Button>
+
+      <Link to='/signin'>
+        <Button className="hidden md:block capitalize font-archivo font-semibold bg-black rounded-full text-sm py-1.5 px-4">
+          Login/Sign Up
+        </Button>
+      </Link>
 
       <div className="md:hidden flex items-center gap-4">
         <i className="h-5 w-5 flex justify-center items-center">

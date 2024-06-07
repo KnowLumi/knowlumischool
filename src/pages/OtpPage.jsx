@@ -1,4 +1,5 @@
 import { useRef, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Button, Carousel } from "@material-tailwind/react";
 import logo1 from "../assets/navlogo.png";
 import banner from "../assets/hero1.png";
@@ -7,6 +8,12 @@ const OtpPage = () => {
   const formRef = useRef(null);
   const inputsRef = useRef([]);
   const submitRef = useRef(null);
+  const frwdRef = useRef(null);
+
+  const handleNumbSubmit = (e) => {
+    e.preventDefault()
+    frwdRef.current.click();
+  }
 
   useEffect(() => {
     const handleKeyDown = (e, index) => {
@@ -92,12 +99,13 @@ const OtpPage = () => {
           <span className="h-[1px] w-[19rem] my-3 bg-[#D9D9D9]"></span>
           <Carousel
             // prevArrow={() => <i></i>}
+            nextArrow={({ handleNext }) => <i className="w-4 h-4 bg-black" onClick={handleNext} ref={frwdRef}></i>}
             navigation={() => <i></i>}
             className="w-80 "
           >
             <div className="flex flex-col w-fit">
               <span className="font-normal text-sm w-fit">Mobile Number</span>
-              <form className="w-fit flex flex-col items-center mt-3" action="">
+              <form onSubmit={handleNumbSubmit} className="w-fit flex flex-col items-center mt-3" action="">
                 <div className="flex gap-3 border-[1.5px] w-[19rem] border-black rounded-md">
                   <select
                     className="pl-2 rounded-md focus:outline-none"
@@ -115,7 +123,7 @@ const OtpPage = () => {
                     className="border-l border-l-[#01010133] py-2 pl-4 focus:outline-none rounded-e-md"
                   />
                 </div>
-                <Button className="font-archivo bg-black mt-7 w-full">
+                <Button type="submit" className="font-archivo bg-black mt-7 w-full">
                   Get OTP
                 </Button>
               </form>
@@ -140,13 +148,15 @@ const OtpPage = () => {
                     />
                   ))}
                 </div>
-                <Button
-                  type="submit"
-                  ref={submitRef}
-                  className="font-archivo bg-black mt-7 w-full capitalize font-light text-white"
-                >
-                  Submit
-                </Button>
+                <a href="/">
+                  <Button
+                    
+                    ref={submitRef}
+                    className="font-archivo bg-black mt-7 w-full capitalize font-light text-white"
+                  >
+                    Submit
+                  </Button>
+                </a>
               </form>
             </div>
           </Carousel>

@@ -50,7 +50,7 @@ const Included = () => {
           <span className="h-[1px] w-64 md:w-full bg-[#4258BE66] "></span>
           <div className="flex flex-col gap-9">
             <div className="flex flex-wrap justify-center w-full h-full md:h-[5.5rem]">
-              <div className="md:rect1 bg-cover md:bg-contain md:w-[39.5rem] w-full h-full bg-no-repeat flex">
+              <div className="md:rect1 bg-cover md:bg-contain md:w-[39.5rem] w-full h-[5.5rem] bg-no-repeat flex">
                 <svg
                   width="55"
                   height="55"
