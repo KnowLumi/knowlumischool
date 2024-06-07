@@ -49,13 +49,14 @@ const Included = () => {
           </div>
           <span className="h-[1px] w-64 md:w-full bg-[#4258BE66] "></span>
           <div className="flex flex-col gap-9">
-            <div className="flex flex-wrap w-full h-full md:h-[5.5rem]">
-              <div className="md:rect1 bg-cover md:bg-contain w-full md:w-[16.25rem] h-full bg-no-repeat flex">
+            <div className="flex flex-wrap justify-center w-full h-full md:h-[5.5rem]">
+              <div className="md:rect1 bg-cover md:bg-contain md:w-[39.5rem] w-full h-full bg-no-repeat flex">
                 <svg
                   width="55"
                   height="55"
                   viewBox="0 0 55 55"
                   fill="none"
+                  className="hidden md:block"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
@@ -63,9 +64,9 @@ const Included = () => {
                     fill="#88DB1B"
                   />
                 </svg>
-                <div className="flex flex-col md:flex-row gap-6 md:gap-9 py-3 items-center">
-                  <div className="flex flex-col gap-2">
-                    <span className="text-[#4258BE] font-semibold text-2xl md:text-3xl p-0">
+                <div className="flex flex-col md:flex-row gap-6 md:gap-9 py-3 w-full items-center">
+                  <div className="rect1_a bg-contain bg-no-repeat w-[16.25rem] h-[4.75rem] md:h-fit md:w-fit flex flex-col px-7 justify-center gap-2">
+                    <span className="text-[#4258BE] font-semibold text-2xl md:text-[28px] p-0">
                       &#8377; 5000/-
                     </span>
                     <span className="font-light text-xs tracking-wider">
@@ -88,8 +89,8 @@ const Included = () => {
                   </div>
                 </div>
               </div>
-              <div className="rect2 bg-cover md:bg-contain h-[4.75rem] md:h-[5.5rem]  w-64 md:w-[41rem] bg-no-repeat flex items-center gap-2 justify-center">
-                <span className="font-bold text-sm md:text-lg w-[8.75rem] md:w-fit tracking-wider text-white">
+              <div className="rect2 bg-contain h-[4.75rem] md:h-[5rem] w-[15.75rem] md:w-[24rem] bg-no-repeat pl-5 flex justify-center items-center gap-2">
+                <span className="font-bold text-sm md:text-lg tracking-wider w-[8.75rem] md:w-fit text-white">
                   ENROLL NOW WITH KNOWLUMI
                 </span>
                 <MdArrowForward className="-rotate-45 text-white w-6 h-6" />
