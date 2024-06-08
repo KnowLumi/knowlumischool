@@ -24,7 +24,8 @@ function Icon({ id, open }) {
     />
   );
 }
-const WeekProgress = () => {
+const WeekProgress = (props) => {
+  const { setIsWeek } = props;
   const [open, setOpen] = useState(0);
   const handleOpen = (value) => setOpen(open === value ? 0 : value);
   return (
@@ -38,13 +39,18 @@ const WeekProgress = () => {
             Continue to your next item!
           </span>
           <div className="flex flex-wrap gap-3 items-center">
-            <h4 className="font-normal text-xs w-[11.75rem] md:text-sm tracking-wider text-[#4258BE]">
+            <h4 className="font-normal text-xs w-[11.75rem] md:w-fit md:text-sm tracking-wider text-[#4258BE]">
               Day 3: Styling HTML Elements with Inline CSS
             </h4>
-            <MdKeyboardDoubleArrowRight className="w-5 h-5" />
+            <MdKeyboardDoubleArrowRight className="w-5 h-5 day_arrow" />
           </div>
         </div>
-        <Button className="rounded-lg bg-[#88DB1B] py-2 px-5 w-fit text-white font-archivo capitalize font-medium text-[10px] md:text-[16px] tracking-wide">
+        <Button
+          onClick={() => {
+            setIsWeek(false);
+          }}
+          className="rounded-lg resume_btn bg-[#88DB1B] py-2 px-5 w-fit text-white font-archivo capitalize font-medium text-[10px] md:text-[16px] tracking-wide"
+        >
           Resume
         </Button>
       </div>

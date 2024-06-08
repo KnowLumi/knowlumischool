@@ -39,7 +39,7 @@ const Fundamentals = () => {
       <h1 className="font-normal tracking-wide text-4xl">Fundamentals</h1>
       <p className="font-light text-xs tracking-wider text-[#010101CC]">
         Learn HTML, CSS, GitHub, and Python essentials, setting the stage for a
-        rewarding career journey.{" "}
+        rewarding career journey.
       </p>
       <div className="flex flex-col gap-3">
         <span className="text-[#696D6E] text-xs font-normal">10% Complete</span>

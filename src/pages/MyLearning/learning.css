@@ -1,3 +1,40 @@
-.weeks::-webkit-scrollbar{
+.weeks::-webkit-scrollbar {
     display: none;
 }
+
+.resume_btn {
+    animation: resume_blink 1s ease-in-out infinite
+}
+
+.day_arrow {
+    animation: toAndFro 1s ease-in-out infinite;
+}
+
+@keyframes toAndFro {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(20px);
+    }
+}
+
+
+
+@keyframes resume_blink {
+
+    0%,
+    100% {
+        background-color: #88DB1B;
+    }
+
+    50% {
+        background-color: #4258BE;
+    }
+
+}
+
+/* #4258BE */
