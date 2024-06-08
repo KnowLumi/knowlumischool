@@ -54,7 +54,7 @@ const ProgressPage = () => {
               <Progress value={25} size="sm" color="indigo" />
             </div>
             <div className="flex items-center gap-3 mt-3 w-full">
-              <Link to="/course:id" className="w-full">
+              <Link to="/learning" className="w-full">
                 <Button className="bg-[#88DB1B] flex justify-center items-center gap-2 w-full rounded-lg text-white capitalize font-archivo font-semibold text-sm py-2.5 px-7">
                   <span className="w-fit">Continue</span>
                   <MdArrowForward className="w-4 h-4"/>

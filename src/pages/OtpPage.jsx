@@ -1,5 +1,4 @@
 import { useRef, useEffect } from "react";
-import { Link } from "react-router-dom";
 import { Button, Carousel } from "@material-tailwind/react";
 import logo1 from "../assets/navlogo.png";
 import banner from "../assets/hero1.png";
@@ -98,8 +97,8 @@ const OtpPage = () => {
           </h6>
           <span className="h-[1px] w-[19rem] my-3 bg-[#D9D9D9]"></span>
           <Carousel
-            // prevArrow={() => <i></i>}
-            nextArrow={({ handleNext }) => <i className="w-4 h-4 bg-black" onClick={handleNext} ref={frwdRef}></i>}
+            prevArrow={() => <i></i>}
+            nextArrow={({ handleNext }) => <i className="hidden w-4 h-4 bg-black" onClick={handleNext} ref={frwdRef}></i>}
             navigation={() => <i></i>}
             className="w-80 "
           >
@@ -148,7 +147,7 @@ const OtpPage = () => {
                     />
                   ))}
                 </div>
-                <a href="/">
+                <a href="/progress">
                   <Button
                     
                     ref={submitRef}

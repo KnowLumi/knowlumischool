@@ -9,8 +9,8 @@ const MyLearning = () => {
       <Navigation />
       <div className="flex mx-6 md:mx-20 gap-8 mt-20 md:mt-28">
         <Fundamentals />
-        {/* <WeekProgress /> */}
-        <DayLearning/>
+        <WeekProgress />
+        {/* <DayLearning/> */}
       </div>
     </div>
   );
