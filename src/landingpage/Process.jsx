@@ -85,7 +85,7 @@ const Process = () => {
           <div className="md:action-line  w-80 relative md:w-[71rem] h-7 md:h-20 bg-cover md:bg-contain bg-no-repeat flex flex-col justify-end">
             <div className="md:absolute left-0 top-6 -translate-x-24 md:bg-[#F7F7F7] flex gap-3.5 items-center z-10">
               <div className="flex flex-row-reverse md:flex-row gap-3 md:gap-7 py-4 px-6 -rotate-90 md:rotate-0 bg-[#4258BE] rounded-lg">
-                <img src={cash} className="w-14 h-14 rotate-90 md:rotate-0 " alt="" />
+                <img src={cash} className="w-14 h-14 rotate-90 md:rotate-0 cash" alt="" />
                 <div className="flex flex-col md:w-[11.25rem] text-white">
                   <h4 className="text-base font-bold leading-6 text-left w-32">
                     FREELANCE & EARN

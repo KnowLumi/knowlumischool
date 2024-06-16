@@ -6,6 +6,19 @@
     animation: tilting-rev 3s forwards infinite;
 }
 
+.cash{
+    animation: cash-tilt 1s forwards ease-in infinite;
+}
+
+@keyframes cash-tilt {
+    0%,100%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(-8deg);
+    }
+}
+
 @keyframes tilting {
 
     0%,
