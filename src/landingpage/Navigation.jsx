@@ -77,9 +77,11 @@ const Navigation = () => {
             </li>
           ))}
         </ul>
-        <Button className="capitalize font-archivo font-semibold bg-black text-sm mx-5">
-          Login/Sign Up
-        </Button>
+        <Link to='/signin'>
+          <Button className="capitalize font-archivo font-semibold bg-black text-sm mx-5">
+            Login/Sign Up
+          </Button>
+        </Link>
       </Drawer>
     </nav>
   );

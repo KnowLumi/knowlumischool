@@ -1,0 +1,8 @@
+.auth-banner{
+background-image: url('../../assets/hero1.png');
+}
+@media (max-width: 640px) {
+    .auth-banner{
+        background-image: url('./otpbanner.png');
+    }
+}
