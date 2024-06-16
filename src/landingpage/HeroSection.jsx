@@ -4,6 +4,7 @@ import {
   MdOutlineLocalLibrary,
   MdKeyboardDoubleArrowRight,
 } from "react-icons/md";
+import { IoArrowForward } from "react-icons/io5";
 import { MdArrowForward } from "react-icons/md";
 import { Button, Avatar } from "@material-tailwind/react";
 import { Fade } from "react-slideshow-image";
@@ -37,7 +38,7 @@ const HeroSection = () => {
           <div className="flex justify-between w-full items-center">
             <div className="flex items-center gap-0">
               <span className="bg-black lineanime"></span>
-              <MdArrowForward className="h-6 md:h-10 w-6 md:w-10 text-black -translate-x-2" />
+              <IoArrowForward className="h-7 md:h-10 w-7 md:w-10 text-black -translate-x-2" />
             </div>
             <span className="font-medium text-3xl md:text-6xl">
               into reality

@@ -11,6 +11,7 @@ import { program } from "./landing_helpers";
 import lines from "../assets/program_lines.png";
 import "./animations.css";
 import aboutbar from "../assets/about_bar1.png";
+import { Link } from "react-router-dom";
 
 const PointIcon = (index) => {
   switch (index) {
@@ -83,12 +84,14 @@ const Program = () => {
         ))}
       </div>
       <div className="flex flex-wrap gap-5 my-9 justify-center">
-        <Button className="rounded-full bg-black flex items-center gap-3 capitalize font-archivo font-medium text-[16px] py-2 pr-2 pl-6">
-          Enroll in the Program
-          <i className="flex icon w-8 h-8 text-white border border-[#0101010D] bg-[#FFFFFF33] justify-center items-center rounded-full">
-            <MdArrowForward />
-          </i>
-        </Button>
+        <Link to='/fundamentals'>
+          <Button className="rounded-full bg-black flex items-center gap-3 capitalize font-archivo font-medium text-[16px] py-2 pr-2 pl-6">
+            Enroll in the Program
+            <i className="flex icon w-8 h-8 text-white border border-[#0101010D] bg-[#FFFFFF33] justify-center items-center rounded-full">
+              <MdArrowForward />
+            </i>
+          </Button>
+        </Link>
         <Button
           className="rounded-full flex items-center gap-3 capitalize font-archivo font-medium text-[16px] text-black py-2 pr-2 pl-6"
           variant="outlined"

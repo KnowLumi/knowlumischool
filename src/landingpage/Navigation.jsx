@@ -36,7 +36,7 @@ const Navigation = () => {
             </NavLink>
           </li>
         ))}
-        <Link to={signedIn?'/learning':'/'}>
+        <Link to={signedIn ? "/progress" : "/"}>
           <Button
             className={`flex items-center capitalize ${
               signedIn
@@ -93,7 +93,7 @@ const Navigation = () => {
             <RxCross1 size={25} />
           </button>
         </div>
-        <ul className="flex flex-col gap-8 mx-5 my-8">
+        <ul className="flex flex-col gap-8 m-8">
           {pages.map((page, index) => (
             <li key={index}>
               <NavLink
@@ -107,11 +107,19 @@ const Navigation = () => {
             </li>
           ))}
         </ul>
-        <Link to="/signin">
-          <Button className="capitalize font-archivo font-semibold bg-black text-sm mx-5">
-            Login/Sign Up
-          </Button>
-        </Link>
+        {signedIn ? (
+          <Link to='/progress' className="mx-7">
+            <Button className="font-archivo capitalize rounded-full bg-white border text-black text-sm">
+              My Learning
+            </Button>
+          </Link>
+        ) : (
+          <Link to="/signin">
+            <Button className="capitalize font-archivo font-semibold bg-black text-sm mx-5">
+              Login/Sign Up
+            </Button>
+          </Link>
+        )}
       </Drawer>
     </nav>
   );

@@ -37,7 +37,7 @@ const Roadmap = () => {
                     WEEK {item.week}
                   </span>
                   <MdKeyboardArrowDown
-                    className="w-5 h-5"
+                    className={`w-5 h-5 ${index===open?'rotate-180':''} transition-transform`}
                     onClick={() => handleOpen(index)}
                   />
                 </div>
@@ -53,7 +53,7 @@ const Roadmap = () => {
               <AccordionHeader className="border-0 h-8 rounded-lg">
                 head
               </AccordionHeader>
-              <AccordionBody>
+              <AccordionBody className="font-archivo px-4 text-white">
                 We&apos;re not always in the position that we want to be at.
                 We&apos;re constantly growing. We&apos;re constantly making
                 mistakes. We&apos;re constantly trying to express ourselves and

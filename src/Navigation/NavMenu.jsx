@@ -4,8 +4,8 @@ import {
   MenuList,
   MenuItem,
   Avatar,
-  Typography,
 } from "@material-tailwind/react";
+import { Link } from "react-router-dom";
 
 const NavMenu = () => {
   return (
@@ -19,7 +19,7 @@ const NavMenu = () => {
         />
       </MenuHandler>
       <MenuList>
-        <MenuItem className="flex items-center gap-2">
+        <MenuItem className="flex items-center gap-2 font-archivo">
           <svg
             width="16"
             height="16"
@@ -34,12 +34,11 @@ const NavMenu = () => {
               fill="#90A4AE"
             />
           </svg>
-
-          <Typography variant="small" className="font-medium">
-            My Profile
-          </Typography>
+          <Link to="/progress">
+            <span className="font-medium">My Profile</span>
+          </Link>
         </MenuItem>
-        <MenuItem className="flex items-center gap-2">
+        <MenuItem className="flex items-center gap-2 font-archivo">
           <svg
             width="16"
             height="16"
@@ -55,11 +54,9 @@ const NavMenu = () => {
             />
           </svg>
 
-          <Typography variant="small" className="font-medium">
-            Edit Profile
-          </Typography>
+          <span className="font-medium">Edit Profile</span>
         </MenuItem>
-        <MenuItem className="flex items-center gap-2">
+        <MenuItem className="flex items-center gap-2 font-archivo">
           <svg
             width="14"
             height="14"
@@ -75,11 +72,9 @@ const NavMenu = () => {
             />
           </svg>
 
-          <Typography variant="small" className="font-medium">
-            Inbox
-          </Typography>
+          <span className="font-medium">Inbox</span>
         </MenuItem>
-        <MenuItem className="flex items-center gap-2">
+        <MenuItem className="flex items-center gap-2 font-archivo">
           <svg
             width="16"
             height="16"
@@ -94,12 +89,10 @@ const NavMenu = () => {
               fill="#90A4AE"
             />
           </svg>
-          <Typography variant="small" className="font-medium">
-            Help
-          </Typography>
+          <span className="font-medium">Help</span>
         </MenuItem>
         <hr className="my-2 border-blue-gray-50" />
-        <MenuItem className="flex items-center gap-2 ">
+        <MenuItem className="flex items-center gap-2 font-archivo">
           <svg
             width="16"
             height="14"
@@ -114,9 +107,7 @@ const NavMenu = () => {
               fill="#90A4AE"
             />
           </svg>
-          <Typography variant="small" className="font-medium">
-            Sign Out
-          </Typography>
+          <span className="font-medium">Sign Out</span>
         </MenuItem>
       </MenuList>
     </Menu>
