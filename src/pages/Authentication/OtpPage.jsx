@@ -113,16 +113,16 @@ const OtpPage = () => {
             navigation={() => <i></i>}
             className="md:w-80 w-[17.5rem]"
           >
-            <div className="flex flex-col w-fit">
+            <div className="flex flex-col w-full">
               <span className="font-normal text-sm w-fit">Mobile Number</span>
               <form
                 onSubmit={handleNumbSubmit}
                 className="w-fit flex flex-col items-center mt-3"
                 action=""
               >
-                <div className="flex gap-3 border-[1.5px] w-full md:w-[19rem] border-black rounded-md">
+                <div className="flex gap-3 border-[1.5px] w-fit md:w-[19rem] border-black rounded-md">
                   <select
-                    className="pl-2 rounded-md focus:outline-none"
+                    className="md:pl-2 bg-white rounded-md focus:outline-none"
                     name=""
                     id=""
                   >
@@ -134,7 +134,7 @@ const OtpPage = () => {
                   </select>
                   <input
                     type="tel"
-                    className="border-l border-l-[#01010133] py-2 pl-4 focus:outline-none rounded-e-md"
+                    className="border-l border-l-[#01010133] py-2 md:pl-4 focus:outline-none rounded-e-md"
                   />
                 </div>
                 <Button
