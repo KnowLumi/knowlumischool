@@ -12,6 +12,7 @@ import Admin from "./pages/Admin";
 import Fundamentals from "./pages/Fundamentals";
 import Progress from "./pages/ProgressPage";
 import MyLearning from "./pages/MyLearning";
+import ScrollToTop from "./ScrollToTop";
 
 export const Context = createContext();
 
@@ -21,7 +22,7 @@ function App() {
     <Context.Provider value={[signedIn, setSignedIn]}>
       <div className="h-screen bg-gray-50 font-archivo">
         <Router>
-          {/* <Navigation /> */}
+          <ScrollToTop/>
           <Routes>
             <Route path="/" element={<LandingPage />} />
             <Route path="/about" element={<About />} />

@@ -1,7 +1,7 @@
 import { useRef, useEffect, useContext } from "react";
 import { Button, Carousel } from "@material-tailwind/react";
 import logo1 from "../../assets/navlogo.png";
-import { countries } from "../otphelpers";
+import { countries } from "../helpers/otphelpers";
 import { Context } from "../../App";
 import { useNavigate } from "react-router-dom";
 import "./auth.css";
@@ -24,7 +24,7 @@ const OtpPage = () => {
       setSignedIn(true);
       navigate("/progress");
     } catch (error) {
-      console.log("error");
+      console.error("error");
     }
   };
 
@@ -159,7 +159,7 @@ const OtpPage = () => {
                   {new Array(6).fill("").map((_, i) => (
                     <input
                       key={`otp_input_${i + 2}`}
-                      type="text"
+                      type="tel"
                       className="md:w-10 w-8 h-10 text-center text-2xl font-extrabold text-slate-900 bg-slate-100 border border-[#01010166] hover:border-slate-200 appearance-none rounded p-2 outline-none focus:bg-white focus:border-indigo-400 focus:ring-2 focus:ring-indigo-100"
                       maxLength="1"
                       ref={(el) => (inputsRef.current[i] = el)}

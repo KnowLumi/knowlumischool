@@ -10,7 +10,7 @@ import {
 const NavMenu = () => {
   return (
     <Menu>
-      <MenuHandler>
+      <MenuHandler className="md:block hidden">
         <Avatar
           variant="circular"
           alt="tania andrew"
