@@ -36,29 +36,33 @@ const Navigation = () => {
             </NavLink>
           </li>
         ))}
-        <Button
-          className={`flex items-center capitalize ${
-            signedIn ? "bg-white py-1 px-2.5 border" : "bg-black py-1 pr-1 pl-3"
-          } font-archivo rounded-full`}
-        >
-          {signedIn ? (
-            <span className="capitalize text-black font-medium text-xs p-1">
-              My Learing
-            </span>
-          ) : (
-            <span className="font-medium text-xs">
-              Explore&nbsp;<span className="lowercase"> our programs</span>
-            </span>
-          )}
+        <Link to={signedIn?'/learning':'/'}>
+          <Button
+            className={`flex items-center capitalize ${
+              signedIn
+                ? "bg-white py-1 px-2.5 border"
+                : "bg-black py-1 pr-1 pl-3"
+            } font-archivo rounded-full`}
+          >
+            {signedIn ? (
+              <span className="capitalize text-black font-medium text-xs p-1">
+                My Learning
+              </span>
+            ) : (
+              <span className="font-medium text-xs">
+                Explore&nbsp;<span className="lowercase"> our programs</span>
+              </span>
+            )}
 
-          {signedIn ? (
-            <i></i>
-          ) : (
-            <i className="rounded-full bg-gray-800 ml-2 w-6 h-6 flex items-center justify-center">
-              <FaArrowRight className="text-[#F7F7F7] -rotate-45" />
-            </i>
-          )}
-        </Button>
+            {signedIn ? (
+              <i></i>
+            ) : (
+              <i className="rounded-full bg-gray-800 ml-2 w-6 h-6 flex items-center justify-center">
+                <FaArrowRight className="text-[#F7F7F7] -rotate-45" />
+              </i>
+            )}
+          </Button>
+        </Link>
       </ul>
 
       {signedIn ? (
