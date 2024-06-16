@@ -31,7 +31,7 @@ const FaqSection = () => {
 
   const handleOpen = (value) => setOpen(open === value ? 0 : value);
   return (
-    <div className="w-full py-2 px-8 flex flex-col items-center bg-gray-50 font-archivo ">
+    <div className="w-full py-2 px-8 my-16 flex flex-col items-center bg-[#F7F7F7] font-archivo ">
       <span className="font-archivo font-bold text-xl text-black opacity-60 mb-3">
         Any Queries?
       </span>

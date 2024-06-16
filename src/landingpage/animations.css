@@ -2,8 +2,14 @@
     animation: tilting 3s forwards infinite;
 }
 
+.about-tilt-rev {
+    animation: tilting-rev 3s forwards infinite;
+}
+
 @keyframes tilting {
-    0% {
+
+    0%,
+    100% {
         transform: rotate(0deg);
     }
 
@@ -11,9 +17,19 @@
         transform: rotate(5deg);
     }
 
+}
+
+@keyframes tilting-rev {
+
+    0%,
     100% {
         transform: rotate(0deg);
     }
+
+    50% {
+        transform: rotate(-5deg);
+    }
+
 }
 
 .process-line path {

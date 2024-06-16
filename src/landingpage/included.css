@@ -19,6 +19,10 @@
         background-image: url('./Included_images/rect_mobile.png');
     }
 
+    .rect1 {
+        background-image: url('');
+    }
+
     .rect1_a {
         background-image: url('./Included_images/rect1_mobile.png');
     }

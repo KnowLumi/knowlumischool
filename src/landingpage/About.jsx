@@ -55,7 +55,7 @@ const About = () => {
               <img src={des} className="h-full pt-2" alt="" />
             </div>
             <img src={about} alt="" className="h-full" />
-            <div className="hidden md:flex items-center bg-[#2F342A] mt-20 rounded-lg gap-3 px-3 h-12">
+            <div className="hidden md:flex items-center about-tilt-rev bg-[#2F342A] mt-20 rounded-lg gap-3 px-3 h-12">
               <MdLocalLibrary className="text-[#88DB1B]" />
               <span className="text-white font-semibold text-xs tracking-wider">
                 Personal Mentorship

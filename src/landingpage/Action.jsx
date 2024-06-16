@@ -8,7 +8,7 @@ const Action = () => {
     <div className="flex flex-col-reverse md:flex-col w-full mb-12 items-center font-archivo">
       <img src={actionbottom} className="w-80 block md:hidden -translate-y-5" alt="" />
       <div className="z-10 w-80 md:w-[71rem] md:h-[22rem] action-banner flex flex-col bg-cover mt-12 md:mt-0 md:bg-contain bg-no-repeat">
-        <div className="w-full hidden md:flex justify-end gap-8 items-center pr-8 py-3.5">
+        <div className="w-full hidden md:flex justify-end gap-8 items-center pr-8 py-1.5">
           <svg
             width="16"
             height="16"
@@ -50,11 +50,11 @@ const Action = () => {
             />
           </svg>
         </div>
-        <div className="flex flex-col md:flex-row w-full md:gap-6  text-[#F7F7F7]">
-          <div className="people bg-center bg-contain bg-no-repeat w-80 md:w-[23.5rem] h-[17.35rem] md:h-[20.25rem] flex items-center justify-center">
+        <div className="flex flex-col md:flex-row w-full text-[#F7F7F7]">
+          <div className="people bg-contain bg-no-repeat w-80 md:w-[23.5rem] h-[17.35rem]  md:h-[19.1rem] flex items-center justify-center">
           </div>
           <div className="flex flex-col text-wrap px-8 w-full bg-black md:bg-transparent md:w-[44.5rem]">
-            <div className="flex flex-col gap-4 pt-6 md:pt-0 pb-3 border-b border-b-[#FFFFFF80] md:text-[#F7F7F7]">
+            <div className="flex flex-col gap-4 pt-6 md:pt-3 pb-3 border-b border-b-[#FFFFFF80] md:text-[#F7F7F7]">
               <h1 className="font-bold text-[16px] md:text-2xl tracking-wider">
                 Join Our Thriving Community of Ambitious Learners!
               </h1>

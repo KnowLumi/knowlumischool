@@ -70,7 +70,7 @@ const Program = () => {
                 style={{ backgroundImage: `url('${lines}')` }}
                 className="md:w-[440px] md:h-[234.58px] bg-contain md:bg-cover bg-no-repeat flex items-center"
               >
-                <img src={item.image} alt="" className="object-contain h-[15.5rem]" />
+                <img src={item.image} alt="" className="object-contain" />
               </div>
             </div>
             <span
