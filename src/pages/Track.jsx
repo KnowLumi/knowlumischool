@@ -8,11 +8,17 @@ import Roadmap from "./Fundamentals/Roadmap";
 import SkillsCovered from "./Fundamentals/SkillsCovered";
 import Hero from "./Fundamentals/Hero";
 import Tracks from "./Fundamentals/Tracks";
+import { useLocation } from "react-router-dom";
+import { tracks } from "./helpers/fundamentalhelpers";
+
 const Track = () => {
+    const location = useLocation();
+    const { data } = location.state || {};
+
     return (
         <div className="flex flex-col w-full bg-[#F7F7F7]">
             <Navigation />
-            <Hero />
+            <Hero tracks={tracks} id={data} />
             <div className="flex flex-col gap-14 mx-6 md:mx-20 mt-20">
                 <h2 className="text-[#88DB1B] font-bold text-lg md:text-3xl tracking-wider">
                     PROGRAM OVERVIEW
@@ -28,8 +34,8 @@ const Track = () => {
                     </p>
                 </div>
             </div>
-            <SkillsCovered />
-            <Roadmap />
+            <SkillsCovered tracks={tracks} id={data}/>
+            <Roadmap tracks={tracks} id={data}/>
             <Companies />
             <div className="rounded-3xl bg-[#DFDFD7] flex flex-wrap items-center gap-6 justify-between md:py-9 py-4 pl-4 pr-2 md:px-12 mx-6 md:mx-20">
                 <div className="flex flex-col gap-6">

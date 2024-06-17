@@ -6,56 +6,80 @@ import {
   MdFreeCancellation,
   MdSlowMotionVideo,
 } from "react-icons/md";
-import { skills } from "../helpers/fundamentalhelpers";
+import { useLocation } from "react-router-dom";
 import "./fundamentals.css";
 import learners from "./Images/learners.png";
 import bars from "./Images/threebars.png";
-const Hero = () => {
+const Hero = (props) => {
+  const { tracks, id } = props;
+  const location = useLocation();
+  const isFundamentalsPath = location.pathname === "/fundamentals";
+
   return (
     <div className="md:mx-20 px-6 mt-24 gap-8 flex md:flex-row flex-col justify-between">
       <div className="flex flex-col gap-9">
         <div className="flex items-center w-fit bg-white rounded-full py-2 px-6 gap-4">
           <MdHdrStrong className="text-[#88DB1B]" />
-          <span className="font-bold text-xs text-[#01010199]">LEARNING</span>
+          <span className="font-bold text-xs text-[#01010199]">
+            {isFundamentalsPath ? "LEARNING" : `TRACK ${id}`}
+          </span>
         </div>
-        <span className="font-medium text-[42px] md:text-7xl tracking-wide">
-          Fundamentals
+        <span
+          className={`font-medium text-[42px] ${
+            isFundamentalsPath ? "md:text-7xl" : "md:text-5xl"
+          } tracking-wide max-w-[30.25rem]`}
+        >
+          {tracks[id].title}
         </span>
+        {!isFundamentalsPath && (
+          <span className="font-extrabold uppercase text-[#88DB1B] text-[16px] tracking-wider">
+            {`${tracks[id].level} LEVEL COURSE`}
+          </span>
+        )}
         <div className="flex flex-col">
-          <p className="md:w-[27.5rem] font-light text-xs">
-            At KnowLumi, students engage in personalized learning, foster
-            community connections, and leverage their skills to secure
-            internships, jobs, or start-ups.
-          </p>
-          <div className="flex gap-3.5 items-center mt-5">
-            <MdOutlineLocalLibrary className="w-5 h-5 text-[#88DB1B]" />
-            <span className="font-light text-sm">Personal Mentorship</span>
-          </div>
-          <div className="flex gap-3.5 items-center mt-5">
-            <MdFreeCancellation className="w-5 h-5 text-[#88DB1B]" />
-            <span className="font-light text-sm">Weekly Review Meetings</span>
-          </div>
-        </div>
-        <div className="flex rounded-2xl border border-[#88DB1B] py-4 px-7 w-80 md:w-[30.75rem] justify-between">
-          {skills.map((skill, index) => (
-            <div
-              key={`skill-${index}`}
-              className="flex items-center justify-between"
-            >
-              <div className="flex flex-col items-center rounded-xl bg-[#F7F7F7] gap-2  p-1 md:p-4 ">
-                <i className="flex justify-center items-center w-5 h-5 md:w-8 md:h-8 bg-[#DFDFD799]"></i>
-                <span className="font-light tracking-wider text-[10px] md:text-xs w-14 text-center">
-                  {skill.name}
+          <p className="md:w-[27.5rem] font-light text-xs">{tracks[id].desc}</p>
+          {isFundamentalsPath && (
+            <>
+              <div className="flex gap-3.5 items-center mt-5">
+                <MdOutlineLocalLibrary className="w-5 h-5 text-[#88DB1B]" />
+                <span className="font-light text-sm">Personal Mentorship</span>
+              </div>
+              <div className="flex gap-3.5 items-center mt-5">
+                <MdFreeCancellation className="w-5 h-5 text-[#88DB1B]" />
+                <span className="font-light text-sm">
+                  Weekly Review Meetings
                 </span>
               </div>
-              <span
-                className={`${
-                  index === skills.length - 1 ? "hidden" : "block"
-                } w-[1px] h-10 bg-[#88DB1B]`}
-              ></span>
-            </div>
-          ))}
+            </>
+          )}
         </div>
+        {isFundamentalsPath && (
+          <>
+            <div className="flex rounded-2xl border border-[#88DB1B] py-4 px-7 w-80 md:w-[30.75rem] justify-between">
+              {tracks[id].skills.map((skill, index) => (
+                <div
+                  key={`skill-${index}`}
+                  className="flex items-center justify-between"
+                >
+                  <div className="flex flex-col items-center rounded-xl bg-[#F7F7F7] gap-2  p-1 md:p-4 ">
+                    <img src={skill.image} alt="" className="flex justify-center items-center w-5 h-5 md:w-8 md:h-8"/>
+                    <span className="font-light tracking-wider text-[10px] md:text-xs w-14 text-center">
+                      {skill.skill}
+                    </span>
+                  </div>
+                  <span
+                    className={`${
+                      index === tracks[id].skills.length - 1
+                        ? "hidden"
+                        : "block"
+                    } w-[1px] h-10 bg-[#88DB1B]`}
+                  ></span>
+                </div>
+              ))}
+            </div>
+          </>
+        )}
+
         <div className="flex flex-wrap md:justify-center gap-6">
           <Button className="rounded-full flex items-center gap-9 capitalize font-archivo font-medium text-[16px] py-2 pr-2 pl-12">
             Enroll Now

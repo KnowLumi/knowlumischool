@@ -3,9 +3,11 @@ import {
   MdArrowForward,
   MdOutlineFileDownload,
 } from "react-icons/md";
-import { skills } from "../helpers/fundamentalhelpers";
 import { Button } from "@material-tailwind/react";
-const SkillsCovered = () => {
+
+const SkillsCovered = (props) => {
+  const { tracks, id } = props;
+
   return (
     <div className="flex flex-col gap-12 py-6 md:py-9 px-3 md:px-12 md:mx-20 mx-6 my-8 bg-white rounded-3xl">
       <div className="flex gap-4 items-center">
@@ -16,15 +18,15 @@ const SkillsCovered = () => {
           Skills covered
         </h3>
       </div>
-      <div className="flex flex-wrap gap-2 justify-between">
-        {skills.map((skill, index) => (
+      <div className="flex flex-col md:flex-row md:flex-wrap gap-2 justify-between items-center">
+        {tracks[id].skills.map((skill, index) => (
           <div
             key={`skill-${index}`}
-            className="flex items-center rounded-xl bg-[#F7F7F7] gap-3 md:gap-8 p-3 md:p-4 w-[8.75rem] md:w-[13.5rem]"
+            className="flex items-center rounded-xl bg-[#F7F7F7] gap-3 md:gap-8 p-3 md:p-4 w-72 md:w-[13.5rem]"
           >
-            <i className="flex justify-center items-center rounded-full w-11 h-11 md:w-14 md:h-14 bg-[#DFDFD799]"></i>
+            <img src={skill.image} alt="" className="flex justify-center object-contain items-center rounded-full w-11 h-11 md:w-14 md:h-14 p-2 bg-[#DFDFD799]" />
             <span className="font-light tracking-wider text-[16px]">
-              {skill.name}
+              {skill.skill}
             </span>
           </div>
         ))}

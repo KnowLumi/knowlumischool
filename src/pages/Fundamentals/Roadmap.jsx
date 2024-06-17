@@ -2,7 +2,7 @@ import React from "react";
 import { IoNavigateCircleOutline } from "react-icons/io5";
 import { MdKeyboardArrowDown, MdArrowForward } from "react-icons/md";
 import { Link } from "react-router-dom";
-import { roadmap } from "../helpers/fundamentalhelpers";    
+
 import "./fundamentals.css";
 import {
   Accordion,
@@ -11,9 +11,10 @@ import {
   Avatar,
   Button,
 } from "@material-tailwind/react";
-const Roadmap = () => {
+const Roadmap = (props) => {
   const [open, setOpen] = React.useState(-1);
   const handleOpen = (value) => setOpen(open === value ? -1 : value);
+  const { tracks, id } = props;
   return (
     <div className="flex flex-col gap-12 py-6 md:py-9 px-4 md:px-12 mx-6 md:mx-20 bg-white rounded-3xl">
       <div className="flex gap-4 items-center">
@@ -28,21 +29,21 @@ const Roadmap = () => {
         Here&apos;s your Actionable Roadmap to learn the fundamentals of Coding
       </span>
       <div className="flex flex-wrap gap-7 justify-between">
-        {roadmap.map((item, index) => (
+        {tracks[id].roadmap.map((item, index) => (
           <div key={`week-${index + 1}`} className="flex flex-col items-center">
             <div className="roadmap-items h-[9.25rem] md:h-[8.75rem] w-[17.375rem] md:w-[30.375rem] bg-contain z-10 bg-no-repeat">
               <div className="mt-5 mx-5 flex flex-col gap-3">
                 <div className="flex justify-between items-center">
                   <span className="font-extrabold text-sm tracking-wider">
-                    WEEK {item.week}
+                    WEEK {index + 1}
                   </span>
                   <MdKeyboardArrowDown
-                    className={`w-5 h-5 ${index===open?'rotate-180':''} transition-transform cursor-pointer`}
+                    className={`w-5 h-5 ${index === open ? 'rotate-180' : ''} transition-transform cursor-pointer`}
                     onClick={() => handleOpen(index)}
                   />
                 </div>
                 <span className="font-light text-sm tracking-wider">
-                  Dorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  {item.heading}
                 </span>
               </div>
             </div>
@@ -54,10 +55,7 @@ const Roadmap = () => {
                 head
               </AccordionHeader>
               <AccordionBody className="font-archivo px-4 text-white">
-                We&apos;re not always in the position that we want to be at.
-                We&apos;re constantly growing. We&apos;re constantly making
-                mistakes. We&apos;re constantly trying to express ourselves and
-                actualize our dreams.
+                {item.desc}
               </AccordionBody>
             </Accordion>
           </div>

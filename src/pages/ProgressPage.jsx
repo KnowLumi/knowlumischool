@@ -4,7 +4,7 @@ import { MdHdrStrong, MdArrowForward } from "react-icons/md";
 import "../landingpage/landing.css";
 import { Button, Progress } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
-import { skills } from "./helpers/fundamentalhelpers";
+import { tracks } from "./helpers/fundamentalhelpers";
 const ProgressPage = () => {
   return (
     <div className="flex flex-col bg-[#F7F7F7]">
@@ -33,7 +33,7 @@ const ProgressPage = () => {
               Learn the fundamentals of the tech future
             </span>
             <div className="flex gap-4 items-center">
-              {skills.map((skill, index) => (
+              {tracks[0].skills.map((skill, index) => (
                 <div
                   key={`skill-${index}`}
                   className="flex items-center md:justify-between"
