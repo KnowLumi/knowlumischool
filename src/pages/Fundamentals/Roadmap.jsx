@@ -37,7 +37,7 @@ const Roadmap = () => {
                     WEEK {item.week}
                   </span>
                   <MdKeyboardArrowDown
-                    className={`w-5 h-5 ${index===open?'rotate-180':''} transition-transform`}
+                    className={`w-5 h-5 ${index===open?'rotate-180':''} transition-transform cursor-pointer`}
                     onClick={() => handleOpen(index)}
                   />
                 </div>

@@ -15,6 +15,8 @@ import { FaCheckCircle } from "react-icons/fa";
 import { LuCalendarClock } from "react-icons/lu";
 import { IoNavigateCircleOutline } from "react-icons/io5";
 import "./learning.css";
+import { Link } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 function Icon({ id, open }) {
   return (
     <MdExpandMore
@@ -24,8 +26,7 @@ function Icon({ id, open }) {
     />
   );
 }
-const WeekProgress = (props) => {
-  const { setIsWeek } = props;
+const WeekProgress = () => {
   const [open, setOpen] = useState(0);
   const handleOpen = (value) => setOpen(open === value ? 0 : value);
   return (
@@ -45,14 +46,11 @@ const WeekProgress = (props) => {
             <MdKeyboardDoubleArrowRight className="w-5 h-5 day_arrow" />
           </div>
         </div>
-        <Button
-          onClick={() => {
-            setIsWeek(false);
-          }}
-          className="rounded-lg resume_btn bg-[#88DB1B] py-2 px-5 w-fit text-white font-archivo capitalize font-medium text-[10px] md:text-[16px] tracking-wide"
-        >
-          Resume
-        </Button>
+        <Link to={`/learning/day`}>
+          <Button className="rounded-lg resume_btn bg-[#88DB1B] py-2 px-5 w-fit text-white font-archivo capitalize font-medium text-[10px] md:text-[16px] tracking-wide">
+            Resume
+          </Button>
+        </Link>
       </div>
       <div className="flex flex-col gap-2 rounded-lg p-6 h-[30rem] md:h-[24rem] overflow-y-scroll weeks bg-white">
         {new Array(7).fill("").map((_, i) => (
@@ -118,6 +116,7 @@ const WeekProgress = (props) => {
           </div>
         </div>
       </div>
+      <Outlet/>
     </div>
   );
 };
