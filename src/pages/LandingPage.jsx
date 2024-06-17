@@ -12,22 +12,27 @@ import WhyKnowLumi from "../landingpage/WhyKnowLumi";
 import Included from "../landingpage/Included";
 import Navigation from "../landingpage/Navigation";
 import Recognized from "../landingpage/Recognized";
+import { useRef } from "react";
 
 const LandingPage = () => {
+  const includedRef = useRef(null);
+  const scrollToIncluded = () => {
+    includedRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
   return (
     <>
-      <Navigation/>
+      <Navigation />
       <div className="flex flex-col bg-[#F7F7F7]">
-        <HeroSection />
+        <HeroSection scrollToIncluded={scrollToIncluded} />
         <About />
         <Program />
         <Companies />
-        <Recognized/>
-        <Process />
+        <Recognized />
+        <Process scrollToIncluded={scrollToIncluded} />
         <Testimonials />
         <Action />
-        <WhyKnowLumi />
-        <Included />
+        <WhyKnowLumi scrollToIncluded={scrollToIncluded} />
+        <Included ref={includedRef} />
         <Enroll />
         <FaqSection />
         <Footer />

@@ -1,10 +1,12 @@
+import { forwardRef } from "react";
 import { included } from "./whats_included";
 import { MdInfo, MdArrowForward, MdOutlinePhoneCallback } from "react-icons/md";
 import { Button } from "@material-tailwind/react";
 import "./included.css";
-const Included = () => {
+import { Link } from "react-router-dom";
+const Included = forwardRef((props, ref) => {
   return (
-    <div className="flex flex-col items-center w-full h-full">
+    <div ref={ref} className="flex flex-col items-center w-full h-full">
       <div className="rect bg-contain md:bg-cover w-80 md:w-[71rem] mb-4 h-[8.5rem] md:h-[14.7rem] bg-no-repeat translate-y-24 md:translate-y-48" />
       <div className="flex flex-col items-center gap-8 w-80 md:w-[71rem] z-10 bg-white py-5 px-0 md:px-16 rounded-2xl">
         <h2 className="font-bold text-3xl text-[#4258BE] tracking-wide">
@@ -115,12 +117,14 @@ const Included = () => {
             </div>
           </div>
           <div className="flex flex-wrap ml-8 md:ml-0 gap-6">
-            <Button className="rounded-full bg-[#4258BE] flex items-center gap-3 capitalize font-archivo font-medium text-xs py-[3px] pr-[3px] pl-6">
-              Enroll Now
-              <i className="flex icon w-8 h-8 text-white border border-[#0101010D] bg-[#FFFFFF1A] justify-center items-center rounded-full">
-                <MdArrowForward />
-              </i>
-            </Button>
+            <Link to='/fundamentals'>
+              <Button className="rounded-full bg-[#4258BE] flex items-center gap-3 capitalize font-archivo font-medium text-xs py-[3px] pr-[3px] pl-6">
+                Enroll Now
+                <i className="flex icon w-8 h-8 text-white border border-[#0101010D] bg-[#FFFFFF1A] justify-center items-center rounded-full">
+                  <MdArrowForward />
+                </i>
+              </Button>
+            </Link>
             <Button className="rounded-full flex border border-[#4258BE] bg-white items-center gap-3 capitalize font-archivo font-medium text-xs text-[#4258BE] py-[3px] pr-[3px] pl-6">
               Request a Callback
               <i className="flex w-8 h-8 text-white border border-[#0101010D] bg-[#4258BE] justify-center items-center rounded-full">
@@ -133,6 +137,8 @@ const Included = () => {
       <div className="rect bg-contain md:bg-cover rotate-180 w-80 md:w-[71rem] mb-4 h-[8.5rem] md:h-[14.7rem] bg-no-repeat -translate-y-20  md:-translate-y-44" />
     </div>
   );
-};
+});
+
+Included.displayName = "Included";
 
 export default Included;

@@ -8,6 +8,7 @@ import mongo from "../../landingpage/Process_Components/logos/mongo.png";
 import node from "../../landingpage/Process_Components/logos/node.png";
 import reactjs from "../../landingpage/Process_Components/logos/react.png";
 import { Button } from "@material-tailwind/react";
+import { Link } from "react-router-dom";
 const Tracks = () => {
   return (
     <div className="flex flex-col mx-6 my-20 px-3 md:m-20 items-center gap-12">
@@ -50,12 +51,14 @@ const Tracks = () => {
               </span>
             </div>
           </div>
-          <Button className="flex items-center gap-1 bg-[#88DB1B] py-2 px-3 font-archivo text-white justify-center capitalize">
-            <span className=" font-normal text-xs tracking-wide">
-              View More
-            </span>
-            <MdKeyboardDoubleArrowRight className="w-3.5 h-3.5" />
-          </Button>
+          <Link to='/track' className="py-2 px-3">
+            <Button className="flex items-center gap-1 bg-[#88DB1B]  font-archivo text-white justify-center capitalize">
+              <span className=" font-normal text-xs tracking-wide">
+                View More
+              </span>
+              <MdKeyboardDoubleArrowRight className="w-3.5 h-3.5" />
+            </Button>
+          </Link>
         </div>
       </div>
       <p className="font-light text-sm tracking-wider md:w-[46rem]">

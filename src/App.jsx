@@ -14,6 +14,7 @@ import Progress from "./pages/ProgressPage";
 import MyLearning from "./pages/MyLearning";
 import ScrollToTop from "./ScrollToTop";
 import DayProgress from "./pages/DayProgress";
+import Track from "./pages/Track";
 
 export const Context = createContext();
 
@@ -32,10 +33,11 @@ function App() {
             <Route path="/all-courses" element={<AllCourses />} />
             <Route path="/signin" element={<OtpPage />} />
             <Route path="/fundamentals" element={<Fundamentals />} />
+            <Route path="/track" element={<Track />} />
             <Route path="/progress" element={<Progress />} />
             <Route path="learning">
               <Route path="" element={<MyLearning />} />
-              <Route path="day" element={<DayProgress/>} />
+              <Route path="day" element={<DayProgress />} />
             </Route>
             <Route path="/admin" element={<Admin />} />
             <Route path="/course:id" element={<Course />} />

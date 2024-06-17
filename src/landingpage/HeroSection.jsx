@@ -10,7 +10,7 @@ import { Button, Avatar } from "@material-tailwind/react";
 import { Fade } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import rating from "../assets/rating.png";
-const HeroSection = () => {
+const HeroSection = ({ scrollToIncluded }) => {
   return (
     <div className="w-full relative mt-10 md:mt-24 flex flex-wrap font-archivo justify-between bg-[#F7F7F7]">
       <svg
@@ -57,7 +57,10 @@ const HeroSection = () => {
           <br className="hidden md:inline" />
           join a community where individual success fuels collective growth.
         </span>
-        <Button className="my-button font-archivo text-xs bg-black hover:bg-[#F7F7F7] hover:border hover:border-black py-1.5 pr-1.5 pl-6 mt-12 gap-2 text-[#F7F7F7] hover:text-black font-medium md:text-lg flex items-center w-fit rounded-full">
+        <Button
+          onClick={scrollToIncluded}
+          className="my-button font-archivo text-xs bg-black hover:bg-[#F7F7F7] hover:border hover:border-black py-1.5 pr-1.5 pl-6 mt-12 gap-2 text-[#F7F7F7] hover:text-black font-medium md:text-lg flex items-center w-fit rounded-full"
+        >
           get started
           <i className="bg-gray-800 p-1 rounded-full">
             <MdArrowForward size={20} className="text-white icon" />
