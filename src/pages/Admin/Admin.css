@@ -1,0 +1,14 @@
+.company_logo_input::-webkit-file-upload-button {
+    width: Fixed (110px)px;
+    height: Fixed (42px)px;
+    padding: 12px;
+    gap: 0px;
+    border-radius: 8px;
+    opacity: 0px;
+    border: 1.5px solid #2D2D2D66;
+    cursor: pointer;
+}
+
+.review_input::-webkit-scrollbar{
+    display: none;
+}

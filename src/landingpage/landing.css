@@ -153,6 +153,10 @@
     background-image: url('../assets/enroll_line.png');
 }
 
+.action-line-2 {
+    background-image: url('../assets/enroll_line.png');
+}
+
 .process::-webkit-scrollbar {
     display: none;
 }
@@ -181,6 +185,11 @@
     .our-courses {
         background-image: url('../assets/our_courses_mobile.png');
     }
+
+    .action-line-2 {
+        background-image: url('');
+    }
+    
 
     .lineanime {
         height: 0.18rem;

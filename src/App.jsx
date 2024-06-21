@@ -15,6 +15,15 @@ import MyLearning from "./pages/MyLearning";
 import ScrollToTop from "./ScrollToTop";
 import DayProgress from "./pages/DayProgress";
 import Track from "./pages/Track";
+import Dashboard from "./pages/Admin/Dashboard";
+import Students from "./pages/Admin/Students";
+import Mentors from "./pages/Admin/Mentors";
+import Categories from "./pages/Admin/Categories"
+import AddVideo from "./pages/Admin/AddVideo";
+import Companies from "./pages/Admin/Companies";
+import Testimonials from "./pages/Admin/Testimonials";
+import AddDetails from "./pages/Admin/AddDetails";
+import AddReview from "./pages/Admin/AddReview";
 
 export const Context = createContext();
 
@@ -39,7 +48,24 @@ function App() {
               <Route path="" element={<MyLearning />} />
               <Route path="day" element={<DayProgress />} />
             </Route>
-            <Route path="/admin" element={<Admin />} />
+
+            <Route path="admin/home" element={<Admin />}>
+              <Route path="dashboard" element={<Dashboard />} />
+              <Route path="students">
+                <Route path="" element={<Students />} />
+                <Route path="addstudent" element={<AddDetails />} />
+              </Route>
+              <Route path="mentors" element={<Mentors />} />
+              <Route path="categories" element={<Categories />} />
+              <Route path="addvideo" element={<AddVideo />} />
+              <Route path="companies" element={<Companies />} />
+              <Route path="testimonials">
+                <Route path="" element={<Testimonials />} />
+                <Route path="addreview" element={<AddReview />} />
+              </Route>
+
+            </Route>
+
             <Route path="/course:id" element={<Course />} />
           </Routes>
         </Router>

@@ -1,12 +1,14 @@
 import { Button, Progress } from "@material-tailwind/react";
-import { MdAddBox, MdKeyboardDoubleArrowRight } from "react-icons/md";
-const TABLE_HEAD = ["Name", "Mobile No.", "Email", "Registered on","Actions"];
+import { MdAddBox, MdKeyboardDoubleArrowRight, MdBorderColor } from "react-icons/md";
+import { RiDeleteBin6Fill } from "react-icons/ri";
+const TABLE_HEAD = ["Name", "Mobile No.", "Email", "Registered on", "Actions"];
 
 const TABLE_ROWS = [
   {
     name: "John Michael",
-    job: "Manager",
-    date: "23/04/18",
+    mobile: 95622042841,
+    email: "abc@example.com",
+    date: "12-05-2024",
   },
 
 ];
@@ -14,7 +16,7 @@ const Dashboard = () => {
   return (
     <div className="flex flex-col gap-9 px-11 py-8 h-screen overflow-y-scroll">
       <h1 className="font-bold text-4xl">Dashboard</h1>
-      <div className="flex gap-6 items-center">
+      <div className="flex flex-wrap md:flex-nowrap gap-6 items-center">
         <div className="flex items-center bg-[#297045] w-80 justify-between rounded-xl py-4 px-6">
           <div className="flex flex-col text-white">
             <span className="font-bold text-[16px] tracking-wider">
@@ -51,7 +53,7 @@ const Dashboard = () => {
           </Button>
         </div>
       </div>
-      <div className="rounded-2xl flex flex-col p-9 gap-6 bg-white">
+      <div className="rounded-2xl flex flex-col p-9 gap-6 bg-white shadow-md">
         <span className="font-bold text-[16px] text-[#2D2D2D]">
           Master Tracks Enrollment Breakdown
         </span>
@@ -81,15 +83,17 @@ const Dashboard = () => {
         </div>
       </div>
 
-      <table className="w-full min-w-max table-auto text-left">
+      <table className="w-full md:min-w-max table-auto text-left shadow-md rounded-xl">
         <thead>
           <tr>
-            {TABLE_HEAD.map((head) => (
+            {TABLE_HEAD.map((head, index) => (
               <th
                 key={head}
-                className="border-b-2 border-[#2D2D2D33] bg-[#EBF2D4] p-4"
+                className={`border-b-2 border-[#2D2D2D33] bg-[#EBF2D4] p-4 text-center ${index === 0 ? "rounded-tl-xl" : ""
+                  } ${index === TABLE_HEAD.length - 1 ? "rounded-tr-xl" : "border-e"
+                  }`}
               >
-                <span className="font-light text-sm text-[#2D2D2D] leading-none opacity-70">
+                <span className="font-semibold text-[16px] text-[#2D2D2D] leading-none">
                   {head}
                 </span>
               </th>
@@ -97,28 +101,40 @@ const Dashboard = () => {
           </tr>
         </thead>
         <tbody>
-          {TABLE_ROWS.map(({ name, job, date }, index) => {
+          {TABLE_ROWS.map(({ name, mobile, email, date }, index) => {
             const isLast = index === TABLE_ROWS.length - 1;
             const classes = isLast ? "p-4" : "p-4 border-b border-blue-gray-50";
             return (
-              <tr key={name}>
-                <td className={classes}>
+              <tr key={name} className="border-b-2">
+                <td className={`${classes} border-e-[1.5px] border-[#2D2D2D1A]`}>
                   <span className="font-light text-sm text-[#2D2D2D]">{name}</span>
                 </td>
-                <td className={classes}>
-                  <span className="font-light text-sm text-[#2D2D2D]">{job}</span>
+                <td className={`${classes} border-e-[1.5px] border-[#2D2D2D1A]`}>
+                  <span className="font-light text-sm text-[#2D2D2D]">{mobile}</span>
                 </td>
-                <td className={classes}>
+                <td className={`${classes} border-e-[1.5px] border-[#2D2D2D1A]`}>
+                  <span className="font-light text-sm text-[#2D2D2D]">{email}</span>
+                </td>
+                <td className={`${classes} border-e-[1.5px] border-[#2D2D2D1A]`}>
                   <span className="font-light text-sm text-[#2D2D2D]">{date}</span>
                 </td>
-                <td className={classes}>
-                  <span className="font-medium">Edit</span>
+                <td className={`${classes} flex items-center gap-5 border-e-[1.5px] border-[#2D2D2D1A]`}>
+                  <Button className="font-archivo font-bold text-xs tracking-wider text-white bg-[#00A156] rounded-md py-3">
+                    RESET
+                  </Button>
+                  <Button className="font-archivo font-bold text-xs tracking-wider text-white bg-[#FF9F1C] rounded-md py-3 px-4">
+                    <MdBorderColor className="w-4 h-4" />
+                  </Button>
+                  <Button className="font-archivo font-bold text-xs tracking-wider text-white bg-[#EC2020] rounded-md py-3 px-4">
+                    <RiDeleteBin6Fill className="w-4 h-4" />
+                  </Button>
                 </td>
               </tr>
             );
           })}
         </tbody>
       </table>
+      <h3 className="flex justify-center font-bold text-[#2D2D2D66] text-[10px] tracking-widest">©2024 Knowlumi. All Rights Reserved</h3>
     </div>
   );
 };

@@ -99,7 +99,7 @@ const Navigation = () => {
               <NavLink
                 to={page.route}
                 className={({ isActive }) =>
-                  isActive ? "text-black" : "text-gray-500"
+                  `${isActive ? "text-black" : "text-gray-500"}`
                 }
               >
                 {page.name}
@@ -108,7 +108,7 @@ const Navigation = () => {
           ))}
         </ul>
         {signedIn ? (
-          <Link to='/progress' className="mx-7">
+          <Link to="/progress" className="mx-7">
             <Button className="font-archivo capitalize rounded-full bg-white border text-black text-sm">
               My Learning
             </Button>

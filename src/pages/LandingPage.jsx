@@ -25,7 +25,7 @@ const LandingPage = () => {
       <div className="flex flex-col bg-[#F7F7F7]">
         <HeroSection scrollToIncluded={scrollToIncluded} />
         <About />
-        <Program />
+        <Program scrollToIncluded={scrollToIncluded}/>
         <Companies />
         <Recognized />
         <Process scrollToIncluded={scrollToIncluded} />

@@ -123,15 +123,15 @@ const DayLearning = () => {
               </div>
             </div>
           ))}
+          <div className="flex items-center justify-between text-white mt-6">
+            <button type="submit" className="font-medium tracking-wide text-[16px] rounded-lg  bg-[#4258BE] py-2 px-5">
+              Submit
+            </button>
+            <button className="rounded-xl  bg-[#4258BE] px-5 py-2">
+              <MdPlayArrow className="w-4 h-4" />
+            </button>
+          </div>
         </form>
-        <div className="flex items-center justify-between text-white mt-6">
-          <button className="font-medium tracking-wide text-[16px] rounded-lg  bg-[#4258BE] py-2 px-5">
-            Submit
-          </button>
-          <button className="rounded-xl  bg-[#4258BE] px-5 py-2">
-            <MdPlayArrow className="w-4 h-4" />
-          </button>
-        </div>
       </div>
     </div>
   );
