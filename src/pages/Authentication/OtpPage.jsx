@@ -5,6 +5,7 @@ import { countries } from "../helpers/otphelpers";
 import { Context } from "../../App";
 import { useNavigate } from "react-router-dom";
 import "./auth.css";
+import { Link } from "react-router-dom";
 const OtpPage = () => {
   const formRef = useRef(null);
   const inputsRef = useRef([]);
@@ -177,6 +178,9 @@ const OtpPage = () => {
             </div>
           </Carousel>
         </div>
+        <Link to="/admin/login" className="bg-[#DDE8B9] font-semibold p-2 rounded-lg">
+          Admin Login
+        </Link>
       </div>
       <div className="auth-banner bg-cover bg-no-repeat w-full  md:w-[33rem] h-[22.5rem] md:h-full flex items-end">
         <h1 className="text-[#FFFFFF66] text-6xl md:text-8xl w-fit mb-9 md:mb-14 ml-4">

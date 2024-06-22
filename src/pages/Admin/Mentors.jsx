@@ -71,7 +71,7 @@ const Mentors = () => {
             className: "w-[21rem]",
           }}
         />
-        <Link to="addstudent">
+        <Link to="addmentor">
           <Button className="bg-[#297045] min-w-40 text-white font-archivo rounded-lg flex items-center justify-evenly gap-2.5 py-2 px-3">
             <span className="capitalize font-bold text-[16px]">Add Mentor</span>
             <MdAddBox className="w-6 h-6" />

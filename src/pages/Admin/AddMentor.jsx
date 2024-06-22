@@ -1,13 +1,12 @@
 import { Button } from "@material-tailwind/react";
-import { studentForm } from "../helpers/adminhelper";
-
-const AddDetails = () => {
+import { mentorForm } from "../helpers/adminhelper";
+const AddMentor = () => {
   return (
     <div className="flex flex-col gap-9 px-11 py-8 w-full h-screen overflow-y-scroll">
-      <h1 className="font-bold text-4xl">Add Student</h1>
+      <h1 className="font-bold text-4xl">Add Mentor</h1>
       <form action="" className="flex flex-col gap-8 w-full">
         <div className="flex flex-wrap gap-8">
-          {studentForm.map((item, i) => (
+          {mentorForm.map((item, i) => (
             <div key={`std_input_${i + 1}`} className="flex flex-col gap-5">
               <label
                 htmlFor={item.name}
@@ -28,7 +27,9 @@ const AddDetails = () => {
                   name={item.name}
                   id={item.name}
                   placeholder={item.placeholder}
-                  className="mt-1 px-3 file:bg-[#2D2D2D1A] file:border-[#2D2D2D66] file:rounded-lg file:border-[1.5px] file:px-3 py-2 border border-[#2D2D2D33] rounded-md shadow-sm focus:outline-none focus:ring-[#2D2D2D] focus:border-[#2D2D2D] placeholder:text-[#2D2D2DCC] sm:text-sm w-[30rem]"
+                  className={`mt-1   border border-[#2D2D2D33] rounded-lg shadow-sm focus:outline-none focus:ring-[#2D2D2D] focus:border-[#2D2D2D] placeholder:text-[#2D2D2DCC] sm:text-sm ${
+                    item.type === "file" ? "w-fit company_logo_input" : "w-[30rem] px-3 py-2"
+                  }`}
                   required
                 />
               )}
@@ -48,4 +49,4 @@ const AddDetails = () => {
   );
 };
 
-export default AddDetails;
+export default AddMentor;

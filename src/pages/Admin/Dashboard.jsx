@@ -1,5 +1,10 @@
 import { Button, Progress } from "@material-tailwind/react";
-import { MdAddBox, MdKeyboardDoubleArrowRight, MdBorderColor } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
+import {
+  MdAddBox,
+  MdKeyboardDoubleArrowRight,
+  MdBorderColor,
+} from "react-icons/md";
 import { RiDeleteBin6Fill } from "react-icons/ri";
 const TABLE_HEAD = ["Name", "Mobile No.", "Email", "Registered on", "Actions"];
 
@@ -10,9 +15,9 @@ const TABLE_ROWS = [
     email: "abc@example.com",
     date: "12-05-2024",
   },
-
 ];
 const Dashboard = () => {
+  const navigate = useNavigate();
   return (
     <div className="flex flex-col gap-9 px-11 py-8 h-screen overflow-y-scroll">
       <h1 className="font-bold text-4xl">Dashboard</h1>
@@ -24,7 +29,12 @@ const Dashboard = () => {
             </span>
             <h1 className="font-extrabold text-3xl tracking-wider">128</h1>
           </div>
-          <Button className="bg-[#DDE8B9] text-[#2D2D2D] font-archivo rounded-lg flex items-center gap-2.5 p-3">
+          <Button
+            onClick={() => {
+              navigate("/admin/home/students/addstudent");
+            }}
+            className="bg-[#DDE8B9] text-[#2D2D2D] font-archivo rounded-lg flex items-center gap-2.5 p-3"
+          >
             <span className="capitalize font-semibold text-xs">Add User</span>
             <MdAddBox className="w-5 h-5" />
           </Button>
@@ -36,7 +46,12 @@ const Dashboard = () => {
             </span>
             <h1 className="font-extrabold text-3xl tracking-wider">8</h1>
           </div>
-          <Button className="bg-[#DDE8B9] text-[#2D2D2D] font-archivo rounded-lg flex items-center gap-2.5 p-3">
+          <Button
+            onClick={() => {
+              navigate("/admin/home/mentors/addmentor");
+            }}
+            className="bg-[#DDE8B9] text-[#2D2D2D] font-archivo rounded-lg flex items-center gap-2.5 p-3"
+          >
             <span className="capitalize font-semibold text-xs">Add Mentor</span>
             <MdAddBox className="w-5 h-5" />
           </Button>
@@ -48,7 +63,12 @@ const Dashboard = () => {
             </span>
             <h1 className="font-extrabold text-3xl tracking-wider">5</h1>
           </div>
-          <Button className="bg-[#DDE8B9] text-[#2D2D2D] font-archivo rounded-lg flex items-center gap-2.5 p-3">
+          <Button
+            onClick={() => {
+              navigate("/admin/home/categories");
+            }}
+            className="bg-[#DDE8B9] text-[#2D2D2D] font-archivo rounded-lg flex items-center gap-2.5 p-3"
+          >
             <span className="capitalize font-semibold text-xs">View All</span>
           </Button>
         </div>
@@ -89,9 +109,11 @@ const Dashboard = () => {
             {TABLE_HEAD.map((head, index) => (
               <th
                 key={head}
-                className={`border-b-2 border-[#2D2D2D33] bg-[#EBF2D4] p-4 text-center ${index === 0 ? "rounded-tl-xl" : ""
-                  } ${index === TABLE_HEAD.length - 1 ? "rounded-tr-xl" : "border-e"
-                  }`}
+                className={`border-b-2 border-[#2D2D2D33] bg-[#EBF2D4] p-4 text-center ${
+                  index === 0 ? "rounded-tl-xl" : ""
+                } ${
+                  index === TABLE_HEAD.length - 1 ? "rounded-tr-xl" : "border-e"
+                }`}
               >
                 <span className="font-semibold text-[16px] text-[#2D2D2D] leading-none">
                   {head}
@@ -105,20 +127,38 @@ const Dashboard = () => {
             const isLast = index === TABLE_ROWS.length - 1;
             const classes = isLast ? "p-4" : "p-4 border-b border-blue-gray-50";
             return (
-              <tr key={name} className="border-b-2">
-                <td className={`${classes} border-e-[1.5px] border-[#2D2D2D1A]`}>
-                  <span className="font-light text-sm text-[#2D2D2D]">{name}</span>
+              <tr key={name} className="border-b-2 text-center">
+                <td
+                  className={`${classes} border-e-[1.5px] border-[#2D2D2D1A]`}
+                >
+                  <span className="font-light text-sm text-[#2D2D2D]">
+                    {name}
+                  </span>
                 </td>
-                <td className={`${classes} border-e-[1.5px] border-[#2D2D2D1A]`}>
-                  <span className="font-light text-sm text-[#2D2D2D]">{mobile}</span>
+                <td
+                  className={`${classes} border-e-[1.5px] border-[#2D2D2D1A]`}
+                >
+                  <span className="font-light text-sm text-[#2D2D2D]">
+                    {mobile}
+                  </span>
                 </td>
-                <td className={`${classes} border-e-[1.5px] border-[#2D2D2D1A]`}>
-                  <span className="font-light text-sm text-[#2D2D2D]">{email}</span>
+                <td
+                  className={`${classes} border-e-[1.5px] border-[#2D2D2D1A]`}
+                >
+                  <span className="font-light text-sm text-[#2D2D2D]">
+                    {email}
+                  </span>
                 </td>
-                <td className={`${classes} border-e-[1.5px] border-[#2D2D2D1A]`}>
-                  <span className="font-light text-sm text-[#2D2D2D]">{date}</span>
+                <td
+                  className={`${classes} border-e-[1.5px] border-[#2D2D2D1A]`}
+                >
+                  <span className="font-light text-sm text-[#2D2D2D]">
+                    {date}
+                  </span>
                 </td>
-                <td className={`${classes} flex items-center gap-5 border-e-[1.5px] border-[#2D2D2D1A]`}>
+                <td
+                  className={`${classes} flex items-center justify-center gap-5 border-e-[1.5px] border-[#2D2D2D1A]`}
+                >
                   <Button className="font-archivo font-bold text-xs tracking-wider text-white bg-[#00A156] rounded-md py-3">
                     RESET
                   </Button>
@@ -134,7 +174,9 @@ const Dashboard = () => {
           })}
         </tbody>
       </table>
-      <h3 className="flex justify-center font-bold text-[#2D2D2D66] text-[10px] tracking-widest">©2024 Knowlumi. All Rights Reserved</h3>
+      <h3 className="flex justify-center font-bold text-[#2D2D2D66] text-[10px] tracking-widest">
+        ©2024 Knowlumi. All Rights Reserved
+      </h3>
     </div>
   );
 };

@@ -1,6 +1,13 @@
+import {
+  Menu,
+  MenuHandler,
+  MenuList,
+  MenuItem,
+} from "@material-tailwind/react";
 import { NavLink, Outlet } from "react-router-dom";
 import { adminLinks } from "./helpers/adminhelper";
 import { IoSettingsOutline, IoPowerOutline } from "react-icons/io5";
+import { MdSmartDisplay, MdSubscriptions } from "react-icons/md";
 import logo1 from "../assets/navlogo.png";
 import "./Admin/Admin.css"
 const Admin = () => {
@@ -19,15 +26,58 @@ const Admin = () => {
         <ul className="flex flex-col gap-3 w-full">
           {adminLinks.map((link, i) => (
             <li key={i}>
-              <NavLink
-                to={link.route}
-                className={({ isActive }) => `flex items-center gap-4 py-3 px-12 transition-all ${isActive ? "text-white bg-[#297045]" : "text-[#2D2D2D]"}`}
-              >
-                <i className="flex justify-center items-center">{link.icon}</i>
-                <span className="font-semibold text-sm">
-                  {link.name}
-                </span>
-              </NavLink>
+              {link.route === "video" ?
+                <Menu>
+                  <MenuHandler>
+                    <div
+                      className="flex items-center cursor-pointer gap-4 py-3 px-12 transition-alltext-white text-[#2D2D2D]"
+                    >
+                      <i className="flex justify-center items-center">{link.icon}</i>
+                      <span className="font-semibold text-sm">
+                        {link.name}
+                      </span>
+                    </div>
+                  </MenuHandler>
+                  <MenuList className="p-0">
+                    <MenuItem>
+                      <NavLink
+                        to="video/demo"
+                        className={({ isActive }) => `flex items-center gap-4 py-3 px-12 transition-all ${isActive ? "text-white bg-[#297045]" : "text-[#2D2D2D]"}`}
+                      >
+                        <i className="flex justify-center items-center">
+                          <MdSmartDisplay className="w-5 h-5"/>
+                        </i>
+                        <span className="font-semibold text-sm">
+                          Demo Video
+                        </span>
+                      </NavLink>
+                    </MenuItem>
+                    <MenuItem>
+                      <NavLink
+                        to="video/program"
+                        className={({ isActive }) => `flex items-center gap-4 py-3 px-12 transition-all ${isActive ? "text-white bg-[#297045]" : "text-[#2D2D2D]"}`}
+                      >
+                        <i className="flex justify-center items-center">
+                          <MdSubscriptions className="w-5 h-5"/>
+                        </i>
+                        <span className="font-semibold text-sm">
+                          Program Video
+                        </span>
+                      </NavLink>
+                    </MenuItem>
+                  </MenuList>
+                </Menu>
+                :
+                <NavLink
+                  to={link.route}
+                  className={({ isActive }) => `flex items-center gap-4 py-3 px-12 transition-all ${isActive ? "text-white bg-[#297045]" : "text-[#2D2D2D]"}`}
+                >
+                  <i className="flex justify-center items-center">{link.icon}</i>
+                  <span className="font-semibold text-sm">
+                    {link.name}
+                  </span>
+                </NavLink>
+              }
             </li>
           ))}
         </ul>

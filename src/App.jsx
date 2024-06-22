@@ -24,6 +24,10 @@ import Companies from "./pages/Admin/Companies";
 import Testimonials from "./pages/Admin/Testimonials";
 import AddDetails from "./pages/Admin/AddDetails";
 import AddReview from "./pages/Admin/AddReview";
+import AddMentor from "./pages/Admin/AddMentor";
+import Demo from "./pages/Admin/Video/Demo";
+import ProgramVideo from "./pages/Admin/Video/ProgramVideo";
+import Login from "./pages/Admin/Login";
 
 export const Context = createContext();
 
@@ -48,24 +52,29 @@ function App() {
               <Route path="" element={<MyLearning />} />
               <Route path="day" element={<DayProgress />} />
             </Route>
-
+            <Route path="admin/login" element={<Login />} />
             <Route path="admin/home" element={<Admin />}>
               <Route path="dashboard" element={<Dashboard />} />
               <Route path="students">
                 <Route path="" element={<Students />} />
                 <Route path="addstudent" element={<AddDetails />} />
               </Route>
-              <Route path="mentors" element={<Mentors />} />
+              <Route path="mentors">
+                <Route path="" element={<Mentors />} />
+                <Route path="addmentor" element={<AddMentor />} />
+              </Route>
               <Route path="categories" element={<Categories />} />
-              <Route path="addvideo" element={<AddVideo />} />
+              <Route path="video">
+                <Route path="demo" element={<Demo />} />
+                <Route path="program" element={<ProgramVideo />} />
+                <Route path="addvideo" element={<AddVideo />} />
+              </Route>
               <Route path="companies" element={<Companies />} />
               <Route path="testimonials">
                 <Route path="" element={<Testimonials />} />
                 <Route path="addreview" element={<AddReview />} />
               </Route>
-
             </Route>
-
             <Route path="/course:id" element={<Course />} />
           </Routes>
         </Router>
