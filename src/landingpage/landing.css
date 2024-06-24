@@ -56,7 +56,7 @@
 }
 
 .course1 {
-    background-image: url('../assets/course1.png');
+    background-image: url('../pages/ProgressImages/course1.png');
 }
 
 .people {
@@ -201,7 +201,7 @@
     }
 
     .course1 {
-        background-image: url('../assets/course1_mobile.png');
+        background-image: url('../pages/ProgressImages/course1.png');
     }
 
     .people {

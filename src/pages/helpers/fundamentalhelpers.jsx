@@ -6,19 +6,19 @@ const tracks = [
         desc: `At KnowLumi, students engage in personalized learning, foster community connections, and leverage their skills to secure internships, jobs, or start-ups.`,
         skills: [
             {
-                image: "src/pages/SkillsLogos/html.png",
+                image: "/SkillsLogos/html.png",
                 skill: "Html",
             },
             {
-                image: "src/pages/SkillsLogos/css.png",
+                image: "/SkillsLogos/css.png",
                 skill: "CSS",
             },
             {
-                image: "src/pages/SkillsLogos/python.png",
+                image: "/SkillsLogos/python.png",
                 skill: "Python",
             },
             {
-                image: "src/pages/SkillsLogos/github.png",
+                image: "/SkillsLogos/github.png",
                 skill: "Github",
             },
         ],
@@ -49,35 +49,35 @@ const tracks = [
         desc: `Embark on a Comprehensive Journey to Mastery: Learn to Develop Dynamic Web Applications from Scratch with Full-Stack Web Development using the MERN Stack - MongoDB, Express.js, React.js, and Node.js.`,
         skills: [
             {
-                image: "src/pages/SkillsLogos/mongodb.png",
+                image: "/SkillsLogos/mongodb.png",
                 skill: "MongoDB management",
             },
             {
-                image: "src/pages/SkillsLogos/express.png",
+                image: "/SkillsLogos/express.png",
                 skill: "Express.js development",
             },
             {
-                image: "src/pages/SkillsLogos/react.png",
+                image: "/SkillsLogos/react.png",
                 skill: "React.js UI design",
             },
             {
-                image: "src/pages/SkillsLogos/node.png",
+                image: "/SkillsLogos/node.png",
                 skill: "Node.js runtime environment",
             },
             {
-                image: "src/pages/SkillsLogos/api.png",
+                image: "/SkillsLogos/api.png",
                 skill: "RESTful API creation",
             },
             {
-                image: "src/pages/SkillsLogos/frb.png", 
+                image: "/SkillsLogos/frb.png", 
                 skill: "Frontend-backend integration",
             },
             {
-                image: "src/pages/SkillsLogos/deploy.png",
+                image: "/SkillsLogos/deploy.png",
                 skill: "Deployment and hosting",
             },
             {
-                image: "src/pages/SkillsLogos/crud.png",
+                image: "/SkillsLogos/crud.png",
                 skill: "CRUD operations",
             },
         ],
