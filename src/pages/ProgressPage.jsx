@@ -24,10 +24,10 @@ const ProgressPage = () => {
               key={`progress_c_${i + 1}`}
               className="rounded-2xl bg-white mb-12 md:w-[22.5rem] w-[19.75rem] flex flex-col pb-5 px-5"
             >
-              <div className="relative w-[15.5rem] md:w-60 h-[7.75rem] md:h-32 bg-[#88DB1B66] mt-8 mb-4 md:mt-9 ml-3 rounded-xl">
+              <div className="relative w-[15.5rem] md:w-56 h-[7.75rem] md:h-[9rem] bg-[#88DB1B66] mt-8 mb-4 md:mt-9 ml-3 rounded-xl">
                 <div
                   style={{ backgroundImage: `url('${item.banner}')` }}
-                  className="absolute flex justify-end items-start -translate-x-3  -translate-y-4 bg-contain bg-no-repeat w-72 md:w-72 h-[11.25rem] md:h-[9.5rem]"
+                  className="absolute flex justify-end items-start -translate-x-3  -translate-y-4 bg-contain bg-no-repeat w-72 md:w-96 h-[11.25rem] md:h-[10.8rem]"
                 ></div>
               </div>
               <span className="font-normal text-[16px] tracking-wide mt-5">
