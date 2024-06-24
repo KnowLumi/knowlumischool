@@ -39,7 +39,7 @@ const About = () => {
             experience, limiting students&apos; exposure to real-world
             applications.
           </p>
-          <div className="flex items-center gap-3.5 mt-8 w-full">
+          <div className="flex items-center md:justify-center gap-3.5 mt-8 w-full">
             <img src={logo} alt="" className="w-7 h-7" />
             <span className="font-extrabold text-lg">Introducing KnowLumi</span>
           </div>

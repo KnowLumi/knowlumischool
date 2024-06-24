@@ -40,7 +40,7 @@ const SkillsCovered = (props) => {
         </Button>
         <Button className="rounded-full flex items-center gap-3 font-archivo bg-[#88DB1B] text-white py-2 pr-2 pl-6">
           <span className="text-sm tracking-widest font-medium capitalize">
-            Download the Brochure
+            Need more info? Download the Brochure
           </span>
           <i className="flex w-8 h-8 text-white border border-[#FFFFFF33] bg-[#FFFFFF4D] justify-center items-center rounded-full">
             <MdOutlineFileDownload />

@@ -31,8 +31,8 @@ const HeroSection = ({ scrollToIncluded }) => {
         <MdKeyboardDoubleArrowRight />
       </i>
       <div className="w-full md:w-fit flex flex-col items-center md:items-start p-4 ml-0 md:ml-16 mt-8">
-        <div className="flex flex-col md:items-end herogradient p-6 md:px-16 md:py-8 rounded-2xl">
-          <span className="font-medium text-3xl md:text-6xl">
+        <div className="flex flex-col gap-4 md:items-end herogradient p-6 md:px-16 md:py-8 rounded-2xl">
+          <span className="font-medium text-3xl md:text-[64px]">
             Transform dreams
           </span>
           <div className="flex justify-between w-full items-center">
@@ -40,7 +40,7 @@ const HeroSection = ({ scrollToIncluded }) => {
               <span className="bg-black lineanime"></span>
               <IoArrowForward className="h-7 md:h-10 w-7 md:w-10 text-black -translate-x-2" />
             </div>
-            <span className="font-medium text-3xl md:text-6xl">
+            <span className="font-medium text-3xl md:text-[64px]">
               into reality
             </span>
           </div>
@@ -89,7 +89,7 @@ const HeroSection = ({ scrollToIncluded }) => {
           KnowLumi
         </span>
       </div>
-      <div className="relative z-20 w-full md:w-[33rem] bg-[#F7F7F7] h-full md:mr-10">
+      <div className="relative z-20 w-full md:w-[34rem] bg-[#F7F7F7] h-full md:mr-14">
         <Fade arrows={false} infinite autoplay duration={3000} easing="linear">
           {heroImages.map((item, index) => (
             <div
@@ -98,7 +98,7 @@ const HeroSection = ({ scrollToIncluded }) => {
               style={{ backgroundImage: `url('${item.main}')` }}
             >
               <div className="flex flex-col items-start gap-4">
-                <div className="backdrop-blur-lg gap-3 hero-border w-40 md:w-64 rounded-xl flex p-3 items-center">
+                {/* <div className="backdrop-blur-lg gap-3 hero-border w-40 md:w-64 rounded-xl flex p-3 items-center">
                   <img
                     src={item.sub}
                     className="w-12 h-12 md:w-24 md:h-24 rounded-xl object-cover"
@@ -109,7 +109,7 @@ const HeroSection = ({ scrollToIncluded }) => {
                       {item.title}
                     </span>
                   </div>
-                </div>
+                </div> */}
                 <div className="rectangle w-[18.4rem] md:w-[31rem] h-[6.25rem] md:h-36 z-40 p-3 md:p-6 gap-2 bg-cover object-cover flex flex-col justify-between items-start">
                   <div className="w-full z-10 flex items-start gap-3">
                     <i className="rounded-full bg-[#88DB1B] p-2.5">
@@ -128,9 +128,9 @@ const HeroSection = ({ scrollToIncluded }) => {
                   <div className="md:w-56 flex">
                     <Button
                       variant="outlined"
-                      className="my-button capitalize font-archivo text-black p-1 border-gray-300  flex w-fit justify-end gap-3 items-center rounded-full"
+                      className="my-button capitalize font-archivo text-black py-[3px] pr-[3px] pl-[18px] border-gray-300 flex w-fit justify-end gap-3 items-center rounded-full"
                     >
-                      <span className="font-medium text-[8px] md:text-xs">
+                      <span className="font-medium text-[8px] md:text-xs tracking-wide">
                         Explore our programs
                       </span>
                       <i className="bg-gray-200 icon flex justify-center items-center border p-0 w-4 h-4 md:w-7 md:h-7 border-white rounded-full">

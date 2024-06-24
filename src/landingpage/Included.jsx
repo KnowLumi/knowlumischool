@@ -108,7 +108,7 @@ const Included = forwardRef((props, ref) => {
                   </div>
                 </div>
               </div>
-              <div className="rect2 bg-contain h-[4.75rem]  md:h-[5rem] w-[15.75rem] md:w-[24rem] bg-no-repeat pl-5 flex justify-center items-center gap-2">
+              <div className="rect2 bg-contain h-[4.75rem] md:h-[5rem] w-[15.75rem] md:w-[26.125rem] bg-no-repeat pl-5 md:pl-0 flex justify-center items-center gap-2">
                 <span className="font-bold text-sm md:text-lg tracking-wider w-[8.75rem] md:w-fit text-white">
                   ENROLL NOW WITH KNOWLUMI
                 </span>

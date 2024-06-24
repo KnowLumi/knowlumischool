@@ -128,6 +128,108 @@ const Learning = () => {
               <MdKeyboardDoubleArrowRight className="w-3.5 h-3.5 text-[#FF9F1C]" />
             </div>
           </div>
+          <div className="bg-white rounded-xl w-52 py-4 px-3.5 flex flex-col gap-4">
+            <div className="flex items-center w-fit bg-[#88DB1B] rounded-full py-1 px-2 gap-1">
+              <MdHdrStrong className="text-white w-2 h-2" />
+              <span className="font-bold text-[8px] text-white">TRACK 1</span>
+            </div>
+            <h2 className="font-normal text-xs">
+              Full-Stack Development with MERN Stack
+            </h2>
+            <div className="flex gap-5">
+              <img src={mongo} alt="" className="w-4 h-4" />
+              <img src={node} alt="" className="w-4 h-4" />
+              <img src={reactjs} alt="" className="w-4 h-4" />
+            </div>
+            <div className="flex flex-col gap-1.5">
+              <div className="flex items-center gap-2">
+                <MdVideoLibrary className="w-3.5 h-3.5 text-[#FF9F1C]" />
+                <span className="font-normal text-[10px] text-[#01010199]">
+                  41 Recorded Videos
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <TbFileFilled className="w-3.5 h-3.5 text-[#FF9F1C]" />
+                <span className="font-normal text-[10px] text-[#01010199]">
+                  4 projects
+                </span>
+              </div>
+            </div>
+            <div className="flex items-center gap-1">
+              <span className="text-[#88DB1B] font-normal text-xs">
+                View More
+              </span>
+              <MdKeyboardDoubleArrowRight className="w-3.5 h-3.5 text-[#FF9F1C]" />
+            </div>
+          </div>
+          <div className="bg-white rounded-xl w-52 py-4 px-3.5 flex flex-col gap-4">
+            <div className="flex items-center w-fit bg-[#88DB1B] rounded-full py-1 px-2 gap-1">
+              <MdHdrStrong className="text-white w-2 h-2" />
+              <span className="font-bold text-[8px] text-white">TRACK 1</span>
+            </div>
+            <h2 className="font-normal text-xs">
+              Full-Stack Development with MERN Stack
+            </h2>
+            <div className="flex gap-5">
+              <img src={mongo} alt="" className="w-4 h-4" />
+              <img src={node} alt="" className="w-4 h-4" />
+              <img src={reactjs} alt="" className="w-4 h-4" />
+            </div>
+            <div className="flex flex-col gap-1.5">
+              <div className="flex items-center gap-2">
+                <MdVideoLibrary className="w-3.5 h-3.5 text-[#FF9F1C]" />
+                <span className="font-normal text-[10px] text-[#01010199]">
+                  41 Recorded Videos
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <TbFileFilled className="w-3.5 h-3.5 text-[#FF9F1C]" />
+                <span className="font-normal text-[10px] text-[#01010199]">
+                  4 projects
+                </span>
+              </div>
+            </div>
+            <div className="flex items-center gap-1">
+              <span className="text-[#88DB1B] font-normal text-xs">
+                View More
+              </span>
+              <MdKeyboardDoubleArrowRight className="w-3.5 h-3.5 text-[#FF9F1C]" />
+            </div>
+          </div>
+          <div className="bg-white rounded-xl w-52 py-4 px-3.5 flex flex-col gap-4">
+            <div className="flex items-center w-fit bg-[#88DB1B] rounded-full py-1 px-2 gap-1">
+              <MdHdrStrong className="text-white w-2 h-2" />
+              <span className="font-bold text-[8px] text-white">TRACK 1</span>
+            </div>
+            <h2 className="font-normal text-xs">
+              Full-Stack Development with MERN Stack
+            </h2>
+            <div className="flex gap-5">
+              <img src={mongo} alt="" className="w-4 h-4" />
+              <img src={node} alt="" className="w-4 h-4" />
+              <img src={reactjs} alt="" className="w-4 h-4" />
+            </div>
+            <div className="flex flex-col gap-1.5">
+              <div className="flex items-center gap-2">
+                <MdVideoLibrary className="w-3.5 h-3.5 text-[#FF9F1C]" />
+                <span className="font-normal text-[10px] text-[#01010199]">
+                  41 Recorded Videos
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <TbFileFilled className="w-3.5 h-3.5 text-[#FF9F1C]" />
+                <span className="font-normal text-[10px] text-[#01010199]">
+                  4 projects
+                </span>
+              </div>
+            </div>
+            <div className="flex items-center gap-1">
+              <span className="text-[#88DB1B] font-normal text-xs">
+                View More
+              </span>
+              <MdKeyboardDoubleArrowRight className="w-3.5 h-3.5 text-[#FF9F1C]" />
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -101,6 +101,104 @@ const PlacementAssistance = () => {
                 Senior Producr designer
               </span>
             </div>
+            <div className="flex flex-col h-40 bg-white rounded-xl px-7 py-5">
+              <div className="flex w-[11.5rem] justify-between">
+                <Badge
+                  content={
+                    <img
+                      src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1480&amp;q=80"
+                      className=" rounded-full"
+                    />
+                  }
+                  overlap="circular"
+                  placement="bottom-end"
+                  className="bg-white w-9 h-9"
+                >
+                  <Avatar
+                    src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1480&amp;q=80"
+                    alt="profile picture"
+                    size="xl"
+                  />
+                </Badge>
+                <div className="flex flex-col p-3.5 gap-3.5">
+                  <span className="text-sm font-semibold leading-4 tracking-wider text-left w-16 h-6">
+                    John Samuel
+                  </span>
+                  <span className="text-xs font-medium leading-4 tracking-wider text-left text-[#01010199]">
+                    Swiggy
+                  </span>
+                </div>
+              </div>
+              <span className="text-xs italic pt-3 mt-3 border-t-2 text-[#010101] font-normal leading-4 tracking-wider text-left">
+                Senior Producr designer
+              </span>
+            </div>
+          </div>
+          <div className="flex flex-wrap pb-7 justify-between gap-5">
+            <div className="flex flex-col h-40 bg-white rounded-xl px-7 py-5">
+              <div className="flex w-[11.5rem] justify-between">
+                <Badge
+                  content={
+                    <img
+                      src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1480&amp;q=80"
+                      className=" rounded-full"
+                    />
+                  }
+                  overlap="circular"
+                  placement="bottom-end"
+                  className="bg-white w-9 h-9"
+                >
+                  <Avatar
+                    src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1480&amp;q=80"
+                    alt="profile picture"
+                    size="xl"
+                  />
+                </Badge>
+                <div className="flex flex-col p-3.5 gap-3.5">
+                  <span className="text-sm font-semibold leading-4 tracking-wider text-left w-16 h-6">
+                    John Samuel
+                  </span>
+                  <span className="text-xs font-medium leading-4 tracking-wider text-left text-[#01010199]">
+                    Swiggy
+                  </span>
+                </div>
+              </div>
+              <span className="text-xs italic pt-3 mt-3 border-t-2 text-[#010101] font-normal leading-4 tracking-wider text-left">
+                Senior Producr designer
+              </span>
+            </div>
+            <div className="flex flex-col h-40 bg-white rounded-xl px-7 py-5">
+              <div className="flex w-[11.5rem] justify-between">
+                <Badge
+                  content={
+                    <img
+                      src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1480&amp;q=80"
+                      className=" rounded-full"
+                    />
+                  }
+                  overlap="circular"
+                  placement="bottom-end"
+                  className="bg-white w-9 h-9"
+                >
+                  <Avatar
+                    src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1480&amp;q=80"
+                    alt="profile picture"
+                    size="xl"
+                  />
+                </Badge>
+                <div className="flex flex-col p-3.5 gap-3.5">
+                  <span className="text-sm font-semibold leading-4 tracking-wider text-left w-16 h-6">
+                    John Samuel
+                  </span>
+                  <span className="text-xs font-medium leading-4 tracking-wider text-left text-[#01010199]">
+                    Swiggy
+                  </span>
+                </div>
+              </div>
+              <span className="text-xs italic pt-3 mt-3 border-t-2 text-[#010101] font-normal leading-4 tracking-wider text-left">
+                Senior Producr designer
+              </span>
+            </div>
           </div>
         </Carousel>
       </div>

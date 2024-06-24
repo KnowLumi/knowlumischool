@@ -68,9 +68,9 @@ const Action = () => {
             <div className="flex flex-col md:flex-row gap-8 mt-5">
               <button className="flex items-center w-fit bg-white rounded-full py-1 pr-1 pl-6 gap-2 border border-[#01010126]">
                 <span className="text-sm font-medium text-black">
-                  Join the community
+                  Join Our community
                 </span>
-                <i className="flex w-8 h-8 text-white border border-[#0101010D] bg-[#01010133] justify-center items-center rounded-full">
+                <i className="flex w-8 h-8 -rotate-45 text-white border border-[#0101010D] bg-[#88DB1B] justify-center items-center rounded-full">
                   <MdArrowForward />
                 </i>
               </button>

@@ -42,10 +42,10 @@ const Enroll = () => {
               <div className="flex justify-between items-center">
                 <Button
                   variant="outlined"
-                  className="my-button capitalize font-archivo text-black p-1 border-gray-300 flex w-fit justify-end gap-3 items-center rounded-full"
+                  className="my-button capitalize font-archivo text-black py-[3px] pr-[3px] pl-[18px] border-gray-300 flex w-fit justify-end gap-3 items-center rounded-full"
                 >
                   <span className="font-medium text-[8px] md:text-xs">
-                    Explore our programs
+                    Request a callback
                   </span>
                   <i className="icon bg-gray-200 flex justify-center items-center border p-0 w-5 h-5 md:w-7 md:h-7 border-white rounded-full">
                     <IoArrowForwardSharp className="text-black  w-1.5 h-1.5 md:w-3.5 md:h-3.5" />
