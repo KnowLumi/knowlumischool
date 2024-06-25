@@ -11,7 +11,6 @@ import { program } from "./landing_helpers";
 import lines from "../assets/program_lines.png";
 import "./animations.css";
 import aboutbar from "../assets/about_bar1.png";
-import { Link } from "react-router-dom";
 
 const PointIcon = (index) => {
   switch (index) {
@@ -101,9 +100,10 @@ const Program = ({ scrollToIncluded }) => {
           </i>
         </Button>
       </div>
-      <div className="w-full flex bg-[#F7F7F7] justify-start">
-        <img src={aboutbar} className="w-fit h-8 md:h-16 rotate-180" alt="" />
+      <div className="w-full flex bg-white justify-end mt-16">
+        <img src={aboutbar} className="w-fit h-8 md:h-16" alt="" />
       </div>
+      
     </div>
   );
 };

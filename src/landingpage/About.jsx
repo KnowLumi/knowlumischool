@@ -10,16 +10,15 @@ import logo from "../../knowlumi.png";
 //bg-[#E6F3D6]
 const About = () => {
   return (
-    <div className="flex flex-col">
-      <div className="w-full flex justify-end">
-        <img src={aboutbar} className="w-fit h-8 md:h-16" alt="" />
+    <div className="flex flex-col mt-24">
+      <div className="w-full flex justify-start bg-white">
+        <img src={aboutbar} className="w-fit h-8 md:h-16 rotate-180 " alt="" />
       </div>
       <div className="flex flex-col w-full bg-white items-start">
         <div className="z-10 w-full flex flex-col gap-6 justify-between items-start md:items-center px-10 mx-0 my-9 md:my-20 h-fit">
           <div className="flex flex-col items-center justify-between gap-6">
             <Button
-              className="flex justify-around items-center gap-2 font-archivo text-black opacity-60 rounded-full tracking-wider"
-              color="white"
+              className="flex justify-around items-center gap-2 font-archivo text-[#01010199] bg-[#F7F7F7] border border-[#01010108] rounded-full tracking-wider"
             >
               <MdHdrStrong className="w-4 h-4 p-0 text-[#88DB1B]" />
               WHAT MAKES US DIFFERENT
@@ -30,7 +29,7 @@ const About = () => {
               </span>
             </div>
           </div>
-          <p className="font-archivo mt-8 md:mt-4  font-light text-sm text-black md:w-[53rem]">
+          <p className="font-archivo mt-8 md:mt-4 text-justify font-light text-sm text-black md:w-[52.5rem]">
             Let&apos;s talk about the difference between how medical and
             engineering students are taught. In medical courses, students learn
             directly from practicing doctors, gaining real-world insights and
@@ -63,7 +62,7 @@ const About = () => {
               <img src={des} className="h-full pt-2" alt="" />
             </div>
           </div>
-          <p className="font-archivo mt-8  font-light text-sm text-black md:w-[53rem]">
+          <p className="font-archivo mt-8  font-light text-sm text-center text-black md:w-[842px]">
             Like a medical course, KnowLumi connects you with industry experts
             who teach you the most relevant and in-demand skills. Learn from the
             best in the field and gain hands-on experience that prepares you for

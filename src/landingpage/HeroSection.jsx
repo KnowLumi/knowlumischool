@@ -12,14 +12,14 @@ import "react-slideshow-image/dist/styles.css";
 import rating from "../assets/rating.png";
 const HeroSection = ({ scrollToIncluded }) => {
   return (
-    <div className="w-full relative mt-10 md:mt-24 flex flex-wrap font-archivo justify-between bg-[#F7F7F7]">
+    <div className="w-full relative mt-10 md:mt-24 flex md:flex-row flex-col font-archivo justify-between bg-[#F7F7F7]">
       <svg
         width="1279"
         height="123"
         viewBox="0 0 1279 123"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="absolute z-[10] bottom-24 w-full hidden md:flex"
+        className="absolute z-[10] bottom-24  w-full hidden md:flex"
       >
         <path
           d="M-69 122.5H617C635.778 122.5 651 107.278 651 88.5V67.75V35C651 16.2223 666.222 1 685 1H1001.5H1352"
@@ -30,8 +30,8 @@ const HeroSection = ({ scrollToIncluded }) => {
       <i className="slider-anime w-7 h-5 text-white z-10 p-1.5 flex justify-center items-center rounded-full bg-[#88DB1B] absolute bottom-[5.5rem] translate-x-[88px]">
         <MdKeyboardDoubleArrowRight />
       </i>
-      <div className="w-full md:w-fit flex flex-col items-center md:items-start p-4 ml-0 md:ml-16 mt-8">
-        <div className="flex flex-col gap-4 md:items-end herogradient p-6 md:px-16 md:py-8 rounded-2xl">
+      <div className="w-full z-40 md:w-fit flex flex-col items-center md:translate-x-5 md:items-start p-4 ml-0 md:ml-16 mt-8">
+        <div className="flex flex-col md:gap-9 md:w-[650px] md:h-[201px] md:items-start justify-center herogradient p-6 md:px-14 md:py-8 rounded-[28px]">
           <span className="font-medium text-3xl md:text-[64px]">
             Transform dreams
           </span>
@@ -49,7 +49,7 @@ const HeroSection = ({ scrollToIncluded }) => {
           <span className="uppercase text-gray-600">
             Unlock Your Potential with Knowlumi -<br />
             <span className="textanime"> A Parallel Education System </span>
-            for Dreamers
+            THAT MAKE YOU INDUSTRY READY
           </span>
         </div>
         <span className="text-left mt-4">
@@ -85,31 +85,19 @@ const HeroSection = ({ scrollToIncluded }) => {
           <img src={rating} className="w-14 md:w-24 h-2.5 md:h-5" alt="" />
           <span className="font-medium text-[10px] md:text-lg">4.7</span>
         </div>
-        <span className="hidden z-20 md:block mt-5 text-[7.5rem] font-medium text-[#E7E7E7] opacity-65">
+        <span className="hidden z-20 md:block mt-5 text-[7.5rem] font-medium text-[#ECECEC]">
           KnowLumi
         </span>
       </div>
-      <div className="relative z-20 w-full md:w-[34rem] bg-[#F7F7F7] h-full md:mr-14">
+      <div className="relative z-20 bg-[#F7F7F7] w-full md:w-[535px] h-full md:mr-14 md:-translate-x-12">
         <Fade arrows={false} infinite autoplay duration={3000} easing="linear">
           {heroImages.map((item, index) => (
             <div
               key={index}
-              className="bg-cover relative flex flex-col gap-4 mx-6 md:mx-0 justify-end items-center bg-center object-cover rounded-3xl h-96 md:h-[40rem] my-12 w-80 md:w-[33rem] pb-6"
+              className="bg-cover relative flex flex-col gap-4 mx-6 md:mx-0 justify-end items-center bg-center object-cover rounded-3xl h-96 md:h-[40.125rem] my-12 w-80 md:w-[535px] pb-6"
               style={{ backgroundImage: `url('${item.main}')` }}
             >
               <div className="flex flex-col items-start gap-4">
-                {/* <div className="backdrop-blur-lg gap-3 hero-border w-40 md:w-64 rounded-xl flex p-3 items-center">
-                  <img
-                    src={item.sub}
-                    className="w-12 h-12 md:w-24 md:h-24 rounded-xl object-cover"
-                    alt=""
-                  />
-                  <div className="flex flex-col justify-center">
-                    <span className="text-white text-sm font-medium tracking-wider text-justify">
-                      {item.title}
-                    </span>
-                  </div>
-                </div> */}
                 <div className="rectangle w-[18.4rem] md:w-[31rem] h-[6.25rem] md:h-36 z-40 p-3 md:p-6 gap-2 bg-cover object-cover flex flex-col justify-between items-start">
                   <div className="w-full z-10 flex items-start gap-3">
                     <i className="rounded-full bg-[#88DB1B] p-2.5">
@@ -128,7 +116,7 @@ const HeroSection = ({ scrollToIncluded }) => {
                   <div className="md:w-56 flex">
                     <Button
                       variant="outlined"
-                      className="my-button capitalize font-archivo text-black py-[3px] pr-[3px] pl-[18px] border-gray-300 flex w-fit justify-end gap-3 items-center rounded-full"
+                      className="my-button capitalize font-archivo text-black py-[3px] pr-[3px] pl-2 md:pl-[18px] border-gray-300 flex w-fit justify-end gap-3 items-center rounded-full"
                     >
                       <span className="font-medium text-[8px] md:text-xs tracking-wide">
                         Explore our programs

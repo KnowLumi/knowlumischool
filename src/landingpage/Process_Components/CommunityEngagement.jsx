@@ -5,9 +5,9 @@ import { MdKeyboardDoubleArrowRight,MdArrowForward } from "react-icons/md";
 import { Button, Avatar } from "@material-tailwind/react";
 const CommunityEngagement = () => {
   return (
-    <div className="flex flex-col w-full h-fit mb-20">
-      <h1 className="font-normal text-4xl md:text-5xl md:w-fit w-fit">Community Engagement</h1>
-      <p className="w-52 md:w-[32rem] text-xs font-light tracking-wider mt-8">
+    <div className="flex flex-col w-full h-fit">
+      <h1 className="font-normal text-4xl md:text-[42px] md:w-fit w-fit">Community Engagement</h1>
+      <p className="w-52 md:w-[32rem] text-xs font-light tracking-wider mt-6">
         Join a network of like-minded individuals, access mentorship from
         seasoned professionals, and embark on a journey where shared success
         propels everyone forward.
@@ -17,7 +17,7 @@ const CommunityEngagement = () => {
         <span className="font-light text-xs w-fit tracking-wider text-black">
           Hackathons, Ideathons and much more!
         </span>
-        <div className="bg-white rounded-2xl p-4 w-56  md:w-[27rem] md:h-[11rem]">
+        <div className="bg-white rounded-2xl p-4 w-56 md:w-[27rem] md:h-[10rem] flex flex-col justify-center">
           <Fade
             arrows={false}
             infinite

@@ -1,17 +1,32 @@
+import { useState, useRef, useEffect } from "react";
 import { Button } from "@material-tailwind/react";
 import {
   MdHdrStrong,
   MdArrowForward,
   MdOutlinePhoneCallback,
 } from "react-icons/md";
-import line1 from "./Process_svg/line1.svg";
+
 import Learning from "./Process_Components/Learning";
 import PlacementAssistance from "./Process_Components/PlacementAssistance";
 import CommunityEngagement from "./Process_Components/CommunityEngagement";
 import Earning from "./Process_Components/Earning";
 import "./landing.css";
+import "./Process_Components/process.css"
 import cash from "./Process_svg/cash.png";
+
 const Process = ({ scrollToIncluded }) => {
+
+  const [isScrolledToBottom, setIsScrolledToBottom] = useState(false);
+  const processRef = useRef(null);
+
+  const handleScroll = () => {
+    const { scrollTop, scrollHeight, clientHeight } = processRef.current;
+    if (scrollTop + clientHeight >= scrollHeight) {
+      setIsScrolledToBottom(true);
+    } else {
+      setIsScrolledToBottom(false);
+    }
+  };
   const Processes = [
     <Learning key={"process-1"} />,
     <CommunityEngagement key={"process-2"} />,
@@ -20,7 +35,7 @@ const Process = ({ scrollToIncluded }) => {
   ];
   return (
     <div className="flex flex-wrap w-full px-8 md:px-16 relative">
-      <div className="flex flex-col gap-10 md:absolute z-10 left-16 top-0">
+      <div className="flex flex-col gap-10 py-2 md:absolute z-10 left-16 top-0">
         <div className="flex items-center w-fit bg-white rounded-full py-2 px-6 gap-4">
           <MdHdrStrong className="text-[#4258BE]" />
           <span className="font-bold text-xs text-[#01010199]">
@@ -54,33 +69,31 @@ const Process = ({ scrollToIncluded }) => {
           </Button>
         </div>
       </div>
-      <div className="w-full  flex flex-col process  h-full md:h-[32rem] md:overflow-y-scroll">
-        <div className="w-full flex flex-col items-end">
-          <div className="flex flex-col w-full md:w-[39rem] h-full gap-6 py-12">
-            <img src={line1} className="w-full" alt="" />
+      <div ref={processRef}
+        onScroll={handleScroll} className="w-full z-20 py-2 flex process flex-col items-end h-full md:h-[36rem] md:overflow-y-scroll">
+        <div className="w-full md:w-[623px] md:h-[3595px] flex flex-col">
+          <div className="flex flex-col w-full process-comp bg-contain bg-no-repeat md:h-full md:w-[32.125rem] h-full gap-6 py-12">
             <div className="flex w-full">
-              <div className="flex flex-col gap-6 w-full">
+              <div className="flex flex-col gap-[88px] w-full mt-[92px]">
                 {Processes.map((process, i) => (
                   <div
                     key={`p_no_${i}`}
-                    className="flex md:gap-3 border-l-[3px] border-dashed border-l-[#4258BE]"
+                    className="flex -mt-5"
                   >
                     <div className="flex flex-col h-fit">
-                      <i className="rounded-full -translate-x-6 md:-translate-x-7 h-10 w-10 md:w-14 md:h-14 bg-[#4258BE] flex justify-center items-center text-white font-extrabold">
+                      <div className="rounded-full -translate-x-3 md:-translate-x-[18px] md:-translate-y-2 h-10 w-10 md:w-[52px] md:h-[52px] bg-[#4258BE] flex justify-center items-center text-white font-extrabold">
                         {i + 1}
-                      </i>
+                      </div>
                     </div>
                     {process}
                   </div>
                 ))}
-                <div className="w-full">
-                  <div className="h-4 w-4 rounded-full bg-[#4258BE] -translate-x-1.5 -translate-y-6"></div>
-                </div>
               </div>
             </div>
           </div>
-          <div className="action-line-2 w-80 relative md:w-[71rem] h-7 md:h-20 bg-cover md:bg-contain bg-no-repeat flex flex-col justify-end">
-            <div className="md:absolute left-0 top-3 -translate-x-24 md:bg-[#F7F7F7] flex gap-3.5 items-center z-10">
+        </div>
+        <div className="process-line w-80 relative md:w-[727.5px] h-7 md:min-h-[66px] md:h-[66px] bg-contain bg-no-repeat flex flex-col justify-end">
+          {/* <div className="md:absolute left-0 top-3 -translate-x-24 md:bg-[#F7F7F7] flex gap-3.5 items-center z-10">
               <div className="flex flex-row-reverse md:flex-row gap-3 md:gap-7 py-4 px-6 -rotate-90 md:rotate-0 bg-[#4258BE] rounded-lg">
                 <img src={cash} className="w-14 h-14 rotate-90 md:rotate-0 cash" alt="" />
                 <div className="flex flex-col md:w-[11.25rem] text-white">
@@ -105,9 +118,8 @@ const Process = ({ scrollToIncluded }) => {
                   fill="#4258BE"
                 />
               </svg>
-            </div>
-            <i className="w-3 md:w-4 h-3 md:h-4 rounded-full hidden md:block bg-[#88DB1B] enroll-anime" />
-          </div>
+            </div> */}
+          <i className="w-3 md:w-4 h-3 md:h-4 rounded-full hidden md:block bg-[#88DB1B] process-ball-anime" />
         </div>
       </div>
     </div>

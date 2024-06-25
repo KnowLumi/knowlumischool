@@ -5,7 +5,6 @@ import { countries } from "../helpers/otphelpers";
 import { Context } from "../../App";
 import { useNavigate } from "react-router-dom";
 import "./auth.css";
-import { Link } from "react-router-dom";
 const OtpPage = () => {
   const formRef = useRef(null);
   const inputsRef = useRef([]);

@@ -1,0 +1,44 @@
+.processes {
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='0.1%' height='100%25' fill='none' stroke='%234258BEFF' stroke-width='6' stroke-dasharray='17%2c 19' stroke-dashoffset='6' stroke-linecap='square'/%3e%3c/svg%3e");
+}
+
+.process-comp {
+    background-image: url('../../assets/process_component.png');
+}
+
+.process-line {
+    background-image: url('./Images/process_line.png');
+}
+
+.process-ball-anime {
+    animation: ball 8s linear forwards infinite;
+    /* animation-delay: 8s; */
+}
+
+@media (max-width: 640px) {
+    .process-line {
+        background-image: url('');
+    }
+
+    .process-comp {
+        background-image: url('../../assets/process_component_mobile.png');
+    }
+}
+
+@keyframes ball {
+    0% {
+        transform: translate(0px, 4px);
+    }
+
+    25% {
+        transform: translate(114px, 4px);
+    }
+
+    50% {
+        transform: translate(154px, -54px);
+    }
+
+    100% {
+        transform: translate(632px, -54px);
+    }
+}

@@ -13,7 +13,7 @@
 }
 
 .herogradient {
-    animation: gradientanime 8s ease-out 100ms forwards;
+    animation: gradientanime 2s ease-in forwards;
 
 }
 
@@ -85,7 +85,7 @@
     }
 
     100% {
-        transform: translateX(250px);
+        transform: translateX(271px);
     }
 }
 
@@ -123,9 +123,12 @@
         background: linear-gradient(81.06deg, rgba(254, 254, 254, 0.3) 6.83%, rgba(115, 115, 115, 0.084) 29.65%, rgba(247, 247, 247, 0.3) 56.91%);
     }
 
+    50% {
+        background: linear-gradient(81.06deg, rgba(254, 254, 254, 0.3) 6.83%, rgba(115, 115, 115, 0.084) 60.95%, rgba(115, 115, 115, 0) 89.26%);
+    }
+
     100% {
         background: linear-gradient(81.06deg, rgba(254, 254, 254, 0.3) 6.83%, rgba(115, 115, 115, 0.084) 93.24%);
-
     }
 }
 
@@ -189,7 +192,7 @@
     .action-line-2 {
         background-image: url('');
     }
-    
+
 
     .lineanime {
         height: 0.18rem;
