@@ -1,12 +1,19 @@
 import { Fade } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import { community } from "./process_helpers";
-import { MdKeyboardDoubleArrowRight,MdArrowForward } from "react-icons/md";
+import { MdKeyboardDoubleArrowRight, MdArrowForward } from "react-icons/md";
 import { Button, Avatar } from "@material-tailwind/react";
 const CommunityEngagement = () => {
   return (
-    <div className="flex flex-col w-full h-fit">
-      <h1 className="font-normal text-4xl md:text-[42px] md:w-fit w-fit">Community Engagement</h1>
+    <div className="flex flex-col w-full h-fit -translate-y-8 md:-translate-y-0">
+      <div className="flex items-center gap-7 -translate-x-12 md:-translate-x-20">
+        <div className="rounded-full min-h-10 min-w-10 md:min-w-[52px] md:min-h-[52px] bg-[#4258BE] flex justify-center items-center text-white font-extrabold">
+          2
+        </div>
+        <h1 className="font-normal text-4xl md:text-[42px] md:w-[505px] w-fit">
+          Community Engagement
+        </h1>
+      </div>
       <p className="w-52 md:w-[32rem] text-xs font-light tracking-wider mt-6">
         Join a network of like-minded individuals, access mentorship from
         seasoned professionals, and embark on a journey where shared success

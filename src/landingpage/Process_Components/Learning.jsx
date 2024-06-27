@@ -16,8 +16,14 @@ import { Link } from "react-router-dom";
 import { tracks } from "../../pages/helpers/fundamentalhelpers";
 const Learning = () => {
   return (
-    <div className="flex flex-col w-full ">
-      <h1 className="font-normal text-4xl md:text-[42px]">Learning</h1>
+    <div className="flex flex-col w-full mt-10 md:mt-0">
+      <div className="flex items-center gap-7 -translate-x-12 md:-translate-x-20">
+        <div className="rounded-full h-10 w-10 md:w-[52px] md:h-[52px] bg-[#4258BE] flex justify-center items-center text-white font-extrabold">
+          1
+        </div>
+        <h1 className="font-normal text-4xl md:text-[42px]">Learning</h1>
+      </div>
+
       <p className="w-[13.25rem] md:w-[28rem] text-xs font-light tracking-wider mt-8">
         At KnowLumi, students engage in personalized learning, foster community
         connections, and leverage their skills to secure internships, jobs, or
@@ -40,19 +46,21 @@ const Learning = () => {
         <span className="font-light text-xs tracking-wider text-black w-fit">
           Learn the fundamentals of the tech future
         </span>
-        <div className="bg-white rounded-2xl flex md:w-[429px] items-center justify-between py-4 px-7">
+        <div className="bg-white rounded-2xl flex flex-wrap w-[200px] md:w-[429px] gap-9 md:gap-0 items-center justify-center md:justify-between py-4 px-7">
           {tracks[0].skills.map((item, i) => (
             <>
               <div
                 key={`skill_${i}`}
-                className="flex flex-col gap-2 items-center"
+                className="flex flex-col gap-2 items-center "
               >
                 <img src={item.image} className="w-8 h-8" alt="" />
                 <span className="text-xs font-light tracking-wider">
                   {item.skill}
                 </span>
               </div>
-              {i != 3 && <span className="w-[1px] h-10 bg-[#00000033]"></span>}
+              {i != 3 && (
+                <span className="hidden md:block w-[1px] h-10 bg-[#00000033]"></span>
+              )}
             </>
           ))}
         </div>
@@ -76,7 +84,7 @@ const Learning = () => {
         </div>
         <div className="flex flex-col w-fit md:flex-row gap-8 items-center">
           <Link to="/fundamentals">
-            <Button className="rounded-full flex items-center gap-3 capitalize font-archivo font-medium text-[16px] bg-[#4258BE] text-white py-[3px] pr-[3px] pl-6">
+            <Button className="rounded-full flex items-center gap-3 capitalize font-archivo font-medium text-[16px] bg-[#4258BE] text-white py-2 md:py-[3px] pr-2 md:pr-[3px] pl-6">
               Know More
               <i className="flex w-8 h-8 text-[#4258BE] -rotate-45 border border-[#0101010D] bg-white justify-center items-center rounded-full">
                 <MdArrowForward />
@@ -113,7 +121,7 @@ const Learning = () => {
           {new Array(4).fill("").map((item, index) => (
             <div
               key={`Learning_fundamentals_track_${index + 1}`}
-              className="bg-white rounded-xl w-52 h-52 py-4 px-3.5 flex flex-col gap-4"
+              className="bg-white rounded-xl w-[205px] h-[205px] py-4 px-3.5 flex flex-col gap-4"
             >
               <div className="flex items-center w-fit bg-[#88DB1B] rounded-full py-1 px-2 gap-1">
                 <MdHdrStrong className="text-white w-2 h-2" />

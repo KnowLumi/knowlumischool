@@ -15,8 +15,8 @@ const DayLearning = () => {
   const [open, setOpen] = useState(2);
   const handleOpen = (value) => setOpen(open === value ? 0 : value);
   return (
-    <div className="flex flex-col gap-6">
-      <div className="flex flex-wrap gap-3 rounded-2xl py-4 px-6 items-center justify-between bg-white md:w-[46.25rem]">
+    <div className="flex flex-col gap-4">
+      <div className="flex flex-wrap gap-3 rounded-2xl py-4 md:py-0 px-6 md:h-12 items-center justify-between bg-white md:w-[46.25rem]">
         <Breadcrumbs
           className="bg-transparent"
           separator={<MdExpandMore className="w-4 h-4 -rotate-90 text-black" />}
@@ -34,15 +34,15 @@ const DayLearning = () => {
         <div className="flex items-center gap-8 text-[#4258BE] font-normal text-sm tracking-wider">
           <div className="flex items-center gap-2.5">
             <MdKeyboardDoubleArrowRight className="w-4 h-4 rotate-180" />
-            <span>Previous</span>
+            <span className="hidden md:block">Previous</span>
           </div>
           <div className="flex items-center gap-2.5">
-            <span>Next</span>
+            <span className="hidden md:block">Next</span>
             <MdKeyboardDoubleArrowRight className="w-4 h-4" />
           </div>
         </div>
       </div>
-      <div className="flex flex-col gap-2 rounded-lg p-6 h-[30rem] md:h-[24rem] overflow-y-scroll weeks bg-white">
+      <div className="flex flex-col gap-2 rounded-lg px-6 py-3 h-[30rem] md:h-[25.5rem] relative overflow-y-scroll weeks bg-white">
         <video
           className="md:h-[22.5rem] max-w-[43.5rem] rounded-xl"
           width="100%"
@@ -64,9 +64,8 @@ const DayLearning = () => {
           >
             <div className="flex items-center gap-4 text-sm font-bold tracking-wide">
               <MdExpandMore
-                className={`text-black ${
-                  open === 1 ? "-rotate-90" : ""
-                } h-6 w-6 transition-transform`}
+                className={`text-black ${open === 1 ? "-rotate-90" : ""
+                  } h-6 w-6 transition-transform`}
               />
               Day 3: CSS Selectors and Basic Styling
             </div>
@@ -85,8 +84,8 @@ const DayLearning = () => {
           <button className="font-medium tracking-wide text-[16px] rounded-lg  bg-[#4258BE] py-2 px-5">
             Assessment
           </button>
-          <button className="rounded-xl  bg-[#4258BE] px-5 py-2">
-            <MdPlayArrow className="w-4 h-4" />
+          <button className="rounded-xl md:fixed right-8 bottom-[33.3%] md:bottom-14 md:right-44 z-20 bg-[#4258BE] px-5 py-2">
+            <MdPlayArrow className="w-4 h-4 text-white" />
           </button>
         </div>
         <form className="flex flex-col gap-5">
@@ -126,9 +125,6 @@ const DayLearning = () => {
           <div className="flex items-center justify-between text-white mt-6">
             <button type="submit" className="font-medium tracking-wide text-[16px] rounded-lg  bg-[#4258BE] py-2 px-5">
               Submit
-            </button>
-            <button className="rounded-xl  bg-[#4258BE] px-5 py-2">
-              <MdPlayArrow className="w-4 h-4" />
             </button>
           </div>
         </form>

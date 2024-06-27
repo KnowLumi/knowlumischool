@@ -3,8 +3,13 @@ import { Avatar, Button } from "@material-tailwind/react";
 import { MdArrowForward } from "react-icons/md";
 const Earning = () => {
   return (
-    <div className="flex flex-col w-full h-fit ">
-      <h1 className="font-normal text-4xl md:text-5xl">Earning</h1>
+    <div className="flex flex-col w-full h-fit  -translate-y-8 md:-translate-y-0 md:mt-6">
+      <div className="flex items-center gap-7 -translate-x-12 md:-translate-x-20">
+        <div className="rounded-full h-10 w-10 md:w-[52px] md:h-[52px] bg-[#4258BE] flex justify-center items-center text-white font-extrabold">
+          4
+        </div>
+        <h1 className="font-normal text-4xl md:text-[42px]">Earning</h1>
+      </div>
       <p className="w-full md:w-[32rem] text-xs font-light tracking-wider mt-8">
         KnowLumi empowers you to secure internships, jobs, or even launch your
         own ventures. Seamlessly transition from education to real-world success

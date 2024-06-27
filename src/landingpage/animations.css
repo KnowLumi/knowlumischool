@@ -6,15 +6,20 @@
     animation: tilting-rev 3s forwards infinite;
 }
 
-.cash{
+.cash {
     animation: cash-tilt 1s forwards ease-in infinite;
 }
 
+
+
 @keyframes cash-tilt {
-    0%,100%{
+
+    0%,
+    100% {
         transform: rotate(0deg);
     }
-    50%{
+
+    50% {
         transform: rotate(-8deg);
     }
 }
@@ -50,16 +55,14 @@
 }
 
 @keyframes change_color {
-    0% {
+
+    0%,
+    100% {
         fill: #4258BE;
     }
 
     50% {
         fill: #88DB1B;
-    }
-
-    100% {
-        fill: #4258BE;
     }
 }
 

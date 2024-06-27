@@ -54,13 +54,13 @@ const Tracks = () => {
                 </span>
               </div>
             </div>
-            <Link to='/track' state={{ data:(i+1)}} className="py-2 px-3">
-              <Button className="flex items-center gap-1 bg-[#88DB1B]  font-archivo text-white justify-center capitalize">
-                <span className=" font-normal text-xs tracking-wide">
+            <Link to='/track' state={{ data: (i + 1) }} className="">
+              <button className="flex items-center gap-1 bg-[#88DB1B] rounded font-archivo text-white  capitalize px-3 py-2">
+                <span className=" font-normal text-xs tracking-wide w-fit">
                   View More
                 </span>
-                <MdKeyboardDoubleArrowRight className="w-3.5 h-3.5" />
-              </Button>
+                <MdKeyboardDoubleArrowRight className="w-3.5 h-3.5 fundamental_arrow" />
+              </button>
             </Link>
           </div>
         ))}

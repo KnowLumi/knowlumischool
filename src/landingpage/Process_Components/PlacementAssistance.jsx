@@ -4,10 +4,15 @@ import { MdArrowForward } from "react-icons/md";
 import { companies } from "../landing_helpers";
 const PlacementAssistance = () => {
   return (
-    <div className="flex flex-col h-fit w-full">
-      <h1 className="font-normal text-4xl md:text-[42px] md:w-full w-fit">
-        Placement Assistance
-      </h1>
+    <div className="flex flex-col h-fit w-full -translate-y-8 md:-translate-y-0">
+      <div className="flex items-center gap-7 -translate-x-12 md:-translate-x-20">
+        <div className="rounded-full min-h-10 min-w-10 md:min-w-[52px] md:min-h-[52px] bg-[#4258BE] flex justify-center items-center text-white font-extrabold">
+          3
+        </div>
+        <h1 className="font-normal text-4xl md:text-[42px] md:w-full w-fit">
+          Placement Assistance
+        </h1>
+      </div>
       <p className="w-[13.25rem] md:w-[31.875rem] text-xs font-light tracking-wider mt-8">
         Gain Access to Top Companies and Personalized Training with Our
         Comprehensive Placement Assistance Program!
@@ -17,7 +22,7 @@ const PlacementAssistance = () => {
           Referrals to top companies
         </h3>
         <div className="flex items-center gap-2 md:gap-7">
-          <div className="bg-white flex items-center justify-center rounded-2xl w-[8.25rem] h-20 border border-[#0101011A]">
+          <div className="bg-white flex items-center justify-center rounded-2xl w-[8.25rem] h-[72px] border border-[#0101011A]">
             <Carousel
               className="h-fit w-12"
               autoplay
@@ -36,14 +41,14 @@ const PlacementAssistance = () => {
               ))}
             </Carousel>
           </div>
-          <p className="w-24 md:w-[16.5rem] text-[10px] md:text-xs font-light tracking-wider">
+          <p className="w-[110px] md:w-[16.5rem] text-[10px] md:text-xs font-light tracking-wider">
             Unlock Referral Opportunities to Top Companies and Propel Your
             Career Forward
           </p>
         </div>
       </div>
-      <div className="flex flex-col md:w-[534px] relative items-center mt-8 gap-4 rounded-2xl bg-[#88DB1B0D] md:px-6 md:py-4">
-        <h3 className="text-[#4258BE] font-semibold text-xl tracking-wider">
+      <div className="flex flex-col w-[267px] md:w-[534px] relative items-center mt-8 gap-4 rounded-2xl bg-[#88DB1B0D] px-6 py-4">
+        <h3 className="text-[#4258BE] font-semibold text-[16px] md:text-xl tracking-wider">
           Our Exceptional Mentors
         </h3>
         <Carousel
@@ -69,7 +74,7 @@ const PlacementAssistance = () => {
         >
           {new Array(2).fill("").map((_, i) => (
             <div key={`exceptional_mentor_${i + 1}`} className="flex flex-wrap pb-7 justify-evenly gap-5">
-              <div className="flex flex-col h-40 bg-white rounded-xl px-7 py-5">
+              <div className="flex flex-col h-[153px] bg-white rounded-xl px-7 py-4">
                 <div className="flex w-[11.5rem] justify-between">
                   <Badge
                     content={
@@ -98,7 +103,7 @@ const PlacementAssistance = () => {
                   </div>
                 </div>
                 <span className="text-xs italic pt-3 mt-3 border-t-2 text-[#010101] font-normal leading-4 tracking-wider text-left">
-                  Senior Producr designer
+                  Senior Product designer
                 </span>
               </div>
               <div className="flex flex-col h-40 bg-white rounded-xl px-7 py-5">
