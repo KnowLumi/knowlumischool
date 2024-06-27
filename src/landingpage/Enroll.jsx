@@ -51,6 +51,7 @@ const Enroll = () => {
                     <IoArrowForwardSharp className="text-black  w-1.5 h-1.5 md:w-3.5 md:h-3.5" />
                   </i>
                 </Button>
+                
                 <div className="enroll2 bg-cover md:bg-contain mt-3 bg-no-repeat w-[148px] rounded-lg md:w-[29rem] h-8 md:h-16 flex md:hidden justify-evenly pl-2 items-center translate-x-3 -translate-y-5">
                   <div className="text-white flex font-bold tracking-wide text-xs md:text-lg">
                     <span className="">ENROLL NOW&nbsp;</span>
