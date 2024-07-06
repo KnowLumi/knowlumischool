@@ -14,11 +14,14 @@ import node from "./logos/node.png";
 import reactjs from "./logos/react.png";
 import { Link } from "react-router-dom";
 import { tracks } from "../../pages/helpers/fundamentalhelpers";
-const Learning = () => {
+const Learning = ({ enableScroll,  setIsVisible }) => {
   return (
     <div className="flex flex-col w-full mt-10 md:mt-0">
       <div className="flex items-center gap-7 -translate-x-12 md:-translate-x-20">
-        <div className="rounded-full h-10 w-10 md:w-[52px] md:h-[52px] bg-[#4258BE] flex justify-center items-center text-white font-extrabold">
+        <div
+          onClick={enableScroll}
+          className="rounded-full h-10 w-10 md:w-[52px] md:h-[52px] bg-[#4258BE] flex justify-center items-center text-white font-extrabold"
+        >
           1
         </div>
         <h1 className="font-normal text-4xl md:text-[42px]">Learning</h1>
@@ -110,7 +113,12 @@ const Learning = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col gap-4 mt-10">
+      <div
+        onMouseEnter={() => {
+          setIsVisible(true)
+        }}
+        className="flex flex-col gap-4 mt-10 md:-ml-14 md:pl-14"
+      >
         <h3 className="text-[#4258BE] font-semibold text-xl">
           Mastering Tracks
         </h3>
