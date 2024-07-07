@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect } from "react";
+import { useRef } from "react";
 import Footer from "../landingpage/Footer";
 import FaqSection from "../landingpage/FaqSection";
 import HeroSection from "../landingpage/HeroSection";
@@ -17,40 +17,11 @@ import Recognized from "../landingpage/Recognized";
 const LandingPage = () => {
 
   const includedRef = useRef(null);
-  const [scrollEnabled, setScrollEnabled] = useState(true);
   const processRef = useRef(null);
 
   const scrollToIncluded = () => {
     includedRef.current.scrollIntoView({ behavior: 'smooth' });
   };
-
-  // const toggleScroll = (enabled) => {
-  //   setScrollEnabled(enabled);
-  //   if (enabled) {
-  //     document.body.style.overflow = "auto";
-  //   } else {
-  //     document.body.style.overflow = "hidden";
-  //   }
-  // };
-
-  // const handleScroll = () => {
-  //   if (processRef.current && scrollEnabled) {
-  //     const rect = processRef.current.getBoundingClientRect();
-  //     if (rect.top <= 96 && rect.bottom >= 96) {
-  //       toggleScroll(false);
-  //     }
-  //     else{
-  //       toggleScroll(true)
-  //     }
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   window.addEventListener('scroll', handleScroll);
-  //   return () => {
-  //     window.removeEventListener('scroll', handleScroll);
-  //   };
-  // }, [scrollEnabled]);
 
   return (
     <>
