@@ -17,43 +17,74 @@ import { processSvg } from "./landing_helpers";
 
 const Process = forwardRef(({ scrollToIncluded }, ref) => {
   const [isComponentAtBottom, setIsComponentAtBottom] = useState(false);
+  const [isComponentNearTop, setIsComponentNearTop] = useState(true);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const processRef = useRef(null);
 
   const handleScroll = () => {
-    const { scrollTop, scrollHeight, clientHeight } = processRef.current;
-    setIsComponentAtBottom(scrollTop + clientHeight >= scrollHeight);
+    if (processRef.current) {
+      const { scrollTop, scrollHeight, clientHeight } = processRef.current;
+      setIsComponentAtBottom(scrollTop + clientHeight >= scrollHeight - 100);
+      setIsComponentNearTop(scrollTop === 0);
+    }
   };
 
   const handleWindowScroll = () => {
-    const processTop = processRef.current?.getBoundingClientRect().top;
-    const isAtTop = processTop <= 100;
+    if (processRef.current) {
+      const processTop = processRef.current.getBoundingClientRect().top;
+      const isAtTop = processTop <= 100;
 
-    if (isAtTop && !isComponentAtBottom) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
+      if (isAtTop && !isComponentAtBottom) {
+        document.body.style.overflow = "hidden";
+      } else {
+        document.body.style.overflow = "auto";
+      }
     }
   };
 
+  const handleResize = () => {
+    setIsMobile(window.innerWidth <= 768);
+  };
+
   useEffect(() => {
-    const processElement = processRef.current;
-    processElement.addEventListener("scroll", handleScroll);
-    window.addEventListener("scroll", handleWindowScroll);
+    window.addEventListener("resize", handleResize);
+    handleResize();
 
     return () => {
-      processElement.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("scroll", handleWindowScroll);
+      window.removeEventListener("resize", handleResize);
     };
-  }, [isComponentAtBottom]);
+  }, []);
 
   useEffect(() => {
-    if (isComponentAtBottom) {
-      document.body.style.overflow = "auto";
-    } else {
-      handleWindowScroll();
+    if (!isMobile) {
+      const processElement = processRef.current;
+
+      if (processElement) {
+        processElement.addEventListener("scroll", handleScroll);
+        window.addEventListener("scroll", handleWindowScroll);
+      }
+
+      return () => {
+        if (processElement) {
+          processElement.removeEventListener("scroll", handleScroll);
+        }
+        window.removeEventListener("scroll", handleWindowScroll);
+      };
     }
-  }, [isComponentAtBottom]);
-  
+  }, [isComponentAtBottom, isMobile]);
+
+  useEffect(() => {
+    if (!isMobile) {
+      if (isComponentAtBottom || isComponentNearTop) {
+        document.body.style.overflow = "auto";
+      } else {
+        handleWindowScroll();
+      }
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [isComponentAtBottom, isComponentNearTop, isMobile]);
+
   return (
     <div ref={ref} className="flex flex-wrap w-full px-8 md:px-16 mt-20 relative">
       <div className="flex flex-col gap-10 py-2 md:absolute z-10 left-16 top-0">
