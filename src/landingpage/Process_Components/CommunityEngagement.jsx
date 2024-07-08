@@ -3,9 +3,11 @@ import "react-slideshow-image/dist/styles.css";
 import { community } from "./process_helpers";
 import { MdKeyboardDoubleArrowRight, MdArrowForward } from "react-icons/md";
 import { Button, Avatar } from "@material-tailwind/react";
+
 const CommunityEngagement = () => {
+  
   return (
-    <div className="flex flex-col w-full h-fit -translate-y-8 md:-translate-y-0 md:mt-24">
+    <div className="flex flex-col w-full h-fit md:-translate-y-0 mt-8 md:mt-24">
       <div className="flex items-center gap-7 -translate-x-12 md:-translate-x-20">
         <div className="rounded-full min-h-10 min-w-10 md:min-w-[52px] md:min-h-[52px] bg-[#4258BE] flex justify-center items-center text-white font-extrabold">
           2

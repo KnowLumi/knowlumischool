@@ -85,6 +85,7 @@ const Process = forwardRef(({ scrollToIncluded }, ref) => {
     }
   }, [isComponentAtBottom, isComponentNearTop, isMobile]);
 
+
   return (
     <div ref={ref} className="flex flex-wrap w-full px-8 md:px-16 mt-20 relative">
       <div className="flex flex-col gap-10 py-2 md:absolute z-10 left-16 top-0">
@@ -151,7 +152,7 @@ const Process = forwardRef(({ scrollToIncluded }, ref) => {
       <div ref={processRef}
         onScroll={handleScroll} className="w-full z-20 py-2 mt-24 md:mt-0 flex flex-col process items-end h-full md:h-[30rem] md:overflow-y-scroll">
         <div className="flex flex-col items-end h-fit w-full md:w-[623px]">
-          <div className="w-full  md:h-[3500px] flex">
+          <div className="w-full h-[4872px] md:h-[3500px] flex">
             <div className="flex flex-col process-comp bg-contain bg-no-repeat md:h-full w-[305px] md:w-full h-full gap-6 py-12">
               <div className="flex flex-col gap-[68px] w-full pl-9 md:pl-16 mt-6 md:mt-[92px]">
                 <div

@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import Footer from "../landingpage/Footer";
 import FaqSection from "../landingpage/FaqSection";
 import HeroSection from "../landingpage/HeroSection";
@@ -18,21 +18,27 @@ const LandingPage = () => {
 
   const includedRef = useRef(null);
   const processRef = useRef(null);
+  const mainContainerRef = useRef(null);
 
   const scrollToIncluded = () => {
     includedRef.current.scrollIntoView({ behavior: 'smooth' });
   };
 
+  useEffect(() => {
+    if (mainContainerRef.current) {
+      mainContainerRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, []);
   return (
     <>
       <Navigation />
-      <div className="flex flex-col bg-[#F7F7F7]">
+      <div ref={mainContainerRef} className="flex flex-col bg-[#F7F7F7]">
         <HeroSection scrollToIncluded={scrollToIncluded} />
         <About />
         <Program scrollToIncluded={scrollToIncluded} />
         <Companies />
         <Recognized />
-        <Process ref={processRef}  />
+        <Process ref={processRef} />
         <Testimonials />
         <Action />
         <WhyKnowLumi scrollToIncluded={scrollToIncluded} />
