@@ -88,7 +88,7 @@ const Process = forwardRef(({ scrollToIncluded }, ref) => {
 
   return (
     <div ref={ref} className="flex flex-wrap w-full px-8 md:px-16 mt-20 relative">
-      <div className="flex flex-col gap-10 py-2 md:absolute z-10 left-16 top-0">
+      <div className="flex flex-col gap-10 py-2 md:absolute z-10 left-24 top-0">
         <button className="flex items-center w-fit bg-white rounded-full py-2 px-6 gap-4">
           <MdHdrStrong className="text-[#4258BE]" />
           <span className="font-bold text-xs text-[#01010199]">
@@ -121,7 +121,7 @@ const Process = forwardRef(({ scrollToIncluded }, ref) => {
             </i>
           </Button>
         </div>
-        {<div className="hidden md:flex gap-3.5 items-center z-50 mt-8 translate-x-24 transition-transform ease-in">
+        {<div className="hidden md:flex gap-3.5 items-center z-50 mt-8  transition-transform ease-in">
           <div className="flex flex-row-reverse md:flex-row gap-3 md:gap-7 py-4 px-6 -rotate-90 md:rotate-0 bg-[#4258BE] rounded-lg">
             <img src={cash} className="w-[54px] h-[54px] rotate-90 md:rotate-0 cash" alt="" />
             <div className="flex flex-col md:w-[11.25rem] text-white">
