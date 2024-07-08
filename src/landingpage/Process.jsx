@@ -20,7 +20,7 @@ const Process = forwardRef(({ scrollToIncluded }, ref) => {
   return (
     <div ref={ref} className="flex flex-col md:flex-row md:justify-between w-full px-8 md:px-16 mt-20 relative">
       <div className="flex flex-col py-2 relative">
-        <div className="flex flex-col gap-10 md:sticky z-20 left-24 top-20 h-fit bg-[#F7F7F7]">
+        <div className="flex flex-col gap-10 md:sticky z-20 left-24 pb-8 top-20 h-fit bg-[#F7F7F7]">
           <button className="flex items-center w-fit bg-white rounded-full py-2 px-6 gap-4">
             <MdHdrStrong className="text-[#4258BE]" />
             <span className="font-bold text-xs text-[#01010199]">
@@ -54,9 +54,9 @@ const Process = forwardRef(({ scrollToIncluded }, ref) => {
             </Button>
           </div>
         </div>
-        <div className="w-[329px] h-[608px] hidden md:block">
+        <div className="w-[329px] h-[608px] hidden md:block mt-20">
         </div>
-        {<div className="hidden md:sticky top-[508px] md:flex gap-3.5 items-center z-10 mt-8 transition-transform ease-in">
+        {<div className="hidden md:sticky top-[518px] md:flex gap-3.5 items-center z-10 mt-8 transition-transform ease-in">
           <div className="flex flex-row-reverse md:flex-row gap-3 md:gap-7 py-4 px-6 -rotate-90 md:rotate-0 bg-[#4258BE] rounded-lg">
             <img src={cash} className="w-[54px] h-[54px] rotate-90 md:rotate-0 cash" alt="" />
             <div className="flex flex-col md:w-[11.25rem] text-white">
@@ -102,7 +102,7 @@ const Process = forwardRef(({ scrollToIncluded }, ref) => {
           </div>
         </div>
         <div className="w-full flex mt-10 ">
-          <div className="process-line w-80 relative md:w-[623px] h-7 md:min-h-[66px] md:h-[66px] bg-contain bg-no-repeat flex flex-col justify-end mr-14">
+          <div className="process-line w-80 relative md:w-[623px] h-7 md:min-h-[66px] md:h-[66px] md:-translate-y-10 bg-contain bg-no-repeat flex flex-col justify-end mr-14">
             <i className="w-3 md:w-4 h-3 md:h-4 rounded-full hidden md:block bg-[#88DB1B] process-ball-anime" />
           </div>
         </div>
