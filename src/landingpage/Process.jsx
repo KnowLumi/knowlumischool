@@ -1,4 +1,4 @@
-import { useState, useRef, forwardRef, useEffect } from "react";
+import { forwardRef } from "react";
 import { Button } from "@material-tailwind/react";
 import {
   MdHdrStrong,
@@ -16,79 +16,10 @@ import cash from "./Process_svg/cash.png";
 import { processSvg } from "./landing_helpers";
 
 const Process = forwardRef(({ scrollToIncluded }, ref) => {
-  const [isComponentAtBottom, setIsComponentAtBottom] = useState(false);
-  const [isComponentNearTop, setIsComponentNearTop] = useState(true);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-  const processRef = useRef(null);
-
-  const handleScroll = () => {
-    if (processRef.current) {
-      const { scrollTop, scrollHeight, clientHeight } = processRef.current;
-      setIsComponentAtBottom(scrollTop + clientHeight >= scrollHeight - 100);
-      setIsComponentNearTop(scrollTop === 0);
-    }
-  };
-
-  const handleWindowScroll = () => {
-    if (processRef.current) {
-      const processTop = processRef.current.getBoundingClientRect().top;
-      const isAtTop = processTop <= 100;
-
-      if (isAtTop && !isComponentAtBottom) {
-        document.body.style.overflow = "hidden";
-      } else {
-        document.body.style.overflow = "auto";
-      }
-    }
-  };
-
-  const handleResize = () => {
-    setIsMobile(window.innerWidth <= 768);
-  };
-
-  useEffect(() => {
-    window.addEventListener("resize", handleResize);
-    handleResize();
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  useEffect(() => {
-    if (!isMobile) {
-      const processElement = processRef.current;
-
-      if (processElement) {
-        processElement.addEventListener("scroll", handleScroll);
-        window.addEventListener("scroll", handleWindowScroll);
-      }
-
-      return () => {
-        if (processElement) {
-          processElement.removeEventListener("scroll", handleScroll);
-        }
-        window.removeEventListener("scroll", handleWindowScroll);
-      };
-    }
-  }, [isComponentAtBottom, isMobile]);
-
-  useEffect(() => {
-    if (!isMobile) {
-      if (isComponentAtBottom || isComponentNearTop) {
-        document.body.style.overflow = "auto";
-      } else {
-        handleWindowScroll();
-      }
-    } else {
-      document.body.style.overflow = "auto";
-    }
-  }, [isComponentAtBottom, isComponentNearTop, isMobile]);
-
 
   return (
-    <div ref={ref} className="flex flex-wrap w-full px-8 md:px-16 mt-20 relative">
-      <div className="flex flex-col gap-10 py-2 md:absolute z-10 left-24 top-0">
+    <div ref={ref} className="flex flex-col md:flex-row md:justify-between w-full px-8 md:px-16 mt-20 relative">
+      <div className="flex flex-col gap-10 py-2 md:sticky z-10 left-24 top-20 h-fit">
         <button className="flex items-center w-fit bg-white rounded-full py-2 px-6 gap-4">
           <MdHdrStrong className="text-[#4258BE]" />
           <span className="font-bold text-xs text-[#01010199]">
@@ -121,7 +52,7 @@ const Process = forwardRef(({ scrollToIncluded }, ref) => {
             </i>
           </Button>
         </div>
-        {<div className="hidden md:flex gap-3.5 items-center z-50 mt-8  transition-transform ease-in">
+        {<div className="hidden md:flex gap-3.5 items-center z-50 mt-8 transition-transform ease-in">
           <div className="flex flex-row-reverse md:flex-row gap-3 md:gap-7 py-4 px-6 -rotate-90 md:rotate-0 bg-[#4258BE] rounded-lg">
             <img src={cash} className="w-[54px] h-[54px] rotate-90 md:rotate-0 cash" alt="" />
             <div className="flex flex-col md:w-[11.25rem] text-white">
@@ -149,8 +80,8 @@ const Process = forwardRef(({ scrollToIncluded }, ref) => {
         </div>}
 
       </div>
-      <div ref={processRef}
-        onScroll={handleScroll} className="w-full z-20 py-2 mt-24 md:mt-0 flex flex-col process items-end h-full md:h-[30rem] md:overflow-y-scroll">
+      <div
+        className="w-full z-20 py-2 mt-24 md:mt-0 flex flex-col process items-end h-full md:w-[623px]">
         <div className="flex flex-col items-end h-fit w-full md:w-[623px]">
           <div className="w-full h-[4872px] md:h-[3500px] flex">
             <div className="flex flex-col process-comp bg-contain bg-no-repeat md:h-full w-[305px] md:w-full h-full gap-6 py-12">
