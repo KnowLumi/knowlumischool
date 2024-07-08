@@ -19,40 +19,44 @@ const Process = forwardRef(({ scrollToIncluded }, ref) => {
 
   return (
     <div ref={ref} className="flex flex-col md:flex-row md:justify-between w-full px-8 md:px-16 mt-20 relative">
-      <div className="flex flex-col gap-10 py-2 md:sticky z-10 left-24 top-20 h-fit">
-        <button className="flex items-center w-fit bg-white rounded-full py-2 px-6 gap-4">
-          <MdHdrStrong className="text-[#4258BE]" />
-          <span className="font-bold text-xs text-[#01010199]">
-            THE PROCESS
+      <div className="flex flex-col py-2 relative">
+        <div className="flex flex-col gap-10 md:sticky z-20 left-24 top-20 h-fit bg-[#F7F7F7]">
+          <button className="flex items-center w-fit bg-white rounded-full py-2 px-6 gap-4">
+            <MdHdrStrong className="text-[#4258BE]" />
+            <span className="font-bold text-xs text-[#01010199]">
+              THE PROCESS
+            </span>
+          </button>
+          <span className="w-72 md:w-80 font-light text-5xl">
+            How Knowlumi Works
           </span>
-        </button>
-        <span className="w-72 md:w-80 font-light text-5xl">
-          How Knowlumi Works
-        </span>
-        <div className="flex flex-col  text-sm">
-          <p className="md:w-[22.75rem] font-light">
-            Join the program and turn dreams into reality with expert mentors
-            and top resources!
-          </p>
+          <div className="flex flex-col  text-sm">
+            <p className="md:w-[22.75rem] font-light">
+              Join the program and turn dreams into reality with expert mentors
+              and top resources!
+            </p>
+          </div>
+          <div className="flex flex-wrap justify-center gap-6 w-fit">
+            <Button onClick={scrollToIncluded} className="rounded-full bg-black flex items-center gap-3 capitalize font-archivo font-medium text-[16px] py-2 pr-2 pl-6">
+              Enroll Now
+              <i className="flex icon w-8 h-8 text-white border border-[#0101010D] bg-[#FFFFFF33] justify-center items-center rounded-full">
+                <MdArrowForward />
+              </i>
+            </Button>
+            <Button
+              className="rounded-full flex items-center gap-3 capitalize font-archivo font-medium text-[16px] text-black py-2 pr-2 pl-6"
+              variant="outlined"
+            >
+              Contact Us
+              <i className="flex w-8 h-8 text-black border border-[#0101010D] bg-[#01010133] justify-center items-center rounded-full">
+                <MdOutlinePhoneCallback />
+              </i>
+            </Button>
+          </div>
         </div>
-        <div className="flex flex-wrap justify-center gap-6 w-fit">
-          <Button onClick={scrollToIncluded} className="rounded-full bg-black flex items-center gap-3 capitalize font-archivo font-medium text-[16px] py-2 pr-2 pl-6">
-            Enroll Now
-            <i className="flex icon w-8 h-8 text-white border border-[#0101010D] bg-[#FFFFFF33] justify-center items-center rounded-full">
-              <MdArrowForward />
-            </i>
-          </Button>
-          <Button
-            className="rounded-full flex items-center gap-3 capitalize font-archivo font-medium text-[16px] text-black py-2 pr-2 pl-6"
-            variant="outlined"
-          >
-            Contact Us
-            <i className="flex w-8 h-8 text-black border border-[#0101010D] bg-[#01010133] justify-center items-center rounded-full">
-              <MdOutlinePhoneCallback />
-            </i>
-          </Button>
+        <div className="w-[329px] h-[608px] hidden md:block">
         </div>
-        {<div className="hidden md:flex gap-3.5 items-center z-50 mt-8 transition-transform ease-in">
+        {<div className="hidden md:sticky top-[508px] md:flex gap-3.5 items-center z-10 mt-8 transition-transform ease-in">
           <div className="flex flex-row-reverse md:flex-row gap-3 md:gap-7 py-4 px-6 -rotate-90 md:rotate-0 bg-[#4258BE] rounded-lg">
             <img src={cash} className="w-[54px] h-[54px] rotate-90 md:rotate-0 cash" alt="" />
             <div className="flex flex-col md:w-[11.25rem] text-white">
@@ -78,7 +82,6 @@ const Process = forwardRef(({ scrollToIncluded }, ref) => {
             />
           </svg>
         </div>}
-
       </div>
       <div
         className="w-full z-20 py-2 mt-24 md:mt-0 flex flex-col process items-end h-full md:w-[623px]">
@@ -98,8 +101,8 @@ const Process = forwardRef(({ scrollToIncluded }, ref) => {
             </div>
           </div>
         </div>
-        <div className="w-full flex mt-10 justify-end">
-          <div className="process-line w-80 relative md:w-[727.5px] h-7 md:min-h-[66px] md:h-[66px] bg-contain bg-no-repeat flex flex-col justify-end">
+        <div className="w-full flex mt-10 ">
+          <div className="process-line w-80 relative md:w-[623px] h-7 md:min-h-[66px] md:h-[66px] bg-contain bg-no-repeat flex flex-col justify-end mr-14">
             <i className="w-3 md:w-4 h-3 md:h-4 rounded-full hidden md:block bg-[#88DB1B] process-ball-anime" />
           </div>
         </div>

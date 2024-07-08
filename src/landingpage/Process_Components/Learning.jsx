@@ -1,4 +1,3 @@
-import { useRef,useEffect } from "react";
 import {
   MdOutlineLocalLibrary,
   MdFreeCancellation,
@@ -16,12 +15,6 @@ import reactjs from "./logos/react.png";
 import { Link } from "react-router-dom";
 import { tracks } from "../../pages/helpers/fundamentalhelpers";
 const Learning = ({ enableScroll }) => {
-  const masterRef = useRef(null);
-  // const { scrollTop, scrollHeight, clientHeight } = masterRef.current;
-  useEffect(() => {
-    console.log(masterRef.current.scrollTop);
-  }, [])
-  
   return (
     <div className="flex flex-col w-full mt-10 md:mt-0">
       <div className="flex items-center gap-7 -translate-x-12 md:-translate-x-20">
@@ -120,7 +113,8 @@ const Learning = ({ enableScroll }) => {
           </div>
         </div>
       </div>
-      <div ref={masterRef} className="flex flex-col gap-4 mt-10 md:-ml-14 md:pl-14">
+      
+      <div className="flex flex-col gap-4 mt-10 md:-ml-14 md:pl-14">
         <h3 className="text-[#4258BE] font-semibold text-xl">
           Mastering Tracks
         </h3>

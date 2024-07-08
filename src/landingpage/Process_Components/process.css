@@ -31,15 +31,15 @@
         transform: translate(0px, 4px);
     }
 
-    25% {
-        transform: translate(114px, 4px);
+    9% {
+        transform: translate(34px, 4px);
     }
 
-    50% {
-        transform: translate(154px, -54px);
+    27% {
+        transform: translate(66px, -54px);
     }
 
     100% {
-        transform: translate(632px, -54px);
+        transform: translate(523px, -54px);
     }
 }
