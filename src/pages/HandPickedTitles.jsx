@@ -23,34 +23,41 @@ function HandPickedTitles() {
             achieve them.
           </p>
           <div className="mt-4">
-            <Button className="rounded-full flex border border-black bg-white items-center gap-3 capitalize font-archivo font-medium text-xs text-black py-[3px] pr-[3px] pl-6">
-              Request a Callback
-              <i className="flex w-8 h-8 text-white border border-[#0101010D] bg-black justify-center items-center rounded-full">
-                <MdOutlinePhoneCallback />
-              </i>
-            </Button>
+          <Button className="rounded-full bg-black flex items-center gap-3 capitalize font-archivo font-medium text-[16px] py-2 pr-2 pl-6 border border-gray-600 text-white">
+          Register For Programs
+          <i className="flex icon w-6 h-6 text-black bg-white border border-[#0101010D] bg-[#FFFFFF33] justify-center items-center rounded-full">
+            <MdArrowForward />
+          </i>
+        </Button>
           </div>
         </div>
-        <div className="w-full p-4 relative">
-  <img
-    className="w-full object-contain h-80 rounded-t-3xl"
-    src="https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp"
-    alt="Image not found"
-  />
-  <div className="px-12">
-    <div className="p-4 bg-white rounded-b-2xl border border-black">
-    <h3 className="font-bold text-xl text-gray-800">
-      Amazing Tailwindcss Grid Layout Examples
-    </h3>
-    <h4 className="font-body mt-2 text-sm text-gray-700">
-      Grids are cool, but Tailwindcss grids are cooler. In this article, we will learn how to create amazing Grid layouts with Tailwindcs grid and React.
-    </h4>
-  </div>
-  </div>
+        <div className="w-full p-4 relative flex flex-col justify-start items-start">
+        <div className="w-[30rem] mx-auto">
+            <div className="relative overflow-hidden h-full rounded-2xl transition duration-200 group bg-white hover:shadow-xl border border-zinc-100">
+              <div className="w-full aspect-w-16 aspect-h-10 bg-gray-100 rounded-tr-lg rounded-tl-lg overflow-hidden xl:aspect-w-16 xl:aspect-h-10 relative">
+                <img
+                  src={blogContent.image}
+                  alt="thumbnail"
+                  layout="fill"
+                  objectFit="cover"
+                  className=" object-cover transition duration-200"
+                />
+              </div>
+              <div className="p-4">
+                <h2 className="font-bold  text-lg text-zinc-700">
+                  {blogContent.title}
+                </h2>
+                <h2 className="font-normal  text-sm text-zinc-500">
+                  {blogContent.description}
+                </h2>
+               
+              </div>
+            </div>
+          </div>
 </div>
 
       </div>
-      <div className="flex items-center flex-wrap justify-center gap-3 mt-16">
+      <div className="flex items-center flex-wrap justify-center gap-3 mt-16 lg:px-16">
         {Array.from({ length: 3 }).map((_, index) => (
           <div className="w-96 mx-auto">
             <div className="relative overflow-hidden h-full rounded-2xl transition duration-200 group bg-white hover:shadow-xl border border-zinc-100">
@@ -71,9 +78,14 @@ function HandPickedTitles() {
                   {blogContent.description}
                 </h2>
                 <div className="flex flex-wrap gap-5 my-9 justify-center">
-                
+                <Button className="rounded-full flex border border-black bg-white items-center gap-3 capitalize font-archivo font-medium text-xs text-black py-[3px] pr-[3px] pl-6">
+              Request a Callback
+              <i className="flex w-8 h-8 text-white border border-[#0101010D] bg-black justify-center items-center rounded-full">
+                <MdOutlinePhoneCallback />
+              </i>
+            </Button>
                   <Button className="rounded-full bg-black flex items-center justify-center gap-3 capitalize font-archivo font-medium text-[16px] py-2 pr-2  ">
-                    Registration For Program
+                   Know More
                     <i className="flex icon w-6 h-6 text-white border border-[#0101010D] bg-[#FFFFFF33] justify-center items-center rounded-full">
                       <MdArrowForward />
                     </i>
@@ -85,9 +97,9 @@ function HandPickedTitles() {
         ))}
       </div>
       <div className="flex items-center justify-center mt-12 mb-6">
-        <Button className="rounded-full bg-white flex items-center gap-3 capitalize font-archivo font-medium text-[16px] py-2 pr-2 pl-6 border border-gray-600 text-black">
+        <Button className="rounded-full bg-black flex items-center gap-3 capitalize font-archivo font-medium text-[16px] py-2 pr-2 pl-6 border border-gray-600 text-white">
           View All Programms
-          <i className="flex icon w-6 h-6 text-white bg-black border border-[#0101010D] bg-[#FFFFFF33] justify-center items-center rounded-full">
+          <i className="flex icon w-6 h-6 text-black bg-white border border-[#0101010D] bg-[#FFFFFF33] justify-center items-center rounded-full">
             <MdArrowForward />
           </i>
         </Button>
