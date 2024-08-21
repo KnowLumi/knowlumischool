@@ -23,12 +23,12 @@ function HandPickedTitles() {
             achieve them.
           </p>
           <div className="mt-4">
-          <Button className="rounded-full bg-black flex items-center gap-3 capitalize font-archivo font-medium text-[16px] py-2 pr-2 pl-6 border border-gray-600 text-white">
-          Register For Programs
-          <i className="flex icon w-6 h-6 text-black bg-white border border-[#0101010D] bg-[#FFFFFF33] justify-center items-center rounded-full">
-            <MdArrowForward />
-          </i>
-        </Button>
+          <Button className="rounded-full flex border border-black bg-white items-center gap-3 capitalize font-archivo font-medium text-xs text-black py-[3px] pr-[3px] pl-6">
+              Request a Callback
+              <i className="flex w-8 h-8 text-white border border-[#0101010D] bg-black justify-center items-center rounded-full">
+                <MdOutlinePhoneCallback />
+              </i>
+            </Button>
           </div>
         </div>
         <div className="w-full p-4 relative flex flex-col justify-start items-start">
@@ -50,6 +50,12 @@ function HandPickedTitles() {
                 <h2 className="font-normal  text-sm text-zinc-500">
                   {blogContent.description}
                 </h2>
+                <Button className="rounded-full mt-6 bg-black flex items-center gap-3 capitalize font-archivo font-medium text-[16px] py-2 pr-2 pl-6 border border-gray-600 text-white">
+          Register For Programs
+          <i className="flex icon w-6 h-6 text-black bg-white border border-[#0101010D] bg-[#FFFFFF33] justify-center items-center rounded-full">
+            <MdArrowForward />
+          </i>
+        </Button>
                
               </div>
             </div>
