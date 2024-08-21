@@ -1,11 +1,11 @@
 import { FaPhoneAlt } from "react-icons/fa";
 import aboutbar from "../assets/about_bar1.png";
 import { Button } from "@material-tailwind/react";
-import { MdOutlinePhoneCallback } from "react-icons/md";
+import { MdArrowForward, MdOutlinePhoneCallback } from "react-icons/md";
 
 function HandPickedTitles() {
   return (
-    <div className="bg-white min-h-screen">
+    <div className="bg-white min-h-screen lg:p-12">
       <div className="w-full flex justify-start bg-white">
         <img src={aboutbar} className="w-fit h-8 md:h-16 rotate-180 " alt="" />
       </div>
@@ -13,12 +13,17 @@ function HandPickedTitles() {
       <div className="grid lg:flex  w-full justify-between items-center mt-12 mb-12 gap-6">
         {/* first section */}
         <div className="w-full flex flex-col items-start p-4 max-w-xl gap-6">
-          <h3 className="font-light text-2xl lg:text-6xl">Program open For Enrollment</h3>
+          <h3 className="font-light text-2xl lg:text-6xl">
+            Program open For Enrollment
+          </h3>
           <p className="mt-4 leading-loose">
-          Get insights directly from people who have been there and done that. These masterclasses not only provide directions to reach your career goals but also keep you inspired to dream without limitations and achieve them.
+            Get insights directly from people who have been there and done that.
+            These masterclasses not only provide directions to reach your career
+            goals but also keep you inspired to dream without limitations and
+            achieve them.
           </p>
           <div className="mt-4">
-          <Button className="rounded-full flex border border-black bg-white items-center gap-3 capitalize font-archivo font-medium text-xs text-black py-[3px] pr-[3px] pl-6">
+            <Button className="rounded-full flex border border-black bg-white items-center gap-3 capitalize font-archivo font-medium text-xs text-black py-[3px] pr-[3px] pl-6">
               Request a Callback
               <i className="flex w-8 h-8 text-white border border-[#0101010D] bg-black justify-center items-center rounded-full">
                 <MdOutlinePhoneCallback />
@@ -27,10 +32,18 @@ function HandPickedTitles() {
           </div>
         </div>
         <div className="w-full p-4 relative">
-          <img className="w-full h-96 rounded-2xl" src="https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp" alt="Image not found" />
-          <div className="p-3 h-20 bg-white w-full relative bottom-16 rounded-b-xl border-b border-r border-l border-black">
-            <h3 className="font-bold text-xl">Sneak Peek Of Masterclass by Rakesh Misra</h3>
-            <h4 className="font-body mt-2 test-sm text-gray-700">Co-Founder Uhana (Acquired by VMWare), Stanford, IIT Madras</h4>
+          <img
+            className="w-full h-96 rounded-2xl"
+            src="https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp"
+            alt="Image not found"
+          />
+          <div className="p-3 h-20 bg-white  relative bottom-16 rounded-b-xl border-b border-r border-l border-black">
+            <h3 className="font-bold text-xl">
+              Sneak Peek Of Masterclass by Rakesh Misra
+            </h3>
+            <h4 className="font-body mt-2 test-sm text-gray-700">
+              Co-Founder Uhana (Acquired by VMWare), Stanford, IIT Madras
+            </h4>
           </div>
         </div>
       </div>
@@ -54,13 +67,24 @@ function HandPickedTitles() {
                 <h2 className="font-normal my-4 text-sm text-zinc-500">
                   {blogContent.description}
                 </h2>
-                <div className="flex flex-row justify-between items-center mt-10 w-full gap-3">
-                  <div className="text-center relative z-10 px-6 py-2 bg-white text-black border border-black font-bold rounded-xl block text-xs w-full">
-                    contact
-                  </div>
-                  <div className="texet-center relative z-10 px-6 py-2 bg-black text-white font-bold rounded-xl block text-xs w-full">
-                    Read More
-                  </div>
+                <div className="flex flex-wrap gap-5 my-9 justify-center">
+                  
+                <Button
+                    className="rounded-full flex items-center gap-3 capitalize font-archivo font-medium text-[16px] text-black py-2 pr-2 pl-24 w-full"
+                    variant="outlined"
+                  >
+                    Request a Callback
+                    <i className="flex w-6 h-6 text-black border border-[#0101010D] bg-[#01010133] justify-center items-center rounded-full">
+                      <MdOutlinePhoneCallback />
+                    </i>
+                  </Button>
+                  <Button className="rounded-full bg-black flex items-center gap-3 capitalize font-archivo font-medium text-[16px] py-2 pr-2 pl-24 w-full">
+                    Enroll in the Program
+                    <i className="flex icon w-6 h-6 text-white border border-[#0101010D] bg-[#FFFFFF33] justify-center items-center rounded-full">
+                      <MdArrowForward />
+                    </i>
+                  </Button>
+                
                 </div>
               </div>
             </div>
