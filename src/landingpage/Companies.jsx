@@ -1,11 +1,18 @@
 import { useState } from "react";
 import { companies } from "./landing_helpers";
 import Marquee from "react-fast-marquee";
+import aboutbar from "../assets/about_bar1.png";
+
 const Companies = () => {
   const [hoveredImageIndex, setHoveredImageIndex] = useState(null);
 
   return (
-    <div className="flex flex-col items-center font-archivo w-full gap-16 my-24">
+    <div className="">
+      <div className="w-full flex justify-end bg-white">
+    <img src={aboutbar} className="w-fit h-8 md:h-16   " alt="" />
+  </div>
+    <div className="flex flex-col items-center font-archivo w-full gap-16 my-24 mt-24">
+      
       <div className="flex flex-col items-center gap-4 px-4">
         <span className="text-[#88DB1B] font-bold text-[20px] leading-5 tracking-wide">
           Exceptional Mentors
@@ -36,6 +43,7 @@ const Companies = () => {
           ))}
         </Marquee>
       </div>
+    </div>
     </div>
   );
 };
