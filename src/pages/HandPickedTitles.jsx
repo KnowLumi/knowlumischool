@@ -10,7 +10,7 @@ function HandPickedTitles() {
         <img src={aboutbar} className="w-fit h-8 md:h-16 rotate-180 " alt="" />
       </div>
       {/* // ? top section contet */}
-      <div className="grid lg:flex  lg:p-12  w-full justify-between items-center mt-12 mb-12 gap-6">
+      <div className="grid lg:flex  lg:p-12   justify-center items-center mt-12 ml-12 mb-12 gap-6">
         {/* first section */}
         <div className="w-full flex flex-col items-start p-4 max-w-xl gap-6">
           <h3 className="font-light text-2xl lg:text-6xl">
@@ -32,22 +32,23 @@ function HandPickedTitles() {
           </div>
         </div>
         <div className="w-full p-4 relative">
-          <div className=" flex flex-col items-start">
-            <img
-              className=" object-contain h-72 rounded-t-2xl"
-              src="https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp"
-              alt="Image not found"
-            />
-            <div className="p-2 h-20 bg-white rounded-b-2xl border border-black ">
-              <h3 className="font-bold text-xl">
-                Sneak Peek Of Masterclass by Rakesh Misra
-              </h3>
-              <h4 className="font-body mt-2 text-sm text-gray-700">
-                Co-Founder Uhana (Acquired by VMWare), Stanford, IIT Madras
-              </h4>
-            </div>
-          </div>
-        </div>
+  <img
+    className="w-full object-contain h-80 rounded-t-3xl"
+    src="https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp"
+    alt="Image not found"
+  />
+  <div className="px-12">
+    <div className="p-4 bg-white rounded-b-2xl border border-black">
+    <h3 className="font-bold text-xl text-gray-800">
+      Amazing Tailwindcss Grid Layout Examples
+    </h3>
+    <h4 className="font-body mt-2 text-sm text-gray-700">
+      Grids are cool, but Tailwindcss grids are cooler. In this article, we will learn how to create amazing Grid layouts with Tailwindcs grid and React.
+    </h4>
+  </div>
+  </div>
+</div>
+
       </div>
       <div className="flex items-center flex-wrap justify-center gap-3 mt-16">
         {Array.from({ length: 3 }).map((_, index) => (
@@ -69,18 +70,10 @@ function HandPickedTitles() {
                 <h2 className="font-normal  text-sm text-zinc-500">
                   {blogContent.description}
                 </h2>
-                <div className="flex flex-wrap gap-5 my-6 justify-center">
-                  <Button
-                    className="rounded-full flex items-center gap-3 capitalize font-archivo font-medium text-[16px] text-black py-2 pr-2 pl-24 w-full"
-                    variant="outlined"
-                  >
-                    Request a Callback
-                    <i className="flex w-6 h-6 text-black border border-[#0101010D] bg-[#01010133] justify-center items-center rounded-full">
-                      <MdOutlinePhoneCallback />
-                    </i>
-                  </Button>
-                  <Button className="rounded-full bg-black flex items-center gap-3 capitalize font-archivo font-medium text-[16px] py-2 pr-2 pl-32 w-full">
-                    Know More
+                <div className="flex flex-wrap gap-5 my-9 justify-center">
+                
+                  <Button className="rounded-full bg-black flex items-center justify-center gap-3 capitalize font-archivo font-medium text-[16px] py-2 pr-2  ">
+                    Registration For Program
                     <i className="flex icon w-6 h-6 text-white border border-[#0101010D] bg-[#FFFFFF33] justify-center items-center rounded-full">
                       <MdArrowForward />
                     </i>
