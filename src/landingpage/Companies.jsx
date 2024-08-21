@@ -18,7 +18,7 @@ const Companies = () => {
           Exceptional Mentors
         </span>
         <span className="font-medium text-2xl md:text-4xl tracking-wider text-center">
-          We have our mentors from top tech companies
+          We have our mentors from 
         </span>
       </div>
       <div className="w-full px-4 md:px-24">
