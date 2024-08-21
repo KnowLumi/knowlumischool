@@ -91,7 +91,7 @@ function HandPickedTitles() {
           </div>
         ))}
       </div>
-      <div className="flex items-center justify-center mt-12">
+      <div className="flex items-center justify-center mt-12 mb-6">
         <Button className="rounded-full bg-white flex items-center gap-3 capitalize font-archivo font-medium text-[16px] py-2 pr-2 pl-6 border border-gray-600 text-black">
           View All Programms
           <i className="flex icon w-6 h-6 text-white bg-black border border-[#0101010D] bg-[#FFFFFF33] justify-center items-center rounded-full">
