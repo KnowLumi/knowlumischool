@@ -14,6 +14,7 @@ import Included from "../landingpage/Included";
 import Navigation from "../landingpage/Navigation";
 import Recognized from "../landingpage/Recognized";
 import HandPickedTitles from "./HandPickedTitles";
+import HowItsWorks from "../landingpage/HowItsWorks";
 
 const LandingPage = () => {
 
@@ -36,6 +37,7 @@ const LandingPage = () => {
       <div ref={mainContainerRef} className="flex flex-col bg-[#F7F7F7]">
         <HeroSection scrollToIncluded={scrollToIncluded} />
         <HandPickedTitles/>
+        <HowItsWorks/>
         <About />
         <Program scrollToIncluded={scrollToIncluded} />
         <Companies />
