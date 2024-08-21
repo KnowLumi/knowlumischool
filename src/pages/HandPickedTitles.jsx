@@ -5,12 +5,12 @@ import { MdArrowForward, MdOutlinePhoneCallback } from "react-icons/md";
 
 function HandPickedTitles() {
   return (
-    <div className="bg-white min-h-screen lg:p-12">
+    <div className="bg-white min-h-screen">
       <div className="w-full flex justify-start bg-white">
         <img src={aboutbar} className="w-fit h-8 md:h-16 rotate-180 " alt="" />
       </div>
       {/* // ? top section contet */}
-      <div className="grid lg:flex  w-full justify-between items-center mt-12 mb-12 gap-6">
+      <div className="grid lg:flex  lg:p-12  w-full justify-between items-center mt-12 mb-12 gap-6">
         {/* first section */}
         <div className="w-full flex flex-col items-start p-4 max-w-xl gap-6">
           <h3 className="font-light text-2xl lg:text-6xl">
@@ -32,18 +32,20 @@ function HandPickedTitles() {
           </div>
         </div>
         <div className="w-full p-4 relative">
-          <img
-            className="w-full h-96 rounded-2xl"
-            src="https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp"
-            alt="Image not found"
-          />
-          <div className="p-3 h-20 bg-white  relative bottom-16 rounded-b-xl border-b border-r border-l border-black">
-            <h3 className="font-bold text-xl">
-              Sneak Peek Of Masterclass by Rakesh Misra
-            </h3>
-            <h4 className="font-body mt-2 test-sm text-gray-700">
-              Co-Founder Uhana (Acquired by VMWare), Stanford, IIT Madras
-            </h4>
+          <div className=" flex flex-col items-start">
+            <img
+              className=" object-contain h-72 rounded-t-2xl"
+              src="https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp"
+              alt="Image not found"
+            />
+            <div className="p-2 h-20 bg-white rounded-b-2xl border border-black ">
+              <h3 className="font-bold text-xl">
+                Sneak Peek Of Masterclass by Rakesh Misra
+              </h3>
+              <h4 className="font-body mt-2 text-sm text-gray-700">
+                Co-Founder Uhana (Acquired by VMWare), Stanford, IIT Madras
+              </h4>
+            </div>
           </div>
         </div>
       </div>
@@ -61,15 +63,14 @@ function HandPickedTitles() {
                 />
               </div>
               <div className="p-4">
-                <h2 className="font-bold my-4 text-lg text-zinc-700">
+                <h2 className="font-bold  text-lg text-zinc-700">
                   {blogContent.title}
                 </h2>
-                <h2 className="font-normal my-4 text-sm text-zinc-500">
+                <h2 className="font-normal  text-sm text-zinc-500">
                   {blogContent.description}
                 </h2>
-                <div className="flex flex-wrap gap-5 my-9 justify-center">
-                  
-                <Button
+                <div className="flex flex-wrap gap-5 my-6 justify-center">
+                  <Button
                     className="rounded-full flex items-center gap-3 capitalize font-archivo font-medium text-[16px] text-black py-2 pr-2 pl-24 w-full"
                     variant="outlined"
                   >
@@ -78,18 +79,25 @@ function HandPickedTitles() {
                       <MdOutlinePhoneCallback />
                     </i>
                   </Button>
-                  <Button className="rounded-full bg-black flex items-center gap-3 capitalize font-archivo font-medium text-[16px] py-2 pr-2 pl-24 w-full">
-                    Enroll in the Program
+                  <Button className="rounded-full bg-black flex items-center gap-3 capitalize font-archivo font-medium text-[16px] py-2 pr-2 pl-32 w-full">
+                    Know More
                     <i className="flex icon w-6 h-6 text-white border border-[#0101010D] bg-[#FFFFFF33] justify-center items-center rounded-full">
                       <MdArrowForward />
                     </i>
                   </Button>
-                
                 </div>
               </div>
             </div>
           </div>
         ))}
+      </div>
+      <div className="flex items-center justify-center mt-12">
+        <Button className="rounded-full bg-white flex items-center gap-3 capitalize font-archivo font-medium text-[16px] py-2 pr-2 pl-6 border border-gray-600 text-black">
+          View All Programms
+          <i className="flex icon w-6 h-6 text-white bg-black border border-[#0101010D] bg-[#FFFFFF33] justify-center items-center rounded-full">
+            <MdArrowForward />
+          </i>
+        </Button>
       </div>
     </div>
   );
