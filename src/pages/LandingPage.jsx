@@ -37,11 +37,12 @@ const LandingPage = () => {
       <div ref={mainContainerRef} className="flex flex-col bg-[#F7F7F7]">
         <HeroSection scrollToIncluded={scrollToIncluded} />
         <HandPickedTitles/>
+        <Companies />
+        <Recognized />
         <HowItsWorks/>
         <About />
         <Program scrollToIncluded={scrollToIncluded} />
-        <Companies />
-        <Recognized />
+       
         {/* <Process ref={processRef} /> */}
         <Testimonials />
         <Action />
