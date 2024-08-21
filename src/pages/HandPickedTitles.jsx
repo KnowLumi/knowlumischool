@@ -53,7 +53,7 @@ function HandPickedTitles() {
                   className=" object-cover transition duration-200"
                 />
               </div>
-              <div className="p-4 border-2 border-[#88DB1B]">
+              <div className="p-4 ">
                 <h2 className="font-bold  text-lg text-zinc-700">
                   {blogContent.title}
                 </h2>
