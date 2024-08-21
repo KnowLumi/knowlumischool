@@ -30,13 +30,7 @@ const About = () => {
             </div>
           </div>
           <p className="font-archivo mt-8 md:mt-4 text-justify font-light text-sm text-black md:w-[52.5rem]">
-            Let&apos;s talk about the difference between how medical and
-            engineering students are taught. In medical courses, students learn
-            directly from practicing doctors, gaining real-world insights and
-            practical skills from experienced professionals. In contrast,
-            engineering courses often rely on teachers without industry
-            experience, limiting students&apos; exposure to real-world
-            applications.
+          Have you ever wondered why IITians often achieve greater heights in their careers compared to other engineering students? The key lies in their ability to identify their passion early on and pursue it with the help of quality resources, top-notch mentors, and advanced programs that are a hallmark of IITs. If you're an engineering student aiming to reach similar heights but struggling to identify your true passions or set clear career goals, or finding it difficult to connect with expert mentors who can guide you, KnowLumi is here to help.
           </p>
           <div className="flex items-center md:justify-center gap-3.5 mt-8 w-full">
             <img src={logo} alt="" className="w-7 h-7" />
@@ -63,11 +57,7 @@ const About = () => {
             </div>
           </div>
           <p className="font-archivo mt-8  font-light text-sm text-center text-black md:w-[842px]">
-            Like a medical course, KnowLumi connects you with industry experts
-            who teach you the most relevant and in-demand skills. Learn from the
-            best in the field and gain hands-on experience that prepares you for
-            a successful career in your chosen industry. Join KnowLumi and
-            bridge the gap between education and industry expertise.
+          KnowLumi is here to help. We use AI to uncover your passions, offer personalized goal-setting support, and connect you with expert mentors and programs. With a focus on hands-on learning and practical experience, KnowLumi bridges the gap between academic knowledge and career success.
           </p>
         </div>
       </div>
