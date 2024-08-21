@@ -1,13 +1,23 @@
 import { FaPhoneAlt } from "react-icons/fa";
 import aboutbar from "../assets/about_bar1.png";
 import { Button } from "@material-tailwind/react";
-import { MdArrowForward, MdOutlinePhoneCallback } from "react-icons/md";
+import {
+  MdArrowForward,
+  MdHdrStrong,
+  MdOutlinePhoneCallback,
+} from "react-icons/md";
 
 function HandPickedTitles() {
   return (
     <div className="bg-white min-h-screen">
       <div className="w-full flex justify-start bg-white">
         <img src={aboutbar} className="w-fit h-8 md:h-16 rotate-180 " alt="" />
+      </div>
+      <div className="flex items-center justify-center">
+        <Button className="flex justify-around items-center gap-2 font-archivo text-[#01010199] bg-[#F7F7F7] border border-[#01010108] rounded-full tracking-wider">
+          <MdHdrStrong className="w-4 h-4 p-0 text-[#88DB1B]" />
+          START YOUR JOURNEY
+        </Button>
       </div>
       {/* // ? top section contet */}
       <div className="grid lg:flex  lg:p-12   justify-center items-start mt-12 ml-12 mb-12 gap-6">
@@ -34,7 +44,7 @@ function HandPickedTitles() {
         <div className="w-full p-4 relative flex flex-col justify-start items-start">
           <div className="w-[30rem] mx-auto">
             <div className="relative overflow-hidden h-full rounded-2xl transition duration-200 group bg-white hover:shadow-xl border border-zinc-100">
-              <div className="w-full aspect-w-16 aspect-h-10 bg-gray-100 rounded-tr-lg rounded-tl-lg overflow-hidden xl:aspect-w-16 xl:aspect-h-10 relative">
+              <div className="w-full aspect-w-16 aspect-h-10 bg-gray-100 rounded-tr-lg rounded-tl-lg overflow-hidden xl:aspect-w-16 xl:aspect-h-10 relative ">
                 <img
                   src={blogContent.image}
                   alt="thumbnail"
@@ -43,7 +53,7 @@ function HandPickedTitles() {
                   className=" object-cover transition duration-200"
                 />
               </div>
-              <div className="p-4">
+              <div className="p-4 border-2 border-[#88DB1B]">
                 <h2 className="font-bold  text-lg text-zinc-700">
                   {blogContent.title}
                 </h2>
@@ -65,9 +75,9 @@ function HandPickedTitles() {
       </div>
       <div className="flex items-center flex-wrap justify-center gap-3 mt-16 lg:px-16">
         {Array.from({ length: 3 }).map((_, index) => (
-          <div className="w-96 mx-auto">
-            <div className="relative overflow-hidden h-full rounded-2xl transition duration-200 group bg-white hover:shadow-xl border border-zinc-100">
-              <div className="w-full aspect-w-16 aspect-h-10 bg-gray-100 rounded-tr-lg rounded-tl-lg overflow-hidden xl:aspect-w-16 xl:aspect-h-10 relative">
+          <div className="w-96 mx-auto ">
+            <div className="relative overflow-hidden h-full rounded-2xl transition duration-200 group bg-white hover:shadow-xl hover:shadow-[#88DB1B] border border-[#88DB1B]">
+              <div className="w-full aspect-w-16 aspect-h-10 bg-gray-100 rounded-tr-lg rounded-tl-lg overflow-hidden xl:aspect-w-16 xl:aspect-h-10 relative ">
                 <img
                   src={blogContent.image}
                   alt="thumbnail"
