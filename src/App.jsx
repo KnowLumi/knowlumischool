@@ -42,7 +42,7 @@ function App() {
             <Route path="/" element={<LandingPage />} />
             <Route path="/about" element={<About />} />
             <Route path="/community" element={<Community />} />
-            <Route path="/refer&earn" element={<Earn />} />
+            {/* <Route path="/refer&earn" element={<Earn />} /> */}
             <Route path="/all-courses" element={<AllCourses />} />
             <Route path="/signin" element={<OtpPage />} />
             <Route path="/fundamentals" element={<Fundamentals />} />
