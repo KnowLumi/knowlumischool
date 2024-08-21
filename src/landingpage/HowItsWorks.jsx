@@ -1,5 +1,5 @@
 import React from 'react'
-import aboutbar from "../assets/about_bar.png";
+// import aboutbar from "../assets/about_bar.png";
 
 export default function HowItsWorks() {
   return (
