@@ -1,5 +1,7 @@
 import { FaPhoneAlt } from "react-icons/fa";
 import aboutbar from "../assets/about_bar1.png";
+import { Button } from "@material-tailwind/react";
+import { MdOutlinePhoneCallback } from "react-icons/md";
 
 function HandPickedTitles() {
   return (
@@ -9,19 +11,27 @@ function HandPickedTitles() {
       </div>
       {/* // ? top section contet */}
       <div className="grid lg:flex  w-full justify-between items-center mt-12 mb-12 gap-6">
-        <div className="w-full flex flex-col items-start p-4 max-w-xl">
+        {/* first section */}
+        <div className="w-full flex flex-col items-start p-4 max-w-xl gap-6">
           <h3 className="font-light text-2xl lg:text-6xl">Program open For Enrollment</h3>
-          <p className="mt-6">
+          <p className="mt-4 leading-loose">
           Get insights directly from people who have been there and done that. These masterclasses not only provide directions to reach your career goals but also keep you inspired to dream without limitations and achieve them.
           </p>
-          <div className="mt-6">
-          <a href="#" className="flex items-center gap-4 hover:bg-white hover:text-black border border-black bg-black text-white px-6 py-2 rounded-md">
-          <FaPhoneAlt />
-            Request a Call back</a>
+          <div className="mt-4">
+          <Button className="rounded-full flex border border-black bg-white items-center gap-3 capitalize font-archivo font-medium text-xs text-black py-[3px] pr-[3px] pl-6">
+              Request a Callback
+              <i className="flex w-8 h-8 text-white border border-[#0101010D] bg-black justify-center items-center rounded-full">
+                <MdOutlinePhoneCallback />
+              </i>
+            </Button>
           </div>
         </div>
-        <div className="w-full">
+        <div className="w-full p-4 relative">
           <img className="w-full h-96 rounded-2xl" src="https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp" alt="Image not found" />
+          <div className="p-3 h-20 bg-white w-full relative bottom-16 rounded-b-xl border-b border-r border-l border-black">
+            <h3 className="font-bold text-xl">Sneak Peek Of Masterclass by Rakesh Misra</h3>
+            <h4 className="font-body mt-2 test-sm text-gray-700">Co-Founder Uhana (Acquired by VMWare), Stanford, IIT Madras</h4>
+          </div>
         </div>
       </div>
       <div className="flex items-center flex-wrap justify-center gap-3 mt-16">
