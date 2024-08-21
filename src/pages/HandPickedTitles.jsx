@@ -10,19 +10,19 @@ function HandPickedTitles() {
         <img src={aboutbar} className="w-fit h-8 md:h-16 rotate-180 " alt="" />
       </div>
       {/* // ? top section contet */}
-      <div className="grid lg:flex  lg:p-12   justify-center items-center mt-12 ml-12 mb-12 gap-6">
+      <div className="grid lg:flex  lg:p-12   justify-center items-start mt-12 ml-12 mb-12 gap-6">
         {/* first section */}
         <div className="w-full flex flex-col items-start p-4 max-w-xl gap-6">
           <h3 className="font-light text-2xl lg:text-6xl">
             Program open For Enrollment
           </h3>
-          <p className="mt-4 leading-loose">
+          <p className="mt-6 leading-loose">
             Get insights directly from people who have been there and done that.
             These masterclasses not only provide directions to reach your career
             goals but also keep you inspired to dream without limitations and
             achieve them.
           </p>
-          <div className="mt-4">
+          <div className="mt-6">
             <Button className="rounded-full flex border border-black bg-white items-center gap-3 capitalize font-archivo font-medium text-xs text-black py-[3px] pr-[3px] pl-6">
               Request a Callback
               <i className="flex w-8 h-8 text-white border border-[#0101010D] bg-black justify-center items-center rounded-full">
