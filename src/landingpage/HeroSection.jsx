@@ -33,7 +33,7 @@ const HeroSection = ({ scrollToIncluded }) => {
       <div className="w-full z-40 md:w-fit flex flex-col items-center md:translate-x-5 md:items-start p-4 ml-0 md:ml-16 mt-8">
         <div className="flex flex-col md:gap-9 md:w-[650px] md:h-[201px] md:items-start justify-center herogradient p-6 md:px-14 md:py-8 rounded-[28px]">
           <span className="font-medium text-3xl md:text-[64px]">
-            Transform dreams
+          Create a career 
           </span>
           <div className="flex justify-between w-full items-center">
             <div className="flex items-center gap-0">
@@ -41,7 +41,7 @@ const HeroSection = ({ scrollToIncluded }) => {
               <IoArrowForward className="h-7 md:h-10 w-7 md:w-10 text-black -translate-x-2" />
             </div>
             <span className="font-medium text-3xl md:text-[64px]">
-              into reality
+            like IITians 
             </span>
           </div>
         </div>
