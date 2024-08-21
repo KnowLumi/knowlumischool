@@ -1,3 +1,4 @@
+import { FaPhoneAlt } from "react-icons/fa";
 import aboutbar from "../assets/about_bar1.png";
 
 function HandPickedTitles() {
@@ -6,14 +7,24 @@ function HandPickedTitles() {
       <div className="w-full flex justify-start bg-white">
         <img src={aboutbar} className="w-fit h-8 md:h-16 rotate-180 " alt="" />
       </div>
-      <div className="flex flex-col items-center mt-12">
-        <div className="flex flex-col items-end md:items-end">
-          <span className="font-light text-2xl lg:text-6xl text-center">
-            Program Open for Enrollment
-          </span>
+      {/* // ? top section contet */}
+      <div className="grid lg:flex  w-full justify-between items-center mt-12 mb-12 gap-6">
+        <div className="w-full flex flex-col items-start p-4 max-w-xl">
+          <h3 className="font-light text-2xl lg:text-6xl">Program open For Enrollment</h3>
+          <p className="mt-6">
+          Get insights directly from people who have been there and done that. These masterclasses not only provide directions to reach your career goals but also keep you inspired to dream without limitations and achieve them.
+          </p>
+          <div className="mt-6">
+          <a href="#" className="flex items-center gap-4 hover:bg-white hover:text-black border border-black bg-black text-white px-6 py-2 rounded-md">
+          <FaPhoneAlt />
+            Request a Call back</a>
+          </div>
+        </div>
+        <div className="w-full">
+          <img className="w-full h-96 rounded-2xl" src="https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp" alt="Image not found" />
         </div>
       </div>
-      <div className="flex items-center flex-wrap justify-center gap-3 mt-12">
+      <div className="flex items-center flex-wrap justify-center gap-3 mt-16">
         {Array.from({ length: 3 }).map((_, index) => (
           <div className="w-96 mx-auto">
             <div className="relative overflow-hidden h-full rounded-2xl transition duration-200 group bg-white hover:shadow-xl border border-zinc-100">
