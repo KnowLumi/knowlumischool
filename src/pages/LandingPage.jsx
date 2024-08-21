@@ -13,6 +13,7 @@ import WhyKnowLumi from "../landingpage/WhyKnowLumi";
 import Included from "../landingpage/Included";
 import Navigation from "../landingpage/Navigation";
 import Recognized from "../landingpage/Recognized";
+import HandPickedTitles from "./HandPickedTitles";
 
 const LandingPage = () => {
 
@@ -34,6 +35,7 @@ const LandingPage = () => {
       <Navigation />
       <div ref={mainContainerRef} className="flex flex-col bg-[#F7F7F7]">
         <HeroSection scrollToIncluded={scrollToIncluded} />
+        <HandPickedTitles/>
         <About />
         <Program scrollToIncluded={scrollToIncluded} />
         <Companies />
