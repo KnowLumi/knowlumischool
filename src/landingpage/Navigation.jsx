@@ -6,7 +6,7 @@ import { RxCross1 } from "react-icons/rx";
 import { FaArrowRight } from "react-icons/fa6";
 import { pages } from "./landing_helpers";
 import { NavLink, Link } from "react-router-dom";
-import logo1 from "../assets/navlogo.png";
+import logo1 from "/Images/logo.png";
 import NavMenu from "../Navigation/NavMenu";
 
 const Navigation = () => {
@@ -21,7 +21,7 @@ const Navigation = () => {
       <img
         src={logo1}
         alt=""
-        className="object-contain w-[126px] h-[34px] md:w-[169px] md:h-[46px]"
+        className="object-cover w-56"
       />
       <ul className="md:flex gap-8 items-center hidden">
         {pages.map((page, index) => (
