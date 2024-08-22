@@ -96,20 +96,26 @@ const WhyKnowlumi = [
     {
         badge: "LOREM IPSUM",
         title: "KNOWLUMI",
-        points: ["Horem ipsum dolor sit amet, consectetur adipiscing elit.",
-            "Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
-            "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. .",
-            "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. .",
-            "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. .",]
+        points: [
+            "Leverages advanced AI to identify your unique passions and interests, guiding you to the most suitable career path.",
+            "Provides tailored goal-setting tools that align with your passions and career aspirations, ensuring a clear path to success.",
+            "Connects you with seasoned industry mentors who offer personalized guidance and support throughout your journey.",
+            "Offers high-quality learning experiences at a cost-effective price, making it accessible without compromising on value.",
+            "Our programs are acknowledged and recognized by leading industry organizations, enhancing your credibility and job prospects",
+            "Fosters a supportive community where individual success fuels collective growth, offering networking and collaboration opportunities."
+        ]
     },
     {
         badge: "LOREM IPSUM",
-        title: "OTHER COURSES",
-        points: ["Horem ipsum dolor sit amet, consectetur adipiscing elit.",
-            "Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
-            "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. .",
-            "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. .",
-            "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. .",]
+        title: "OTHER PLATFORMS",
+        points: [
+            " Do not offer any tools for passion discovery, leaving students to navigate their interests on their own.",
+            " Lack personalized goal-setting support, often offering only generic advice without customization.",
+            "May provide general mentorship options but often lack the depth of expertise and personalized attention",
+            " Often charge premium prices without delivering equivalent value in terms of personalized guidance and mentorship.",
+            "May not have the same level of recognition or endorsement from industry leaders.",
+            "Typically lack a strong, integrated community aspect, offering limited peer support and networking opportunities."
+        ]
     },
 ]
 
