@@ -106,9 +106,9 @@ const Program = ({ scrollToIncluded }) => {
           </i>
         </Button>
       </div>
-      <div className="w-full flex bg-white justify-end mt-16">
+      {/* <div className="w-full flex bg-white justify-end mt-16">
         <img src={aboutbar} className="w-fit h-8 md:h-16" alt="" />
-      </div>
+      </div> */}
       
     </div>
   );

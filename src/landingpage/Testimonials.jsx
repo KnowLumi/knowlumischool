@@ -11,7 +11,7 @@ const Testimonials = () => {
         viewBox="0 0 1280 197"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="w-full h-full hidden md:block translate-y-[8.7rem]"
+        className="w-full h-full -mt-36 hidden md:block bg-white translate-y-[8.7rem]"
       >
         <path
           d="M-30 90C-30 76.7452 -19.2548 66 -6 66H640H938.473C946.322 66 953.675 62.1622 958.163 55.723L989.837 10.277C994.325 3.83784 1001.68 0 1009.53 0L1286 0C1299.25 0 1310 10.7452 1310 24V173C1310 186.255 1299.25 197 1286 197H-6.00004C-19.2549 197 -30 186.255 -30 173V90Z"
