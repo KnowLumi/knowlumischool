@@ -46,11 +46,11 @@ const program = [
     {
         icon: logo1,
         bg: "#F0F1EC",
-        title: "College Degree",
-        desc: `Dorem ipsum dolor sit amet, consectetur adipiscing elit. 
-            Dorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum,ac aliquet odio mattis.
-            Nunc vulputate libero et velit interdum, ac aliquet odio mattis.`,
-        points: ["Limited practical skills", "Minimal industry exposure", "Traditional learning with a focus on theory"],
+        title: "Traditional Engineering Degree",
+        desc: ``,
+        points: [
+            "Difficulty Identifying Passion",
+            "Confusion in Setting Goals","Minimal industry exposure", "Traditional learning with a focus on theory","Static, One-Size-Fits-All Curriculum"],
         color: "#DC552A",
         image: unemployed,
         text: "LIMITED CARRER TRAJECTORY"
@@ -58,11 +58,14 @@ const program = [
     {
         icon: logo2,
         bg: "#E8FFCD",
-        title: "Knowlumi program along with a college degree",
-        desc: `Dorem ipsum dolor sit amet, consectetur adipiscing elit. 
-            Dorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum,ac aliquet odio mattis.
-            Nunc vulputate libero et velit interdum, ac aliquet odio mattis.`,
-        points: ["Hands-on projects", "Access to industry experts", "Internships and job referrals"],
+        title: "Engineering Degree with KnowLumi Parallel Education",
+        desc: ``,
+        points: ["AI-Powered Passion Discovery",
+            "Personalized Goal Setting",
+            "Expert Mentorship",
+            "Hands-On, Real-World Learning",
+            "Customized Learning Pathways"
+            ],
         color: "#2FC34F",
         image: dreamjob,
         text: "ACCELERATED CARRER TRAJECTORY"

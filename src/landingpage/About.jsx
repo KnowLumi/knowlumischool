@@ -29,8 +29,8 @@ const About = () => {
               </span>
             </div>
           </div>
-          <p className="font-archivo mt-8 md:mt-4 text-justify font-light text-sm text-black md:w-[52.5rem]">
-          Have you ever wondered why IITians often achieve greater heights in their careers compared to other engineering students? The key lies in their ability to identify their passion early on and pursue it with the help of quality resources, top-notch mentors, and advanced programs that are a hallmark of IITs. If you're an engineering student aiming to reach similar heights but struggling to identify your true passions or set clear career goals, or finding it difficult to connect with expert mentors who can guide you, KnowLumi is here to help.
+          <p className="font-archivo mt-8 md:mt-4 font-light text-sm text-black md:w-[52.5rem] text-center">
+          Ever wondered why IITians excel in their careers more than other engineering students? It's because they identify their passions early and pursue them with quality resources, top mentors, and advanced programs. If you aspire to reach similar heights but are struggling to find your true passion, set clear goals, or connect with expert mentors, KnowLumi is here to guide you.
           </p>
           <div className="flex items-center md:justify-center gap-3.5 mt-8 w-full">
             <img src={logo} alt="" className="w-7 h-7" />
@@ -43,7 +43,7 @@ const About = () => {
             <div className="hidden md:flex items-center bg-[#2F342A] about-tilt mb-20 rounded-lg gap-3 px-3 h-12">
               <MdShoppingBag className="text-[#88DB1B]" />
               <span className="text-white font-semibold text-xs tracking-wider">
-                Placement Assistance
+                AI Powered Platform
               </span>
               <img src={des} className="h-full pt-2" alt="" />
             </div>

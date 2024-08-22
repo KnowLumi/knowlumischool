@@ -1,5 +1,5 @@
 import { Button } from "@material-tailwind/react";
-import { FaUserCog, FaBook } from "react-icons/fa";
+import { FaUserCog, FaBook, FaLifeRing } from "react-icons/fa";
 import { BsBuildingsFill } from "react-icons/bs";
 import {
   MdTrendingDown,
@@ -11,6 +11,7 @@ import { program } from "./landing_helpers";
 import lines from "../assets/program_lines.png";
 import "./animations.css";
 import aboutbar from "../assets/about_bar1.png";
+import { SiFuturelearn } from "react-icons/si";
 
 const PointIcon = (index) => {
   switch (index) {
@@ -20,6 +21,11 @@ const PointIcon = (index) => {
       return <BsBuildingsFill className="w-4 h-4" />;
     case 2:
       return <FaBook className="w-4 h-4" />;
+    case 3:
+      return <FaLifeRing className="w-4 h-4" />;
+    case 4:
+      return <SiFuturelearn className="w-4 h-4" />
+
     default:
       break;
   }
