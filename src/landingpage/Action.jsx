@@ -1,20 +1,41 @@
 import "./landing.css";
 import { MdArrowForward } from "react-icons/md";
 import { AiOutlineDoubleRight } from "react-icons/ai";
-import { BsDiscord } from "react-icons/bs";
+import { BsDiscord, BsWhatsapp } from "react-icons/bs";
 import { Avatar } from "@material-tailwind/react";
 import actionbottom from "../assets/action_bottom.png";
-import "./animations.css"
+import "./animations.css";
 const Action = () => {
   return (
     <div className="flex flex-col-reverse md:flex-col w-full mb-12 items-center font-archivo">
-      <img src={actionbottom} className="w-80 block md:hidden -translate-y-5" alt="" />
+      <img
+        src={actionbottom}
+        className="w-80 block md:hidden -translate-y-5"
+        alt=""
+      />
       <div className="z-10 w-80 md:w-[71rem] md:h-[22rem] action-banner flex flex-col bg-cover mt-12 md:mt-0 md:bg-contain bg-no-repeat">
         <div className="w-full hidden md:flex justify-end gap-8 items-center pr-8 py-1.5">
-          <svg className="rotate-90" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M14 13.3333L7 8.39959L0 13.3333L0 10.9158L7 5.98209L14 10.9158V13.3333ZM14 7.46219L7 2.52853L0 7.46219L0 5.04469L7 0.111031L14 5.04469V7.46219Z" fill="url(#paint0_linear_268_2834)" />
+          <svg
+            className="rotate-90"
+            width="14"
+            height="14"
+            viewBox="0 0 14 14"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M14 13.3333L7 8.39959L0 13.3333L0 10.9158L7 5.98209L14 10.9158V13.3333ZM14 7.46219L7 2.52853L0 7.46219L0 5.04469L7 0.111031L14 5.04469V7.46219Z"
+              fill="url(#paint0_linear_268_2834)"
+            />
             <defs>
-              <linearGradient id="paint0_linear_268_2834" x1="7" y1="10.1736" x2="7" y2="-2.07645" gradientUnits="userSpaceOnUse">
+              <linearGradient
+                id="paint0_linear_268_2834"
+                x1="7"
+                y1="10.1736"
+                x2="7"
+                y2="-2.07645"
+                gradientUnits="userSpaceOnUse"
+              >
                 <stop offset="0.924" stopColor="white" />
                 <stop offset="1" stopColor="#737373" stopOpacity="0" />
               </linearGradient>
@@ -23,10 +44,27 @@ const Action = () => {
           <i className="bg-[#F7F7F7] w-10 h-[30px] rounded-full flex justify-center items-center">
             <AiOutlineDoubleRight className="text-black w-5 h-5 action-arrow-black" />
           </i>
-          <svg className="rotate-90" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M14 13.3333L7 8.39959L0 13.3333L0 10.9158L7 5.98209L14 10.9158V13.3333ZM14 7.46219L7 2.52853L0 7.46219L0 5.04469L7 0.111031L14 5.04469V7.46219Z" fill="url(#paint0_linear_268_2834)" />
+          <svg
+            className="rotate-90"
+            width="14"
+            height="14"
+            viewBox="0 0 14 14"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M14 13.3333L7 8.39959L0 13.3333L0 10.9158L7 5.98209L14 10.9158V13.3333ZM14 7.46219L7 2.52853L0 7.46219L0 5.04469L7 0.111031L14 5.04469V7.46219Z"
+              fill="url(#paint0_linear_268_2834)"
+            />
             <defs>
-              <linearGradient id="paint0_linear_268_2834" x1="7" y1="10.1736" x2="7" y2="-2.07645" gradientUnits="userSpaceOnUse">
+              <linearGradient
+                id="paint0_linear_268_2834"
+                x1="7"
+                y1="10.1736"
+                x2="7"
+                y2="-2.07645"
+                gradientUnits="userSpaceOnUse"
+              >
                 <stop offset="0.924" stopColor="white" />
                 <stop offset="1" stopColor="#737373" stopOpacity="0" />
               </linearGradient>
@@ -44,10 +82,11 @@ const Action = () => {
                 Join Our Thriving Community of Ambitious Learners!
               </h1>
               <p className=" font-light text-xs md:text-[16px] leading-6">
-                Discover a supportive network of learners, mentors, and
-                professionals at KnowLumi. Connect, collaborate, and grow with
-                like-minded individuals passionate about education and
-                innovation. Together, let&apos;s build a brighter future!
+                Join KnowLumi to tap into a vibrant network of learners,
+                mentors, and industry professionals. Connect, collaborate, and
+                thrive with peers who share your passion for corporate roles,
+                startups, higher studies, and civil service exams. Let’s shape a
+                successful future together!
               </p>
             </div>
             <div className="flex flex-col md:flex-row gap-8 mt-5">
@@ -75,7 +114,7 @@ const Action = () => {
                 <span className="text-[#F7F7F7] font-normal text-[16px] tracking-wide">
                   1700+ members
                 </span>
-                <BsDiscord className="text-[#F7F7F7] w-6 h-6" />
+                <BsWhatsapp className="text-[#F7F7F7] w-6 h-6" />
               </div>
             </div>
           </div>
