@@ -47,7 +47,7 @@ const LandingPage = () => {
         <Testimonials />
         <Action />
         <WhyKnowLumi scrollToIncluded={scrollToIncluded} />
-        <Included ref={includedRef} />
+        {/* <Included ref={includedRef} /> */}
         <Enroll />
         <FaqSection />
         <Footer />
