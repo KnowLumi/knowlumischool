@@ -56,13 +56,6 @@ const FaqSection = () => {
           </Accordion>
         ))}
       </div>
-      <p className="font-light text-[#101010] text-sm">
-        Rorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis
-        molestie, dictum est a, mattis tellus. Sed dignissim, metus nec
-        fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus
-        elit sed risus. Maecenas eget condimentum velit, sit amet feugiat
-        lectus.
-      </p>
       <button className="flex text-lg font-normal gap-1 items-center my-8">
         <span className="text-gray-500">Not yet resolved?</span>
         <span>Find help!</span>
