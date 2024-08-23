@@ -22,8 +22,8 @@ import logo2 from "../../public/logo.png";
 // import unemployed from "../assets/career-down.mp4";
 // import dreamjob from "../assets/dream-career.mp4";
 
-import careerdown from "../assets/career-down.mp4";
-import dreamjcareer from "../assets/dream-career.mp4";
+import careerdown from "../assets/dream-career.mp4";
+import dreamjcareer from "../assets/career-down.mp4";
 
 const pages = [
   { name: "Home", route: "/" },
