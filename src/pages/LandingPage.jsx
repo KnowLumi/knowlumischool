@@ -40,12 +40,13 @@ const LandingPage = () => {
         <HandPickedTitles/>
         <Companies />
         <Recognized />
+        <div className="bg-white">
         <HowItsWorks/>
         <About />
+        </div>
         <Program scrollToIncluded={scrollToIncluded} />
        
         {/* <Process ref={processRef} /> */}
-        {/* <TracingBeamDemo/> */}
         <Testimonials />
         <Action />
         <WhyKnowLumi scrollToIncluded={scrollToIncluded} />
