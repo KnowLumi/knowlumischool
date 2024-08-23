@@ -9,7 +9,7 @@ import {
 
 function HandPickedTitles() {
   return (
-    <div className="bg-white min-h-screen p-4">
+    <div className="bg-white min-h-screen">
       <div className="w-full flex justify-start bg-white">
         <img src={aboutbar} className="w-full md:w-fit h-8 md:h-16 rotate-180 " alt="" />
       </div>
@@ -20,7 +20,7 @@ function HandPickedTitles() {
         </Button>
       </div>
       
-      <div className="grid lg:flex lg:p-12 justify-center items-start mt-8 mb-12 gap-6">
+      <div className="grid lg:flex lg:p-16 justify-center items-start mt-8 mb-12 gap-6">
         {/* First Section */}
         <div className="w-full flex flex-col items-start p-4 max-w-xl gap-4">
           <h3 className="font-light text-2xl md:text-4xl lg:text-6xl">
@@ -77,9 +77,9 @@ function HandPickedTitles() {
       </div>
 
       {/* Third Section */}
-      <div className="flex flex-col md:flex-row items-center justify-center gap-3 mt-8 lg:px-16">
+      <div className="flex flex-col md:flex-row flex-wrap items-center justify-center gap-3 mt-8 ">
         {Array.from({ length: 3 }).map((_, index) => (
-          <div key={index} className="w-full md:w-96 mx-auto p-2">
+          <div key={index} className="w-full md:w-[28rem] lg:w-[30rem] mx-auto p-2">
             <div className="relative overflow-hidden h-full rounded-2xl transition duration-200 group bg-white hover:shadow-xl hover:shadow-[#88DB1B] border border-[#88DB1B]">
               <div className="w-full aspect-w-16 aspect-h-10 bg-gray-100 rounded-tr-lg rounded-tl-lg overflow-hidden xl:aspect-w-16 xl:aspect-h-10 relative">
                 <img
@@ -98,7 +98,7 @@ function HandPickedTitles() {
                   {blogContent.description}
                 </h2>
                 <div className="flex flex-col md:flex-row gap-3 md:gap-5 my-6 justify-center">
-                  <Button className="rounded-full flex border border-black bg-white items-center gap-3 capitalize font-archivo font-medium text-xs md:text-sm text-black py-2 px-4">
+                  <Button className="rounded-full flex border border-black bg-white items-center justify-center gap-3 capitalize font-archivo font-medium  text-[16px] text-black py-2 px-4">
                     Request a Callback
                     <i className="flex w-8 h-8 text-white border border-[#0101010D] bg-black justify-center items-center rounded-full">
                       <MdOutlinePhoneCallback />
@@ -106,7 +106,7 @@ function HandPickedTitles() {
                   </Button>
                   <Button className="rounded-full bg-black flex items-center justify-center gap-3 capitalize font-archivo font-medium text-[16px] py-2 pr-2">
                     Know More
-                    <i className="flex icon w-6 h-6 text-white border border-[#0101010D] bg-[#FFFFFF33] justify-center items-center rounded-full">
+                    <i className="flex icon w-8 h-8 text-white border border-[#0101010D] bg-[#FFFFFF33] justify-center items-center rounded-full">
                       <MdArrowForward />
                     </i>
                   </Button>
