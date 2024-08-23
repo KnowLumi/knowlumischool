@@ -40,8 +40,8 @@ export const TracingBeam = ({ children, className }) => {
       <div className="absolute -left-4 md:-left-20 top-3">
         <motion.div
           transition={{
-            duration: 0.2,
-            delay: 0.5,
+            duration: 0.6,
+            delay: 0.1,
           }}
           animate={{
             boxShadow:
@@ -73,7 +73,9 @@ export const TracingBeam = ({ children, className }) => {
           aria-hidden="true"
         >
           <motion.path
-            d={`M 1 0V -36 l 18 24 V ${svgHeight * 0.25} l -18 24V ${svgHeight}`}
+            d={`M 1 0V -36 l 18 24 V ${
+              svgHeight * 0.25
+            } l -18 24V ${svgHeight}`}
             fill="none"
             stroke="#9091A0"
             strokeOpacity="0.20"
@@ -82,7 +84,9 @@ export const TracingBeam = ({ children, className }) => {
             }}
           ></motion.path>
           <motion.path
-            d={`M 1 0V -36 l 18 24 V ${svgHeight * 0.25} l -18 24V ${svgHeight}`}
+            d={`M 1 0V -36 l 18 24 V ${
+              svgHeight * 0.25
+            } l -18 24V ${svgHeight}`}
             fill="none"
             stroke="url(#gradient)"
             strokeWidth="1.50"
