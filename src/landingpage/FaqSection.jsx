@@ -31,11 +31,11 @@ const FaqSection = () => {
 
   const handleOpen = (value) => setOpen(open === value ? 0 : value);
   return (
-    <div className="w-full py-2 px-8 my-16 flex flex-col items-center bg-[#F7F7F7] font-archivo ">
+    <div className="w-full py-2 px-2 lg:px-8 mt-8 lg:my-16 flex flex-col items-center bg-[#F7F7F7] font-archivo ">
       <span className="font-archivo font-bold text-xl text-black opacity-60 mb-3">
         Any Queries?
       </span>
-      <span className="font-archivo font-semibold text-3xl tracking-widest">
+      <span className="font-archivo font-semibold text-3xl tracking-widest w-full">
         Frequently Asked Questions
       </span>
       <div className="my-12">
@@ -43,7 +43,7 @@ const FaqSection = () => {
           <Accordion
             key={index + 1}
             open={open === index + 1}
-            className="bg-white my-6 px-6 rounded-2xl border-b-white md:w-[45.125rem]"
+            className="bg-white my-6 px-6 rounded-2xl border-b-white w-full md:w-[45.125rem]"
             icon={<Icon id={index + 1} open={open} />}
           >
             <AccordionHeader

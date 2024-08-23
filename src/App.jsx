@@ -35,7 +35,7 @@ function App() {
   const [signedIn, setSignedIn] = useState(false);
   return (
     <Context.Provider value={[signedIn, setSignedIn]}>
-      <div className="h-screen bg-gray-50 font-archivo">
+      <div className="h-screen bg-gray-50 font-archivo overflow-x-hidden">
         <Router>
           <ScrollToTop />
           <Routes>

@@ -16,11 +16,11 @@ const WhyKnowLumi = ({scrollToIncluded}) => {
           Why join KnowLumi?
         </h2>
       </div>
-      <div className="flex gap-3 md:gap-14 w-full items-center justify-center">
+      <div className="flex flex-col md:flex-row gap-6 md:gap-14 w-full items-center justify-center">
         {WhyKnowlumi.map((item, i) => (
           <div
             key={`why_${i}`}
-            className="flex flex-col items-center py-6 px-7 bg-white justify-between rounded-xl w-[10.75rem] md:w-[27.5rem] h-[59.5rem] md:h-[34.5rem]"
+            className="flex flex-col items-center py-6 px-7 bg-white justify-between rounded-xl w-full md:w-[27.5rem] h-[59.5rem] md:h-[34.5rem]"
           >
             <button className="bg-[#88DB1B] text-white rounded-full gap-1 flex items-center w-fit py-1 px-2 ">
               <MdHdrStrong className="w-2 h-2" />
