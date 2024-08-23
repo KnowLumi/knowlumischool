@@ -8,13 +8,13 @@ export function TracingBeamDemo() {
       <div className="max-w-2xl mx-auto antialiased pt-4 relative">
         {dummyContent.map((item, index) => (
           <div key={`content-${index}`} className="mb-10">
-            <h2 className="bg-[#88DB1B] text-white rounded-full text-sm w-fit px-4 py-1 mb-4">
+            <h2 className="mt-4 bg-[#88DB1B] text-white rounded-full text-sm w-fit px-4 py-1 mb-4">
               {item.badge}
             </h2>
 
-            <p className="text-xl mb-4">{item.title}</p>
+            <p className="text-xl mb-4 text-white">{item.title}</p>
 
-            <div className="text-sm prose prose-sm ">
+            <div className="text-sm prose prose-sm text-white">
               {item?.image && (
                 <img
                   src={item.image}
@@ -35,7 +35,7 @@ const dummyContent = [
   {
     title: "1. Explore Your Pathways",
     description: (
-      <ul className="space-y-4 list-disc list-inside ">
+      <ul className="space-y-4 list-disc list-inside text-white">
         <li className="flex items-start">
           <span className="mt-1 mr-2 text-[#88DB1B]">
             <GoDotFill />

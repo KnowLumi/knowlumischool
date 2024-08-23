@@ -44,7 +44,7 @@ const LandingPage = () => {
         <About />
         <Program scrollToIncluded={scrollToIncluded} />
        
-        <Process ref={processRef} />
+        {/* <Process ref={processRef} /> */}
         {/* <TracingBeamDemo/> */}
         <Testimonials />
         <Action />

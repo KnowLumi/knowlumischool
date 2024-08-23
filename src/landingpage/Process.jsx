@@ -93,11 +93,11 @@ const Process = forwardRef(({ scrollToIncluded }, ref) => {
                 <div
                   className="flex flex-col"
                 >
-                  <TracingBeamDemo/>
-                  {/* <Learning />
+                  {/* <TracingBeamDemo/> */}
+                  <Learning />
                   <CommunityEngagement />
                   <PlacementAssistance />
-                  <Earning /> */}
+                  <Earning />
                 </div>
               </div>
             </div>

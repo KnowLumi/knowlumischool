@@ -1,5 +1,6 @@
 import React from "react";
 import aboutbar from "../assets/about_bar1.png";
+import { TracingBeamDemo } from "./TracingBeamDemo";
 
 export default function HowItsWorks() {
   return (
@@ -38,7 +39,7 @@ export default function HowItsWorks() {
           How its Works
         </span>
       </div>
-     
+     <TracingBeamDemo/>
      {/* body */}
     </div>
     <svg
