@@ -4,7 +4,7 @@ import { MdChevronRight } from "react-icons/md";
 import "./landing.css";
 const Testimonials = () => {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col -mt-44 lg:-mt-0">
       <svg
         width="1280"
         height="197"
