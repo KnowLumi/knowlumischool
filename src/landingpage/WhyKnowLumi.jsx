@@ -47,12 +47,14 @@ const WhyKnowLumi = ({scrollToIncluded}) => {
       </div>
 
       <div className="flex gap-6 flex-wrap justify-center ">
+        <a href="#explore">
         <Button onClick={scrollToIncluded} className="rounded-full flex items-center gap-3 capitalize font-archivo font-medium text-[16px] py-2 pr-2 pl-6">
           Enroll Now
           <i className="flex icon w-8 h-8 text-white border border-[#0101010D] bg-[#FFFFFF33] justify-center items-center rounded-full">
             <MdArrowForward />
           </i>
         </Button>
+        </a>
         <Button
           className="rounded-full flex items-center gap-3 capitalize font-archivo font-medium text-[16px] text-black py-2 pr-2 pl-6"
           variant="outlined"

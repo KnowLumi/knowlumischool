@@ -116,9 +116,9 @@ const HeroSection = ({ scrollToIncluded }) => {
                       variant="outlined"
                       className="my-button capitalize font-archivo text-black py-[3px] pr-[3px] pl-2 md:pl-[18px] border-gray-300 flex w-fit justify-end gap-3 items-center rounded-full"
                     >
-                      <span className="font-medium text-[8px] md:text-xs tracking-wide">
+                      <a href="#explore" className="font-medium text-[8px] md:text-xs tracking-wide">
                         Explore our programs
-                      </span>
+                      </a>
                       <i className="bg-gray-200 icon flex justify-center items-center border p-0 w-4 h-4 md:w-7 md:h-7 border-white rounded-full">
                         <MdArrowForward className="text-black" />
                       </i>

@@ -92,6 +92,7 @@ const Program = ({ scrollToIncluded }) => {
         ))}
       </div>
       <div className="flex flex-wrap gap-5 my-9 justify-center">
+        <a href="#explore">
         <Button
           onClick={scrollToIncluded}
           className="rounded-full bg-black flex items-center gap-3 capitalize font-archivo font-medium text-[16px] py-2 pr-2 pl-6"
@@ -101,6 +102,7 @@ const Program = ({ scrollToIncluded }) => {
             <MdArrowForward />
           </i>
         </Button>
+        </a>
         <Button
           onClick={scrollToIncluded}
           className="rounded-full flex items-center gap-3 capitalize font-archivo font-medium text-[16px] text-black py-2 pr-2 pl-6"

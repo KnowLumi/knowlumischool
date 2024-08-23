@@ -49,9 +49,11 @@ const Navigation = () => {
                 My Learning
               </span>
             ) : (
-              <span className="font-medium text-xs">
+              <a href="#explore">
+                <span className="font-medium text-xs">
                 Explore&nbsp;<span className="lowercase"> our programs</span>
               </span>
+              </a>
             )}
 
             {signedIn ? (

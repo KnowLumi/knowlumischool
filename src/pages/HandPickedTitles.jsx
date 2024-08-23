@@ -9,7 +9,7 @@ import {
 
 function HandPickedTitles() {
   return (
-    <div className="bg-white min-h-screen">
+    <div id="explore" className="bg-white min-h-screen">
       <div className="w-full flex justify-start bg-white">
         <img src={aboutbar} className="w-full md:w-fit h-8 md:h-16 rotate-180 " alt="" />
       </div>
