@@ -24,7 +24,7 @@ const PointIcon = (index) => {
     case 3:
       return <FaLifeRing className="w-4 h-4" />;
     case 4:
-      return <SiFuturelearn className="w-4 h-4" />
+      return <SiFuturelearn className="w-4 h-4" />;
 
     default:
       break;
@@ -72,12 +72,15 @@ const Program = ({ scrollToIncluded }) => {
                   <MdTrendingUp className="w-5 h-5" />
                 )}
               </div>
-              <div
-                style={{ backgroundImage: `url('${lines}')` }}
-                className="md:w-[440px] md:h-[234.58px] bg-contain md:bg-cover bg-no-repeat flex items-center"
-              >
-                <img src={item.image} alt="" className="object-contain" />
-              </div>
+              {/* item.image */}
+              <video
+                src={item.video}
+                autoPlay
+                muted
+                loop
+                className="w-full h-auto"
+                controls={false} // Ensure controls are not displayed
+              />
             </div>
             <span
               style={{ backgroundColor: item.color }}
@@ -89,7 +92,10 @@ const Program = ({ scrollToIncluded }) => {
         ))}
       </div>
       <div className="flex flex-wrap gap-5 my-9 justify-center">
-        <Button onClick={scrollToIncluded} className="rounded-full bg-black flex items-center gap-3 capitalize font-archivo font-medium text-[16px] py-2 pr-2 pl-6">
+        <Button
+          onClick={scrollToIncluded}
+          className="rounded-full bg-black flex items-center gap-3 capitalize font-archivo font-medium text-[16px] py-2 pr-2 pl-6"
+        >
           Enroll in the Program
           <i className="flex icon w-8 h-8 text-white border border-[#0101010D] bg-[#FFFFFF33] justify-center items-center rounded-full">
             <MdArrowForward />
@@ -109,7 +115,6 @@ const Program = ({ scrollToIncluded }) => {
       {/* <div className="w-full flex bg-white justify-end mt-16">
         <img src={aboutbar} className="w-fit h-8 md:h-16" alt="" />
       </div> */}
-      
     </div>
   );
 };
