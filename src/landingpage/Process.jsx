@@ -14,6 +14,7 @@ import "./landing.css";
 import "./Process_Components/process.css"
 import cash from "./Process_svg/cash.png";
 import { processSvg } from "./landing_helpers";
+import { TracingBeamDemo } from "./TracingBeamDemo";
 
 const Process = forwardRef(({ scrollToIncluded }, ref) => {
 
@@ -86,16 +87,17 @@ const Process = forwardRef(({ scrollToIncluded }, ref) => {
       <div
         className="w-full z-20 py-2 mt-24 md:mt-0 flex flex-col process items-end h-full md:w-[623px]">
         <div className="flex flex-col items-end h-fit w-full md:w-[623px]">
-          <div className="w-full h-[4872px] md:h-[3500px] flex">
-            <div className="flex flex-col process-comp bg-contain bg-no-repeat md:h-full w-[305px] md:w-full h-full gap-6 py-12">
+          <div className="w-full h-screen md:h-[3500px] flex">
+            <div className="flex flex-col bg-contain bg-no-repeat md:h-full w-[305px] md:w-full h-full gap-6 py-12">
               <div className="flex flex-col gap-[68px] w-full pl-9 md:pl-16 mt-6 md:mt-[92px]">
                 <div
                   className="flex flex-col"
                 >
-                  <Learning />
+                  <TracingBeamDemo/>
+                  {/* <Learning />
                   <CommunityEngagement />
                   <PlacementAssistance />
-                  <Earning />
+                  <Earning /> */}
                 </div>
               </div>
             </div>

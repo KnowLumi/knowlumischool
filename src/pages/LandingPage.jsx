@@ -15,6 +15,7 @@ import Navigation from "../landingpage/Navigation";
 import Recognized from "../landingpage/Recognized";
 import HandPickedTitles from "./HandPickedTitles";
 import HowItsWorks from "../landingpage/HowItsWorks";
+import { TracingBeamDemo } from "../landingpage/TracingBeamDemo";
 
 const LandingPage = () => {
 
@@ -43,7 +44,8 @@ const LandingPage = () => {
         <About />
         <Program scrollToIncluded={scrollToIncluded} />
        
-        {/* <Process ref={processRef} /> */}
+        <Process ref={processRef} />
+        {/* <TracingBeamDemo/> */}
         <Testimonials />
         <Action />
         <WhyKnowLumi scrollToIncluded={scrollToIncluded} />
