@@ -19,8 +19,11 @@ import icon7 from "./company_icons/verizonlogo.png";
 import logo1 from "../assets/hat.png";
 import logo2 from "../../public/logo.png";
 
-import unemployed from "../assets/dream-job.mp4";
-import dreamjob from "../assets/dream-job.mp4";
+// import unemployed from "../assets/career-down.mp4";
+// import dreamjob from "../assets/dream-career.mp4";
+
+import careerdown from "../assets/career-down.mp4";
+import dreamjcareer from "../assets/dream-career.mp4";
 
 const pages = [
   { name: "Home", route: "/" },
@@ -109,7 +112,7 @@ const program = [
       "Static, One-Size-Fits-All Curriculum",
     ],
     color: "#DC552A",
-    video: unemployed,
+    video: dreamjcareer,
     text: "LIMITED CARRER TRAJECTORY",
   },
   {
@@ -125,7 +128,7 @@ const program = [
       "Customized Learning Pathways",
     ],
     color: "#2FC34F",
-    video: dreamjob,
+    video: careerdown,
     text: "ACCELERATED CARRER TRAJECTORY",
   },
 ];
