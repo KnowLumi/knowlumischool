@@ -10,9 +10,9 @@ import logo from "../../knowlumi.png";
 //bg-[#E6F3D6]
 const About = () => {
   return (
-    <div className="flex flex-col">
-      {/* <div className="w-full flex justify-end bg-[#F7F7F7]">
-        <img src={aboutbar} className="w-fit h-8 md:h-16 " alt="" />
+    <div className="flex flex-col lg:-mt-56 xl:-mt-60">
+      {/* <div className="w-full flex justify-end bg-white">
+        <img src={aboutbar} className="w-fit h-8 md:h-16 rotate-180" alt="" />
       </div> */}
       <div className="flex flex-col w-full bg-white items-start">
         <div className="z-10 w-full flex flex-col gap-6 justify-between items-start md:items-center px-10 mx-0 my-9 md:my-20 h-fit">

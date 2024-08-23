@@ -40,7 +40,7 @@ const LandingPage = () => {
         <HandPickedTitles/>
         <Companies />
         <Recognized />
-        <div className="bg-white">
+        <div className="">
         <HowItsWorks/>
         <About />
         </div>
