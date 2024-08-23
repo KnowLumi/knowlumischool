@@ -5,6 +5,8 @@ import {
   RiTwitterXFill,
   RiWhatsappFill,
   RiDiscordFill,
+  RiYoutubeFill,
+  RiLinkedinFill,
 } from "react-icons/ri";
 import { MdHdrStrong } from "react-icons/md";
 import footer from "../assets/footer.png";
@@ -33,13 +35,39 @@ const Footer = () => {
               With KnowLumi, we go beyond learning, empowering you to create
               opportunities and achieve your goals.
             </p>
-            <div className="flex items-center gap-8 text-black">
-              <RiInstagramFill className="w-4 h-4" />
-              <RiWhatsappFill className="w-4 h-4" />
-              <RiDiscordFill className="w-4 h-4" />
-              <RiFacebookBoxFill className="w-4 h-4" />
-              <RiTwitterXFill className="w-4 h-4" />
-            </div>
+          
+<div className="flex items-center gap-8 text-black">
+  <a
+    href="https://www.instagram.com/knowlumiofficial?igsh=M3d2ZWR6YndhcXJk&utm_source=qr"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <RiInstagramFill className="w-4 h-4" />
+  </a>
+  <a
+    href="https://whatsapp.com/channel/0029VaRvShwGU3BScdXIfB15"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <RiWhatsappFill className="w-4 h-4" />
+  </a>
+  <a
+    href="https://www.linkedin.com/company/knowlumi1/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <RiLinkedinFill className="w-4 h-4" />
+  </a>
+  <a
+    href="https://youtube.com/@knowlumi?si=fiyxyEW6yADijX-4"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <RiYoutubeFill className="w-4 h-4" />
+  </a>
+ 
+
+</div>
             <button className="bg-white w-fit flex rounded-full items-center py-1 pr-1 pl-5 gap-1">
               <span className="font-medium text-xs">Drop us a message</span>
               <IconButton className="rounded-full bg-gray-300 w-7 h-7">
