@@ -98,15 +98,15 @@ function HandPickedTitles() {
                   {blogContent.description}
                 </h2>
                 <div className="flex flex-col md:flex-row gap-3 md:gap-5 my-6 justify-center">
-                  <Button className="rounded-full flex border border-black bg-white items-center justify-center gap-3 capitalize font-archivo font-medium  text-[16px] text-black py-2 px-4">
+                  <Button className="rounded-full flex border border-black bg-white items-center justify-center gap-3 capitalize font-archivo font-medium  text-[16px] text-black py-1 px-4">
                     Request a Callback
-                    <i className="flex w-8 h-8 text-white border border-[#0101010D] bg-black justify-center items-center rounded-full">
+                    <i className="flex w-6 h-6 text-white border border-[#0101010D] bg-black justify-center items-center rounded-full">
                       <MdOutlinePhoneCallback />
                     </i>
                   </Button>
-                  <Button className="rounded-full bg-black flex items-center justify-center gap-3 capitalize font-archivo font-medium text-[16px] py-2 pr-2">
+                  <Button className="rounded-full bg-black flex items-center justify-center gap-3 capitalize font-archivo font-medium text-[16px] py-1 pr-2">
                     Know More
-                    <i className="flex icon w-8 h-8 text-white border border-[#0101010D] bg-[#FFFFFF33] justify-center items-center rounded-full">
+                    <i className="flex icon w-6 h-6 text-white border border-[#0101010D] bg-[#FFFFFF33] justify-center items-center rounded-full">
                       <MdArrowForward />
                     </i>
                   </Button>

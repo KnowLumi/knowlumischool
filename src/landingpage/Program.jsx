@@ -50,7 +50,7 @@ const Program = ({ scrollToIncluded }) => {
             <p className="md:w-[24rem] text-[#01010199] font-light text-xs tracking-[4%]">
               {item.desc}
             </p>
-            <div className="flex flex-wrap gap-2">
+            <div className="grid lg:grid-cols-2 gap-2">
               {item.points.map((p, i) => (
                 <div
                   key={`point-${i + 1}`}
