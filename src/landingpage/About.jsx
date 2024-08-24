@@ -4,10 +4,14 @@ import about from "../assets/about.png";
 import des from "../assets/about_des.png";
 import curly from "../assets/curly.png";
 import logo from "../../knowlumi.png";
+import { useEffect } from "react";
 
 const About = () => {
+  useEffect(() => {
+    window.scrollTo(0,0)
+  },[])
   return (
-    <div className="flex flex-col -mt-44 lg:-mt-56 xl:-mt-60">
+    <div className="flex flex-col ">
       <div className="flex flex-col w-full bg-white items-start">
         <div className="z-10 w-full flex flex-col gap-6 justify-between items-start md:items-center px-4 md:px-10 mx-0 my-6 md:my-20">
           <div className="flex flex-col items-center justify-between gap-4 md:gap-6">

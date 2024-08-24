@@ -208,7 +208,7 @@ export default function HowItsWorks() {
           </div>
         </div>
       </div>
-      <svg
+      {/* <svg
         width="1280"
         height="197"
         viewBox="0 0 1280 197"
@@ -233,7 +233,7 @@ export default function HowItsWorks() {
           d="M-15 47.4823C-15 37.5411 -6.94112 29.4822 3 29.4822H115H184.13C190.015 29.4822 195.528 26.6059 198.894 21.7794L208.712 7.70285C212.078 2.87633 217.591 0 223.476 0H386C395.941 0 404 8.05887 404 18V210C404 219.941 395.941 228 386 228H3.00001C-6.94112 228 -15 219.941 -15 210V47.4823Z"
           fill="#010101"
         />
-      </svg>
+      </svg> */}
     </div>
   );
 }
@@ -256,13 +256,13 @@ const PhaseCard = ({ primaryImage, features, index, setCurrentPhase }) => {
         background: "linear-gradient(125.65deg, #FAFAFA 0.81%, #FFDFDF 100%)",
         borderRadius: "176.08px 26.41px 26.41px 26.41px",
       }}
-      className="min-h-[30rem] w-full max-w-5xl p-8 grid lg:flex items-center gap-8"
+      className="min-h-96 w-full max-w-4xl p-8 grid lg:flex items-center gap-8"
     >
       <div className="lg:w-1/2">
         <img
           src={primaryImage}
           alt="Phase illustration"
-          className="w-full h-auto"
+          className="w-full h-72 object-contain"
         />
       </div>
       <div className="flex flex-col gap-y-6 items-start lg:w-1/2">

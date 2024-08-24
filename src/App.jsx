@@ -1,10 +1,10 @@
-import { createContext, useState } from "react";
-import About from "./pages/About";
+import { createContext, useState, useRef, useEffect } from "react";
+import About from "./landingpage/About";
 import Community from "./pages/Community";
 import LandingPage from "./pages/LandingPage";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Earn from "./pages/Earn";
-import "./App.css"
+import "./App.css";
 import AllCourses from "./pages/AllCourses";
 import Course from "./pages/Course";
 import OtpPage from "./pages/Authentication/OtpPage";
@@ -18,7 +18,7 @@ import Track from "./pages/Track";
 import Dashboard from "./pages/Admin/Dashboard";
 import Students from "./pages/Admin/Students";
 import Mentors from "./pages/Admin/Mentors";
-import Categories from "./pages/Admin/Categories"
+import Categories from "./pages/Admin/Categories";
 import AddVideo from "./pages/Admin/AddVideo";
 import Companies from "./pages/Admin/Companies";
 import Testimonials from "./pages/Admin/Testimonials";
@@ -28,11 +28,36 @@ import AddMentor from "./pages/Admin/AddMentor";
 import Demo from "./pages/Admin/Video/Demo";
 import ProgramVideo from "./pages/Admin/Video/ProgramVideo";
 import Login from "./pages/Admin/Login";
+import Program from "./landingpage/Program";
+import NavMenu from "./Navigation/NavMenu";
+import Footer from "./landingpage/Footer";
+import Navigation from "./landingpage/Navigation";
 
 export const Context = createContext();
 
+const AboutRouteBody = () => {
+  const includedRef = useRef(null);
+
+  const scrollToIncluded = () => {
+    if (includedRef.current) {
+      includedRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  return (
+    <>
+  <Navigation/>
+  <About />
+      <Program scrollToIncluded={scrollToIncluded} />
+      {/* Pass the ref to other components as needed */}
+   <Footer/>
+    </>
+  );
+};
+
 function App() {
   const [signedIn, setSignedIn] = useState(false);
+
   return (
     <Context.Provider value={[signedIn, setSignedIn]}>
       <div className="h-screen bg-gray-50 font-archivo overflow-x-hidden">
@@ -40,7 +65,7 @@ function App() {
           <ScrollToTop />
           <Routes>
             <Route path="/" element={<LandingPage />} />
-            <Route path="/about" element={<About />} />
+            <Route path="/about" element={<AboutRouteBody />} />
             <Route path="/community" element={<Community />} />
             {/* <Route path="/refer&earn" element={<Earn />} /> */}
             <Route path="/all-courses" element={<AllCourses />} />
