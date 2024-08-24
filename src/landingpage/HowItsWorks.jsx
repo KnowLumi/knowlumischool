@@ -1,18 +1,18 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { useInView } from "react-intersection-observer";
+
 import aboutbar from "../assets/about_bar1.png";
 import { TracingBeamDemo } from "./TracingBeamDemo";
 
-
 import phaseOne from "../assets/phase1.png";
-import phaseTwo from "../assets/phase2.png"
-import phaseThree from "../assets/phase3.png"
-import phaseFour from "../assets/phase4.png"
+import phaseTwo from "../assets/phase2.png";
+import phaseThree from "../assets/phase3.png";
+import phaseFour from "../assets/phase4.png";
 
 import iconOne from "../assets/icon1.png";
 import iconTwo from "../assets/icon2.png";
 import iconThree from "../assets/icon3.png";
 import iconFour from "../assets/icon4.png";
-
 
 const PhaseCardData = [
   {
@@ -137,6 +137,7 @@ const PhaseCardData = [
 ];
 
 export default function HowItsWorks() {
+  const [currentPhase, setCurrentPhase] = useState(0);
   return (
     <div className="flex flex-col">
       <svg
@@ -167,31 +168,44 @@ export default function HowItsWorks() {
       </svg>
 
       <div className="bg-black font-archivo flex flex-col z-10 items-center min-h-screen">
-        <div className="flex flex-col items-center gap-3 md:gap-6 my-12 mx-16 text-center ">
-          {/* <span className="text-[#88DB1B] font-bold text-xl">Wall of Love</span> */}
-          {/* ? body section starts */}
-          <span className="text-white font-medium tracking-wide text-2xl md:text-5xl">
-            How Knowlumi Revolutionizes Engineering Education !
-          </span>
-          <span className="font-medium text-center text-white">
-            Build Your Dream Career with Our AI-Powered Parallel Education
-            System
-          </span>
-          <div className="flex">
-            {Array.from({ length: 4 }).map((_, index) => (
-              <button className="p-2 text-[#FF6D25] bg-white text-center first:rounded-l-3xl last:rounded-r-3xl border-red-500 border">
-                <span className="text-lg font-bold">Phase {index + 1}</span>{" "}
-                <br />
-                <span className="text-sm">Explore your path ways</span>
-              </button>
+        <div className="flex flex-col items-center gap-3 md:gap-6 my-12 mx-16 text-center">
+          <div className="text-center flex flex-col justify-center mx-auto items-center gap-4 top-0 sticky z-50 bg-black mb-14 rounded-2xl p-6">
+            <span className="text-white font-medium tracking-wide text-2xl md:text-5xl">
+              How Knowlumi Revolutionizes Engineering Education !
+            </span>
+            <span className="font-medium text-center text-white">
+              Build Your Dream Career with Our AI-Powered Parallel Education
+              System
+            </span>
+            <div className="flex mt-4 space-x-2">
+              {Array.from({ length: 4 }).map((_, index) => (
+                <button
+                  key={index}
+                  className={`p-3 text-center first:rounded-l-3xl last:rounded-r-3xl border-red-500 border transition-colors duration-300 ${
+                    currentPhase === index
+                      ? "bg-[#FF6D25] text-white"
+                      : "bg-white text-[#FF6D25]"
+                  }`}
+                >
+                  <span className="text-lg font-bold">Phase {index + 1}</span>{" "}
+                  <br />
+                  <span className="text-sm">Explore your path ways</span>
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div className="space-y-32">
+            {PhaseCardData.map((data, index) => (
+              <PhaseCard
+                features={data.features}
+                primaryImage={data.primaryImage}
+                key={index}
+                index={index}
+                setCurrentPhase={setCurrentPhase}
+              />
             ))}
           </div>
-          {/* TODO  need to implement froamer motion  */}
-          {PhaseCardData.map((data, index) => (
-            <PhaseCard features={data.features} primaryImage={data.primaryImage} key={index} />
-          ))}
-
-          {/* ? body section ends */}
         </div>
       </div>
       <svg
@@ -224,30 +238,49 @@ export default function HowItsWorks() {
   );
 }
 
-const PhaseCard = ({ primaryImage, features }) => {
+const PhaseCard = ({ primaryImage, features, index, setCurrentPhase }) => {
+  const [ref, inView] = useInView({
+    threshold: 0.5,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      setCurrentPhase(index);
+    }
+  }, [inView, index, setCurrentPhase]);
+
   return (
     <div
+      ref={ref}
       style={{
         background: "linear-gradient(125.65deg, #FAFAFA 0.81%, #FFDFDF 100%)",
         borderRadius: "176.08px 26.41px 26.41px 26.41px",
       }}
-      className="min-h-[30rem] w-full max-w-5xl p-6 grid lg:flex  items-center "
+      className="min-h-[30rem] w-full max-w-5xl p-8 grid lg:flex items-center gap-8"
     >
-      <div className="">
-        <img src={primaryImage} alt="Image not found" />
+      <div className="lg:w-1/2">
+        <img
+          src={primaryImage}
+          alt="Phase illustration"
+          className="w-full h-auto"
+        />
       </div>
-      <div className="flex flex-col gap-y-3 items-start">
-       {features.map((data) => (
-         <div className="flex gap-3 items-center">
-         <img src={data.icon} alt="Image for icon" />
-         <div className="flex flex-col items-start">
-           <h3 className="font-bold text-xl">{data.title}</h3>
-           <span className="max-w-lg text-left my-2 text-[#252525B2]">
-             {data.caption}{" "}
-           </span>
-         </div>
-       </div>
-       ))}
+      <div className="flex flex-col gap-y-6 items-start lg:w-1/2">
+        {features.map((data, featureIndex) => (
+          <div key={featureIndex} className="flex gap-4 items-start">
+            <img
+              src={data.icon}
+              alt={`Icon for ${data.title}`}
+              className="w-12 h-12"
+            />
+            <div className="flex flex-col items-start">
+              <h3 className="font-bold text-xl">{data.title}</h3>
+              <span className="text-left my-2 text-[#252525B2]">
+                {data.caption}
+              </span>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
