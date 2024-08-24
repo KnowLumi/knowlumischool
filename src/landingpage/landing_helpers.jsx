@@ -19,8 +19,10 @@ import icon7 from "./company_icons/verizonlogo.png";
 import logo1 from "../assets/hat.png";
 import logo2 from "../../public/logo.png";
 
-import careerdownImage from "../assets/unemployed.png";
-import dreamjcareerImage from "../assets/dreamjob.png";
+import dreamjcareerImage from "../assets/unemployed.png";
+import careerdownImage from "../assets/dreamjob.png";
+
+
 
 import careerdown from "../assets/dream-career.mp4";
 import dreamjcareer from "../assets/career-down.mp4";
