@@ -19,8 +19,8 @@ import icon7 from "./company_icons/verizonlogo.png";
 import logo1 from "../assets/hat.png";
 import logo2 from "../../public/logo.png";
 
-// import unemployed from "../assets/career-down.mp4";
-// import dreamjob from "../assets/dream-career.mp4";
+import careerdownImage from "../assets/unemployed.png";
+import dreamjcareerImage from "../assets/dreamjob.png";
 
 import careerdown from "../assets/dream-career.mp4";
 import dreamjcareer from "../assets/career-down.mp4";
@@ -113,6 +113,7 @@ const program = [
     ],
     color: "#DC552A",
     video: dreamjcareer,
+    image: dreamjcareerImage,
     text: "LIMITED CARRER TRAJECTORY",
   },
   {
@@ -129,6 +130,7 @@ const program = [
     ],
     color: "#2FC34F",
     video: careerdown,
+    image: careerdownImage,
     text: "ACCELERATED CARRER TRAJECTORY",
   },
 ];

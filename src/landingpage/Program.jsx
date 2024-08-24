@@ -73,12 +73,14 @@ const Program = ({ scrollToIncluded }) => {
                 )}
               </div>
               {/* item.image */}
+              {/* this part added image and video  video for lg screen and image for sm ! video need to play in sm screen auto play not working  */}
+              <img src={item.image} alt="The image represt graph" className="w-full h-auto block lg:hidden" />
               <video
                 src={item.video}
                 autoPlay
                 muted
                 loop
-                className="w-full h-auto"
+                className="w-full h-auto lg:block hidden"
                 controls={false} // Ensure controls are not displayed
               />
             </div>
