@@ -200,7 +200,7 @@ export default function HowItsWorks() {
             </div>
           </div>
 
-          <div className="relative h-[350vh]  top-0 space-y-44 snap-mandatory snap-y z-0 ">
+          <div className="relative  top-0 space-y-48 snap-mandatory snap-y z-0 ">
             {PhaseCardData.map((data, index) => (
               <PhaseCard
                 features={data.features}

@@ -85,7 +85,7 @@ function HandPickedTitles() {
         {Array.from({ length: 3 }).map((_, index) => (
           <div
             key={index}
-            className="w-full md:w-[28rem] lg:w-[30rem] mx-auto p-2"
+            className="w-full md:w-[28rem] lg:w-[26rem] mx-auto p-2 "
           >
             <div className="relative overflow-hidden h-full rounded-2xl transition duration-200 group bg-white hover:shadow-xl hover:shadow-[#88DB1B] border border-[#88DB1B]">
               <div className="w-full aspect-w-16 aspect-h-10 bg-gray-100 rounded-tr-lg rounded-tl-lg overflow-hidden xl:aspect-w-16 xl:aspect-h-10 relative">
@@ -105,13 +105,13 @@ function HandPickedTitles() {
                   {blogContent.description}
                 </h2>
                 <div className="flex flex-col md:flex-row gap-x-4 my-6 justify-center items-center">
-                  <Button className="w-60 md:w-72 rounded-full flex border border-black bg-white items-center justify-center gap-3 capitalize font-archivo font-medium text-[16px] text-black py-2 px-4">
+                  <Button className="w-60 lg:w-auto md:w-72 rounded-full flex border border-black bg-white items-center justify-center gap-3 capitalize font-archivo font-medium text-[16px] text-black py-2 px-4">
                     Request a Callback
                     <i className="flex w-6 h-6 text-white border border-[#0101010D] bg-black justify-center items-center rounded-full">
                       <MdOutlinePhoneCallback />
                     </i>
                   </Button>
-                  <Button className="w-60 md:w-64 rounded-full bg-black flex items-center justify-center gap-3 capitalize font-archivo font-medium text-[16px] py-2 pr-2 mt-4 md:mt-0">
+                  <Button className="w-60 lg:w-auto md:w-64 rounded-full bg-black flex items-center justify-center gap-3 capitalize font-archivo font-medium  py-2 pr-2 mt-4 md:mt-0">
                     Know More
                     <i className="flex icon w-6 h-6 text-white border border-[#0101010D] bg-[#FFFFFF33] justify-center items-center rounded-full">
                       <MdArrowForward />
@@ -126,7 +126,7 @@ function HandPickedTitles() {
 
       {/* Fourth Section */}
       <div className="flex items-center justify-center mt-12 mb-6">
-        <Button className="rounded-full bg-black flex items-center gap-3 capitalize font-archivo font-medium text-[16px] py-2 pr-2 pl-6 border border-gray-600 text-white">
+        <Button className="rounded-full bg-black flex items-center gap-3 capitalize font-archivo font-medium  py-2 pr-2 pl-6 border border-gray-600 text-white">
           View All Programs
           <i className="flex icon w-6 h-6 text-black bg-white border border-[#0101010D] justify-center items-center rounded-full">
             <MdArrowForward />
