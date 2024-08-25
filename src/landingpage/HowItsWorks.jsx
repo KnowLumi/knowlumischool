@@ -170,7 +170,7 @@ export default function HowItsWorks() {
 
       <div className="bg-black font-archivo flex flex-col z-10 items-center min-h-screen">
         <div className="flex flex-col items-center gap-3 md:gap-6 my-12 mx-16 text-center">
-          <div className="text-center flex flex-col justify-center mx-auto items-center gap-4 top-0 sticky z-50 bg-black mb-14 rounded-2xl p-6">
+          <div className="text-center flex flex-col justify-center mx-auto items-center gap-4 top-0 sticky z-50 bg-black mb-14 rounded-2xl ">
             <span className="text-white font-medium tracking-wide text-2xl md:text-5xl">
               How Knowlumi Revolutionizes Engineering Education !
             </span>
@@ -178,7 +178,7 @@ export default function HowItsWorks() {
               Build Your Dream Career with Our AI-Powered Parallel Education
               System
             </span>
-            <div className="flex mt-4 ">
+            <div className="flex mt-4 mb-4">
               {Array.from({ length: 4 }).map((_, index) => (
                 <React.Fragment>
                 <div className=" flex flex-col items-center">
@@ -200,7 +200,7 @@ export default function HowItsWorks() {
             </div>
           </div>
 
-          <div className="space-y-44 snap-mandatory snap-y z-0">
+          <div className="relative h-[350vh]  top-0 space-y-44 snap-mandatory snap-y z-0 ">
             {PhaseCardData.map((data, index) => (
               <PhaseCard
                 features={data.features}
@@ -262,7 +262,7 @@ const PhaseCard = ({ primaryImage, features, index, setCurrentPhase }) => {
         background: "linear-gradient(125.65deg, #FAFAFA 0.81%, #FFDFDF 100%)",
         borderRadius: "176.08px 26.41px 26.41px 26.41px",
       }}
-      className="min-h-80 w-full max-w-4xl p-2 grid lg:flex items-center gap- sticky"
+      className="min-h-80 w-full max-w-4xl p-2 grid lg:flex items-center"
     >
       <div className="lg:w-1/2">
         <img
