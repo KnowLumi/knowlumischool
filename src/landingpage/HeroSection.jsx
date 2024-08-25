@@ -74,7 +74,7 @@ const HeroSection = ({ scrollToIncluded }) => {
     <h1 className="text-2xl md:text-4xl text-[#88DB1B]">100+</h1>
   </div>
   <div className="flex flex-col items-center text-center text-xl md:text-3xl ">
-    <h1 className="font-bold">Community Members</h1>
+    <h1 className="font-bold">Members</h1>
     <h1 className="text-2xl md:text-4xl text-[#88DB1B]">10,000+</h1>
   </div>
   <div className="flex flex-col items-center text-center text-xl md:text-3xl ">
