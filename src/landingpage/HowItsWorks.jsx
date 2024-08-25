@@ -193,7 +193,7 @@ export default function HowItsWorks() {
                   <br />
                   <span className="text-sm">Explore your path ways</span>
                 </button>
-                <IoMdArrowDropdown className={`relative bottom-2 text-2xl  ${currentPhase === index ? "text-[#FF6D25] " : "text-white"}` } />
+                <IoMdArrowDropdown className={`relative bottom-2 text-2xl  ${currentPhase === index ? "text-[#FF6D25] " : "text-black"}` } />
                 </div>
                 </React.Fragment>
               ))}
