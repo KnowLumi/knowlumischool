@@ -46,7 +46,7 @@ const PhaseCardData = [
   },
   // second
   {
-    primaryImage: phaseTwo,
+    primaryImage: phaseThree,
     features: [
       {
         icon: iconOne,
@@ -76,7 +76,7 @@ const PhaseCardData = [
   },
   // third
   {
-    primaryImage: phaseThree,
+    primaryImage: phaseTwo,
     features: [
       {
         icon: iconOne,
