@@ -200,7 +200,7 @@ export default function HowItsWorks() {
             </div>
           </div>
 
-          <div className="space-y-32">
+          <div className="space-y-44 snap-mandatory snap-y z-0">
             {PhaseCardData.map((data, index) => (
               <PhaseCard
                 features={data.features}
@@ -208,6 +208,7 @@ export default function HowItsWorks() {
                 key={index}
                 index={index}
                 setCurrentPhase={setCurrentPhase}
+                className="snap-center bg-fixed"
               />
             ))}
           </div>
@@ -261,7 +262,7 @@ const PhaseCard = ({ primaryImage, features, index, setCurrentPhase }) => {
         background: "linear-gradient(125.65deg, #FAFAFA 0.81%, #FFDFDF 100%)",
         borderRadius: "176.08px 26.41px 26.41px 26.41px",
       }}
-      className="min-h-96 w-full max-w-4xl p-8 grid lg:flex items-center gap-8"
+      className="min-h-80 w-full max-w-4xl p-2 grid lg:flex items-center gap- sticky"
     >
       <div className="lg:w-1/2">
         <img
