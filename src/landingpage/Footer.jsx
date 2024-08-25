@@ -10,64 +10,62 @@ import {
 } from "react-icons/ri";
 import { MdHdrStrong } from "react-icons/md";
 import footer from "../assets/footer.png";
-import logo1 from "../assets/logo1.png";
+import logo1 from "/Images/logo.png";
 import { IconButton } from "@material-tailwind/react";
-import { footerLinks } from "./landing_helpers";
+
 import "./landing.css";
 import { Button } from "@material-tailwind/react";
 const Footer = () => {
   return (
     <div className="w-full flex flex-col font-archivo">
       <div className="w-full flex justify-end">
-        <img src={footer} alt="" className="w-fit translate-y-0.5 h-10 md:h-20" />
+        <img
+          src={footer}
+          alt=""
+          className="w-fit translate-y-0.5 h-10 md:h-20"
+        />
       </div>
       <footer className="bg-[#DFDFD7] z-10 flex flex-col">
         <div className="flex flex-col md:flex-row border-b-2 border-b-gray-500 justify-between py-6 md:py-14 mx-8 md:mx-16">
           <div className="flex flex-col w-80 gap-8">
             <div className="flex items-center gap-2 p-1">
-              <img src={logo1} className="h-10 w-10" alt="" />
-              <div className="flex flex-col px-3 border-black border-l-2">
-                <span className="font-extrabold text-lg">KNOWLUMI</span>
-                <span className="font-light text-xs">Learn-Earn-Achieve</span>
-              </div>
+              <img src={logo1} className="" alt="" />
             </div>
             <p className="text-xs">
               With KnowLumi, we go beyond learning, empowering you to create
               opportunities and achieve your goals.
             </p>
-          
-<div className="flex items-center gap-8 text-black">
-  <a
-    href="https://www.instagram.com/knowlumiofficial?igsh=M3d2ZWR6YndhcXJk&utm_source=qr"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <RiInstagramFill className="w-4 h-4" />
-  </a>
-  <a
-    href="https://whatsapp.com/channel/0029VaRvShwGU3BScdXIfB15"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <RiWhatsappFill className="w-4 h-4" />
-  </a>
-  <a
-    href="https://www.linkedin.com/company/knowlumi1/"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <RiLinkedinFill className="w-4 h-4" />
-  </a>
-  <a
-    href="https://youtube.com/@knowlumi?si=fiyxyEW6yADijX-4"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <RiYoutubeFill className="w-4 h-4" />
-  </a>
- 
 
-</div>
+            <div className="flex items-center gap-8 text-black">
+              <a
+                href="https://www.instagram.com/knowlumiofficial?igsh=M3d2ZWR6YndhcXJk&utm_source=qr"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <RiInstagramFill className="w-4 h-4" />
+              </a>
+              <a
+                href="https://whatsapp.com/channel/0029VaRvShwGU3BScdXIfB15"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <RiWhatsappFill className="w-4 h-4" />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/knowlumi1/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <RiLinkedinFill className="w-4 h-4" />
+              </a>
+              <a
+                href="https://youtube.com/@knowlumi?si=fiyxyEW6yADijX-4"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <RiYoutubeFill className="w-4 h-4" />
+              </a>
+            </div>
             <button className="bg-white w-fit flex rounded-full items-center py-1 pr-1 pl-5 gap-1">
               <span className="font-medium text-xs">Drop us a message</span>
               <IconButton className="rounded-full bg-gray-300 w-7 h-7">
@@ -81,7 +79,7 @@ const Footer = () => {
                 key={`footer_link_${index}`}
                 className="font-normal text-black opacity-60 footer-link"
               >
-                {link}
+                <a href={link.path}>{link.label}</a>
               </li>
             ))}
           </ul>
@@ -103,3 +101,11 @@ const Footer = () => {
 };
 
 export default Footer;
+const footerLinks = [
+  { label: "Home", path: "" },
+  { label: "Programs", path: "#explore" },
+  { label: "Courses", path: "" },
+  { label: "How Knowlumi works", path: "#howitswork" },
+  { label: "Privacy Policy", path: "" },
+  { label: "Contact Us", path: "" }
+];

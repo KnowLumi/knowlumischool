@@ -139,7 +139,7 @@ const PhaseCardData = [
 export default function HowItsWorks() {
   const [currentPhase, setCurrentPhase] = useState(0);
   return (
-    <div className="flex flex-col">
+    <div id="howitswork" className="flex flex-col">
       <svg
         width="1280"
         height="197"
