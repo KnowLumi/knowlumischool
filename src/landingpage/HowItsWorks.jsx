@@ -1,8 +1,6 @@
-import React, { useState, useEffect } from "react";
-import { useInView } from "react-intersection-observer";
+import React, { useState, useEffect, useRef } from "react";
+import { IoMdArrowDropdown } from "react-icons/io";
 
-import aboutbar from "../assets/about_bar1.png";
-import { TracingBeamDemo } from "./TracingBeamDemo";
 
 import phaseOne from "../assets/phase1.png";
 import phaseTwo from "../assets/phase2.png";
@@ -13,35 +11,31 @@ import iconOne from "../assets/icon1.png";
 import iconTwo from "../assets/icon2.png";
 import iconThree from "../assets/icon3.png";
 import iconFour from "../assets/icon4.png";
-import { IoMdArrowDropdown } from "react-icons/io";
+
 
 const PhaseCardData = [
   {
     primaryImage: phaseOne,
     features: [
       {
-        icon: iconOne,
-        title: "Number Sense and Operations",
+        title: "AI-Powered Interest Identification",
         caption:
-          "Fluently compose and decompose numbers within 10 Understand addition and subtraction within 10",
+          "Utilize our AI-powered platform to identify your area of interest and passion.",
       },
       {
-        icon: iconTwo,
-        title: "Geometry",
+        title: "ntroduction to Various Fields",
         caption:
-          "Recognize 2D and 3D shapes Identify defining attributes of shapes (edges, vertices, cross sections, nets, etc.)",
+          "Explore careers in corporate roles, startups, higher studies, civil services, and more.",
       },
       {
-        icon: iconThree,
-        title: "Logic and Patterns",
+        title: "Interactive Sessions",
         caption:
-          "Use analogical reasoning to solve Sudoku puzzles and understand the concept of cycles",
+          "Participate in engaging sessions that provide insights into each field.",
       },
       {
-        icon: iconFour,
-        title: "Problem Solving",
+        title: "Guidance and Resources",
         caption:
-          "Learn tangram puzzles and practice creating shapes using tangram pieces Measure by iterating length units ",
+          "Access resources and expert guidance to understand your options and identify your interests and strengths",
       },
     ],
   },
@@ -50,28 +44,29 @@ const PhaseCardData = [
     primaryImage: phaseThree,
     features: [
       {
-        icon: iconOne,
-        title: "Number Sense and Operations",
+        title: "Clarify Your Objectives",
         caption:
-          "Fluently compose and decompose numbers within 10 Understand addition and subtraction within 10",
+          "Identify and articulate your short-term and long-term career goals.",
       },
       {
-        icon: iconTwo,
-        title: "Geometry",
+        title: "AI-Driven Goal Setting",
         caption:
-          "Recognize 2D and 3D shapes Identify defining attributes of shapes (edges, vertices, cross sections, nets, etc.)",
+          "Use our AI platform to set realistic and achievable goals tailored to your interests",
       },
       {
-        icon: iconThree,
-        title: "Logic and Patterns",
+        title: "Expert Mentorship",
         caption:
-          "Use analogical reasoning to solve Sudoku puzzles and understand the concept of cycles",
+          "Collaborate with experienced mentors to refine and solidify your goals.",
       },
       {
-        icon: iconFour,
-        title: "Problem Solving",
+        title: "Strategic Planning",
         caption:
-          "Learn tangram puzzles and practice creating shapes using tangram pieces Measure by iterating length units ",
+          "Develop a strategic plan to achieve your goals with clear milestones.",
+      },
+      {
+        title: "Regular Check-Ins:",
+        caption:
+          "Monitor your progress and make adjustments with ongoing support from mentors.",
       },
     ],
   },
@@ -80,28 +75,24 @@ const PhaseCardData = [
     primaryImage: phaseTwo,
     features: [
       {
-        icon: iconOne,
-        title: "Number Sense and Operations",
+        title: "Tailored Learning Paths",
         caption:
-          "Fluently compose and decompose numbers within 10 Understand addition and subtraction within 10",
+          "Follow a curriculum customized to your chosen field and goals.",
       },
       {
-        icon: iconTwo,
-        title: "Geometry",
+        title: "Expert Instruction",
         caption:
-          "Recognize 2D and 3D shapes Identify defining attributes of shapes (edges, vertices, cross sections, nets, etc.)",
+          "Benefit from the knowledge and experience of our seasoned faculty.",
       },
       {
-        icon: iconThree,
-        title: "Logic and Patterns",
+        title: "Hands-On Experience",
         caption:
-          "Use analogical reasoning to solve Sudoku puzzles and understand the concept of cycles",
+          "Engage in practical projects and real-world applications.",
       },
       {
-        icon: iconFour,
-        title: "Problem Solving",
+        title: "Career Guidanc",
         caption:
-          "Learn tangram puzzles and practice creating shapes using tangram pieces Measure by iterating length units ",
+          "Get professional advice and support through our career counseling services.",
       },
     ],
   },
@@ -110,178 +101,167 @@ const PhaseCardData = [
     primaryImage: phaseFour,
     features: [
       {
-        icon: iconOne,
-        title: "Number Sense and Operations",
+        title: "Goal Achievement:",
         caption:
-          "Fluently compose and decompose numbers within 10 Understand addition and subtraction within 10",
+          "Follow a structured path to reach your professional goals.",
       },
       {
-        icon: iconTwo,
-        title: "Geometry",
+        title: "Ongoing Mentorship:",
         caption:
-          "Recognize 2D and 3D shapes Identify defining attributes of shapes (edges, vertices, cross sections, nets, etc.)",
+          "Receive continuous support and guidance from experienced mentors.",
       },
       {
-        icon: iconThree,
-        title: "Logic and Patterns",
+        title: "Success Tracking",
         caption:
-          "Use analogical reasoning to solve Sudoku puzzles and understand the concept of cycles",
+          " Monitor your progress and celebrate milestones along the way.",
       },
       {
-        icon: iconFour,
-        title: "Problem Solving",
+        title: "Skill Refinement",
         caption:
-          "Learn tangram puzzles and practice creating shapes using tangram pieces Measure by iterating length units ",
+          "Refine your skills with targeted feedback and advanced resources.",
+      },
+      {
+        title: "Career Advancement",
+        caption:
+          "Access exclusive opportunities for career growth and development.",
       },
     ],
   },
 ];
 
 export default function HowItsWorks() {
+  const sectionRef = useRef(null);
   const [currentPhase, setCurrentPhase] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+
+  const phaseRefs = useRef([]);
+
+  useEffect(() => {
+    const observerOptions = {
+      threshold: 0.5,
+    };
+
+    const observers = PhaseCardData.map((_, index) => {
+      const ref = phaseRefs.current[index];
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setIsTransitioning(true);
+            setTimeout(() => {
+              setCurrentPhase(index);
+              setIsTransitioning(false);
+            }, 0); // Adjust this duration to match your transition duration
+          }
+        },
+        observerOptions
+      );
+      if (ref) observer.observe(ref);
+
+      return observer;
+    });
+
+    return () => {
+      observers.forEach((observer) => observer.disconnect());
+    };
+  }, []);
+
+  const phaseLabel = [
+    "Explore Your Pathways",
+    "Set Your Goals",
+    "Navigate to Your Goals",
+    "Achieve Your Goals",
+  ];
+
   return (
     <div id="howitswork" className="flex flex-col">
-      <svg
-        width="1280"
-        height="197"
-        viewBox="0 0 1280 197"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        className="w-full h-full hidden md:block translate-y-[8.7rem]"
-      >
-        <path
-          d="M-30 90C-30 76.7452 -19.2548 66 -6 66H640H938.473C946.322 66 953.675 62.1622 958.163 55.723L989.837 10.277C994.325 3.83784 1001.68 0 1009.53 0L1286 0C1299.25 0 1310 10.7452 1310 24V173C1310 186.255 1299.25 197 1286 197H-6.00004C-19.2549 197 -30 186.255 -30 173V90Z"
-          fill="#010101"
-        />
-      </svg>
-      <svg
-        width="390"
-        height="228"
-        viewBox="0 0 390 228"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        className="w-full h-full block md:hidden translate-y-[11.5rem]"
-      >
-        <path
-          d="M-15 47.4823C-15 37.5411 -6.94112 29.4822 3 29.4822H115H184.13C190.015 29.4822 195.528 26.6059 198.894 21.7794L208.712 7.70285C212.078 2.87633 217.591 0 223.476 0H386C395.941 0 404 8.05887 404 18V210C404 219.941 395.941 228 386 228H3.00001C-6.94112 228 -15 219.941 -15 210V47.4823Z"
-          fill="#010101"
-        />
-      </svg>
-
+      {/* SVG Backgrounds */}
       <div className="bg-black font-archivo flex flex-col z-10 items-center min-h-screen">
         <div className="flex flex-col items-center gap-3 md:gap-6 my-12 mx-16 text-center">
-          <div className="text-center flex flex-col justify-center mx-auto items-center gap-4 top-0 sticky z-50 bg-black mb-14 rounded-2xl ">
+          <div className="text-center flex flex-col justify-center mx-auto items-center gap-4 top-0 sticky z-50 bg-black mb-14 rounded-2xl">
             <span className="text-white font-medium tracking-wide text-2xl md:text-5xl">
-              How Knowlumi Revolutionizes Engineering Education !
+              How Knowlumi Revolutionizes Engineering Education!
             </span>
             <span className="font-medium text-center text-white">
-              Build Your Dream Career with Our AI-Powered Parallel Education
-              System
+              Build Your Dream Career with Our AI-Powered Parallel Education System
             </span>
             <div className="flex mt-4 mb-4">
               {Array.from({ length: 4 }).map((_, index) => (
-                <React.Fragment>
-                <div className=" flex flex-col items-center">
-                <button
-                  key={index}
-                  className={`p-3 text-center  border-red-500 border border-b-0 transition-colors duration-300 
-                  ${index === 0  && "rounded-l-3xl" || index === 3 && "rounded-r-3xl"}
-                  ${currentPhase === index ? "bg-[#FF6D25] text-white" : "bg-white text-[#FF6D25]"
-                  }`}
-                >
-                  <span className="text-lg font-bold">Phase {index + 1}</span>{" "}
-                  <br />
-                  <span className="text-sm">Explore your path ways</span>
-                </button>
-                <IoMdArrowDropdown className={`relative bottom-2 text-2xl  ${currentPhase === index ? "text-[#FF6D25] " : "text-black"}` } />
+                <div key={index} className="flex flex-col items-center">
+                  <button
+                    className={`p-3 text-center border-red-500 border border-b-0 transition-colors duration-300 
+                      ${index === 0 ? "rounded-l-3xl" : index === 3 ? "rounded-r-3xl" : ""}
+                      ${currentPhase === index ? "bg-[#FF6D25] text-white" : "bg-white text-[#FF6D25]"}`}
+                  >
+                    <span className="text-lg font-bold">Phase {index + 1}</span>
+                    <br />
+                    <span className="text-sm">{phaseLabel[index]}</span>
+                  </button>
+                  <IoMdArrowDropdown
+                    className={`relative bottom-2 text-2xl ${
+                      currentPhase === index ? "text-[#FF6D25]" : "text-black"
+                    }`}
+                  />
                 </div>
-                </React.Fragment>
               ))}
             </div>
           </div>
 
-          <div className="relative  top-0 space-y-48  z-0 ">
-            {PhaseCardData.map((data, index) => (
-              <PhaseCard
-                features={data.features}
-                primaryImage={data.primaryImage}
+          <div className="relative z-0">
+            <div className="sticky top-56">
+              <div
+                className={`transition-opacity duration-300 ${
+                  isTransitioning ? "opacity-0" : "opacity-100"
+                }`}
+              >
+                <PhaseCard
+                  features={PhaseCardData[currentPhase].features}
+                  primaryImage={PhaseCardData[currentPhase].primaryImage}
+                />
+              </div>
+            </div>
+            {PhaseCardData.map((_, index) => (
+              <div
                 key={index}
-                index={index}
-                setCurrentPhase={setCurrentPhase}
-                className="snap-center bg-fixed"
-              />
+                ref={(el) => (phaseRefs.current[index] = el)}
+                className="h-screen"
+              ></div>
             ))}
           </div>
         </div>
       </div>
-      {/* <svg
-        width="1280"
-        height="197"
-        viewBox="0 0 1280 197"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        className="w-full h-full hidden md:block -translate-y-[8.7rem] rotate-180"
-      >
-        <path
-          d="M-30 90C-30 76.7452 -19.2548 66 -6 66H640H938.473C946.322 66 953.675 62.1622 958.163 55.723L989.837 10.277C994.325 3.83784 1001.68 0 1009.53 0L1286 0C1299.25 0 1310 10.7452 1310 24V173C1310 186.255 1299.25 197 1286 197H-6.00004C-19.2549 197 -30 186.255 -30 173V90Z"
-          fill="#010101"
-        />
-      </svg>
-      <svg
-        width="390"
-        height="228"
-        viewBox="0 0 390 228"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        className="w-full h-full block md:hidden -translate-y-[11.5rem] rotate-180"
-      >
-        <path
-          d="M-15 47.4823C-15 37.5411 -6.94112 29.4822 3 29.4822H115H184.13C190.015 29.4822 195.528 26.6059 198.894 21.7794L208.712 7.70285C212.078 2.87633 217.591 0 223.476 0H386C395.941 0 404 8.05887 404 18V210C404 219.941 395.941 228 386 228H3.00001C-6.94112 228 -15 219.941 -15 210V47.4823Z"
-          fill="#010101"
-        />
-      </svg> */}
     </div>
   );
 }
 
-const PhaseCard = ({ primaryImage, features, index, setCurrentPhase }) => {
-  const [ref, inView] = useInView({
-    threshold: 0.5,
-  });
-
-  useEffect(() => {
-    if (inView) {
-      setCurrentPhase(index);
-    }
-  }, [inView, index, setCurrentPhase]);
-
+const PhaseCard = ({ primaryImage, features }) => {
   return (
     <div
-      ref={ref}
       style={{
         background: "linear-gradient(125.65deg, #FAFAFA 0.81%, #FFDFDF 100%)",
         borderRadius: "176.08px 26.41px 26.41px 26.41px",
       }}
-      className="min-h-80 w-full max-w-4xl p-2 grid lg:flex items-center"
+      className="min-h-[550px] w-full max-w-5xl p-8 grid lg:flex items-center gap-6 lg:gap-12"
     >
       <div className="lg:w-1/2">
         <img
           src={primaryImage}
           alt="Phase illustration"
-          className="w-full h-72 object-contain"
+          className="w-full h-80 object-contain rounded-xl" // Adjusted for a consistent image size
         />
       </div>
-      <div className="flex flex-col gap-y-6 items-start lg:w-1/2">
+      <div className="flex flex-col gap-6 lg:w-1/2">
         {features.map((data, featureIndex) => (
-          <div key={featureIndex} className="flex gap-4 items-start">
+          <div key={featureIndex} className="flex gap-6 items-start">
             <img
-              src={data.icon}
+              src={iconFour} // Updated to use the correct icon for each feature
               alt={`Icon for ${data.title}`}
-              className="w-12 h-12"
+              className="w-10 h-10 rounded-full rotate-90"
             />
             <div className="flex flex-col items-start">
-              <h3 className="font-bold text-xl">{data.title}</h3>
-              <span className="text-left my-2 text-[#252525B2]">
+              <h3 className="font-semibold text-lg text-gray-800">
+                {data.title}
+              </h3>
+              <span className="text-md text-gray-600 text-left leading-relaxed">
                 {data.caption}
               </span>
             </div>
