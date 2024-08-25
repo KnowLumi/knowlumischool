@@ -13,6 +13,7 @@ import iconOne from "../assets/icon1.png";
 import iconTwo from "../assets/icon2.png";
 import iconThree from "../assets/icon3.png";
 import iconFour from "../assets/icon4.png";
+import { IoMdArrowDropdown } from "react-icons/io";
 
 const PhaseCardData = [
   {
@@ -177,20 +178,24 @@ export default function HowItsWorks() {
               Build Your Dream Career with Our AI-Powered Parallel Education
               System
             </span>
-            <div className="flex mt-4 space-x-2">
+            <div className="flex mt-4 ">
               {Array.from({ length: 4 }).map((_, index) => (
+                <React.Fragment>
+                <div className=" flex flex-col items-center">
                 <button
                   key={index}
-                  className={`p-3 text-center first:rounded-l-3xl last:rounded-r-3xl border-red-500 border transition-colors duration-300 ${
-                    currentPhase === index
-                      ? "bg-[#FF6D25] text-white"
-                      : "bg-white text-[#FF6D25]"
+                  className={`p-3 text-center  border-red-500 border border-b-0 transition-colors duration-300 
+                  ${index === 0  && "rounded-l-3xl" || index === 3 && "rounded-r-3xl"}
+                  ${currentPhase === index ? "bg-[#FF6D25] text-white" : "bg-white text-[#FF6D25]"
                   }`}
                 >
                   <span className="text-lg font-bold">Phase {index + 1}</span>{" "}
                   <br />
                   <span className="text-sm">Explore your path ways</span>
                 </button>
+                <IoMdArrowDropdown className={`relative bottom-2 text-2xl  ${currentPhase === index ? "text-[#FF6D25] " : "text-white"}` } />
+                </div>
+                </React.Fragment>
               ))}
             </div>
           </div>
