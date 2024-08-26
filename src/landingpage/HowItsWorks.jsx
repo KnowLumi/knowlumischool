@@ -125,6 +125,13 @@ const PhaseCardData = [
   },
 ];
 
+const phaseLabel = [
+  "Explore Your Pathways",
+  "Set Your Goals",
+  "Navigate to Your Goals",
+  "Achieve Your Goals",
+];
+
 export default function HowItsWorks() {
   const sectionRef = useRef(null);
   const [currentPhase, setCurrentPhase] = useState(0);
@@ -158,12 +165,7 @@ export default function HowItsWorks() {
     };
   }, []);
 
-  const phaseLabel = [
-    "Explore Your Pathways",
-    "Set Your Goals",
-    "Navigate to Your Goals",
-    "Achieve Your Goals",
-  ];
+
 
   return (
     <div id="howitswork" className="flex flex-col">
@@ -218,6 +220,7 @@ export default function HowItsWorks() {
             {PhaseCardData.map((data, index) => (
               <PhaseCard
                 key={index}
+                index={index}
                 features={data.features}
                 primaryImage={data.primaryImage}
               />
@@ -251,7 +254,7 @@ export default function HowItsWorks() {
   );
 }
 
-const PhaseCard = ({ primaryImage, features }) => {
+const PhaseCard = ({ primaryImage, features,index }) => {
   return (
     <div
       style={{
@@ -261,6 +264,10 @@ const PhaseCard = ({ primaryImage, features }) => {
       className="min-h-[550px] w-full max-w-5xl p-8 grid lg:flex items-center gap-0 lg:gap-3"
     >
       <div className="lg:w-1/2">
+        <div className="flex lg:hidden flex-col items-end mb-4">
+          <h3>Phase {index+1}</h3>
+          <h3 className="font-bold text-lg">{phaseLabel[index]}</h3>
+        </div>
         <img
           src={primaryImage}
           alt="Phase illustration"
