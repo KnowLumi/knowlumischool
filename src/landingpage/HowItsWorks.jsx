@@ -10,6 +10,8 @@ import iconOne from "../assets/icon1.png";
 import iconTwo from "../assets/icon2.png";
 import iconThree from "../assets/icon3.png";
 import iconFour from "../assets/icon4.png";
+import { MdHdrStrong } from "react-icons/md";
+import { Button } from "@material-tailwind/react";
 
 const PhaseCardData = [
   {
@@ -170,7 +172,14 @@ export default function HowItsWorks() {
   return (
     <div id="howitswork" className="flex flex-col">
       {/* SVG Backgrounds */}
+      
       <div className="bg-black font-archivo flex flex-col z-10 items-center min-h-screen">
+      <div className="flex items-center justify-center mt-4">
+        <Button className="flex justify-around items-center gap-2 font-archivo text-sm md:text-lg text-[#01010199] bg-[#F7F7F7] border border-[#01010108] rounded-full tracking-wider px-4 py-2">
+          <MdHdrStrong className="w-4 h-4 p-0 text-[#88DB1B]" />
+          How It's Work
+        </Button>
+      </div>
         <div className="flex flex-col items-center gap-3 md:gap-6 lg:my-12 p-2 lg:mx-16 text-center">
           <div className="text-center flex flex-col justify-center mx-auto items-center gap-4 top-0 lg:sticky z-50 bg-black mb-14 rounded-2xl">
             <span className="text-white font-medium tracking-wide text-2xl md:text-5xl">
