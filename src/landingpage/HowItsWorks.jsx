@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { IoMdArrowDropdown } from "react-icons/io";
 
-
 import phaseOne from "../assets/phase1.png";
 import phaseTwo from "../assets/phase2.png";
 import phaseThree from "../assets/phase3.png";
@@ -11,7 +10,6 @@ import iconOne from "../assets/icon1.png";
 import iconTwo from "../assets/icon2.png";
 import iconThree from "../assets/icon3.png";
 import iconFour from "../assets/icon4.png";
-
 
 const PhaseCardData = [
   {
@@ -23,7 +21,7 @@ const PhaseCardData = [
           "Utilize our AI-powered platform to identify your area of interest and passion.",
       },
       {
-        title: "ntroduction to Various Fields",
+        title: "Introduction to Various Fields",
         caption:
           "Explore careers in corporate roles, startups, higher studies, civil services, and more.",
       },
@@ -86,8 +84,7 @@ const PhaseCardData = [
       },
       {
         title: "Hands-On Experience",
-        caption:
-          "Engage in practical projects and real-world applications.",
+        caption: "Engage in practical projects and real-world applications.",
       },
       {
         title: "Career Guidanc",
@@ -102,8 +99,7 @@ const PhaseCardData = [
     features: [
       {
         title: "Goal Achievement:",
-        caption:
-          "Follow a structured path to reach your professional goals.",
+        caption: "Follow a structured path to reach your professional goals.",
       },
       {
         title: "Ongoing Mentorship:",
@@ -143,18 +139,15 @@ export default function HowItsWorks() {
 
     const observers = PhaseCardData.map((_, index) => {
       const ref = phaseRefs.current[index];
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) {
-            setIsTransitioning(true);
-            setTimeout(() => {
-              setCurrentPhase(index);
-              setIsTransitioning(false);
-            }, 0); // Adjust this duration to match your transition duration
-          }
-        },
-        observerOptions
-      );
+      const observer = new IntersectionObserver(([entry]) => {
+        if (entry.isIntersecting) {
+          setIsTransitioning(true);
+          setTimeout(() => {
+            setCurrentPhase(index);
+            setIsTransitioning(false);
+          }, 0); // Adjust this duration to match your transition duration
+        }
+      }, observerOptions);
       if (ref) observer.observe(ref);
 
       return observer;
@@ -176,25 +169,40 @@ export default function HowItsWorks() {
     <div id="howitswork" className="flex flex-col">
       {/* SVG Backgrounds */}
       <div className="bg-black font-archivo flex flex-col z-10 items-center min-h-screen">
-        <div className="flex flex-col items-center gap-3 md:gap-6 my-12 mx-16 text-center">
-          <div className="text-center flex flex-col justify-center mx-auto items-center gap-4 top-0 sticky z-50 bg-black mb-14 rounded-2xl">
+        <div className="flex flex-col items-center gap-3 md:gap-6 lg:my-12 p-2 lg:mx-16 text-center">
+          <div className="text-center flex flex-col justify-center mx-auto items-center gap-4 top-0 lg:sticky z-50 bg-black mb-14 rounded-2xl">
             <span className="text-white font-medium tracking-wide text-2xl md:text-5xl">
               How Knowlumi Revolutionizes Engineering Education!
             </span>
             <span className="font-medium text-center text-white">
-              Build Your Dream Career with Our AI-Powered Parallel Education System
+              Build Your Dream Career with Our AI-Powered Parallel Education
+              System
             </span>
-            <div className="flex mt-4 mb-4">
+            <div className="hidden lg:flex mt-4">
               {Array.from({ length: 4 }).map((_, index) => (
                 <div key={index} className="flex flex-col items-center">
                   <button
                     className={`p-3 text-center border-red-500 border border-b-0 transition-colors duration-300 
-                      ${index === 0 ? "rounded-l-3xl" : index === 3 ? "rounded-r-3xl" : ""}
-                      ${currentPhase === index ? "bg-[#FF6D25] text-white" : "bg-white text-[#FF6D25]"}`}
+                      ${
+                        index === 0
+                          ? "rounded-l-3xl"
+                          : index === 3
+                          ? "rounded-r-3xl"
+                          : ""
+                      }
+                      ${
+                        currentPhase === index
+                          ? "bg-[#FF6D25] text-white"
+                          : "bg-white text-[#FF6D25]"
+                      }`}
                   >
-                    <span className="text-lg font-bold">Phase {index + 1}</span>
+                    <span className="text-sm lg:text-lg font-bold">
+                      Phase {index + 1}
+                    </span>
                     <br />
-                    <span className="text-sm">{phaseLabel[index]}</span>
+                    <span className="text-xs lg:text-sm">
+                      {phaseLabel[index]}
+                    </span>
                   </button>
                   <IoMdArrowDropdown
                     className={`relative bottom-2 text-2xl ${
@@ -206,8 +214,18 @@ export default function HowItsWorks() {
             </div>
           </div>
 
-          <div className="relative z-0">
-            <div className="sticky top-56">
+          <div className="lg:hidden grid gap-3">
+            {PhaseCardData.map((data, index) => (
+              <PhaseCard
+                key={index}
+                features={data.features}
+                primaryImage={data.primaryImage}
+              />
+            ))}
+          </div>
+
+          <div className="relative z-0 lg:block hidden">
+            <div className="sticky top-64">
               <div
                 className={`transition-opacity duration-300 ${
                   isTransitioning ? "opacity-0" : "opacity-100"
@@ -223,7 +241,7 @@ export default function HowItsWorks() {
               <div
                 key={index}
                 ref={(el) => (phaseRefs.current[index] = el)}
-                className="h-screen"
+                className="min-h-screen"
               ></div>
             ))}
           </div>
@@ -240,16 +258,16 @@ const PhaseCard = ({ primaryImage, features }) => {
         background: "linear-gradient(125.65deg, #FAFAFA 0.81%, #FFDFDF 100%)",
         borderRadius: "176.08px 26.41px 26.41px 26.41px",
       }}
-      className="min-h-[550px] w-full max-w-5xl p-8 grid lg:flex items-center gap-6 lg:gap-12"
+      className="min-h-[550px] w-full max-w-5xl p-8 grid lg:flex items-center gap-0 lg:gap-3"
     >
       <div className="lg:w-1/2">
         <img
           src={primaryImage}
           alt="Phase illustration"
-          className="w-full h-80 object-contain rounded-xl" // Adjusted for a consistent image size
+          className="w-full h-40 lg:h-80 object-contain rounded-xl " // Adjusted for a consistent image size
         />
       </div>
-      <div className="flex flex-col gap-6 lg:w-1/2">
+      <div className="flex flex-col lg:gap-2 lg:w-96">
         {features.map((data, featureIndex) => (
           <div key={featureIndex} className="flex gap-6 items-start">
             <img
@@ -257,8 +275,8 @@ const PhaseCard = ({ primaryImage, features }) => {
               alt={`Icon for ${data.title}`}
               className="w-10 h-10 rounded-full rotate-90"
             />
-            <div className="flex flex-col items-start">
-              <h3 className="font-semibold text-lg text-gray-800">
+            <div className="flex  flex-col items-start">
+              <h3 className="font-semibold text-lg text-gray-800 text-left">
                 {data.title}
               </h3>
               <span className="text-md text-gray-600 text-left leading-relaxed">
