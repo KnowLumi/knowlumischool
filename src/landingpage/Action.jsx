@@ -1,12 +1,11 @@
 import "./landing.css";
 import { MdArrowForward } from "react-icons/md";
 import { AiOutlineDoubleRight } from "react-icons/ai";
-import { BsDiscord, BsWhatsapp } from "react-icons/bs";
+import { BsWhatsapp } from "react-icons/bs";
 import { Avatar } from "@material-tailwind/react";
 import actionbottom from "../assets/action_bottom.png";
 import "./animations.css";
 import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
 const Action = () => {
 
   const navigate = useNavigate()
