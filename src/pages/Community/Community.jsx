@@ -9,6 +9,10 @@ import CommunityPrepare from "./CommunityPrepare";
 import ScrollToTop from "../../ScrollToTop";
 
 const Community = () => {
+  useEffect(() => {
+    console.log("Mounted")
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  },[])
 
   return (
     <>

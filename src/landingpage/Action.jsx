@@ -98,14 +98,14 @@ const Action = () => {
               </p>
             </div>
             <div className="flex flex-col md:flex-row gap-8 mt-5">
-              <Link to={"/community"} className="flex items-center w-fit bg-white rounded-full py-1 pr-1 pl-6 gap-2 border border-[#01010126]">
+              <a href="/community" className="flex items-center w-fit bg-white rounded-full py-1 pr-1 pl-6 gap-2 border border-[#01010126]">
                 <span className="text-sm font-medium text-black">
                   Join Our community
                 </span>
                 <i className="flex w-8 h-8 -rotate-45 text-white border border-[#0101010D] bg-[#88DB1B] justify-center items-center rounded-full">
                   <MdArrowForward />
                 </i>
-              </Link>
+              </a>
               <div className="flex items-center gap-3.5">
                 <div className="flex items-center -space-x-2">
                   {new Array(3).fill("").map((_, i) => (
