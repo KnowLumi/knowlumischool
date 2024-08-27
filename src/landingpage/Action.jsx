@@ -5,7 +5,14 @@ import { BsDiscord, BsWhatsapp } from "react-icons/bs";
 import { Avatar } from "@material-tailwind/react";
 import actionbottom from "../assets/action_bottom.png";
 import "./animations.css";
+import { useNavigate } from "react-router-dom";
 const Action = () => {
+
+  const navigate = useNavigate()
+  const navigateTOCommunity = () => {
+    navigate("/community")
+    window.scrollTo(0,0)
+  }
   return (
     <div className="flex flex-col-reverse md:flex-col w-full mb-12 items-center font-archivo">
       <img
@@ -90,7 +97,7 @@ const Action = () => {
               </p>
             </div>
             <div className="flex flex-col md:flex-row gap-8 mt-5">
-              <button className="flex items-center w-fit bg-white rounded-full py-1 pr-1 pl-6 gap-2 border border-[#01010126]">
+              <button onClick={navigateTOCommunity} className="flex items-center w-fit bg-white rounded-full py-1 pr-1 pl-6 gap-2 border border-[#01010126]">
                 <span className="text-sm font-medium text-black">
                   Join Our community
                 </span>

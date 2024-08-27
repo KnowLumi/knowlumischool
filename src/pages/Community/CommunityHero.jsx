@@ -1,6 +1,10 @@
 import React from "react";
+import { useEffect } from "react";
 
 export default function CommunityHero() {
+  useEffect(() => {
+    window.scrollTo(0,0)
+  },[])
   return (
     <div className="min-h-screen lg:flex grid gap-y-40 items-center justify-center w-full lg:px-16 p-3">
       <div className="w-full">

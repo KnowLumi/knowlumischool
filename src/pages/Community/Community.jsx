@@ -1,3 +1,4 @@
+import { useEffect } from "react"
 import Footer from "../../landingpage/Footer"
 import Navigation from "../../landingpage/Navigation"
 import CommunityAdvance from "./CommunityAdvance"
@@ -8,6 +9,9 @@ import CommunityPrepare from "./CommunityPrepare"
 
 
 const Community = () => {
+  useEffect(() => {
+    window.scrollTo(0,0)
+  },[])
   return (
     <>
       <Navigation/>
