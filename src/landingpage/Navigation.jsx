@@ -5,7 +5,7 @@ import { Context } from "../App";
 import { RxCross1 } from "react-icons/rx";
 import { FaArrowRight } from "react-icons/fa6";
 import { pages } from "./landing_helpers";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink, Link, useNavigate } from "react-router-dom";
 import logo1 from "/Images/logo.png";
 import NavMenu from "../Navigation/NavMenu";
 
@@ -14,15 +14,24 @@ const Navigation = () => {
   const openDrawer = () => setOpen(true);
   const closeDrawer = () => setOpen(false);
   const [signedIn] = useContext(Context);
+  const navigate = useNavigate();
+
+  const handleExploreClick = () => {
+    if (window.location.pathname !== "/") {
+      navigate("/");
+      setTimeout(() => {
+        document.getElementById("explore")?.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    } else {
+      document.getElementById("explore")?.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <nav
-      className={`flex justify-between fixed z-50 bg-[#FEFEFE] items-center w-full py-3 md:py-2.5 px-3 md:px-12 font-archivo border-b-2`}
-    >
-      <Link to="/"><img
-        src={logo1}
-        alt=""
-        className="object-cover w-56"
-      /></Link>
+    <nav className="flex justify-between fixed z-50 bg-[#FEFEFE] items-center w-full py-3 md:py-2.5 px-3 md:px-12 font-archivo border-b-2">
+      <Link to="/">
+        <img src={logo1} alt="" className="object-cover w-56" />
+      </Link>
       <ul className="md:flex gap-8 items-center hidden">
         {pages.map((page, index) => (
           <li key={index}>
@@ -49,10 +58,10 @@ const Navigation = () => {
                 My Learning
               </span>
             ) : (
-              <button onClick={ () => window.location.replace("#explore")}>
+              <button onClick={handleExploreClick}>
                 <span className="font-medium text-xs">
-                Explore&nbsp;<span className="lowercase"> our programs</span>
-              </span>
+                  Explore&nbsp;<span className="lowercase">our programs</span>
+                </span>
               </button>
             )}
 
