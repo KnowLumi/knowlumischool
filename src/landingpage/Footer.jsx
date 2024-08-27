@@ -17,7 +17,7 @@ import "./landing.css";
 import { Button } from "@material-tailwind/react";
 const Footer = () => {
   return (
-    <div className="w-full flex flex-col font-archivo">
+    <div id="contact" className="w-full flex flex-col font-archivo">
       <div className="w-full flex justify-end">
         <img
           src={footer}
@@ -104,8 +104,7 @@ export default Footer;
 const footerLinks = [
   { label: "Home", path: "" },
   { label: "Programs", path: "#explore" },
-  { label: "Courses", path: "" },
   { label: "How Knowlumi works", path: "#howitswork" },
   { label: "Privacy Policy", path: "" },
-  { label: "Contact Us", path: "" }
+  { label: "Contact Us", path: "#contact" }
 ];
