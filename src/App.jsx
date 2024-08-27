@@ -32,6 +32,7 @@ import Program from "./landingpage/Program";
 import NavMenu from "./Navigation/NavMenu";
 import Footer from "./landingpage/Footer";
 import Navigation from "./landingpage/Navigation";
+import CommingSoon from "./pages/CommingSoon/CommingSoon";
 
 export const Context = createContext();
 
@@ -69,7 +70,9 @@ function App() {
             <Route path="/community" element={<Community />} />
             {/* <Route path="/refer&earn" element={<Earn />} /> */}
             <Route path="/all-courses" element={<AllCourses />} />
-            <Route path="/signin" element={<OtpPage />} />
+            {/* <Route path="/signin" element={<OtpPage />} /> */}
+            <Route path="/signin" element={<CommingSoon/>} />
+
             <Route path="/fundamentals" element={<Fundamentals />} />
             <Route path="/track" element={<Track />} />
             <Route path="/progress" element={<Progress />} />
