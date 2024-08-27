@@ -61,6 +61,7 @@ const Enroll = () => {
                 </div>
               </div>
             </div>
+            <a href="#explore">
             <div className="enroll2 bg-cover md:bg-contain mt-3 translate-x-2 bg-no-repeat w-[148px] rounded-lg md:w-[29rem] h-8 md:h-16 hidden md:flex justify-around items-center">
               <div className="text-white flex font-bold tracking-wide text-xs md:text-lg">
                 <span className="">ENROLL NOW&nbsp;</span>
@@ -68,6 +69,7 @@ const Enroll = () => {
               </div>
               <IoArrowForwardSharp className="text-white -rotate-45 h-6 w-6" />
             </div>
+            </a>
           </div>
         </div>
       </div>

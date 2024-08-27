@@ -35,7 +35,7 @@ const FaqSection = () => {
       <span className="font-archivo font-bold text-xl text-black opacity-60 mb-3">
         Any Queries?
       </span>
-      <span className="font-archivo font-semibold text-3xl tracking-widest w-full">
+      <span className="font-archivo font-semibold text-3xl tracking-widest w-full text-center">
         Frequently Asked Questions
       </span>
       <div className="my-12">
