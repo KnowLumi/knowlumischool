@@ -199,7 +199,7 @@ export default function HowItsWorks() {
         />
       </svg>
       <div className="bg-black font-archivo flex flex-col z-10 items-center min-h-screen">
-      <div className="flex items-center justify-center mt-4">
+      <div className="flex items-center justify-center mt-12">
         <Button className="flex justify-around items-center gap-2 font-archivo text-sm md:text-lg text-[#01010199] bg-[#F7F7F7] border border-[#01010108] rounded-full tracking-wider px-4 py-2">
           <MdHdrStrong className="w-4 h-4 p-0 text-[#88DB1B]" />
           How It's Work
