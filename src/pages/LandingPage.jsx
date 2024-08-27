@@ -15,7 +15,6 @@ import Navigation from "../landingpage/Navigation";
 import Recognized from "../landingpage/Recognized";
 import HandPickedTitles from "./HandPickedTitles";
 import HowItsWorks from "../landingpage/HowItsWorks";
-import { TracingBeamDemo } from "../landingpage/TracingBeamDemo";
 
 const LandingPage = () => {
 

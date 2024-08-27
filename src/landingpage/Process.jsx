@@ -14,7 +14,7 @@ import "./landing.css";
 import "./Process_Components/process.css"
 import cash from "./Process_svg/cash.png";
 import { processSvg } from "./landing_helpers";
-import { TracingBeamDemo } from "./TracingBeamDemo";
+
 
 const Process = forwardRef(({ scrollToIncluded }, ref) => {
 
@@ -93,7 +93,6 @@ const Process = forwardRef(({ scrollToIncluded }, ref) => {
                 <div
                   className="flex flex-col"
                 >
-                  {/* <TracingBeamDemo/> */}
                   <Learning />
                   <CommunityEngagement />
                   <PlacementAssistance />

@@ -1,6 +1,6 @@
 import { createContext, useState, useRef, useEffect } from "react";
 import About from "./landingpage/About";
-import Community from "./pages/Community";
+import Community from "./pages/Community/Community";
 import LandingPage from "./pages/LandingPage";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Earn from "./pages/Earn";
