@@ -49,11 +49,11 @@ const Navigation = () => {
                 My Learning
               </span>
             ) : (
-              <a href="#explore">
+              <button onClick={ () => window.location.replace("#explore")}>
                 <span className="font-medium text-xs">
                 Explore&nbsp;<span className="lowercase"> our programs</span>
               </span>
-              </a>
+              </button>
             )}
 
             {signedIn ? (
