@@ -26,7 +26,7 @@ export default function CommunityHero() {
       <div className="w-full">
         <img
           src="/Images/community-hero.png"
-          className="object-contain"
+          className="h-auto w-auto"
           alt="Illustation of four friends"
         />
       </div>
