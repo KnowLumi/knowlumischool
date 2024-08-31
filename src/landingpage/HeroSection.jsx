@@ -68,7 +68,7 @@ const HeroSection = ({ scrollToIncluded }) => {
             <MdArrowForward size={20} className="text-white icon" />
           </i>
         </Button>
-        <div className="flex flex-col md:flex-row mt-6 justify-between items-center gap-6 md:gap-12">
+        {/* <div className="flex flex-col md:flex-row mt-6 justify-between items-center gap-6 md:gap-12">
   <div className="flex flex-col items-center text-center text-xl md:text-3xl ">
     <h1 className="font-bold">Colleges</h1>
     <h1 className="text-2xl md:text-4xl text-[#88DB1B]">100+</h1>
@@ -81,7 +81,7 @@ const HeroSection = ({ scrollToIncluded }) => {
     <h1 className="font-bold">Chapters</h1>
     <h1 className="text-2xl md:text-4xl text-[#88DB1B]">50+</h1>
   </div>
-</div>
+</div> */}
 
         <span className="hidden z-20 md:block mt-5 text-[7.5rem] font-medium text-[#ECECEC]">
           KnowLumi
