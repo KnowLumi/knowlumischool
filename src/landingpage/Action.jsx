@@ -14,7 +14,7 @@ const Action = () => {
     window.scrollTo(0,0)
   }
   return (
-    <div className="flex flex-col-reverse md:flex-col w-full mb-12 items-center font-archivo">
+    <div className="flex flex-col-reverse md:flex-col w-full mb-12 items-center font-archivo mt-24">
       <img
         src={actionbottom}
         className="w-80 block md:hidden -translate-y-5"

@@ -46,7 +46,7 @@ const LandingPage = () => {
         {/* <Program scrollToIncluded={scrollToIncluded} /> */}
        
         {/* <Process ref={processRef} /> */}
-        <Testimonials />
+        {/* <Testimonials /> */}
         <Action />
         <WhyKnowLumi scrollToIncluded={scrollToIncluded} />
         {/* <Included ref={includedRef} /> */}
