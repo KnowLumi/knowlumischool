@@ -1,5 +1,6 @@
 import { FaPhoneAlt } from "react-icons/fa";
 import aboutbar from "../assets/about_bar1.png";
+import image_one from "../assets/hero_img_1.jpg"
 import { Button } from "@material-tailwind/react";
 import {
   MdArrowForward,
@@ -53,7 +54,7 @@ function HandPickedTitles() {
             <div className="relative overflow-hidden h-full rounded-2xl transition duration-200 group bg-white hover:shadow-xl border border-zinc-100">
               <div className="w-full aspect-w-16 aspect-h-10 bg-gray-100 rounded-tr-lg rounded-tl-lg overflow-hidden xl:aspect-w-16 xl:aspect-h-10 relative">
                 <img
-                  src={blogContent.image}
+                  src={image_one}
                   alt="thumbnail"
                   layout="fill"
                   objectFit="cover"
@@ -62,10 +63,10 @@ function HandPickedTitles() {
               </div>
               <div className="p-4">
                 <h2 className="font-bold text-lg text-zinc-700">
-                  {blogContent.title}
+                  {blogContent[0].title}
                 </h2>
                 <h2 className="font-normal text-sm text-zinc-500">
-                  {blogContent.description}
+                  {blogContent[0].description}
                 </h2>
                 <div className="flex items-center justify-center">
                   <Button className="rounded-full mt-6 bg-black flex items-center gap-3 capitalize font-archivo font-medium text-[16px] py-2 pr-2 pl-6 border border-gray-600 text-white">
