@@ -82,6 +82,8 @@ const HeroSection = ({ scrollToIncluded }) => {
     <h1 className="text-2xl md:text-4xl text-[#88DB1B]">50+</h1>
   </div>
 </div> */}
+{/* ! need to remove below div when above code un comment */}
+<div className="mt-6"/>
 
         <span className="hidden z-20 md:block mt-5 text-[7.5rem] font-medium text-[#ECECEC]">
           KnowLumi
