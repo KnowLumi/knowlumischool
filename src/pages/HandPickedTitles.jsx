@@ -6,6 +6,7 @@ import {
   MdHdrStrong,
   MdOutlinePhoneCallback,
 } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 function HandPickedTitles() {
   return (
@@ -82,15 +83,15 @@ function HandPickedTitles() {
 
       {/* Third Section */}
       <div className="flex flex-col md:flex-row flex-wrap items-center justify-center gap-3 mt-8 ">
-        {Array.from({ length: 3 }).map((_, index) => (
+        {blogContent.map((data, index) => (
           <div
             key={index}
-            className="w-full md:w-[28rem] lg:w-[26rem] mx-auto p-2 "
+            className="w-full md:w-[28rem] lg:w-[30rem] mx-auto p-2 "
           >
             <div className="relative overflow-hidden h-full rounded-2xl transition duration-200 group bg-white hover:shadow-xl hover:shadow-[#88DB1B] border border-[#88DB1B]">
               <div className="w-full aspect-w-16 aspect-h-10 bg-gray-100 rounded-tr-lg rounded-tl-lg overflow-hidden xl:aspect-w-16 xl:aspect-h-10 relative">
                 <img
-                  src={blogContent.image}
+                  src={data.image}
                   alt="thumbnail"
                   layout="fill"
                   objectFit="cover"
@@ -99,10 +100,10 @@ function HandPickedTitles() {
               </div>
               <div className="p-4">
                 <h2 className="font-bold text-lg text-zinc-700">
-                  {blogContent.title}
+                  {data.title}
                 </h2>
                 <h2 className="font-normal text-sm text-zinc-500">
-                  {blogContent.description}
+                  {data.description}
                 </h2>
                 <div className="flex flex-col md:flex-row gap-x-4 my-6 justify-center items-center">
                   <Button className="w-60 lg:w-auto md:w-72 rounded-full flex border border-black bg-white items-center justify-center gap-3 capitalize font-archivo font-medium text-[16px] text-black py-2 px-4">
@@ -111,12 +112,14 @@ function HandPickedTitles() {
                       <MdOutlinePhoneCallback />
                     </i>
                   </Button>
-                  <Button className="w-60 lg:w-auto md:w-64 rounded-full bg-black flex items-center justify-center gap-3 capitalize font-archivo font-medium  py-2 pr-2 mt-4 md:mt-0">
-                    Know More
-                    <i className="flex icon w-6 h-6 text-white border border-[#0101010D] bg-[#FFFFFF33] justify-center items-center rounded-full">
-                      <MdArrowForward />
-                    </i>
-                  </Button>
+                  <a href="/comming-soon">
+                    <Button className="w-60 lg:w-auto md:w-64 rounded-full bg-black flex items-center justify-center gap-3 capitalize font-archivo font-medium  py-2 pr-2 mt-4 md:mt-0">
+                      Know More
+                      <i className="flex icon w-6 h-6 text-white border border-[#0101010D] bg-[#FFFFFF33] justify-center items-center rounded-full">
+                        <MdArrowForward />
+                      </i>
+                    </Button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -137,12 +140,28 @@ function HandPickedTitles() {
   );
 }
 
-const blogContent = {
-  title: "Amazing Tailwindcss Grid Layout Examples",
-  description:
-    "Grids are cool, but Tailwindcss grids are cooler. In this article, we will learn how to create amazing Grid layouts with Tailwindcs grid and React.",
-  image:
-    "https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp",
-};
+const blogContent = [
+  {
+    title: "Job Track ",
+    description:
+      "Land Your Dream Role Prepare for the corporate world with tailored guidance, skill development, and exclusive job opportunities to kickstart your career.",
+    image:
+      "https://images.pexels.com/photos/5990031/pexels-photo-5990031.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  },
+  {
+    title: "StartUp Track",
+    description:
+      `Launch Your Startup
+      Turn your ideas into reality with expert mentorship, resources, and a community of innovators to guide your entrepreneurial journey.`,
+    image: "https://images.pexels.com/photos/3194521/pexels-photo-3194521.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  },
+  {
+    title: "Higher Studies Track",
+    description:
+      `Pursue Advanced Education Navigate the path to top universities with personalized counseling, exam preparation, and application support to achieve academic excellence`,
+    image:
+      "https://images.pexels.com/photos/27623232/pexels-photo-27623232/free-photo-of-a-man-in-a-graduation-gown-standing-in-front-of-some-columns.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  },
+];
 
 export default HandPickedTitles;
