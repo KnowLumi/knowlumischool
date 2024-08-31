@@ -99,10 +99,11 @@ function HandPickedTitles() {
                 />
               </div>
               <div className="p-4">
-                <h2 className="font-bold text-lg text-zinc-700">
+                <h2 className="text-center font-bold text-lg text-zinc-700">
                   {data.title}
                 </h2>
-                <h2 className="font-normal text-sm text-zinc-500">
+                <h2 className="font-normal text-center text-sm text-zinc-500">
+                  <span className="font-bold">{data.bold}:</span>
                   {data.description}
                 </h2>
                 <div className="flex flex-col md:flex-row gap-x-4 my-6 justify-center items-center">
@@ -143,22 +144,25 @@ function HandPickedTitles() {
 const blogContent = [
   {
     title: "Job Track ",
+    bold: "Land Your Dream Role",
     description:
-      "Land Your Dream Role Prepare for the corporate world with tailored guidance, skill development, and exclusive job opportunities to kickstart your career.",
+      "Prepare for the corporate world with tailored guidance, skill development, and exclusive job opportunities to kickstart your career.",
     image:
       "https://images.pexels.com/photos/5990031/pexels-photo-5990031.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
   {
     title: "StartUp Track",
+    bold: "Launch Your Startup",
+
     description:
-      `Launch Your Startup
-      Turn your ideas into reality with expert mentorship, resources, and a community of innovators to guide your entrepreneurial journey.`,
+      `Turn your ideas into reality with expert mentorship, resources, and a community of innovators to guide your entrepreneurial journey.`,
     image: "https://images.pexels.com/photos/3194521/pexels-photo-3194521.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
   {
     title: "Higher Studies Track",
+    bold: "Pursue Advanced Education",
     description:
-      `Pursue Advanced Education Navigate the path to top universities with personalized counseling, exam preparation, and application support to achieve academic excellence`,
+      `Navigate the path to top universities with personalized counseling, exam preparation, and application support to achieve academic excellence`,
     image:
       "https://images.pexels.com/photos/27623232/pexels-photo-27623232/free-photo-of-a-man-in-a-graduation-gown-standing-in-front-of-some-columns.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
