@@ -6,19 +6,18 @@ const Companies = () => {
   const [hoveredImageIndex, setHoveredImageIndex] = useState(null);
   const companies = [
     // Updated company logos
-    "https://w7.pngwing.com/pngs/587/646/png-transparent-swiggy-hd-logo.png", // Swiggy
-    "https://w7.pngwing.com/pngs/782/863/png-transparent-paypal-logo-paypal-logo-paypal-blue-text-trademark.png", // PayPal
+    "/Images/swiggy.png", // Swiggy
+    "/Images/paypal.png", // PayPal
     "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Intuit_logo_2022.svg/640px-Intuit_logo_2022.svg.png", // Intuit
     "https://1000logos.net/wp-content/uploads/2020/08/McAfee-Logo-500x313.png", // McAfee
     "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg", // Google
-    "https://w7.pngwing.com/pngs/350/63/png-transparent-youtube-facebook-messenger-logo-information-facebook-blue-text-trademark.png", // Facebook
+    "/Images/facebook.png", // Facebook
     "https://www.nokia.com/themes/custom/onenokia_reskin/logo.svg", // Nokia
     "https://upload.wikimedia.org/wikipedia/commons/f/fc/Qualcomm-Logo.svg", // Qualcomm
     "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/GoTo_logo.svg/800px-GoTo_logo.svg.png", // GoTo
     "https://upload.wikimedia.org/wikipedia/commons/0/09/Snapdeal_logo_new.png", // Snapdeal
     "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Hike-logo-web.png/640px-Hike-logo-web.png", // Hike
-    "https://upload.wikimedia.org/wikipedia/commons/b/bf/Reliance_Jio_Logo.svg", // Jio
-    "https://w7.pngwing.com/pngs/124/600/png-transparent-microsoft-logo-microsoft.png", // Microsoft
+    "/Images/microsoft.png", // Microsoft
     "https://upload.wikimedia.org/wikipedia/commons/7/77/Razorpay_logo.png", // Razorpay
     "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg", // Amazon
     "https://upload.wikimedia.org/wikipedia/en/d/d5/Myntra_logo.png", // Myntra
