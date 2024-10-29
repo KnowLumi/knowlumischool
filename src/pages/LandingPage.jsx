@@ -38,7 +38,9 @@ const LandingPage = () => {
         <HeroSection scrollToIncluded={scrollToIncluded} />
         <HandPickedTitles/>
 {/*         <Companies /> */}
+     <div className="mt-12">
         <Recognized />
+     </div>
         <div className="">
         <HowItsWorks/>
         {/* <About /> */}
