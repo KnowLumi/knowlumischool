@@ -42,7 +42,7 @@ const LandingPage = () => {
         <Recognized />
      </div>
         <div className="">
-        <HowItsWorks/>
+        {/* <HowItsWorks/> */}
         {/* <About /> */}
         </div>
         {/* <Program scrollToIncluded={scrollToIncluded} /> */}
