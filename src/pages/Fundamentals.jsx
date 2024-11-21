@@ -9,13 +9,30 @@ import SkillsCovered from "./Fundamentals/SkillsCovered";
 import Hero from "./Fundamentals/Hero";
 import Tracks from "./Fundamentals/Tracks";
 import { tracks } from "./helpers/fundamentalhelpers";
+import Process from "../landingpage/Process";
+import { useRef } from "react";
+import { useEffect } from "react";
 
 const Fundamentals = () => {
+  const includedRef = useRef(null);
+  const processRef = useRef(null);
+  const mainContainerRef = useRef(null);
+
+  const scrollToIncluded = () => {
+    includedRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  useEffect(() => {
+    if (mainContainerRef.current) {
+      mainContainerRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, []);
 
   return (
     <div className="flex flex-col w-full bg-[#F7F7F7]">
       <Navigation />
       <Hero tracks={tracks} id={0} />
+      <Process  ref={processRef}/>
       <div className="flex flex-col gap-14 mx-6 md:mx-20 mt-20">
         <h2 className="text-[#88DB1B] font-bold text-lg md:text-3xl tracking-wider">
           PROGRAM OVERVIEW
