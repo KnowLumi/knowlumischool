@@ -33,6 +33,7 @@ import NavMenu from "./Navigation/NavMenu";
 import Footer from "./landingpage/Footer";
 import Navigation from "./landingpage/Navigation";
 import CommingSoon from "./pages/CommingSoon/CommingSoon";
+import WhatsAppButton from "./landingpage/WhatsappButton";
 
 export const Context = createContext();
 
@@ -62,6 +63,7 @@ function App() {
   return (
     <Context.Provider value={[signedIn, setSignedIn]}>
       <div className="h-screen bg-gray-50 font-archivo overflow-x-hidden">
+        <WhatsAppButton/>
         <Router>
           <ScrollToTop />
           <Routes>
