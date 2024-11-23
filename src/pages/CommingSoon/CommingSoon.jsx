@@ -12,8 +12,8 @@ export default function CommingSoon() {
   return (
     <main>
         <Navigation/>
-        <div className="h-screen flex flex-col items-center justify-center ">
-        <Lottie animationData={animation} loop={true} />
+        <div className="min-h-screen flex items-center justify-center">
+          <h3 className="text-3xl">Know Lumi</h3>
         </div>
         <Footer/>
     </main>
