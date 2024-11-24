@@ -144,7 +144,7 @@ function HandPickedTitles() {
         {blogContent.map((data, index) => (
           <div
             key={index}
-            className="w-full max-w-xl p-2 "
+            className="w-full max-w-lg h-[35rem] p-2 "
           >
             <div className="relative overflow-hidden h-full rounded-2xl transition duration-200 group bg-white hover:shadow-xl hover:shadow-gray-200 border border-[#88DB1B]">
               <div className="w-full aspect-w-16 aspect-h-10 bg-gray-100 rounded-tr-lg rounded-tl-lg overflow-hidden xl:aspect-w-16 xl:aspect-h-10 relative">
