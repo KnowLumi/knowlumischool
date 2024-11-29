@@ -37,53 +37,54 @@ const LandingPage = () => {
       <Navigation />
       <div ref={mainContainerRef} className="flex flex-col bg-[#F7F7F7]">
         <HeroSection scrollToIncluded={scrollToIncluded} />
-        <HandPickedTitles/>
-{/*         <Companies /> */}
-     <div className="mt-12">
-        <Recognized />
-     </div>
+        <HandPickedTitles />
+        {/*         <Companies /> */}
+        <div className="mt-12">
+          <Recognized />
+        </div>
         <div className="">
-        {/* <HowItsWorks/> */}
-        {/* <About /> */}
+          {/* <HowItsWorks/> */}
+          {/* <About /> */}
         </div>
         {/* <Program scrollToIncluded={scrollToIncluded} /> */}
-       
-        <Process ref={processRef} />
+
+        {/* How Knowlumi Works
+        <Process ref={processRef} /> */}
         {/* <Testimonials /> */}
         {/* <Action /> */}
         {/* <WhyKnowLumi scrollToIncluded={scrollToIncluded} /> */}
         {/* <Included ref={includedRef} /> */}
         <Enroll />
-        <About/>
+        <About />
         <FaqSection />
         <div className=" bg-[#F2F2F2] flex flex-col items-center justify-center px-4 py-16">
-      {/* Loading indicator */}
-      <div className="absolute top-24 right-24">
-        <div className="w-3 h-3 rounded-full bg-[#88DB1B] animate-pulse" />
-      </div>
+          {/* Loading indicator */}
+          <div className="absolute top-24 right-24">
+            <div className="w-3 h-3 rounded-full bg-[#88DB1B] animate-pulse" />
+          </div>
 
-      {/* Main content */}
-      <div className="max-w-4xl mx-auto text-center space-y-8">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
-          Knowlumi
-        </h1>
+          {/* Main content */}
+          <div className="max-w-4xl mx-auto text-center space-y-8">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
+              Knowlumi
+            </h1>
 
-        <p className="text-zinc-600 text-base md:text-lg leading-relaxed mx-auto max-w-3xl">
-          Unlock Your Potential with Knowlumi - A Parallel Education System For Engineering Students. Learn like IITians by discovering your passion, setting your goals with our AI platform, connecting with expert mentors, accessing premium resources, and joining a community where individual success fuels collective growth. Experience a transformative learning journey that goes beyond traditional education.
-        </p>
+            <p className="text-zinc-600 text-base md:text-lg leading-relaxed mx-auto max-w-3xl">
+              Unlock Your Potential with Knowlumi - A Parallel Education System For Engineering Students. Learn like IITians by discovering your passion, setting your goals with our AI platform, connecting with expert mentors, accessing premium resources, and joining a community where individual success fuels collective growth. Experience a transformative learning journey that goes beyond traditional education.
+            </p>
 
-        <div className="pt-4">
-          <button 
-            className="bg-[#88DB1B] hover:bg-black  text-white rounded-full px-8 py-6 text-lg font-medium transition-all duration-200 group flex items-center mx-auto"
-          >
-            START YOUR JOURNEY
-            <span className="ml-2 group-hover:translate-x-1 transition-transform duration-200">
-              <MdArrowForward className="w-5 h-5" />
-            </span>
-          </button>
+            <div className="pt-4 flex justify-center items-center">
+              <button
+                className="bg-[#88DB1B] hover:bg-black  text-white flex flex-row justify-center items-center p-3 rounded uppercase group"
+              >
+                start your journey
+                <span className="ml-3 group-hover:translate-x-1 transition-transform duration-200">
+                  <MdArrowForward className="w-5 h-5" />
+                </span>
+              </button>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
         <Footer />
       </div>
     </>

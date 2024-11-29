@@ -14,7 +14,6 @@ import CustomArrow from "./CustomArrow";
 const Navigation = () => {
   const [open, setOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [activeTab, setActiveTab] = useState(null);
   const openDrawer = () => setOpen(true);
   const closeDrawer = () => setOpen(false);
   const [signedIn] = useContext(Context);
@@ -22,11 +21,6 @@ const Navigation = () => {
 
   const handleExploreClick = () => {
     setIsDropdownOpen(!isDropdownOpen);
-  };
-
-  const handleDropdownClick = (tabName) => {
-    setActiveTab(tabName);
-    console.log(`Active tab changed to: ${tabName}`); // Debugging purpose
   };
 
   const dropdownVariants = {
@@ -43,12 +37,12 @@ const Navigation = () => {
   };
 
   const navItems = [
-    { itemName: "Data" },
-    { itemName: "Design" },
-    { itemName: "Product" },
-    { itemName: "Growth" },
-    { itemName: "Gen Ai" },
-  ];
+    { itemName: 'Data' },
+    { itemName: 'Design' },
+    { itemName: 'Product' },
+    { itemName: 'Growth' },
+    { itemName: 'Gen Ai' },
+  ]
 
   return (
     <nav className="flex justify-between fixed z-50 bg-[#FEFEFE] items-center w-full py-3 md:py-2.5 px-3 md:px-12 font-archivo border-b-2">
@@ -58,9 +52,21 @@ const Navigation = () => {
       </Link>
 
       {/* Desktop Navigation */}
-
-      {/* Explore Our program */}
       <ul className="md:flex gap-8 items-center hidden">
+        {pages.map((page, index) => (
+          <li key={index}>
+            <NavLink
+              to={page.route}
+              className={({ isActive }) =>
+                isActive ? "text-black" : "text-gray-500"
+              }
+            >
+              {page.name}
+            </NavLink>
+          </li>
+        ))}
+
+        {/* Explore Our Programs - Dropdown */}
         <div className="relative">
           <button
             onClick={handleExploreClick}
@@ -68,61 +74,49 @@ const Navigation = () => {
           >
             Explore&nbsp;<span className="lowercase">our programs</span>
             <FaArrowRight
-              className={`transition-transform duration-300 ${isDropdownOpen ? "rotate-90" : "-rotate-45"}`}
+              className={`transition-transform duration-300 ${isDropdownOpen ? "rotate-90" : "-rotate-45"
+                }`}
             />
           </button>
           {/* Dropdown Content */}
-
           <motion.div
-            className="absolute top-full left-0  rounded mt-5 bg-white shadow-lg rounded-lg overflow-hidden z-50"
+            className="absolute top-full left-0 w-[22vw] rounded mt-5 bg-white shadow-lg rounded-lg overflow-hidden z-50"
             initial="closed"
             animate={isDropdownOpen ? "open" : "closed"}
             variants={dropdownVariants}
           >
-            <div className="flex flex-row ">
-              <ul className="flex flex-col pt-4 py-2 w-[22vw]">
-                {navItems.map((data, index) => (
+            <ul className="flex flex-col pt-4 py-2">
+              {navItems.map((data, index) => {
+                return (
                   <li
                     key={index}
-                    onClick={() => handleDropdownClick(data.itemName)}
-                    className={`px-4 m-2 py-2 rounded-full cursor-pointer flex justify-between items-center transition-transform duration-250 ${activeTab === data.itemName ? "bg-black text-white" : "hover:bg-black hover:text-white"
-                      }`}
+                    className="px-4 m-2 py-2 rounded-full cursor-pointer hover:bg-black hover:text-white flex flex-row justify-between items-center transition-transform duration-250"
                   >
                     {data.itemName}
-                    <span>
+                    <span className="hover:text-white">
                       <CustomArrow className="transition-transform duration-300" />
                     </span>
                   </li>
-                ))}
-              </ul>
-              {/* <div className="w-[22vw] border-left border-gray">
+                );
+              })}
+            </ul>
 
-              </div> */}
-            </div>
           </motion.div>
-        </div>
-        {pages.map((page, index) => (
-          <li key={index}>
-            <NavLink
-              to={page.route}
-              className={({ isActive }) => (isActive ? "text-black" : "text-gray-500")}
-            >
-              {page.name}
-            </NavLink>
-          </li>
-        ))}
-      </ul>
+        </div >
+      </ul >
 
       {/* User Navigation */}
-      {signedIn ? (
-        <NavMenu />
-      ) : (
-        <Link to="/signin">
-          <Button className="hidden md:block capitalize font-archivo font-semibold bg-black rounded-full text-sm py-1.5 px-4">
-            Login/Sign Up
-          </Button>
-        </Link>
-      )}
+      {
+        signedIn ? (
+          <NavMenu />
+        ) : (
+          <Link to="/signin">
+            <Button className="hidden md:block capitalize font-archivo font-semibold bg-black rounded-full text-sm py-1.5 px-4">
+              Login/Sign Up
+            </Button>
+          </Link>
+        )
+      }
 
       {/* Mobile Drawer */}
       <div className="md:hidden flex items-center gap-4">
@@ -171,7 +165,7 @@ const Navigation = () => {
           </Link>
         )}
       </Drawer>
-    </nav>
+    </nav >
   );
 };
 

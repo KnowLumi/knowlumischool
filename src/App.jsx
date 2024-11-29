@@ -34,6 +34,7 @@ import Footer from "./landingpage/Footer";
 import Navigation from "./landingpage/Navigation";
 import CommingSoon from "./pages/CommingSoon/CommingSoon";
 import WhatsAppButton from "./landingpage/WhatsappButton";
+import IndiviudalCourse from "./pages/IndiviudalCourse";
 
 export const Context = createContext();
 
@@ -75,6 +76,7 @@ function App() {
             {/* <Route path="/signin" element={<OtpPage />} /> */}
             <Route path="/signin" element={<CommingSoon/>} />
             <Route path="/coming-soon" element={<CommingSoon/>} />
+            <Route path="/course/:id" element={<IndiviudalCourse />} />
 
 
             <Route path="/fundamentals" element={<Fundamentals />} />

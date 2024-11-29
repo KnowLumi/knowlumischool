@@ -13,7 +13,7 @@ function Icon({ id, open }) {
       fill="none"
       viewBox="0 0 24 24"
       strokeWidth={2}
-      stroke="currentColor"
+      stroke="black"
       className={`text-gray-50 ${
         id === open ? "rotate-180" : ""
       } h-5 w-5 transition-transform`}
