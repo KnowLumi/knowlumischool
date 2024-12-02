@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import { Context } from "../App";
 import { pages } from "./landing_helpers";
 import { NavLink, Link, useNavigate } from "react-router-dom";
-import logo1 from "/Images/logo.png";
+import logo1 from "/Images/knowlumi-brand.svg";
 import NavMenu from "../Navigation/NavMenu";
 import CustomArrow from "./CustomArrow";
 

@@ -138,8 +138,6 @@ function HandPickedTitles() {
               </div>
             </motion.div>
           </AnimatePresence>
-          {/* Navigation Buttons */}
-
         </div>
       </div>
 

@@ -59,9 +59,9 @@ const LandingPage = () => {
         <FaqSection />
         <div className=" bg-[#F2F2F2] flex flex-col items-center justify-center px-4 py-16">
           {/* Loading indicator */}
-          <div className="absolute top-24 right-24">
+          {/* <div className="absolute top-24 right-24">
             <div className="w-3 h-3 rounded-full bg-[#88DB1B] animate-pulse" />
-          </div>
+          </div> */}
 
           {/* Main content */}
           <div className="max-w-4xl mx-auto text-center space-y-8">

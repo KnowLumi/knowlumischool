@@ -32,22 +32,22 @@ const HeroSection = ({ scrollToIncluded }) => {
       </i>
       <div className="w-full z-40 md:w-fit flex flex-col items-center md:translate-x-5 md:items-start p-4 ml-0 md:ml-16 mt-8">
         <div className="flex flex-col md:gap-9 md:w-[650px] md:h-[201px] md:items-start justify-center herogradient p-6 md:px-14 md:py-8 rounded-[28px]">
-          <span className="font-medium text-2xl md:text-[62px]">
-          Create a Career 
+          <span className="font-medium text-2xl md:text-[50px]">
+          Shape a Career Beyond
           </span>
           <div className="flex justify-between w-full items-center">
             <div className="flex items-center gap-0">
               <span className="bg-black lineanime"></span>
               <IoArrowForward className="h-7 md:h-10 w-7 md:w-10 text-black -translate-x-2" />
             </div>
-            <span className="font-medium text-2xl md:text-[62px]">
-            Like IITians 
+            <span className="font-medium text-2xl md:text-[50px]">
+            Classroom
             </span>
           </div>
         </div>
         <div className="flex flex-col font-semibold text-sm mt-8">
           <span className="uppercase text-gray-600">
-            Unlock Your Potential with Knowlumi -<br />
+          Unlock Your Potential with KnowLumi School  -<br />
             <span className="textanime"> A Parallel Education System </span>
             For engineering students 
           </span>
