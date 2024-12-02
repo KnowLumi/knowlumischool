@@ -142,6 +142,9 @@ function HandPickedTitles() {
       </div>
 
       {/* Third Section */}
+      <div id="programs" className="w-full flex flex-col justify-center align-center">
+      <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-center mb-4">Our Programs</h1>
+      </div>
       <div className="flex flex-col md:flex-row flex-wrap items-center justify-center mt-8">
         {blogContent.map((data, index) => (
           <div

@@ -11,6 +11,9 @@ import { Fade } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import rating from "../assets/rating.png";
 const HeroSection = ({ scrollToIncluded }) => {
+  const explorerClick = () => {
+    window.location.href = "/#programs";
+  }
   return (
     <div className="w-full relative mt-10 md:mt-24 flex md:flex-row flex-col font-archivo justify-between bg-[#F7F7F7]">
       <svg
@@ -40,7 +43,7 @@ const HeroSection = ({ scrollToIncluded }) => {
               <span className="bg-black lineanime"></span>
               <IoArrowForward className="h-7 md:h-10 w-7 md:w-10 text-black -translate-x-2" />
             </div>
-            <span className="w-full font-medium text-2xl md:text-[50px] flex justify-start">
+            <span className="w-full font-medium text-2xl md:text-[50px] flex justify-center">
               Classroom
             </span>
           </div>
@@ -61,7 +64,7 @@ const HeroSection = ({ scrollToIncluded }) => {
           <strong>We help you learn what college doesn’t.</strong>
         </span>
         <Button
-          onClick={scrollToIncluded}
+          onClick={explorerClick}
           className="my-button font-archivo text-xs bg-black hover:bg-[#F7F7F7] hover:border hover:border-black py-1.5 pr-1.5 pl-6 mt-12 gap-2 text-[#F7F7F7] hover:text-black font-medium md:text-lg flex items-center w-fit rounded-full"
         >
           get started
