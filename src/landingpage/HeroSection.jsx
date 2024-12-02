@@ -33,31 +33,32 @@ const HeroSection = ({ scrollToIncluded }) => {
       <div className="w-full z-40 md:w-fit flex flex-col items-center md:translate-x-5 md:items-start p-4 ml-0 md:ml-16 mt-8">
         <div className="flex flex-col md:gap-9 md:w-[650px] md:h-[201px] md:items-start justify-center herogradient p-6 md:px-14 md:py-8 rounded-[28px]">
           <span className="font-medium text-2xl md:text-[50px]">
-          Shape a Career Beyond
+            Shape a Career Beyond
           </span>
           <div className="flex justify-between w-full items-center">
             <div className="flex items-center gap-0">
               <span className="bg-black lineanime"></span>
               <IoArrowForward className="h-7 md:h-10 w-7 md:w-10 text-black -translate-x-2" />
             </div>
-            <span className="font-medium text-2xl md:text-[50px]">
-            Classroom
+            <span className="w-full font-medium text-2xl md:text-[50px] flex justify-start">
+              Classroom
             </span>
           </div>
         </div>
         <div className="flex flex-col font-semibold text-sm mt-8">
           <span className="uppercase text-gray-600">
-          Unlock Your Potential with KnowLumi School  -<br />
+            Unlock Your Potential with KnowLumi School  -<br />
             <span className="textanime"> A Parallel Education System </span>
-            For engineering students 
+            For engineering students
           </span>
         </div>
         <span className="text-left mt-4 text-sm lg:text-lg">
-        Learn like IITians by discovering your passion, setting your goals with our AI platform{" "}
-          <br className="hidden md:inline" />
-          connecting with expert mentors, accessing premium resources, <br className="hidden md:inline" />
-          and joining a community where
-          individual success fuels collective growth.
+        The subjects you're studying in college might not be enough to <br className="hidden md:inline" />
+        build the career you're dreaming of. To achieve true success, <br className="hidden md:inline" />
+        you need to go beyond the syllabus. That's where KnowLumi School comes in. 
+           <br className="hidden md:inline" />
+           <br className="hidden md:inline" />
+          <strong>We help you learn what college doesn’t.</strong>
         </span>
         <Button
           onClick={scrollToIncluded}
@@ -82,8 +83,8 @@ const HeroSection = ({ scrollToIncluded }) => {
     <h1 className="text-2xl md:text-4xl text-[#88DB1B]">50+</h1>
   </div>
 </div> */}
-{/* TODO need to remove below div when above code uncomment check the out*/}
-<div className="mt-6"/>
+        {/* TODO need to remove below div when above code uncomment check the out*/}
+        <div className="mt-6" />
 
         <span className="hidden z-20 md:block mt-5 text-[7.5rem] font-medium text-[#ECECEC]">
           KnowLumi
