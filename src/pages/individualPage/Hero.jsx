@@ -32,7 +32,7 @@ const Hero = (props) => {
         </span>
         {!isFundamentalsPath && (
           <span className="font-extrabold uppercase text-[#88DB1B] text-lg tracking-wider text-left" >
-            {`${tracks[id].level} LEVEL COURSE`}
+            {course.bold}
           </span>
         )}
         <div className="flex flex-col">
