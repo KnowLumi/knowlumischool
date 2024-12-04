@@ -11,6 +11,13 @@ import {
 } from "react-icons/md";
 import { Link } from "react-router-dom";
 import WorkshopCard from "../landingpage/WorkshopCard";
+import FirstCard from "/Images/first-card.jpg"
+import SecondCard from "/Images/second-card.jpg"
+import ThirdCard from "/Images/third-card.jpg"
+import TimeIcon from "../landingpage/IconsJSX/TimeIcon"
+import DateIcon from "../landingpage/IconsJSX/DateIcon"
+import VenueIcon from "../landingpage/IconsJSX/VenueIcon"
+import FullDay from "../landingpage/IconsJSX/FullDay"
 
 function HandPickedTitles() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -18,33 +25,30 @@ function HandPickedTitles() {
   const blogContent = [
     {
       id: 1,
-      title: "Artificial Intelligence",
-      bold: "Master the Future of Technology",
+      title: "Level Up After Graduation",
+      bold: "For Graduates & Beyond",
       description:
-        "Dive into the world of AI and machine learning. Learn to develop intelligent systems, neural networks, and cutting-edge algorithms that are shaping the future of technology across industries.",
-      image:
-        "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "Take your tech career to the next level with advanced courses tailored for industry success. Master tools and frameworks to stay ahead.",
+      image: FirstCard,
     },
     {
       id: 2,
-      title: "MERN Stack Development",
-      bold: "Build Modern Web Applications",
+      title: "Skill Up While You Study",
+      bold: "For Current Engineering Students",
       description:
-        "Become a full-stack developer with MERN (MongoDB, Express.js, React, Node.js) stack. Create dynamic and responsive web applications from front-end interfaces to robust back-end systems.",
-      image: "https://images.pexels.com/photos/11035471/pexels-photo-11035471.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "Still in college? Turn your years of study into real-world skills with hands-on courses in software development. Learn to create, innovate, and lead in tech, starting now!",
+      image: SecondCard,
     },
     {
       id: 3,
-      title: "Cybersecurity",
-      bold: "Protect Digital Assets",
+      title: "Launch Your Startup Dream",
+      bold: "For Every one",
       description:
-        "Learn to safeguard information systems from cyber threats. Master the techniques of ethical hacking, network security, and digital forensics to become a cybersecurity expert in high demand.",
-      image:
-        "https://images.pexels.com/photos/5380642/pexels-photo-5380642.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "Got a startup idea? Whether you're in college or a graduate, our program equips you to transform your vision into a thriving business. From ideation to scaling, we'll guide your entrepreneurial path.",
+      image: ThirdCard,
     },
 
   ];
-
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -52,15 +56,12 @@ function HandPickedTitles() {
     }, 5000); // Change content every 5 seconds
 
     return () => clearInterval(interval);
-  }, []);
+  }, [blogContent.length]);
 
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % blogContent.length);
+  const goToSlide = (index) => {
+    setCurrentIndex(index);
   };
 
-  const prevSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + blogContent.length) % blogContent.length);
-  };
 
   return (
     <div id="explore" className="bg-white min-h-screen">
@@ -90,60 +91,120 @@ function HandPickedTitles() {
             goals but also keep you inspired to dream without limitations and
             achieve them.
           </p>
-          <a href="#" className="mt-4">
+          {/* <a href="#" className="mt-4">
             <Button className="rounded-full flex border border-black bg-white items-center gap-3 capitalize font-archivo font-medium text-xs md:text-sm text-black py-2 px-4">
               Request a Callback
               <i className="flex w-8 h-8 text-white border border-[#0101010D] bg-black justify-center items-center rounded-full">
                 <MdOutlinePhoneCallback />
               </i>
             </Button>
-          </a>
+          </a> */}
         </div>
 
         {/* Second Section - Animated */}
         <div className="w-full h-[80%] p-4 relative flex flex-col justify-center items-center">
           <AnimatePresence mode="wait">
-            <motion.div
-              key={currentIndex}
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -50 }}
-              transition={{ duration: 0.5 }}
-              className="w-full max-w-xl mx-auto flex justify-center items-center mt-[15%] md:mt-4"
-            >
-              <div className="w-[75%]  relative overflow-hidden h-full rounded-2xl transition duration-200 group bg-white hover:shadow-xl border border-zinc-100">
-                <div className="w-full md:h-[33vh] h-[35vh]  aspect-w-16 aspect-h-9 bg-gray-100 rounded-tr-lg rounded-tl-lg overflow-hidden xl:aspect-w-16 xl:aspect-h-7 relative">
-                  <img
-                    src={blogContent[currentIndex].image}
-                    alt={`${blogContent[currentIndex].title} thumbnail`}
-                    className="object-cover object-bottom w-full h-full transition duration-200"
-                  />
-                </div>
-                <div className="p-4">
-                  <h2 className="font-bold text-lg text-zinc-700">
-                    {blogContent[currentIndex].title}
-                  </h2>
-                  <h2 className="font-normal text-sm text-zinc-500">
-                    <span className="font-bold">{blogContent[currentIndex].bold}:</span> {blogContent[currentIndex].description}
-                  </h2>
-                  <div className="flex items-center justify-center">
-                    <Button className="rounded-full mt-6 bg-black flex items-center gap-3 capitalize font-archivo font-medium text-[16px] py-2 pr-2 pl-6 border border-gray-600 text-white">
-                      Register
-                      <i className="flex icon w-6 h-6 text-black bg-white border border-[#0101010D] justify-center items-center rounded-full">
-                        <MdArrowForward />
-                      </i>
-                    </Button>
+            {blogContent.map((blog, index) =>
+              index === currentIndex ? ( // Render only the card matching the current index
+                <motion.div
+                  key={blog.id || index}
+                  initial={{ opacity: 0, x: 100 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -100 }}
+                  transition={{ duration: 0.5 }}
+                  className="w-full max-w-xl mx-auto flex justify-center items-center mt-[15%] md:mt-4"
+                >
+                  <div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-md overflow-hidden">
+                    {/* Dynamic Image */}
+                    <div className="relative bg-gray-100 h-48 flex justify-center items-center">
+                      <img
+                        src={blog.image} // Use the dynamic image from `blogContent`
+                        alt={blog.title}
+                        className="object-cover w-full h-full"
+                      />
+                    </div>
+
+                    <div className="p-4">
+                      {/* Dynamic Heading */}
+                      <div className="flex items-center justify-between mb-2">
+                        <span className="text-2xl font-bold text-black">{blog.title}</span>
+                      </div>
+
+                      {/* Dynamic Subheading */}
+                      <p className="text-red-600 text-sm font-medium mb-4">
+                        8 hours left at this price
+                      </p>
+
+                      {/* Register Button */}
+                      <div className="flex flex-col gap-3">
+                        <button className="w-full bg-black text-white py-2 rounded hover:bg-gray-700 transition">
+                          Register Now
+                        </button>
+                      </div>
+
+                      {/* Dynamic Features Section */}
+                      <div className="mt-4">
+                        <h3 className="text-gray-700 font-semibold mb-2">More details:</h3>
+                        <ul className="text-sm text-gray-600 space-y-1">
+                          <li className="flex items-center">
+                            <span className="w-5 h-5 flex items-center justify-center mr-2">
+                              <TimeIcon />
+                            </span>
+                            11 AM
+                          </li>
+                          <li className="flex items-center">
+                            <span className="w-5 h-5 flex items-center justify-center mr-2">
+                              <DateIcon />
+                            </span>
+                            28 January 2025
+                          </li>
+                          <li className="flex items-center">
+                            <span className="w-5 h-5 flex items-center justify-center mr-2">
+                              <VenueIcon />
+                            </span>
+                            Kochi
+                          </li>
+                          <li className="flex items-center">
+                            <span className="w-5 h-5 flex items-center justify-center mr-2">
+                              <FullDay />
+                            </span>
+                            Full Day Workshop
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-            </motion.div>
+                </motion.div>
+              ) : null // Hide other cards
+            )}
           </AnimatePresence>
+
+          {/* Dots Navigation */}
+          <div className="flex mt-4 gap-2">
+            {blogContent.map((_, index) => (
+              <motion.button
+                key={index}
+                onClick={() => goToSlide(index)}
+                className={`w-3 h-3 rounded-full ${index === currentIndex ? "bg-black" : "bg-gray-300"
+                  }`}
+                initial={{ scale: 1 }}
+                animate={{
+                  scale: index === currentIndex ? 1.3 : 1,
+                  opacity: index === currentIndex ? 1 : 0.6,
+                }}
+                transition={{ duration: 0.3 }}
+              />
+            ))}
+          </div>
         </div>
+
+
       </div>
+      <div id="programs"></div>
 
       {/* Third Section */}
-      <div id="programs" className="w-full flex flex-col justify-center align-center">
-      <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-center mb-4">Our Programs</h1>
+      <div className="w-full flex flex-col justify-center align-center md:mt-[10rem]">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-center mb-4">Programs</h1>
       </div>
       <div className="flex flex-col md:flex-row flex-wrap items-center justify-center mt-8">
         {blogContent.map((data, index) => (
@@ -156,15 +217,17 @@ function HandPickedTitles() {
                 <img
                   src={data.image}
                   alt={`${data.title} thumbnail`}
-                  className="group-hover:scale-95 group-hover:rounded-2xl transform object-cover object-bottom transition duration-200 w-full h-full"
+                  className="group-hover:scale-95 group-hover:rounded-2xl transform object-cover object-center transition duration-200 w-full h-full"
                 />
               </div>
               <div className="p-4">
-                <h2 className="text-center font-bold text-lg text-zinc-700">
+                <h2 className="text-center font-bold text-xl text-zinc-700">
                   {data.title}
                 </h2>
+                <h2 className="text-center font-bold text-lg text-gray-700">
+                  {data.bold}
+                </h2>
                 <h2 className="font-normal text-center text-sm text-zinc-500">
-                  <span className="font-bold">{data.bold}:</span>
                   {data.description}
                 </h2>
                 <div className="flex flex-col md:flex-row gap-x-4 my-6 justify-center items-center">
@@ -174,7 +237,7 @@ function HandPickedTitles() {
                       <MdOutlinePhoneCallback />
                     </i>
                   </Button>
-                      <a href={`/course/${data.id}`}>
+                  <a href={`/course/${data.id}`}>
                     <Button className="w-60 lg:w-auto md:w-64 rounded-full bg-black flex items-center justify-center gap-3 capitalize font-archivo font-medium  py-2 pr-2 mt-4 md:mt-0">
                       Know More
                       <i className="flex icon w-6 h-6 text-white border border-[#0101010D] bg-[#FFFFFF33] justify-center items-center rounded-full">
@@ -189,8 +252,8 @@ function HandPickedTitles() {
         ))}
       </div>
 
-      {/* Fourth section : Workshop card */}
-      <WorkshopCard />
+      {/* Fourth section : Mentorship Program card */}
+      {/* <WorkshopCard /> */}
 
       {/* Fourth Section */}
       {/* <div className="flex items-center justify-center mt-12 mb-6">

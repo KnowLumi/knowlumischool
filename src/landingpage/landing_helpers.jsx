@@ -35,41 +35,49 @@ const pages = [
 
 const faq = [
   {
-    title: "1. What is KnowLumi?",
-    desc: "KnowLumi is an innovative platform that offers a parallel education system for engineering students. It helps you discover your passions, set clear career goals, and achieve success through AI-powered tools, expert mentorship, and hands-on learning. Our approach complements traditional education by providing personalized pathways and practical experience tailored to your career aspirations.",
+    title: "1. What is KnowLumi School?",
+    desc: "KnowLumi School is a parallel education system for engineering students. While your college focuses on academics, KnowLumi School complements it by shaping your career through mentorship, advanced resources, and practical guidance.",
   },
   {
-    title: "2. How does KnowLumi’s AI-powered platform work?",
-    desc: " Our AI-driven platform analyzes your interests and skills to identify your areas of passion, helps you set clear goals, and recommends personalized pathways for your career development.",
+    title: "2. Why do I need KnowLumi School if I’m already in college?",
+    desc: "Your college education provides academic knowledge, but it might not fully prepare you for the career you’re dreaming of. KnowLumi School bridges this gap by offering personalised guidance, real-world skills, and resources to help you excel.",
   },
   {
-    title: "3. What career pathways can I explore with KnowLumi?",
-    desc: "KnowLumi provides opportunities to explore various career pathways, including corporate roles, startups, higher studies, civil services, and more. Our diverse range of sessions and expert guidance help students identify their interests and strengths.",
+    title: "3. Who are the mentors at KnowLumi School?",
+    desc: "Our mentors are experienced professionals and industry experts who provide personalized guidance tailored to your career aspirations.",
   },
   {
-    title: "4. What kind of mentorship does KnowLumi offer?",
-    desc: "KnowLumi connects you with seasoned industry experts who provide personalized guidance, career advice, and support tailored to your specific goals and aspirations.",
+    title: "4. What makes KnowLumi School different from traditional education?",
+    desc: "Traditional education focuses on academics. KnowLumi School focuses on helping you build a career by adding real-world skills, advanced learning resources, and expert mentorship to your journey.",
   },
   {
-    title: "5. How can I benefit from KnowLumi’s personalized goal-setting?",
-    desc: "Our platform helps you set and track clear, achievable goals based on your passions and career ambitions, ensuring you have a structured plan to reach your desired outcomes.",
+    title: "5. Is KnowLumi School suitable for all engineering students?",
+    desc: "Yes, whether you’re aiming for a job, further studies, or starting something of your own, KnowLumi School is designed to guide engineering students from all backgrounds.",
   },
   {
-    title: "6. Is KnowLumi suitable for all engineering students?",
-    desc: "KnowLumi is designed to benefit all engineering students who are looking to discover their passions, set meaningful goals, and gain practical experience to advance their careers.",
+    title: "6. Who is KnowLumi School for?",
+    desc: "KnowLumi School is for engineering students who want to enhance their college education and build successful careers. Whether you're unsure of your path or need guidance, KnowLumi School is here for you.",
   },
   {
     title:
-      "7. What makes KnowLumi different from traditional education programs?",
-    desc: "KnowLumi combines AI-driven insights, personalized mentorship, and hands-on learning to provide a comprehensive approach that bridges the gap between theoretical knowledge and practical career success.",
+      "7. How does the parallel education system work?",
+    desc: "Our system runs alongside your college journey, helping you bridge the gap between academic knowledge and real-world career preparation. We provide mentorship, skills training, and goal-setting tools to guide you.",
   },
   {
-    title: "8. What is the investment required for KnowLumi programs?",
-    desc: "KnowLumi offers high-quality education at a cost-effective price. Our programs are designed to provide exceptional value, ensuring you receive practical skills and industry connections without a significant financial burden.",
+    title: "8. Do I need KnowLumi School if I’m already doing well in college?",
+    desc: "Even if you're excelling academically, KnowLumi  Schoolprovides the practical skills, industry insights, and career-focused mentorship that college alone may not offer.",
   },
   {
-    title: "9. Is there ongoing support after course completion?",
-    desc: "Yes, KnowLumi offers continuous support even after you complete your course. You’ll have access to resources, networking opportunities, and industry updates to keep you informed and connected as you progress in your career.",
+    title: "9. Does KnowLumi School replace my college education?",
+    desc: "No, KnowLumi School complements your college education. While your college focuses on academics, we focus on shaping your career.",
+  },
+  {
+    title: "10. Is KnowLumi School affordable?",
+    desc: "Yes, KnowLumi School is designed to be cost-effective while delivering high-quality mentorship and resources.",
+  },
+  {
+    title: "11. Can I join KnowLumi School at any stage of my engineering degree?",
+    desc: "Yes, KnowLumi School is open to students at any stage of their engineering journey, whether you’re in your first year or final year.",
   },
 ];
 
@@ -107,11 +115,9 @@ const program = [
     title: "Traditional Engineering Degree",
     desc: ``,
     points: [
-      "Difficulty Identifying Passion",
-      "Confusion in Setting Goals",
+      "Focuses on academics.",
+      "Lacks career guidance and mentorship",
       "Minimal industry exposure",
-      "Traditional learning with a focus on theory",
-      "Static, One-Size-Fits-All Curriculum",
     ],
     color: "#DC552A",
     video: dreamjcareer,
@@ -124,11 +130,8 @@ const program = [
     title: "Engineering Degree with KnowLumi Parallel Education",
     desc: ``,
     points: [
-      "AI-Powered Passion Discovery",
-      "Personalized Goal Setting",
-      "Expert Mentorship",
-      "Hands-On, Real-World Learning",
-      "Customized Learning Pathways",
+      "Combines academics with career support.",
+      "Offers mentorship, goal setting, and real-world skills.",
     ],
     color: "#2FC34F",
     video: careerdown,

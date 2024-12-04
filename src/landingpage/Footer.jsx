@@ -10,7 +10,7 @@ import {
 } from "react-icons/ri";
 import { MdHdrStrong } from "react-icons/md";
 import footer from "../assets/footer.png";
-import logo1 from "/Images/logo.png";
+import logo1 from "/Images/knowlumi-brand.svg";
 import { IconButton } from "@material-tailwind/react";
 
 import "./landing.css";

@@ -46,16 +46,18 @@ const LandingPage = () => {
           {/* <HowItsWorks/> */}
           {/* <About /> */}
         </div>
-        {/* <Program scrollToIncluded={scrollToIncluded} /> */}
+        
 
         {/* How Knowlumi Works
         <Process ref={processRef} /> */}
-        {/* <Testimonials /> */}
+        
         {/* <Action /> */}
         {/* <WhyKnowLumi scrollToIncluded={scrollToIncluded} /> */}
         {/* <Included ref={includedRef} /> */}
-        <Enroll />
+        {/* <Enroll /> */}
         <About />
+        <Program scrollToIncluded={scrollToIncluded} />
+        <Testimonials />
         <FaqSection />
         <div className=" bg-[#F2F2F2] flex flex-col items-center justify-center px-4 py-16">
           {/* Loading indicator */}
