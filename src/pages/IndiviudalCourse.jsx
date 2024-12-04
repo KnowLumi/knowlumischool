@@ -78,8 +78,9 @@ const IndividualCourse = () => {
                 <Alumini />
                 <Certificate />
                 <Testimonials />
-                <Process />
-                <Fees />
+                {/* <Process /> */}
+                
+                {/* <Fees /> */}
             </div>
             <Footer />
         </>

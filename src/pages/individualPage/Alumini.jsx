@@ -17,7 +17,7 @@ const Alumini = () => {
     <div className="w-full flex flex-col justify-center items-center my-10 md:my-28">
       <div className="container w-[90%] flex flex-col justify-center items-center">
         <h1 className="text-3xl font-semibold md:text-5xl my-10">
-          Our Alumni Placed at Companies
+          Our Alumni Placed 
         </h1>
         <div className="w-full p-4 sm:p-6">
           <img
