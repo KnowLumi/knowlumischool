@@ -15,6 +15,7 @@ import { tracks } from "./helpers/fundamentalhelpers";
 import FirstCard from "/Images/first-card.jpg"
 import SecondCard from "/Images/second-card.jpg"
 import ThirdCard from "/Images/third-card.jpg"
+import IndividualTracks from './individualPage/individual-tracks';
 
 const IndividualCourse = () => {
     let { id } = useParams();
@@ -72,6 +73,7 @@ const IndividualCourse = () => {
             <div className="mt-[30%] md:mt-[7%] text-center">
                 <Hero tracks={tracks} id={0} course={course} />
                 {/* <CourseHero course={course}/> */}
+                <IndividualTracks/>
                 <LearnerCount />
                 <Alumini />
                 <Certificate />
