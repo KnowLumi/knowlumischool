@@ -2,7 +2,7 @@ import React from 'react'
 
 const Fees = () => {
   return (
-    <div className="w-full container flex flex-col justify-center items-center -translate-y-20 my-5 mb-10 md:my-28">
+    <div className="w-full flex flex-col justify-center items-center -translate-y-20 my-5 mb-10 md:my-28">
       <div className='w-[90%] flex flex-col '>
       <h1 className='text-3xl md:text-5xl font-semibold'>Your Success is our Success</h1>
       <div  className='w-full p-5 md:py-8 border border-gray rounded-lg mt-16 h-auto md:max-h-[44vh] flex flex-col md:flex-row justify-start items-start md:justify-around md:items-center gap-10'>

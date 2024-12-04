@@ -14,7 +14,7 @@ const Alumini = () => {
   const mentorImage = width < 768 ? mobileImage : width < 1024 ? mobileDesktop : mobileDesktop;
 
   return (
-    <div className="w-full container flex flex-col justify-center items-center my-10 md:my-28">
+    <div className="w-full flex flex-col justify-center items-center my-10 md:my-28">
       <div className="container w-[90%] flex flex-col justify-center items-center">
         <h1 className="text-3xl font-semibold md:text-5xl my-10">
           Our Alumni Placed at Companies

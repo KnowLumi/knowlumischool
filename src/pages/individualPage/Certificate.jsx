@@ -26,7 +26,7 @@ const Certificate = () => {
         }
     ]
     return (
-        <div className="w-full container flex flex-col justify-center items-center my-10 md:my-28">
+        <div className="w-full flex flex-col justify-center items-center my-10 md:my-28">
             <div className='w-full'>
                 <h1 className='text-3xl font-semibold md:text-5xl my-10'>Get Certified. Get Hired</h1>
             </div>

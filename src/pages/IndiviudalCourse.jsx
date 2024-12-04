@@ -3,12 +3,18 @@ import { useParams } from 'react-router-dom';
 import Navigation from '../landingpage/Navigation';
 import Footer from '../landingpage/Footer';
 import CourseHero from './individualPage/CourseHero';
+import Hero from './individualPage/Hero';
 import LearnerCount from "./individualPage/LearnerCount";
 import Alumini from "./individualPage/Alumini";
 import Certificate from "./individualPage/Certificate";
 import Fees from "./individualPage/Fees";
 import Testimonials from "../landingpage/Testimonials";
 import Process from "../landingpage/Process";
+import { tracks } from "./helpers/fundamentalhelpers";
+
+import FirstCard from "/Images/first-card.jpg"
+import SecondCard from "/Images/second-card.jpg"
+import ThirdCard from "/Images/third-card.jpg"
 
 const IndividualCourse = () => {
     let { id } = useParams();
@@ -18,25 +24,29 @@ const IndividualCourse = () => {
     const coursedetails = [
         {
             id: 1,
-            title: "Artificial Intelligence",
-            bold: "Master the Future of Technology",
-            description: "Dive into the world of AI and machine learning. Learn to develop intelligent systems, neural networks, and cutting-edge algorithms that are shaping the future of technology across industries.",
-            image: "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            title: "Level Up After Graduation",
+            bold: "For Graduates & Beyond",
+            description:
+                "Take your tech career to the next level with advanced courses tailored for industry success. Master tools and frameworks to stay ahead.",
+            image: FirstCard,
         },
         {
             id: 2,
-            title: "MERN Stack Development",
-            bold: "Build Modern Web Applications",
-            description: "Become a full-stack developer with MERN (MongoDB, Express.js, React, Node.js) stack. Create dynamic and responsive web applications from front-end interfaces to robust back-end systems.",
-            image: "https://images.pexels.com/photos/11035471/pexels-photo-11035471.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            title: "Skill Up While You Study",
+            bold: "For Current Engineering Students",
+            description:
+                "Still in college? Turn your years of study into real-world skills with hands-on courses in software development. Learn to create, innovate, and lead in tech, starting now!",
+            image: SecondCard,
         },
         {
             id: 3,
-            title: "Cybersecurity",
-            bold: "Protect Digital Assets",
-            description: "Learn to safeguard information systems from cyber threats. Master the techniques of ethical hacking, network security, and digital forensics to become a cybersecurity expert in high demand.",
-            image: "https://images.pexels.com/photos/5380642/pexels-photo-5380642.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            title: "Launch Your Startup Dream",
+            bold: "For Every one",
+            description:
+                "Got a startup idea? Whether you're in college or a graduate, our program equips you to transform your vision into a thriving business. From ideation to scaling, we'll guide your entrepreneurial path.",
+            image: ThirdCard,
         },
+
     ];
 
     const isValidId = /^[0-9]+$/.test(id);
@@ -60,11 +70,12 @@ const IndividualCourse = () => {
         <>
             <Navigation />
             <div className="mt-[30%] md:mt-[7%] text-center">
-                <CourseHero course={course} />
+                <Hero tracks={tracks} id={0} course={course} />
+                {/* <CourseHero course={course}/> */}
                 <LearnerCount />
-                <Alumini/> 
-                <Certificate/>
-                <Testimonials/>
+                <Alumini />
+                <Certificate />
+                <Testimonials />
                 <Process />
                 <Fees />
             </div>

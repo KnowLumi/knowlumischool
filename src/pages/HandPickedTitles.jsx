@@ -79,9 +79,9 @@ function HandPickedTitles() {
         </Button>
       </div>
 
-      <div className="grid lg:flex lg:p-16 justify-center items-start mt-8 mb-12 gap-6 ">
+      <div className="grid lg:flex lg:p-16 lg:pb-0 justify-center items-center mt-8 mb-0 gap-6 ">
         {/* First Section */}
-        <div className="w-full flex flex-col items-start p-4 max-w-xl gap-4">
+        <div className="w-full flex flex-col justify-center items-center p-4 max-w-xl gap-4">
           <h3 className="font-light text-2xl md:text-4xl lg:text-6xl">
             Program Open For Enrollment
           </h3>
@@ -102,7 +102,10 @@ function HandPickedTitles() {
         </div>
 
         {/* Second Section - Animated */}
-        <div className="w-full h-[80%] p-4 relative flex flex-col justify-center items-center">
+        <div className="w-[50%] h-[80%] p-4 relative flex flex-col justify-center items-center">
+          <div className="w-full h-auto">
+            <h1 className="text-center text-5xl font-light tracking-tight text-bold mb-2">Workshop</h1>
+          </div>
           <AnimatePresence mode="wait">
             {blogContent.map((blog, index) =>
               index === currentIndex ? ( // Render only the card matching the current index

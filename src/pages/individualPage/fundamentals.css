@@ -1,0 +1,35 @@
+.hero-banner {
+    background-image: url('./Images/hero.png');
+}
+
+.gradbg {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.28) 0%, rgba(255, 255, 255, 0.34) 100%);
+    border: 1px solid;
+    border-image-source: linear-gradient(90deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.09) 100%);
+
+}
+
+.roadmap-items {
+    background-image: url('./Images/roadmap.png');
+}
+
+.fundamental_arrow{
+    animation: arrow 1500ms ease-in-out forwards infinite;
+}
+
+@keyframes arrow {
+    0%,100%{
+        margin-left: 0px;
+        color: white;
+    }
+    50%{
+        margin-left: 10px;
+        color:#4258BE
+    }
+}
+
+@media (max-width: 640px) {
+    .roadmap-items {
+        background-image: url('./Images/roadmap_mobile.png');
+    }
+}

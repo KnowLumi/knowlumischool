@@ -21,7 +21,7 @@ const About = () => {
             </Button>
             <div className="flex flex-col items-center">
               <span className="font-light text-3xl md:text-6xl text-center">
-                About KnowLumi
+                About KnowLumi School
               </span>
             </div>
           </div>
@@ -29,8 +29,8 @@ const About = () => {
             Ever wondered why some engineering students excel in their careers more than others? The secret isn’t just in what they learn from 9 to 4—it’s what they do after class. They identify their passions early and pursue them with quality resources, top mentors, and advanced programs.
           </p>
           <div className="flex items-center justify-center gap-2 md:gap-3.5 mt-6 md:mt-8 w-full">
-            <img src={logo} alt="" className="w-6 h-6 md:w-7 md:h-7" />
-            <span className="font-extrabold text-base md:text-lg">Introducing KnowLumi</span>
+            {/* <img src={logo} alt="" className="w-6 h-6 md:w-7 md:h-7" /> */}
+            <span className="font-extrabold text-base md:text-lg">Introducing KnowLumi School</span>
           </div>
           <div
             style={{ backgroundImage: `url('${curly}')` }}
