@@ -3,7 +3,7 @@ import Profile from "../../assets/LearnerCountImage/profile.png";
 import Company from "../../assets/LearnerCountImage/flipkart.svg";
 import Marquee from "react-fast-marquee";
 
-const LearnerCount = () => {
+const LearnerCount = ({title}) => {
     const profileDetails = [
         {
             profile: Profile,
@@ -73,7 +73,7 @@ const LearnerCount = () => {
     return (
         <div className='w-full flex flex-row justify-center items-center'>
             <div className='container border border-gray rounded-lg w-[90%] h-[25vh] md:h-[47vh] max-h-max md:w-[70%] my-10 flex flex-col gap-1 p-4 md:p-8 text-left overflow-hidden' >
-                <h1 className='text-3xl md:text-6xl font-archive'>5.4M+ Learners</h1>
+                <h1 className='text-3xl md:text-6xl font-archive'>{title}</h1>
                 <p className='text-xs md:text-xl'>have reaped benefits from our programs</p>
                 <Marquee
                     speed={120}

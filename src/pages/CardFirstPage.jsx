@@ -11,6 +11,7 @@ import Fees from "./individualPage/Fees";
 import Testimonials from "../landingpage/Testimonials";
 import Process from "../landingpage/Process";
 import { tracks } from "./helpers/fundamentalhelpers";
+import FaqSection from "../landingpage/FaqSection";
 
 import FirstCard from "/Images/first-card.jpg"
 import SecondCard from "/Images/second-card.jpg"
@@ -18,9 +19,8 @@ import ThirdCard from "/Images/third-card.jpg"
 import IndividualTracks from './individualPage/individual-tracks';
 
 const IndividualCourse = () => {
-    let { id } = useParams();
-
-    const courseId = parseInt(id, 10);
+    // let { id } = useParams();
+    // const courseId = parseInt(id, 10);
 
     const coursedetails = [
         {
@@ -50,36 +50,36 @@ const IndividualCourse = () => {
 
     ];
 
-    const isValidId = /^[0-9]+$/.test(id);
-    const course = coursedetails.find((course) => course.id === courseId);
+    // const isValidId = /^[0-9]+$/.test(id);
+    // const course = coursedetails.find((course) => course.id === courseId);
 
-    useEffect(() => {
-        console.log("ID:", id);
-        console.log("Course:", course);
+    // useEffect(() => {
+    //     console.log("ID:", id);
+    //     console.log("Course:", course);
 
-    }, []);
+    // }, []);
 
-    if (!isValidId || !course) {
-        return (
-            <div className="min-h-screen flex flex-col items-center justify-center">
-                <h1 className="text-lg text-red-600 font-bold">Error: Invalid Course ID</h1>
-            </div>
-        );
-    }
+    // if (!isValidId || !course) {
+    //     return (
+    //         <div className="min-h-screen flex flex-col items-center justify-center">
+    //             <h1 className="text-lg text-red-600 font-bold">Error: Invalid Course ID</h1>
+    //         </div>
+    //     );
+    // }
 
     return (
         <>
             <Navigation />
             <div className="mt-[30%] md:mt-[7%] text-center">
-                <Hero tracks={tracks} id={0} course={course} />
+                <Hero tracks={tracks} id={0} course={coursedetails[0]} />
                 {/* <CourseHero course={course}/> */}
                 <IndividualTracks/>
-                <LearnerCount />
+                <LearnerCount title={"5.4M+ Learners"}/>
                 <Alumini />
                 <Certificate />
                 <Testimonials />
-                {/* <Process /> */}
-                
+                {/* <Process /> */} 
+                <FaqSection itemShow={3}/>
                 {/* <Fees /> */}
             </div>
             <Footer />

@@ -26,10 +26,12 @@ function Icon({ id, open }) {
     </svg>
   );
 }
-const FaqSection = () => {
+const FaqSection = ({itemShow = faq.length}) => {
   const [open, setOpen] = useState(0);
 
   const handleOpen = (value) => setOpen(open === value ? 0 : value);
+
+  const disaplyFaq = faq.slice(0, itemShow);
   return (
     <div className="w-full py-2 px-2 lg:px-8 mt-8 lg:my-16 flex flex-col items-center bg-[#F7F7F7] font-archivo ">
       <span className="font-archivo font-bold text-xl text-black opacity-60 mb-3">
@@ -39,7 +41,7 @@ const FaqSection = () => {
         Frequently Asked Questions
       </span>
       <div className="my-12">
-        {faq.map((item, index) => (
+        {disaplyFaq.map((item, index) => (
           <Accordion
             key={index + 1}
             open={open === index + 1}

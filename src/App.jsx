@@ -34,7 +34,9 @@ import Footer from "./landingpage/Footer";
 import Navigation from "./landingpage/Navigation";
 import CommingSoon from "./pages/CommingSoon/CommingSoon";
 import WhatsAppButton from "./landingpage/WhatsappButton";
-import IndiviudalCourse from "./pages/IndiviudalCourse";
+import CardFirstPage from "./pages/CardFirstPage";
+import CardSecondPage from "./pages/CardSecondPage";
+import CardThirdPage from "./pages/CardThirdPage";
 
 export const Context = createContext();
 
@@ -76,7 +78,10 @@ function App() {
             {/* <Route path="/signin" element={<OtpPage />} /> */}
             <Route path="/signin" element={<CommingSoon/>} />
             <Route path="/coming-soon" element={<CommingSoon/>} />
-            <Route path="/course/:id" element={<IndiviudalCourse />} />
+            {/* <Route path="/course/:id" element={<IndiviudalCourse />} /> */}
+            <Route path='/course/1' element={<CardFirstPage/>}/>
+            <Route path='/course/2' element={<CardSecondPage/>}/>
+            <Route path='/course/3' element={<CardThirdPage/>}/>
 
 
             <Route path="/fundamentals" element={<Fundamentals />} />
