@@ -2,6 +2,9 @@ import { Progress } from "@material-tailwind/react";
 import React from "react";
 import { MdArrowForward, MdLock } from "react-icons/md";
 import { Button } from "react-scroll";
+import courseOne from "/Images/courseOne.png"
+import courseTwo from "/ProgressImages/course2.png"
+import courseThree from "/ProgressImages/course3.png"
 
 export default function IndividualTracks() {
   return (
@@ -198,7 +201,7 @@ export default function IndividualTracks() {
 
 const IndividualCourseData = [
   {
-    banner: "/ProgressImages/course1.png",
+    banner: {courseOne},
     title: "UI/UX Designing",
     desc: "Learn Essential designing skills!",
     skills: [
@@ -223,7 +226,7 @@ const IndividualCourseData = [
     isLocked: false,
   },
   {
-    banner: "/ProgressImages/course2.png",
+    banner: {courseTwo},
     title: "Data Science",
     desc: "Learn the Fundamentals of Data Science",
     skills: [
@@ -248,7 +251,7 @@ const IndividualCourseData = [
     isLocked: true,
   },
   {
-    banner: "/ProgressImages/course3.png",
+    banner: {courseThree},
     title: "Data analytics",
     desc: "Dive into Data Analytics!",
     skills: [
@@ -269,7 +272,7 @@ const IndividualCourseData = [
     isLocked: true,
   },
   {
-    banner: "/ProgressImages/course1.png",
+    banner: {courseOne},
     title: "UI/UX Designing",
     desc: "Learn Essential designing skills!",
     skills: [
