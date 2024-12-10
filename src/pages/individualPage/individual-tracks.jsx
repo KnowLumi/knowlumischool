@@ -201,7 +201,7 @@ export default function IndividualTracks() {
 
 const IndividualCourseData = [
   {
-    banner: {courseOne},
+    banner: courseOne,
     title: "UI/UX Designing",
     desc: "Learn Essential designing skills!",
     skills: [
@@ -226,7 +226,7 @@ const IndividualCourseData = [
     isLocked: false,
   },
   {
-    banner: {courseTwo},
+    banner: courseTwo,
     title: "Data Science",
     desc: "Learn the Fundamentals of Data Science",
     skills: [
@@ -251,7 +251,7 @@ const IndividualCourseData = [
     isLocked: true,
   },
   {
-    banner: {courseThree},
+    banner: courseThree,
     title: "Data analytics",
     desc: "Dive into Data Analytics!",
     skills: [
@@ -272,7 +272,7 @@ const IndividualCourseData = [
     isLocked: true,
   },
   {
-    banner: {courseOne},
+    banner: courseOne,
     title: "UI/UX Designing",
     desc: "Learn Essential designing skills!",
     skills: [
