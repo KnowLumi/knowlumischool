@@ -21,6 +21,7 @@ const Alumini = () => {
         </h1>
         <div className="w-full p-4 sm:p-6">
           <img
+            loading='lazy'
             src={mentorImage}
             alt="Alumni Companies"
             className="object-contain select-none"

@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaPhoneAlt, FaChevronLeft, FaChevronRight } from "react-icons/fa";
+// import { FaPhoneAlt, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import aboutbar from "../assets/about_bar1.png";
-import image_one from "../assets/hero_img_1.jpg"
+// import image_one from "../assets/hero_img_1.jpg"
 import { Button } from "@material-tailwind/react";
 import {
   MdArrowForward,
   MdHdrStrong,
   MdOutlinePhoneCallback,
 } from "react-icons/md";
-import { Link } from "react-router-dom";
-import WorkshopCard from "../landingpage/WorkshopCard";
+// import { Link } from "react-router-dom";
+// import WorkshopCard from "../landingpage/WorkshopCard";
 import FirstCard from "/Images/first-card.jpg"
 import SecondCard from "/Images/second-card.jpg"
 import ThirdCard from "/Images/third-card.jpg"

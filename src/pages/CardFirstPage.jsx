@@ -1,15 +1,14 @@
 import React, { useEffect } from 'react';
-import { useParams } from 'react-router-dom';
 import Navigation from '../landingpage/Navigation';
 import Footer from '../landingpage/Footer';
-import CourseHero from './individualPage/CourseHero';
+// import CourseHero from './individualPage/CourseHero';
 import Hero from './individualPage/Hero';
 import LearnerCount from "./individualPage/LearnerCount";
 import Alumini from "./individualPage/Alumini";
 import Certificate from "./individualPage/Certificate";
-import Fees from "./individualPage/Fees";
+// import Fees from "./individualPage/Fees";
 import Testimonials from "../landingpage/Testimonials";
-import Process from "../landingpage/Process";
+// import Process from "../landingpage/Process";
 import { tracks } from "./helpers/fundamentalhelpers";
 import FaqSection from "../landingpage/FaqSection";
 

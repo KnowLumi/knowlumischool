@@ -4,17 +4,17 @@ import FaqSection from "../landingpage/FaqSection";
 import HeroSection from "../landingpage/HeroSection";
 import Testimonials from "../landingpage/Testimonials";
 import About from "../landingpage/About";
-import Companies from "../landingpage/Companies";
-import Enroll from "../landingpage/Enroll";
-import Action from "../landingpage/Action";
-import Process from "../landingpage/Process";
+// import Companies from "../landingpage/Companies";
+// import Enroll from "../landingpage/Enroll";
+// import Action from "../landingpage/Action";
+// import Process from "../landingpage/Process";
 import Program from "../landingpage/Program";
-import WhyKnowLumi from "../landingpage/WhyKnowLumi";
-import Included from "../landingpage/Included";
+// import WhyKnowLumi from "../landingpage/WhyKnowLumi";
+// import Included from "../landingpage/Included";
 import Navigation from "../landingpage/Navigation";
 import Recognized from "../landingpage/Recognized";
 import HandPickedTitles from "./HandPickedTitles";
-import HowItsWorks from "../landingpage/HowItsWorks";
+// import HowItsWorks from "../landingpage/HowItsWorks";
 import { MdArrowForward } from "react-icons/md";
 
 const LandingPage = () => {

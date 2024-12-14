@@ -1,15 +1,14 @@
-import { Progress } from "@material-tailwind/react";
+// import { Progress } from "@material-tailwind/react";
 import React from "react";
-import { MdArrowForward, MdLock } from "react-icons/md";
+import { Link } from "react-router-dom";
+// import { MdArrowForward, MdLock } from "react-icons/md";
 import { Button } from "react-scroll";
-import courseOne from "/Images/courseOne.png"
-import courseTwo from "/ProgressImages/course2.png"
-import courseThree from "/ProgressImages/course3.png"
+import IndividualCourseData from "./individualCourseData";
 
 export default function IndividualTracks() {
   return (
     <div className="min-h-screen mt-24 bg-gray-100">
-      <h2 className="text-[#88DB1B] text-xl lg:text-3xl font-bold">
+      <h2 className="text-[#88DB1B] text-xl lg:text-3xl font-bold text-center">
         Courses
       </h2>
       <p className="max-w-2xl text-sm text-center mx-auto mt-3">
@@ -45,7 +44,7 @@ export default function IndividualTracks() {
                 >
                   <div className="flex flex-col items-center gap-2">
                     <i className="flex justify-center items-center w-5 h-5 md:w-7 md:h-7">
-                      <img src={skill.image} alt="" className="" />
+                      <img loading="lazy" src={skill.image} alt="" className="" />
                     </i>
                     <span className="font-light tracking-wider text-[10px] md:text-xs w-14 text-center">
                       {skill.skill}
@@ -184,9 +183,11 @@ export default function IndividualTracks() {
             </div>
 
             <div className="flex items-center gap-3 mt-3 w-full">
-              <Button className="flex bg-[#88DB1B]  justify-center items-center gap-2 w-full rounded-lg text-white capitalize font-archivo font-semibold text-sm py-2.5 px-7">
+              {/* <Button className="flex bg-[#88DB1B]  justify-center items-center gap-2 w-full rounded-lg text-white capitalize font-archivo font-semibold text-sm py-2.5 px-7"> */}
+              <Link to={`/course/title/${item.id}`} role="button" className="flex bg-[#88DB1B]  justify-center items-center gap-2 w-full rounded-lg text-white capitalize font-archivo font-semibold text-sm py-2.5 px-7">
                 Enroll Now
-              </Button>
+              </Link>
+              {/* </Button> */}
 
               <Button className="flex bg-white border border-[#88DB1B] text-[#88DB1B]  justify-center items-center gap-2 w-full rounded-lg capitalize font-archivo font-semibold text-sm py-2.5 px-7">
                 Learn More
@@ -199,147 +200,147 @@ export default function IndividualTracks() {
   );
 }
 
-const IndividualCourseData = [
-  {
-    banner: courseOne,
-    title: "UI/UX Designing",
-    desc: "Learn Essential designing skills!",
-    skills: [
-      {
-        image: "/SkillsLogos/html.png",
-        skill: "",
-      },
-      {
-        image: "/SkillsLogos/css.png",
-        skill: "",
-      },
-      {
-        image: "/SkillsLogos/python.png",
-        skill: "",
-      },
-      {
-        image: "/SkillsLogos/github.png",
-        skill: "",
-      },
-    ],
-    completed: 30,
-    isLocked: false,
-  },
-  {
-    banner: courseTwo,
-    title: "Data Science",
-    desc: "Learn the Fundamentals of Data Science",
-    skills: [
-      {
-        image: "/SkillsLogos/react.png",
-        skill: "",
-      },
-      {
-        image: "/SkillsLogos/figma.png",
-        skill: "",
-      },
-      {
-        image: "/SkillsLogos/python.png",
-        skill: "",
-      },
-      {
-        image: "/SkillsLogos/spark.png",
-        skill: "",
-      },
-    ],
-    completed: 0,
-    isLocked: true,
-  },
-  {
-    banner: courseThree,
-    title: "Data analytics",
-    desc: "Dive into Data Analytics!",
-    skills: [
-      {
-        image: "/SkillsLogos/apache-spark.png",
-        skill: "",
-      },
-      {
-        image: "/SkillsLogos/logos_hadoop.png",
-        skill: "",
-      },
-      {
-        image: "/SkillsLogos/logos_jupyter.png",
-        skill: "",
-      },
-    ],
-    completed: 0,
-    isLocked: true,
-  },
-  {
-    banner: courseOne,
-    title: "UI/UX Designing",
-    desc: "Learn Essential designing skills!",
-    skills: [
-      {
-        image: "/SkillsLogos/html.png",
-        skill: "",
-      },
-      {
-        image: "/SkillsLogos/css.png",
-        skill: "",
-      },
-      {
-        image: "/SkillsLogos/python.png",
-        skill: "",
-      },
-      {
-        image: "/SkillsLogos/github.png",
-        skill: "",
-      },
-    ],
-    completed: 30,
-    isLocked: false,
-  },
-  {
-    banner: "/ProgressImages/course2.png",
-    title: "Data Science",
-    desc: "Learn the Fundamentals of Data Science",
-    skills: [
-      {
-        image: "/SkillsLogos/react.png",
-        skill: "",
-      },
-      {
-        image: "/SkillsLogos/figma.png",
-        skill: "",
-      },
-      {
-        image: "/SkillsLogos/python.png",
-        skill: "",
-      },
-      {
-        image: "/SkillsLogos/spark.png",
-        skill: "",
-      },
-    ],
-    completed: 0,
-    isLocked: true,
-  },
-  {
-    banner: "/ProgressImages/course3.png",
-    title: "Data analytics",
-    desc: "Dive into Data Analytics!",
-    skills: [
-      {
-        image: "/SkillsLogos/apache-spark.png",
-        skill: "",
-      },
-      {
-        image: "/SkillsLogos/logos_hadoop.png",
-        skill: "",
-      },
-      {
-        image: "/SkillsLogos/logos_jupyter.png",
-        skill: "",
-      },
-    ],
-    completed: 0,
-    isLocked: true,
-  },
-];
+// const IndividualCourseData = [
+//   {
+//     banner: courseOne,
+//     title: "UI/UX Designing",
+//     desc: "Learn Essential designing skills!",
+//     skills: [
+//       {
+//         image: "/SkillsLogos/html.png",
+//         skill: "",
+//       },
+//       {
+//         image: "/SkillsLogos/css.png",
+//         skill: "",
+//       },
+//       {
+//         image: "/SkillsLogos/python.png",
+//         skill: "",
+//       },
+//       {
+//         image: "/SkillsLogos/github.png",
+//         skill: "",
+//       },
+//     ],
+//     completed: 30,
+//     isLocked: false,
+//   },
+//   {
+//     banner: courseTwo,
+//     title: "Data Science",
+//     desc: "Learn the Fundamentals of Data Science",
+//     skills: [
+//       {
+//         image: "/SkillsLogos/react.png",
+//         skill: "",
+//       },
+//       {
+//         image: "/SkillsLogos/figma.png",
+//         skill: "",
+//       },
+//       {
+//         image: "/SkillsLogos/python.png",
+//         skill: "",
+//       },
+//       {
+//         image: "/SkillsLogos/spark.png",
+//         skill: "",
+//       },
+//     ],
+//     completed: 0,
+//     isLocked: true,
+//   },
+//   {
+//     banner: courseThree,
+//     title: "Data analytics",
+//     desc: "Dive into Data Analytics!",
+//     skills: [
+//       {
+//         image: "/SkillsLogos/apache-spark.png",
+//         skill: "",
+//       },
+//       {
+//         image: "/SkillsLogos/logos_hadoop.png",
+//         skill: "",
+//       },
+//       {
+//         image: "/SkillsLogos/logos_jupyter.png",
+//         skill: "",
+//       },
+//     ],
+//     completed: 0,
+//     isLocked: true,
+//   },
+//   {
+//     banner: courseOne,
+//     title: "UI/UX Designing",
+//     desc: "Learn Essential designing skills!",
+//     skills: [
+//       {
+//         image: "/SkillsLogos/html.png",
+//         skill: "",
+//       },
+//       {
+//         image: "/SkillsLogos/css.png",
+//         skill: "",
+//       },
+//       {
+//         image: "/SkillsLogos/python.png",
+//         skill: "",
+//       },
+//       {
+//         image: "/SkillsLogos/github.png",
+//         skill: "",
+//       },
+//     ],
+//     completed: 30,
+//     isLocked: false,
+//   },
+//   {
+//     banner: "/ProgressImages/course2.png",
+//     title: "Data Science",
+//     desc: "Learn the Fundamentals of Data Science",
+//     skills: [
+//       {
+//         image: "/SkillsLogos/react.png",
+//         skill: "",
+//       },
+//       {
+//         image: "/SkillsLogos/figma.png",
+//         skill: "",
+//       },
+//       {
+//         image: "/SkillsLogos/python.png",
+//         skill: "",
+//       },
+//       {
+//         image: "/SkillsLogos/spark.png",
+//         skill: "",
+//       },
+//     ],
+//     completed: 0,
+//     isLocked: true,
+//   },
+//   {
+//     banner: "/ProgressImages/course3.png",
+//     title: "Data analytics",
+//     desc: "Dive into Data Analytics!",
+//     skills: [
+//       {
+//         image: "/SkillsLogos/apache-spark.png",
+//         skill: "",
+//       },
+//       {
+//         image: "/SkillsLogos/logos_hadoop.png",
+//         skill: "",
+//       },
+//       {
+//         image: "/SkillsLogos/logos_jupyter.png",
+//         skill: "",
+//       },
+//     ],
+//     completed: 0,
+//     isLocked: true,
+//   },
+// ];

@@ -87,10 +87,10 @@ const LearnerCount = ({title}) => {
                             return (
                                 <div key={index} className='h-21 w-[70px] md:h-[100px] md:w-[90px] rounded border border-gray '>
                                     <div className='h-16 w-full md:h-[70px] rounded'>
-                                        <img className='select-none w-full h-full object-cover object-top rounded' src={data.profile} />
+                                        <img loading='lazy' className='select-none w-full h-full object-cover object-top rounded' src={data.profile} />
                                     </div>
                                     <div className='h-5 w-full md:h-[30px] rounded bg-slate-300'>
-                                        <img className='select-none w-full h-full object-fit object-center p-1' src={data.company} />
+                                        <img loading='lazy' className='select-none w-full h-full object-fit object-center p-1' src={data.company} />
                                     </div>
                                 </div>
                             );

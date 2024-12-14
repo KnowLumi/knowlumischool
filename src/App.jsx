@@ -1,15 +1,16 @@
+import React, { Suspense } from "react";
 import { createContext, useState, useRef, useEffect } from "react";
 import About from "./landingpage/About";
 import Community from "./pages/Community/Community";
 import LandingPage from "./pages/LandingPage";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Earn from "./pages/Earn";
+// import Earn from "./pages/Earn";
 import "./App.css";
 import AllCourses from "./pages/AllCourses";
 import Course from "./pages/Course";
-import OtpPage from "./pages/Authentication/OtpPage";
-import Admin from "./pages/Admin";
-import Fundamentals from "./pages/Fundamentals";
+// import OtpPage from "./pages/Authentication/OtpPage";
+const Admin = React.lazy(() => import("./pages/Admin"));
+const Fundamentals = React.lazy(()=> ("./pages/Fundamentals"));
 import Progress from "./pages/ProgressPage";
 import MyLearning from "./pages/MyLearning";
 import ScrollToTop from "./ScrollToTop";
@@ -29,14 +30,15 @@ import Demo from "./pages/Admin/Video/Demo";
 import ProgramVideo from "./pages/Admin/Video/ProgramVideo";
 import Login from "./pages/Admin/Login";
 import Program from "./landingpage/Program";
-import NavMenu from "./Navigation/NavMenu";
-import Footer from "./landingpage/Footer";
+// import NavMenu from "./Navigation/NavMenu";
+const Footer = React.lazy(() => import("./landingpage/Footer"));
 import Navigation from "./landingpage/Navigation";
 import CommingSoon from "./pages/CommingSoon/CommingSoon";
-import WhatsAppButton from "./landingpage/WhatsappButton";
+const WhatsAppButton = React.lazy(() => import("./landingpage/WhatsappButton"));
 import CardFirstPage from "./pages/CardFirstPage";
 import CardSecondPage from "./pages/CardSecondPage";
 import CardThirdPage from "./pages/CardThirdPage";
+import LearningPage from "./pages/LearningPage";
 
 export const Context = createContext();
 
@@ -51,11 +53,13 @@ const AboutRouteBody = () => {
 
   return (
     <>
-  <Navigation/>
-  <About />
+      <Navigation />
+      <About />
       <Program scrollToIncluded={scrollToIncluded} />
       {/* Pass the ref to other components as needed */}
-   <Footer/>
+      <Suspense>
+        <Footer />
+      </Suspense>
     </>
   );
 };
@@ -66,7 +70,7 @@ function App() {
   return (
     <Context.Provider value={[signedIn, setSignedIn]}>
       <div className="h-screen bg-gray-50 font-archivo overflow-x-hidden">
-        <WhatsAppButton/>
+        <WhatsAppButton />
         <Router>
           <ScrollToTop />
           <Routes>
@@ -76,12 +80,13 @@ function App() {
             {/* <Route path="/refer&earn" element={<Earn />} /> */}
             <Route path="/all-courses" element={<AllCourses />} />
             {/* <Route path="/signin" element={<OtpPage />} /> */}
-            <Route path="/signin" element={<CommingSoon/>} />
-            <Route path="/coming-soon" element={<CommingSoon/>} />
+            <Route path="/signin" element={<CommingSoon />} />
+            <Route path="/coming-soon" element={<CommingSoon />} />
             {/* <Route path="/course/:id" element={<IndiviudalCourse />} /> */}
-            <Route path='/course/1' element={<CardFirstPage/>}/>
-            <Route path='/course/2' element={<CardSecondPage/>}/>
-            <Route path='/course/3' element={<CardThirdPage/>}/>
+            <Route path='/course/1' element={<CardFirstPage />} />
+            <Route path='/course/2' element={<CardSecondPage />} />
+            <Route path='/course/3' element={<CardThirdPage />} />
+            <Route path='/course/title/:id' element={<LearningPage />} />
 
 
             <Route path="/fundamentals" element={<Fundamentals />} />
@@ -114,7 +119,6 @@ function App() {
                 <Route path="addreview" element={<AddReview />} />
               </Route>
             </Route>
-            <Route path="/course:id" element={<Course />} />
           </Routes>
         </Router>
       </div>

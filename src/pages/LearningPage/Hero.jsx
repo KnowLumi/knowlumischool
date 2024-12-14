@@ -2,6 +2,8 @@ import { Button } from "@material-tailwind/react";
 import {
   MdHdrStrong,
   MdArrowForward,
+  MdOutlineLocalLibrary,
+  MdFreeCancellation,
   MdSlowMotionVideo,
 } from "react-icons/md";
 import { useLocation } from "react-router-dom";
@@ -12,73 +14,74 @@ const Hero = (props) => {
   const { tracks, id, course } = props;
   const location = useLocation();
   const isFundamentalsPath = location.pathname === "/fundamentals";
+
   return (
-    <div className="md:mx-20 px-6 mt-24 gap-8 flex md:flex-row flex-col justify-around">
+    <div className="md:mx-20 px-6 mt-24 gap-8 flex md:flex-row flex-col justify-between">
       <div className="flex flex-col gap-9">
         <div className="flex items-center w-fit bg-white rounded-full py-2 px-6 gap-4">
           <MdHdrStrong className="text-[#88DB1B]" />
           <span className="font-bold text-xs text-[#01010199]">
-            COURSE
+            LEARNING
           </span>
         </div>
         <span
-          className="font-medium text-[42px] text-left md:text-7xl md:text-5xl tracking-wide max-w-[30.25rem]"
+          className={`font-medium text-[42px] ${isFundamentalsPath ? "md:text-7xl" : "md:text-5xl"
+            } tracking-wide max-w-[30.25rem]`}
         >
           {course.title}
         </span>
         {!isFundamentalsPath && (
-          <span className="font-extrabold uppercase text-[#88DB1B] text-lg tracking-wider text-left" >
-            {course.bold}
+          <span className="font-extrabold uppercase text-[#88DB1B] text-[16px] tracking-wider">
+            {`${tracks[id].level} LEVEL COURSE`}
           </span>
         )}
         <div className="flex flex-col">
-          <p className="md:w-[27.5rem] font-light text-lg text-left">{course.description}</p>
-          {/* {isFundamentalsPath && (
-            <>
-              <div className="flex gap-3.5 items-center mt-5">
-                <MdOutlineLocalLibrary className="w-5 h-5 text-[#88DB1B]" />
-                <span className="font-light text-sm">Personal Mentorship</span>
-              </div>
-              <div className="flex gap-3.5 items-center mt-5">
-                <MdFreeCancellation className="w-5 h-5 text-[#88DB1B]" />
-                <span className="font-light text-sm">
-                  Weekly Review Meetings
+          <p className="md:w-[27.5rem] font-light text-xs">{course.desc}</p>
+          <div className="flex gap-3.5 items-center mt-5">
+            <MdOutlineLocalLibrary className="w-5 h-5 text-[#88DB1B]" />
+            <span className="font-light text-sm">Personal Mentorship</span>
+          </div>
+          <div className="flex gap-3.5 items-center mt-5">
+            <MdFreeCancellation className="w-5 h-5 text-[#88DB1B]" />
+            <span className="font-light text-sm">
+              Weekly Review Meetings
+            </span>
+          </div>
+        </div>
+
+        <div className="flex rounded-2xl border border-[#88DB1B] py-4 px-7 w-80 md:w-[30.75rem] justify-between">
+          {tracks[id].skills.map((skill, index) => (
+            <div
+              key={`skill-${index}`}
+              className="flex items-center justify-between"
+            >
+              <div className="flex flex-col items-center rounded-xl bg-[#F7F7F7] gap-2  p-1 md:p-4 ">
+                <img loading="lazy" src={skill.image} alt="" className="flex justify-center items-center w-5 h-5 md:w-8 md:h-8" />
+                <span className="font-light tracking-wider text-[10px] md:text-xs w-14 text-center">
+                  {skill.skill}
                 </span>
               </div>
-            </>
-          )} */}
-        </div>
-        {isFundamentalsPath && (
-          <>
-            <div className="flex rounded-2xl border border-[#88DB1B] py-4 px-7 w-80 md:w-[30.75rem] justify-between">
-              {tracks[id].skills.map((skill, index) => (
-                <div
-                  key={`skill-${index}`}
-                  className="flex items-center justify-between"
-                >
-                  <div className="flex flex-col items-center rounded-xl bg-[#F7F7F7] gap-2  p-1 md:p-4 ">
-                    <img loading="lazy" src={skill.image} alt="" className="flex justify-center items-center w-5 h-5 md:w-8 md:h-8"/>
-                    <span className="font-light tracking-wider text-[10px] md:text-xs w-14 text-center">
-                      {skill.skill}
-                    </span>
-                  </div>
-                  <span
-                    className={`${
-                      index === tracks[id].skills.length - 1
-                        ? "hidden"
-                        : "block"
-                    } w-[1px] h-10 bg-[#88DB1B]`}
-                  ></span>
-                </div>
-              ))}
+              <span
+                className={`${index === tracks[id].skills.length - 1
+                    ? "hidden"
+                    : "block"
+                  } w-[1px] h-10 bg-[#88DB1B]`}
+              ></span>
             </div>
-          </>
-        )}
+          ))}
+        </div>
 
-        <div className="flex flex-wrap md:justify-left gap-6">
+
+        <div className="flex flex-wrap md:justify-center gap-6">
           <Button className="rounded-full flex items-center gap-9 capitalize font-archivo font-medium text-[16px] py-2 pr-2 pl-12">
             Enroll Now
             <i className="flex icon w-8 h-8 text-white border border-[#0101010D] bg-[#FFFFFF33] justify-center items-center rounded-full">
+              <MdArrowForward />
+            </i>
+          </Button>
+          <Button className="rounded-full flex items-center gap-9 capitalize bg-white font-archivo font-bold text-[16px] text-black py-2 pr-2 pl-12">
+            Try Demo
+            <i className="flex w-8 h-8 -rotate-45 text-black border border-[#0101010D] bg-[#01010133] justify-center items-center rounded-full">
               <MdArrowForward />
             </i>
           </Button>

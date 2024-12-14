@@ -53,6 +53,7 @@ const Testimonials = () => {
             >
               <div className="flex items-center mb-6 gap-6">
                 <img
+                  loading="lazy"
                   src="https://docs.material-tailwind.com/img/face-2.jpg"
                   alt="avatar"
                   className="w-14 h-14 rounded-full"
@@ -87,6 +88,7 @@ const Testimonials = () => {
             >
               <div className="flex items-center mb-6 gap-6">
                 <img
+                  loading="lazy"
                   src="https://docs.material-tailwind.com/img/face-2.jpg"
                   alt="avatar"
                   className="w-14 h-14 rounded-full"
