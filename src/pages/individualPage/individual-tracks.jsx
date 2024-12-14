@@ -1,11 +1,11 @@
 // import { Progress } from "@material-tailwind/react";
-import React from "react";
 import { Link } from "react-router-dom";
 // import { MdArrowForward, MdLock } from "react-icons/md";
 import { Button } from "react-scroll";
 import IndividualCourseData from "./individualCourseData";
 
-export default function IndividualTracks() {
+const IndividualTracks = ({itemShow = IndividualCourseData.length}) => {
+  const displayCourse = IndividualCourseData.slice(0, itemShow);
   return (
     <div className="min-h-screen mt-24 bg-gray-100">
       <h2 className="text-[#88DB1B] text-xl lg:text-3xl font-bold text-center">
@@ -18,7 +18,7 @@ export default function IndividualTracks() {
         boundaries. */}
       </p>
       <div className="flex flex-wrap max-w-6xl mx-auto gap-5 justify-center mt-7 lg:mt-14">
-        {IndividualCourseData.map((item, i) => (
+        {displayCourse.map((item, i) => (
           <div
             key={`progress_c_${i + 1}`}
             className="rounded-2xl bg-white mb-12 md:w-[22.5rem] w-[19.75rem] flex flex-col items-start pb-5 px-5"
@@ -200,147 +200,4 @@ export default function IndividualTracks() {
   );
 }
 
-// const IndividualCourseData = [
-//   {
-//     banner: courseOne,
-//     title: "UI/UX Designing",
-//     desc: "Learn Essential designing skills!",
-//     skills: [
-//       {
-//         image: "/SkillsLogos/html.png",
-//         skill: "",
-//       },
-//       {
-//         image: "/SkillsLogos/css.png",
-//         skill: "",
-//       },
-//       {
-//         image: "/SkillsLogos/python.png",
-//         skill: "",
-//       },
-//       {
-//         image: "/SkillsLogos/github.png",
-//         skill: "",
-//       },
-//     ],
-//     completed: 30,
-//     isLocked: false,
-//   },
-//   {
-//     banner: courseTwo,
-//     title: "Data Science",
-//     desc: "Learn the Fundamentals of Data Science",
-//     skills: [
-//       {
-//         image: "/SkillsLogos/react.png",
-//         skill: "",
-//       },
-//       {
-//         image: "/SkillsLogos/figma.png",
-//         skill: "",
-//       },
-//       {
-//         image: "/SkillsLogos/python.png",
-//         skill: "",
-//       },
-//       {
-//         image: "/SkillsLogos/spark.png",
-//         skill: "",
-//       },
-//     ],
-//     completed: 0,
-//     isLocked: true,
-//   },
-//   {
-//     banner: courseThree,
-//     title: "Data analytics",
-//     desc: "Dive into Data Analytics!",
-//     skills: [
-//       {
-//         image: "/SkillsLogos/apache-spark.png",
-//         skill: "",
-//       },
-//       {
-//         image: "/SkillsLogos/logos_hadoop.png",
-//         skill: "",
-//       },
-//       {
-//         image: "/SkillsLogos/logos_jupyter.png",
-//         skill: "",
-//       },
-//     ],
-//     completed: 0,
-//     isLocked: true,
-//   },
-//   {
-//     banner: courseOne,
-//     title: "UI/UX Designing",
-//     desc: "Learn Essential designing skills!",
-//     skills: [
-//       {
-//         image: "/SkillsLogos/html.png",
-//         skill: "",
-//       },
-//       {
-//         image: "/SkillsLogos/css.png",
-//         skill: "",
-//       },
-//       {
-//         image: "/SkillsLogos/python.png",
-//         skill: "",
-//       },
-//       {
-//         image: "/SkillsLogos/github.png",
-//         skill: "",
-//       },
-//     ],
-//     completed: 30,
-//     isLocked: false,
-//   },
-//   {
-//     banner: "/ProgressImages/course2.png",
-//     title: "Data Science",
-//     desc: "Learn the Fundamentals of Data Science",
-//     skills: [
-//       {
-//         image: "/SkillsLogos/react.png",
-//         skill: "",
-//       },
-//       {
-//         image: "/SkillsLogos/figma.png",
-//         skill: "",
-//       },
-//       {
-//         image: "/SkillsLogos/python.png",
-//         skill: "",
-//       },
-//       {
-//         image: "/SkillsLogos/spark.png",
-//         skill: "",
-//       },
-//     ],
-//     completed: 0,
-//     isLocked: true,
-//   },
-//   {
-//     banner: "/ProgressImages/course3.png",
-//     title: "Data analytics",
-//     desc: "Dive into Data Analytics!",
-//     skills: [
-//       {
-//         image: "/SkillsLogos/apache-spark.png",
-//         skill: "",
-//       },
-//       {
-//         image: "/SkillsLogos/logos_hadoop.png",
-//         skill: "",
-//       },
-//       {
-//         image: "/SkillsLogos/logos_jupyter.png",
-//         skill: "",
-//       },
-//     ],
-//     completed: 0,
-//     isLocked: true,
-//   },
-// ];
+export default IndividualTracks;

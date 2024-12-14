@@ -1,18 +1,17 @@
-import { useRef, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom';
 import individualCourseData from "./individualPage/individualCourseData";
 
 import Hero from "./LearningPage/Hero";
 import { tracks } from "./helpers/fundamentalhelpers";
 
+import ScrollToTop from '../ScrollToTop';
 import Navigation from '../landingpage/Navigation';
 import Footer from '../landingpage/Footer';
-import ProgramOverview from './LearningPage/ProgramOverview'
+import ProgramOverview from './LearningPage/ProgramOverview';
 import SkillsCovered from "./Fundamentals/SkillsCovered";
 import Roadmap from "./Fundamentals/Roadmap";
 import Companies from "../landingpage/Companies";
 import IgniteGrowth from './LearningPage/IgniteGrowth';
-// import OurCourse from './LearningPage/OurCourse';
 import IndividualTracks from "./individualPage/individual-tracks";
 
 const LearningPage = () => {
@@ -20,24 +19,11 @@ const LearningPage = () => {
     const { id } = useParams();
     const navigate = useNavigate();
     const courseId = parseInt(id, 10);
-    const course = individualCourseData.find((item) => item.id == courseId);
-
-    const includedRef = useRef(null);
-    const mainContainerRef = useRef(null);
+    const course = individualCourseData.find((item) => item.id === courseId);
 
     if (course) {
         newSubCourse = course;
     }
-
-    const scrollToIncluded = () => {
-        includedRef.current.scrollIntoView({ behavior: 'smooth' });
-    };
-
-    useEffect(() => {
-        if (mainContainerRef.current) {
-            mainContainerRef.current.scrollIntoView({ behavior: 'smooth' });
-        }
-    }, []);
 
     if (!course) {
         return (
@@ -50,18 +36,18 @@ const LearningPage = () => {
 
     return (
         <>
+            <ScrollToTop />
             <Navigation />
             <Hero tracks={tracks} id={0} course={newSubCourse} />
-            <ProgramOverview/>
+            <ProgramOverview />
             <SkillsCovered tracks={tracks} id={0} />
             <Roadmap tracks={tracks} id={0} />
             <Companies />
-            <IgniteGrowth/>
-            {/* <OurCourse/> */}
-            <IndividualTracks/>
+            <IgniteGrowth />
+            <IndividualTracks itemShow={6} />
             <Footer />
         </>
-    )
-}
+    );
+};
 
-export default LearningPage
+export default LearningPage;

@@ -154,9 +154,9 @@ const Learning = ({ enableScroll }) => {
                 </div>
               </div>
               <div className="flex items-center gap-1">
-                <span className="text-[#88DB1B] font-normal text-xs">
+                <Link to={`/course/title/5452`} className="text-[#88DB1B] font-normal text-xs">
                   View More
-                </span>
+                </Link>
                 <MdKeyboardDoubleArrowRight className="w-3.5 h-3.5 text-[#FF9F1C]" />
               </div>
             </div>

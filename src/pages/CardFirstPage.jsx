@@ -72,7 +72,7 @@ const IndividualCourse = () => {
             <div className="mt-[30%] md:mt-[7%] text-center">
                 <Hero tracks={tracks} id={0} course={coursedetails[0]} />
                 {/* <CourseHero course={course}/> */}
-                <IndividualTracks/>
+                <IndividualTracks itemShow={6}/>
                 <LearnerCount title={"5.4M+ Learners"}/>
                 <Alumini />
                 <Certificate />

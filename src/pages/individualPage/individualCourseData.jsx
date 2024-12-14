@@ -151,6 +151,32 @@ const IndividualCourseData = [
     completed: 0,
     isLocked: true,
   },
+  {
+    id: 5452,
+    banner: "/ProgressImages/course3.png",
+    title: "Full-Stack Web Development with MERN Stack",
+    desc: "Dive into Data Analytics!",
+    skills: [
+      {
+        image: "/SkillsLogos/html.png",
+        skill: "",
+      },
+      {
+        image: "/SkillsLogos/css.png",
+        skill: "",
+      },
+      {
+        image: "/SkillsLogos/python.png",
+        skill: "",
+      },
+      {
+        image: "/SkillsLogos/github.png",
+        skill: "",
+      },
+    ],
+    completed: 0,
+    isLocked: true,
+  },
 ];
 
 export default IndividualCourseData;
