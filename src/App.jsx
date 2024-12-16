@@ -1,5 +1,5 @@
 import React, { Suspense } from "react";
-import { createContext, useState, useRef, useEffect } from "react";
+import { createContext, useState, useRef } from "react";
 import About from "./landingpage/About";
 import Community from "./pages/Community/Community";
 import LandingPage from "./pages/LandingPage";
@@ -7,16 +7,15 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 // import Earn from "./pages/Earn";
 import "./App.css";
 import AllCourses from "./pages/AllCourses";
-import Course from "./pages/Course";
+// import Course from "./pages/Course";
 // import OtpPage from "./pages/Authentication/OtpPage";
 const Admin = React.lazy(() => import("./pages/Admin"));
 const Fundamentals = React.lazy(()=> ("./pages/Fundamentals"));
 import Progress from "./pages/ProgressPage";
 import MyLearning from "./pages/MyLearning";
-import ScrollToTop from "./ScrollToTop";
 import DayProgress from "./pages/DayProgress";
 import Track from "./pages/Track";
-import Dashboard from "./pages/Admin/Dashboard";
+const Dashboard = React.lazy(() => import("./pages/Admin/Dashboard"));
 import Students from "./pages/Admin/Students";
 import Mentors from "./pages/Admin/Mentors";
 import Categories from "./pages/Admin/Categories";
@@ -72,7 +71,6 @@ function App() {
       <div className="h-screen bg-gray-50 font-archivo overflow-x-hidden">
         <WhatsAppButton />
         <Router>
-          <ScrollToTop />
           <Routes>
             <Route path="/" element={<LandingPage />} />
             <Route path="/about" element={<AboutRouteBody />} />

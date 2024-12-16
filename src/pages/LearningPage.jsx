@@ -52,10 +52,10 @@ const LearningPage = () => {
             <ProgramOverview />
             <SkillsCovered tracks={tracks} id={0} />
             <Roadmap tracks={tracks} id={0} />
+            <IgniteGrowth />
             <Included />
             <Enroll />
             {/* <Companies /> */}
-            <IgniteGrowth />
             <IndividualTracks itemShow={3} />
             <Footer />
         </>
