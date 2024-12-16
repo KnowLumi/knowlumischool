@@ -10,7 +10,7 @@ import Footer from '../landingpage/Footer';
 import ProgramOverview from './LearningPage/ProgramOverview';
 import SkillsCovered from "./Fundamentals/SkillsCovered";
 import Roadmap from "./Fundamentals/Roadmap";
-import Companies from "../landingpage/Companies";
+// import Companies from "../landingpage/Companies";
 import IgniteGrowth from './LearningPage/IgniteGrowth';
 import IndividualTracks from "./individualPage/individual-tracks";
 import Included from "../landingpage/Included";
@@ -54,7 +54,7 @@ const LearningPage = () => {
             <Roadmap tracks={tracks} id={0} />
             <Included />
             <Enroll />
-            <Companies />
+            {/* <Companies /> */}
             <IgniteGrowth />
             <IndividualTracks itemShow={3} />
             <Footer />

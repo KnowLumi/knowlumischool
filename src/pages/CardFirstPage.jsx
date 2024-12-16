@@ -16,6 +16,7 @@ import FirstCard from "/Images/first-card.jpg"
 import SecondCard from "/Images/second-card.jpg"
 import ThirdCard from "/Images/third-card.jpg"
 import IndividualTracks from './individualPage/individual-tracks';
+import Companies from "../landingpage/Companies";
 
 const IndividualCourse = () => {
     // let { id } = useParams();
@@ -73,6 +74,7 @@ const IndividualCourse = () => {
                 <Hero tracks={tracks} id={0} course={coursedetails[0]} />
                 {/* <CourseHero course={course}/> */}
                 <IndividualTracks itemShow={3}/>
+                <Companies/>
                 <LearnerCount title={"5.4M+ Learners"}/>
                 <Alumini />
                 <Certificate />

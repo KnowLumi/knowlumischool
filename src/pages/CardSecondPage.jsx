@@ -78,8 +78,8 @@ const IndividualCourse = () => {
                 <Alumini />
                 {/* How Knowlumi Works */}
                 <Process />
-                <Included />
                 <Certificate />
+                <Included />
                 <Testimonials />
                 <FaqSection itemShow={3} />
                 {/* <Fees /> */}
