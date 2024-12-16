@@ -22,7 +22,7 @@ const CommunityEngagement = () => {
         propels everyone forward.
       </p>
       <div className="mt-9 flex flex-col gap-4">
-        <h3 className="text-[#4258BE] font-semibold text-xl">Hackathons</h3>
+        <h3 className=" text-left text-[#4258BE] font-semibold text-xl">Hackathons</h3>
         <span className="font-light text-xs w-fit tracking-wider text-black">
           Hackathons, Ideathons and much more!
         </span>
@@ -52,7 +52,7 @@ const CommunityEngagement = () => {
         </div>
       </div>
       <div className="mt-9 flex flex-col gap-4">
-        <h3 className="text-[#4258BE] font-semibold text-xl">Masterclasses</h3>
+        <h3 className="text-[#4258BE] text-left font-semibold text-xl">Masterclasses</h3>
         <span className="font-light text-xs tracking-wider text-black w-60 md:w-fit">
           Learn with masterclasses from experts to remaster your specific skill.
         </span>

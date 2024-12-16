@@ -28,7 +28,7 @@ const Process = forwardRef(({ scrollToIncluded }, ref) => {
             </span>
           </button>
           <span className="w-72 md:w-80 font-light text-5xl">
-            How Knowlumi Works
+            How it Works
           </span>
           <div className="flex flex-col  text-sm">
             <p className="md:w-[22.75rem] font-light">

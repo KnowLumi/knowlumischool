@@ -41,10 +41,10 @@ const Learning = ({ enableScroll }) => {
         <span className="font-light text-sm">Weekly Review Meetings</span>
       </div>
       <div className="flex flex-col gap-4 mt-10">
-        <h3 className="text-[#4258BE] font-semibold text-xl">Fundamentals</h3>
+        <h3 className="text-[#4258BE] font-semibold text-xl text-left">Fundamentals</h3>
         <div className="flex gap-3.5 items-center">
           <MdAlarm className="w-[18px] h-[18px] text-[#88DB1B]" />
-          <span className="font-light text-sm">3 month duration</span>
+          <span className="font-light text-sm">3 month duration<  /span>
         </div>
         <span className="font-light text-xs tracking-wider text-black w-fit">
           Learn the fundamentals of the tech future
@@ -115,7 +115,7 @@ const Learning = ({ enableScroll }) => {
       </div>
       
       <div className="flex flex-col gap-4 mt-10 md:-ml-14 md:pl-14">
-        <h3 className="text-[#4258BE] font-semibold text-xl">
+        <h3 className="text-[#4258BE] font-semibold text-xl text-left">
           Mastering Tracks
         </h3>
         <span className="font-light text-sm md:w-80">

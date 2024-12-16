@@ -27,7 +27,7 @@ const Included = forwardRef((props, ref) => {
                   >
                     {item.logo}
                   </i>
-                  <span className="font-normal text-sm tracking-wide text-[#010101CC] w-[8.75rem]">
+                  <span className="font-normal text-sm tracking-wide text-[#010101CC] w-[8.75rem] text-left">
                     {item.title}
                   </span>
                 </div>

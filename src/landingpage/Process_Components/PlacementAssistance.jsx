@@ -18,7 +18,7 @@ const PlacementAssistance = () => {
         Comprehensive Placement Assistance Program!
       </p>
       <div className="flex flex-col mt-9 w-fit gap-4">
-        <h3 className="text-[#4258BE] font-semibold text-xl">
+        <h3 className="text-[#4258BE] font-semibold text-xl  text-left">
           Referrals to top companies
         </h3>
         <div className="flex items-center gap-2 md:gap-7">
@@ -48,7 +48,7 @@ const PlacementAssistance = () => {
         </div>
       </div>
       <div className="flex flex-col w-[267px] md:w-[534px] relative items-center mt-8 gap-4 rounded-2xl bg-[#88DB1B0D] px-6 py-4">
-        <h3 className="text-[#4258BE] font-semibold text-[16px] md:text-xl tracking-wider">
+        <h3 className="text-[#4258BE] font-semibold text-left text-[16px] md:text-xl tracking-wider">
           Our Exceptional Mentors
         </h3>
         <Carousel
@@ -144,7 +144,7 @@ const PlacementAssistance = () => {
         </Carousel>
       </div>
       <div className="flex flex-col mt-8 gap-6">
-        <h3 className="text-[#4258BE] font-semibold text-xl tracking-wider">
+        <h3 className="text-[#4258BE] font-semibold text-left text-xl tracking-wider">
           Free Add-ons:
         </h3>
         <ul className="md:w-[33.5rem] flex flex-wrap gap-6">
