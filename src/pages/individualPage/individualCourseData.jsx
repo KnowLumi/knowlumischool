@@ -6,7 +6,7 @@ const IndividualCourseData = [
   {
     id: 4613,
     banner: courseOne,
-    title: "UI/UX Designing",
+    title: "Mern Stack",
     desc: "Learn Essential designing skills!",
     skills: [
       {
@@ -32,7 +32,7 @@ const IndividualCourseData = [
   {
     id: 4632,
     banner: courseTwo,
-    title: "Data Science",
+    title: "Kotlin",
     desc: "Learn the Fundamentals of Data Science",
     skills: [
       {
@@ -58,7 +58,7 @@ const IndividualCourseData = [
   {
     id: 4654,
     banner: courseThree,
-    title: "Data analytics",
+    title: "Flutter",
     desc: "Dive into Data Analytics!",
     skills: [
       {

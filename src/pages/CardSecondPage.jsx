@@ -1,22 +1,22 @@
-import React, { useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import React from "react";
 import Navigation from '../landingpage/Navigation';
-import Footer from '../landingpage/Footer';
-import CourseHero from './individualPage/CourseHero';
+const Footer = React.lazy(() => import('../landingpage/Footer'));
+// const CourseHero = React.lazy(() => import('./individualPage/CourseHero'));
 import Hero from './individualPage/Hero';
 import LearnerCount from "./individualPage/LearnerCount";
 import Alumini from "./individualPage/Alumini";
 import Certificate from "./individualPage/Certificate";
-import Fees from "./individualPage/Fees";
+// import Fees from "./individualPage/Fees";
 import Testimonials from "../landingpage/Testimonials";
-import Process from "../landingpage/Process";
+import Included from "../landingpage/Included";
+const Process = React.lazy(() => import("../landingpage/Process"));
 import { tracks } from "./helpers/fundamentalhelpers";
-import FaqSection from "../landingpage/FaqSection";
+const FaqSection = React.lazy(() => import("../landingpage/FaqSection"));
 
-import FirstCard from "/Images/first-card.jpg"
-import SecondCard from "/Images/second-card.jpg"
-import ThirdCard from "/Images/third-card.jpg"
-import IndividualTracks from './individualPage/individual-tracks';
+const FirstCard = React.lazy(() => import("/Images/first-card.jpg"));
+const SecondCard = React.lazy(() => import("/Images/second-card.jpg"));
+const ThirdCard = React.lazy(() => import("/Images/third-card.jpg"));
+// import IndividualTracks from './individualPage/individual-tracks';
 
 const IndividualCourse = () => {
     // let { id } = useParams();
@@ -78,8 +78,9 @@ const IndividualCourse = () => {
                 <Alumini />
                 {/* How Knowlumi Works */}
                 <Process />
+                <Included />
                 <Certificate />
-                {/* <Testimonials /> */}
+                <Testimonials />
                 <FaqSection itemShow={3} />
                 {/* <Fees /> */}
             </div>

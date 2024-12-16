@@ -13,6 +13,8 @@ import Roadmap from "./Fundamentals/Roadmap";
 import Companies from "../landingpage/Companies";
 import IgniteGrowth from './LearningPage/IgniteGrowth';
 import IndividualTracks from "./individualPage/individual-tracks";
+import Included from "../landingpage/Included";
+import Enroll from "../landingpage/Enroll";
 
 const LearningPage = () => {
     let newSubCourse;
@@ -42,9 +44,11 @@ const LearningPage = () => {
             <ProgramOverview />
             <SkillsCovered tracks={tracks} id={0} />
             <Roadmap tracks={tracks} id={0} />
+            <Included/>
+            <Enroll/>
             <Companies />
             <IgniteGrowth />
-            <IndividualTracks itemShow={6} />
+            <IndividualTracks itemShow={3} />
             <Footer />
         </>
     );

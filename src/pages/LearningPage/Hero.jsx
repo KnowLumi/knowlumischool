@@ -49,7 +49,7 @@ const Hero = (props) => {
           </div>
         </div>
 
-        <div className="flex rounded-2xl border border-[#88DB1B] py-4 px-7 w-80 md:w-[30.75rem] justify-between">
+        {/* <div className="flex rounded-2xl border border-[#88DB1B] py-4 px-7 w-80 md:w-[30.75rem] justify-between">
           {tracks[id].skills.map((skill, index) => (
             <div
               key={`skill-${index}`}
@@ -69,7 +69,7 @@ const Hero = (props) => {
               ></span>
             </div>
           ))}
-        </div>
+        </div> */}
 
 
         <div className="flex flex-wrap md:justify-center gap-6">
