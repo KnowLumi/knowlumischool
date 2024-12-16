@@ -1,4 +1,3 @@
-import React from "react";
 import certificate from "../../assets/Certificate/certificate.avif";
 // import svgItemOne from "../../assets/Certificate/ready.svg";
 // import svgItemTwo from "../../assets/Certificate/share.svg";
