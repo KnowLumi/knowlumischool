@@ -132,6 +132,7 @@ const program = [
     points: [
       "Combines academics with career support.",
       "Offers mentorship, goal setting, and real-world skills.",
+      "Minimal industry exposure",
     ],
     color: "#2FC34F",
     video: careerdown,

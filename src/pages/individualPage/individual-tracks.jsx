@@ -8,7 +8,7 @@ const IndividualTracks = ({itemShow = IndividualCourseData.length}) => {
   const displayCourse = IndividualCourseData.slice(0, itemShow);
   return (
     <div className="min-h-screen mt-24 bg-gray-100">
-      <h2 className="text-[#88DB1B] text-xl lg:text-3xl font-bold text-center">
+      <h2 className="text-[#88DB1B] text-xl lg:text-5xl font-bold text-center pt-10">
         Courses
       </h2>
       <p className="max-w-2xl text-sm text-center mx-auto mt-3">
