@@ -10,7 +10,8 @@ import AllCourses from "./pages/AllCourses";
 // import Course from "./pages/Course";
 // import OtpPage from "./pages/Authentication/OtpPage";
 const Admin = React.lazy(() => import("./pages/Admin"));
-const Fundamentals = React.lazy(()=> ("./pages/Fundamentals"));
+// const Fundamental = React.lazy(()=> ("./pages/Fundamental"));
+import Fundamental from "./pages/Fundamental";
 import Progress from "./pages/ProgressPage";
 import MyLearning from "./pages/MyLearning";
 import DayProgress from "./pages/DayProgress";
@@ -87,7 +88,7 @@ function App() {
             <Route path='/course/title/:id' element={<LearningPage />} />
 
 
-            <Route path="/fundamentals" element={<Fundamentals />} />
+            <Route path="/fundamentals" element={<Fundamental />} />
             <Route path="/track" element={<Track />} />
             <Route path="/progress" element={<Progress />} />
             <Route path="learning">

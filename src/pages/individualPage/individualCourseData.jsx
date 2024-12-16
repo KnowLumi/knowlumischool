@@ -176,6 +176,83 @@ const IndividualCourseData = [
     ],
     completed: 0,
     isLocked: true,
+  }, {
+    id: 544522,
+    banner: "/ProgressImages/course3.png",
+    title: "Full-Stack Web Development with LAMP Stack",
+    desc: "Dive into Data Analytics!",
+    skills: [
+      {
+        image: "/SkillsLogos/html.png",
+        skill: "",
+      },
+      {
+        image: "/SkillsLogos/css.png",
+        skill: "",
+      },
+      {
+        image: "/SkillsLogos/python.png",
+        skill: "",
+      },
+      {
+        image: "/SkillsLogos/github.png",
+        skill: "",
+      },
+    ],
+    completed: 0,
+    isLocked: true,
+  },
+  {
+    id: 54752,
+    banner: "/ProgressImages/course3.png",
+    title: "Full-Stack Web Development with MEAN Stack",
+    desc: "Dive into Data Analytics!",
+    skills: [
+      {
+        image: "/SkillsLogos/html.png",
+        skill: "",
+      },
+      {
+        image: "/SkillsLogos/css.png",
+        skill: "",
+      },
+      {
+        image: "/SkillsLogos/python.png",
+        skill: "",
+      },
+      {
+        image: "/SkillsLogos/github.png",
+        skill: "",
+      },
+    ],
+    completed: 0,
+    isLocked: true,
+  },
+  {
+    id: 545112,
+    banner: "/ProgressImages/course3.png",
+    title: "Full-Stack Web Development with Java",
+    desc: "Dive into Data Analytics!",
+    skills: [
+      {
+        image: "/SkillsLogos/html.png",
+        skill: "",
+      },
+      {
+        image: "/SkillsLogos/css.png",
+        skill: "",
+      },
+      {
+        image: "/SkillsLogos/python.png",
+        skill: "",
+      },
+      {
+        image: "/SkillsLogos/github.png",
+        skill: "",
+      },
+    ],
+    completed: 0,
+    isLocked: true,
   },
 ];
 

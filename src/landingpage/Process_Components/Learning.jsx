@@ -14,7 +14,10 @@ import node from "./logos/node.png";
 import reactjs from "./logos/react.png";
 import { Link } from "react-router-dom";
 import { tracks } from "../../pages/helpers/fundamentalhelpers";
+import IndividualCourseData from "../../pages/individualPage/individualCourseData";
+
 const Learning = ({ enableScroll }) => {
+  const newDataStack = IndividualCourseData.slice(-4);
   return (
     <div className="flex flex-col w-full mt-10 md:mt-0">
       <div className="flex items-center gap-7 -translate-x-12 md:-translate-x-20">
@@ -44,7 +47,7 @@ const Learning = ({ enableScroll }) => {
         <h3 className="text-[#4258BE] font-semibold text-xl text-left">Fundamentals</h3>
         <div className="flex gap-3.5 items-center">
           <MdAlarm className="w-[18px] h-[18px] text-[#88DB1B]" />
-          <span className="font-light text-sm">3 month duration<  /span>
+          <span className="font-light text-sm">3 month duration</span>
         </div>
         <span className="font-light text-xs tracking-wider text-black w-fit">
           Learn the fundamentals of the tech future
@@ -122,7 +125,7 @@ const Learning = ({ enableScroll }) => {
           Choose your career track, or let us choose it for you!
         </span>
         <div className="flex flex-wrap gap-[18px]">
-          {new Array(4).fill("").map((item, index) => (
+          {newDataStack.map((item, index) => (
             <div
               key={`Learning_fundamentals_track_${index + 1}`}
               className="bg-white rounded-xl w-[205px] h-[205px] py-4 px-3.5 flex flex-col gap-4"
@@ -132,7 +135,7 @@ const Learning = ({ enableScroll }) => {
                 <span className="font-bold text-[8px] text-white">TRACK 1</span>
               </div>
               <h2 className="font-normal text-xs">
-                Full-Stack Development with MERN Stack
+                {item.title}
               </h2>
               <div className="flex gap-5">
                 <img src={mongo} alt="" className="w-4 h-4" />
@@ -154,7 +157,7 @@ const Learning = ({ enableScroll }) => {
                 </div>
               </div>
               <div className="flex items-center gap-1">
-                <Link to={`/course/title/5452`} className="text-[#88DB1B] font-normal text-xs">
+                <Link to={`/course/title/${item.id}`} className="text-[#88DB1B] font-normal text-xs">
                   View More
                 </Link>
                 <MdKeyboardDoubleArrowRight className="w-3.5 h-3.5 text-[#FF9F1C]" />

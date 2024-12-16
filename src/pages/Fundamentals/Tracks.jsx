@@ -26,7 +26,7 @@ const Tracks = () => {
         </p>
       </div>
       <div className="flex flex-wrap gap-7">
-        {tracks.slice(1).map((item, i) => (
+        {tracks.map((item, i) => (
           <div key={`track_${i}`} className="bg-white rounded-xl w-52 py-4 px-3.5 flex flex-col gap-4">
             <div className="flex items-center w-fit bg-[#88DB1B] rounded-full py-1 px-2 gap-1">
               <MdHdrStrong className="text-white w-2 h-2" />

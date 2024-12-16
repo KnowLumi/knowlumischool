@@ -42,6 +42,9 @@ const LearningPage = () => {
             </div>
         );
     }
+    
+    const newData = individualCourseData.slice(4);
+    const newSet = newData.find((item) => item.id === courseId);
 
     return (
         <>
@@ -53,7 +56,9 @@ const LearningPage = () => {
             <SkillsCovered tracks={tracks} id={0} />
             <Roadmap tracks={tracks} id={0} />
             <IgniteGrowth />
-            <Included />
+            {newSet ? 
+                ""
+             : <Included /> }
             <Enroll />
             {/* <Companies /> */}
             <IndividualTracks itemShow={3} />
