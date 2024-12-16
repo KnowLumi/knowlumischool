@@ -1,7 +1,6 @@
 import React from 'react'
 import Navigation from "../landingpage/Navigation";
 import Hero from "./Fundamentals/Hero";
-import Process from "../landingpage/Process";
 import ProgramOverview from "./LearningPage/ProgramOverview";
 import SkillsCovered from "./Fundamentals/SkillsCovered";
 import Roadmap from "./Fundamentals/Roadmap";
@@ -17,7 +16,6 @@ const Fundamental = () => {
         <>
             <Navigation />
             <Hero tracks={tracks} id={0} />
-            <Process />
             <ProgramOverview />
             <SkillsCovered tracks={tracks} id={0} />
             <Roadmap tracks={tracks} id={0} />
