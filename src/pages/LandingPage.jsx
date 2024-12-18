@@ -72,14 +72,15 @@ const LandingPage = () => {
             </h1>
 
             <p className="text-zinc-600 text-base md:text-lg leading-relaxed mx-auto max-w-3xl">
-              Unlock Your Potential with Knowlumi - A Parallel Education System For Engineering Students. Learn like IITians by discovering your passion, setting your goals with our AI platform, connecting with expert mentors, accessing premium resources, and joining a community where individual success fuels collective growth. Experience a transformative learning journey that goes beyond traditional education.
+            Not sure about your career path? KnowLumi helps you discover the most suitable career based on your skills and aspirations.
+            Explore opportunities, build relevant skills, and get expert guidance to shape your future.
             </p>
 
             <div className="pt-4 flex justify-center items-center">
               <button
                 className="bg-[#88DB1B] hover:bg-black  text-white flex flex-row justify-center items-center p-3 rounded uppercase group"
               >
-                start your journey
+                Find Your Path with KnowLumi
                 <span className="ml-3 group-hover:translate-x-1 transition-transform duration-200">
                   <MdArrowForward className="w-5 h-5" />
                 </span>

@@ -31,6 +31,8 @@ function HandPickedTitles() {
       description:
         "Take your tech career to the next level with advanced courses tailored for industry success. Master tools and frameworks to stay ahead.",
       image: FirstCard,
+      link: "/course/1"
+      
     },
     {
       id: 2,
@@ -39,6 +41,7 @@ function HandPickedTitles() {
       description:
         "Still in college? Turn your years of study into real-world skills with hands-on courses in software development. Learn to create, innovate, and lead in tech, starting now!",
       image: SecondCard,
+      link: "/course/2"
     },
     {
       id: 3,
@@ -47,6 +50,7 @@ function HandPickedTitles() {
       description:
         "Got a startup idea? Whether you're in college or a graduate, our program equips you to transform your vision into a thriving business. From ideation to scaling, we'll guide your entrepreneurial path.",
       image: ThirdCard,
+      link: "/coming-soon"
     },
 
   ];
@@ -241,7 +245,7 @@ function HandPickedTitles() {
                       <MdOutlinePhoneCallback />
                     </i>
                   </Button>
-                  <Link to={`/coming-soon`}>
+                  <Link to={data.link}>
                     <Button className="w-60 lg:w-auto md:w-64 rounded-full bg-black flex items-center justify-center gap-3 capitalize font-archivo font-medium  py-2 pr-2 mt-4 md:mt-0">
                       Know More
                       <i className="flex icon w-6 h-6 text-white border border-[#0101010D] bg-[#FFFFFF33] justify-center items-center rounded-full">
