@@ -22,8 +22,8 @@ const LearningPage = () => {
     const location = useLocation();
 
     useLayoutEffect(() => {
-        document.documentElement.scrollTo(0, 0);
-    }, [location.pathname]);
+        window.scrollTo(0, 0);
+    }, []);
 
     const { id } = useParams();
     const navigate = useNavigate();

@@ -13,7 +13,7 @@ const PlacementAssistance = () => {
           Placement Assistance
         </h1>
       </div>
-      <p className="w-[13.25rem] md:w-[31.875rem] text-xs font-light tracking-wider mt-8">
+      <p className="w-[13.25rem] md:w-[31.875rem] text-xs font-light tracking-wider text-left mt-8">
         Gain Access to Top Companies and Personalized Training with Our
         Comprehensive Placement Assistance Program!
       </p>

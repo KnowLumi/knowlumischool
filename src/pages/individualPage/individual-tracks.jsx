@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 // import { MdArrowForward, MdLock } from "react-icons/md";
 import { Button } from "react-scroll";
 import IndividualCourseData from "./individualCourseData";
+import { Dot } from "lucide-react";
+import { CircleDotDashed } from "lucide-react";
+import { Target } from "lucide-react";
 
 const IndividualTracks = ({itemShow = IndividualCourseData.length}) => {
   const displayCourse = IndividualCourseData.slice(0, itemShow);
@@ -29,14 +32,14 @@ const IndividualTracks = ({itemShow = IndividualCourseData.length}) => {
                 className="absolute flex justify-end items-start -translate-x-3  -translate-y-4 bg-contain bg-no-repeat w-72 md:w-96 h-[11.25rem] md:h-[10.8rem]"
               ></div>
             </div>
-            <span className="font-normal text-[16px] tracking-wide mt-5">
+            <span className="font-normal text-[16px] tracking-wide mt-5 mb-6">
               {item.title}
             </span>
-            <span className="text-[#01010199] font-light text-xs my-4">
+            {/* <span className="text-[#01010199] font-light text-xs my-4">
               {item.desc}
-            </span>
+            </span> */}
 
-            <div className="flex gap-4 items-center">
+            <div className="flex gap-4 items-center mb-3">
               {item.skills.map((skill, index) => (
                 <div
                   key={`skill-${index}`}
@@ -55,8 +58,8 @@ const IndividualTracks = ({itemShow = IndividualCourseData.length}) => {
             </div>
 
             <div className="flex text-gray-500 mb-2 items-center gap-2">
-              <span className="text-black">Beginner (3-6 months)</span>
-              <svg
+              <span className="text-black">Beginner to Advanced</span>
+              {/* <svg
                 width="49"
                 height="9"
                 viewBox="0 0 49 9"
@@ -143,8 +146,8 @@ const IndividualTracks = ({itemShow = IndividualCourseData.length}) => {
                     fill="#FF9F1C"
                   />
                 </g>
-              </svg>
-              <span>20 reviews</span>
+              </svg> */}
+              {/* <span>20 reviews</span> */}
             </div>
 
             <div className="flex items-center justify-between gap-5 mb-3">
@@ -174,11 +177,13 @@ const IndividualTracks = ({itemShow = IndividualCourseData.length}) => {
                     />
                   </g>
                 </svg>
-                <p className="text-gray-500">41 Recorded Videos</p>
+                <p className="text-gray-500">Live Mentorship</p>
               </div>
 
               <div>
-                <span className="text-gray-500">4 projects</span>
+                <span className="text-gray-500 flex space-x-2 items-center"> 
+                <Target className="text-[#88DB1B] h-4" />
+                  Hands On Projects</span>
               </div>
             </div>
 

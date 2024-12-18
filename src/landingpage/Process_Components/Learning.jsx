@@ -45,13 +45,14 @@ const Learning = ({ enableScroll }) => {
       </div>
       <div className="flex flex-col gap-4 mt-10">
         <h3 className="text-[#4258BE] font-semibold text-xl text-left">Fundamentals</h3>
+        <span className="font-light text-left text-xs tracking-wider text-black w-fit">
+        In this stage, you’ll build a strong foundation by learning the core skills essential for your journey. The fundamentals include:
+        </span>
         <div className="flex gap-3.5 items-center">
           <MdAlarm className="w-[18px] h-[18px] text-[#88DB1B]" />
           <span className="font-light text-sm">3 month duration</span>
         </div>
-        <span className="font-light text-xs tracking-wider text-black w-fit">
-          Learn the fundamentals of the tech future
-        </span>
+       
         <div className="bg-white rounded-2xl flex flex-wrap w-[200px] md:w-[429px] gap-9 md:gap-0 items-center justify-center md:justify-between py-4 px-7">
           {tracks[0].skills.map((item, i) => (
             <>
@@ -121,8 +122,8 @@ const Learning = ({ enableScroll }) => {
         <h3 className="text-[#4258BE] font-semibold text-xl text-left">
           Mastering Tracks
         </h3>
-        <span className="font-light text-sm md:w-80">
-          Choose your career track, or let us choose it for you!
+        <span className="font-light text-sm text-left">
+        We'll recommend a track based on your assessment, or you can select your own to master the skills that align with your goals.
         </span>
         <div className="flex flex-wrap gap-[18px]">
           {newDataStack.map((item, index) => (

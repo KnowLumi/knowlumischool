@@ -16,16 +16,21 @@ const CommunityEngagement = () => {
           Community Engagement
         </h1>
       </div>
-      <p className="w-52 md:w-[32rem] text-xs font-light tracking-wider mt-6">
-        Join a network of like-minded individuals, access mentorship from
-        seasoned professionals, and embark on a journey where shared success
-        propels everyone forward.
+      <p className="w-52 md:w-[32rem] text-xs font-light tracking-wider mt-6 text-left">
+      Join a vibrant network of like-minded individuals, gain access to mentorship from seasoned professionals, and unlock opportunities that fuel collective growth. Our community is designed to help you thrive, whether you're a student, professional, or aspiring entrepreneur.
       </p>
       <div className="mt-9 flex flex-col gap-4">
-        <h3 className=" text-left text-[#4258BE] font-semibold text-xl">Hackathons</h3>
-        <span className="font-light text-xs w-fit tracking-wider text-black">
-          Hackathons, Ideathons and much more!
+        <h3 className=" text-left text-[#4258BE] font-semibold text-xl">Hackathons , Ideathons and more 
+        </h3>
+        <span className="font-light text-xs w-fit tracking-wider text-black text-left">
+        Put your skills to the test and solve real-world challenges in our Hackathons and Ideathons. These events help you:
         </span>
+        <ul className="text-left font-light text-xs tracking-wider">
+        <li className="list-disc">Collaborate with peers and industry leaders.</li>
+        <li className="list-disc">Gain hands-on experience and boost your problem-solving abilities.</li>
+        <li className="list-disc">Earn rewards and recognition for innovative solutions.</li>
+
+        </ul>
         <div className="bg-white rounded-2xl p-4 w-56 md:w-[27rem] md:h-[10rem] flex flex-col justify-center">
           <Fade
             arrows={false}
@@ -54,7 +59,7 @@ const CommunityEngagement = () => {
       <div className="mt-9 flex flex-col gap-4">
         <h3 className="text-[#4258BE] text-left font-semibold text-xl">Masterclasses</h3>
         <span className="font-light text-xs tracking-wider text-black w-60 md:w-fit">
-          Learn with masterclasses from experts to remaster your specific skill.
+        Enhance your expertise with masterclasses taught by top industry professionals.
         </span>
         <div className="flex gap-3.5 items-center">
           <svg
@@ -69,7 +74,8 @@ const CommunityEngagement = () => {
               fill="#88DB1B"
             />
           </svg>
-          <span className="font-light text-sm">Freelance sessions</span>
+          <span className="font-light text-sm"><span className="font-bold">Freelance Sessions:</span> Learn skills that open doors to freelance opportunities.
+          </span>
         </div>
         <div className="flex gap-3.5 items-center">
           <svg
@@ -89,7 +95,7 @@ const CommunityEngagement = () => {
             />
           </svg>
 
-          <span className="font-light text-sm">Add-ons to your skills</span>
+          <span className="font-light text-sm"><span className="font-bold">Skill Add-ons:</span> Stay ahead by mastering niche skills and technologies.</span>
         </div>
       </div>
       <div className="flex flex-col md:flex-row w-fit gap-8 items-center mt-9">

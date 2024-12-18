@@ -6,23 +6,23 @@ const IndividualCourseData = [
   {
     id: 4613,
     banner: courseOne,
-    title: "Mern Stack",
-    desc: "Learn Essential designing skills!",
+    title: "Learn Mern Stack Development",
+    desc: "Master MERN: MongoDB, Express.js, React, and Node.js—one of the most in-demand full-stack technologies for building modern, scalable web applications.",
     skills: [
       {
-        image: "/SkillsLogos/html.png",
+        image: "/SkillsLogos/mongodb.png",
         skill: "",
       },
       {
-        image: "/SkillsLogos/css.png",
+        image: "/SkillsLogos/express.png",
         skill: "",
       },
       {
-        image: "/SkillsLogos/python.png",
+        image: "/SkillsLogos/react.png",
         skill: "",
       },
       {
-        image: "/SkillsLogos/github.png",
+        image: "/SkillsLogos/node.png",
         skill: "",
       },
     ],
@@ -32,23 +32,23 @@ const IndividualCourseData = [
   {
     id: 4632,
     banner: courseTwo,
-    title: "Kotlin",
-    desc: "Learn the Fundamentals of Data Science",
+    title: "Learn Kotlin Android Development",
+    desc: "Develop robust and modern Android applications with Kotlin—a concise, expressive, and officially recommended programming language for Android development.",
     skills: [
       {
-        image: "/SkillsLogos/react.png",
+        image: "/SkillsLogos/kotlin.png",
         skill: "",
       },
       {
-        image: "/SkillsLogos/figma.png",
+        image: "/SkillsLogos/android.png",
         skill: "",
       },
       {
-        image: "/SkillsLogos/python.png",
+        image: "/SkillsLogos/jetpack.webp",
         skill: "",
       },
       {
-        image: "/SkillsLogos/spark.png",
+        image: "/SkillsLogos/android-studio.png",
         skill: "",
       },
     ],
@@ -58,19 +58,23 @@ const IndividualCourseData = [
   {
     id: 4654,
     banner: courseThree,
-    title: "Flutter",
-    desc: "Dive into Data Analytics!",
+    title: "Learn Flutter Development",
+    desc: "Build beautiful, fast, and cross-platform mobile applications using Flutter—Google's open-source framework for crafting natively compiled apps for iOS and Android with a single codebase.",
     skills: [
       {
-        image: "/SkillsLogos/apache-spark.png",
+        image: "/SkillsLogos/flutter.png",
         skill: "",
       },
       {
-        image: "/SkillsLogos/logos_hadoop.png",
+        image: "/SkillsLogos/dart.png",
         skill: "",
       },
       {
-        image: "/SkillsLogos/logos_jupyter.png",
+        image: "/SkillsLogos/android.png",
+        skill: "",
+      },
+      {
+        image: "/SkillsLogos/ios.png",
         skill: "",
       },
     ],

@@ -10,7 +10,7 @@ const Earning = () => {
         </div>
         <h1 className="font-normal text-4xl md:text-[42px]">Earning</h1>
       </div>
-      <p className="w-full md:w-[32rem] text-xs font-light tracking-wider mt-8">
+      <p className="w-full md:w-[32rem] text-xs font-light tracking-wider text-left mt-8">
         KnowLumi empowers you to secure internships, jobs, or even launch your
         own ventures. Seamlessly transition from education to real-world success
         by leveraging the skills and connections!

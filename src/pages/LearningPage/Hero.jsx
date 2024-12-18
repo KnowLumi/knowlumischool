@@ -39,12 +39,12 @@ const Hero = (props) => {
           <p className="md:w-[27.5rem] font-light text-xs">{course.desc}</p>
           <div className="flex gap-3.5 items-center mt-5">
             <MdOutlineLocalLibrary className="w-5 h-5 text-[#88DB1B]" />
-            <span className="font-light text-sm">Personal Mentorship</span>
+            <span className="font-light text-sm">Live Mentorship</span>
           </div>
           <div className="flex gap-3.5 items-center mt-5">
             <MdFreeCancellation className="w-5 h-5 text-[#88DB1B]" />
             <span className="font-light text-sm">
-              Weekly Review Meetings
+            Hands On Project
             </span>
           </div>
         </div>
