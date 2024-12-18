@@ -32,6 +32,12 @@ const Certificate = () => {
     {
       imageSrc: rocketBulletPoint,
       title:
+        "Demonstrate your commitment to continuous learning and growth.",
+      desc: "IRC certifies your industry-readiness and gets you placed with higher salaries.",
+    },
+    {
+      imageSrc: rocketBulletPoint,
+      title:
         "Stand out in interviews and professional networks with credible achievements.",
       desc: "IRC certifies your industry-readiness and gets you placed with higher salaries.",
     },
