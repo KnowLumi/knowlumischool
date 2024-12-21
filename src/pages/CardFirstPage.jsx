@@ -26,6 +26,7 @@ import {
 import { IoChevronForwardOutline } from 'react-icons/io5';
 import { Icon } from 'lucide-react';
 import { FiPlus } from 'react-icons/fi';
+import ComparisonTable from './layouts/comparison-table';
 
 const IndividualCourse = () => {
 
@@ -90,6 +91,7 @@ const IndividualCourse = () => {
                 <Certificate />
                 <Testimonials />
                 {/* <Process /> */} 
+                <ComparisonTable/>
                 <FirstCoursePageFAQ  />
                 {/* <Fees /> */}
             </div>
