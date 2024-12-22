@@ -16,6 +16,7 @@ import IndividualTracks from "./individualPage/individual-tracks";
 import Included from "../landingpage/Included";
 import Enroll from "../landingpage/Enroll";
 import { useLayoutEffect } from "react";
+import IndividualCourseData from "./individualPage/individualCourseData";
 
 const LearningPage = () => {
   let newSubCourse;
@@ -29,6 +30,7 @@ const LearningPage = () => {
   const navigate = useNavigate();
   const courseId = parseInt(id, 10);
   const course = individualCourseData.find((item) => item.id === courseId);
+  //?  based on the course id choose index number for course data 
   let courseDataIndexNumber = 0;
   switch (courseId) {
     case 4613:
@@ -67,7 +69,7 @@ const LearningPage = () => {
       <Hero tracks={tracks} id={0} course={newSubCourse} />
       <ProgramOverview />
       <SkillsCovered tracks={tracks} id={courseDataIndexNumber} />
-      <Roadmap tracks={tracks} id={0} />
+      <Roadmap tracks={IndividualCourseData} id={courseDataIndexNumber} />
       <IgniteGrowth />
       {newSet ? "" : <Included />}
       <Enroll />

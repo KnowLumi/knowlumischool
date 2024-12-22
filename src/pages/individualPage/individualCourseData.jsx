@@ -1,6 +1,7 @@
-import courseOne from "/Images/courseOne.png"
-import courseTwo from "/ProgressImages/course2.png"
-import courseThree from "/ProgressImages/course3.png"
+import { week } from "../helpers/learninghelpers";
+import courseOne from "/Images/courseOne.png";
+import courseTwo from "/ProgressImages/course2.png";
+import courseThree from "/ProgressImages/course3.png";
 
 const IndividualCourseData = [
   {
@@ -24,6 +25,139 @@ const IndividualCourseData = [
       {
         image: "/SkillsLogos/node.png",
         skill: "Node.js runtime environment",
+      },
+    ],
+    roadmap: [
+      {
+        week: "Week 1",
+        topics: [
+          "What is HTML?",
+          "What are the basic HTML tags?",
+          "How do you add an image in HTML?",
+          "How do you create links in HTML?",
+          "What is a semantic tag?",
+        ],
+      },
+      {
+        week: "Week 2",
+        topics: [
+          "What is CSS?",
+          "How do you link CSS to HTML?",
+          "What is the box model in CSS?",
+          "What are CSS selectors?",
+          "How do you center an element in CSS?",
+        ],
+      },
+      {
+        week: "Week 3",
+        topics: [
+          "What is Git?",
+          "How do you initialize a Git repo?",
+          "How do you make a commit in Git?",
+          "What is the difference between Git and GitHub?",
+          "How do you create branches in Git?"
+        ],
+      },
+      {
+        week: "Week 4",
+        topics: [
+          "What is the purpose of forms in HTML?",
+          "How do you create a form in HTML?",
+          "What are input types?",
+          "How do you validate forms in HTML?",
+          "How do you handle form data?"
+        ]        
+      },
+      {
+        week: "Week 5",
+        topics: [
+          "What is Flexbox?",
+          "How do you create a Flexbox container?",
+          "What is the difference between Flexbox and Grid?",
+          "How do you align items with Flexbox?",
+          "What are grid lines in CSS Grid?"
+        ]        
+      },
+      {
+        week: "Week 6",
+        topics: [
+          "What are variables in JavaScript?",
+          "What is a function?",
+          "How do you create a loop in JS?",
+          "What are conditionals in JavaScript?",
+          "What is the difference between let, var, and const?"
+        ]        
+      },
+      {
+        week: "Week 7",
+        topics: [
+          "What is the DOM?",
+          "How do you select an element in JavaScript?",
+          "How do you change an element’s content?",
+          "How do you add and remove classes?",
+          "What is event handling in JavaScript?"
+        ]        
+      },
+      {
+        week: "Week 8",
+        topics: [
+          "What is an arrow function?",
+          "How do you use promises in JavaScript?",
+          "What is async/await?",
+          "What is destructuring in JS?",
+          "How do you handle errors in promises?"
+        ]        
+      },
+      {
+        week: "Week 9",
+        topics: [
+          "What is Node.js?",
+          "How do you set up a basic Node.js server?",
+          "What are modules in Node.js?",
+          "How do you handle HTTP requests in Node.js?",
+          "What is the purpose of the 'http' module in Node.js?"
+        ]        
+      },
+      {
+        week: "Week 10",
+        topics: [
+          "What is Express.js?",
+          "How do you set up a basic Express server?",
+          "What is a route in Express?",
+          "How do you create middleware in Express?",
+          "What is app.use() in Express?"
+        ]        
+      },
+      {
+        week: "Week 11",
+        topics: [
+          "What is MongoDB?",
+          "What is the difference between SQL and NoSQL?",
+          "How do you insert data into MongoDB?",
+          "How do you query data in MongoDB?",
+          "What is a MongoDB document?"
+        ]        
+      },
+      {
+        week: "Week 12",
+        topics: [
+          "What is Mongoose?",
+          "How do you define a Mongoose schema?",
+          "How do you create a Mongoose model?",
+          "What is a virtual field in Mongoose?",
+          "How do you set up validation in Mongoose?"
+        ]        
+      },
+      {
+        week: "Week 13",
+        topics: [
+          "How do you connect React with Express?",
+          "What is CORS in MERN?",
+          "How do you handle API calls in React?",
+          "What is JWT and how is it used in MERN?",
+          "How do you deploy a MERN stack app to Heroku?"
+        ]
+        
       },
     ],
     completed: 30,
@@ -180,7 +314,8 @@ const IndividualCourseData = [
     ],
     completed: 0,
     isLocked: true,
-  }, {
+  },
+  {
     id: 544522,
     banner: "/ProgressImages/course3.png",
     title: "Full-Stack Web Development with LAMP Stack",

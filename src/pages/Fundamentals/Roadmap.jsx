@@ -14,7 +14,7 @@ import {
 const Roadmap = (props) => {
   const [open, setOpen] = React.useState(-1);
   const handleOpen = (value) => setOpen(open === value ? -1 : value);
-  const { tracks, id } = props;
+  const {tracks,  id } = props;
   return (
     <div className="flex flex-col gap-12 py-6 md:py-9 px-4 md:px-12 mx-6 md:mx-20 bg-white rounded-3xl">
       <div className="flex gap-4 items-center">
@@ -28,34 +28,72 @@ const Roadmap = (props) => {
       <span className="font-light text-sm tracking-wider">
         Here&apos;s your Actionable Roadmap to learn the fundamentals of Coding
       </span>
-      <div className="flex flex-wrap gap-7 justify-between">
-        {tracks[id].roadmap.map((item, index) => (
-          <div key={`week-${index + 1}`} className="flex flex-col items-center">
+      {/* <div className="flex flex-wrap gap-8">
+        {tracks[id]?.roadmap?.map((item, index) => (
+          <div key={`week-${index}`} className="flex flex-col items-center">
             <div className="roadmap-items h-[9.25rem] md:h-[8.75rem] w-[17.375rem] md:w-[30.375rem] bg-contain z-10 bg-no-repeat">
               <div className="mt-5 mx-5 flex flex-col gap-3">
                 <div className="flex justify-between items-center">
                   <span className="font-extrabold text-sm tracking-wider">
-                    WEEK {index + 1}
+                    {item.week}
                   </span>
                   <MdKeyboardArrowDown
-                    className={`w-5 h-5 ${index === open ? 'rotate-180' : ''} transition-transform cursor-pointer`}
+                    className={`w-5 h-5 ${
+                      index === open ? "rotate-180" : ""
+                    } transition-transform cursor-pointer`}
                     onClick={() => handleOpen(index)}
                   />
                 </div>
-                <span className="font-light text-sm tracking-wider">
-                  {item.heading}
-                </span>
+                <ul className="list-disc pl-5">
+                  {item.topics?.map((topic, i) => (
+                    <li key={i}>{topic}</li>
+                  ))}
+                </ul>
               </div>
             </div>
             <Accordion
               open={open === index}
               className="md:w-[26.75rem] w-60 rounded-lg bg-[#88DB1B] -translate-y-11"
             >
+              <AccordionHeader className="border-0 h-8 rounded-lg text-white">
+                Details
+              </AccordionHeader>
+              <AccordionBody className="font-archivo px-4 text-white">
+                {item.desc}
+              </AccordionBody>
+            </Accordion>
+          </div>
+        ))}
+      </div> */}
+      <div className="flex flex-wrap items-center justify-center gap-4">
+        {tracks[id]?.roadmap?.map((item, index) => (
+          <div key={`week-${index + 1}`} className="flex flex-col items-center">
+            <div className="roadmap-items h-[9.25rem] md:h-[8.75rem] w-[17.375rem] lg:w-[26rem] md:w-[30.375rem] bg-contain z-10 bg-no-repeat">
+              <div className="mt-5 mx-5 flex flex-col gap-3">
+                <div className="flex justify-between items-center">
+                </div>
+              <div className="flex items-center justify-between">
+              <span className="font-extrabold text-sm tracking-wider">
+                  What will you learn in {tracks[id]?.roadmap[index]?.week}
+                </span>
+                <MdKeyboardArrowDown
+                    className={`w-5 h-5 ${index === open ? 'rotate-180' : ''} transition-transform cursor-pointer`}
+                    onClick={() => handleOpen(index)}
+                  />
+              </div>
+              </div>
+            </div>
+            <Accordion
+              open={open === index}
+              className="md:w-[26.75rem] lg:w-[26rem] w-60 rounded-lg bg-[#88DB1B] -translate-y-11"
+            >
               <AccordionHeader className="border-0 h-8 rounded-lg">
                 head
               </AccordionHeader>
               <AccordionBody className="font-archivo px-4 text-white">
-                {item.desc}
+              {item.topics?.map((topic, i) => (
+                    <li key={i}>{topic}</li>
+                  ))}
               </AccordionBody>
             </Accordion>
           </div>
