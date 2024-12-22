@@ -4,6 +4,7 @@ import {
   MdOutlineFileDownload,
 } from "react-icons/md";
 import { Button } from "@material-tailwind/react";
+import IndividualCourseData from "../individualPage/individualCourseData";
 
 const SkillsCovered = (props) => {
   const { tracks, id } = props;
@@ -19,7 +20,7 @@ const SkillsCovered = (props) => {
         </h3>
       </div>
       <div className="flex flex-col md:flex-row md:flex-wrap gap-2 justify-between items-center">
-        {tracks[id].skills.map((skill, index) => (
+        {IndividualCourseData[id].skills.map((skill, index) => (
           <div
             key={`skill-${index}`}
             className="flex items-center rounded-xl bg-[#F7F7F7] gap-3 md:gap-8 p-3 md:p-4 w-72 md:w-[13.5rem]"

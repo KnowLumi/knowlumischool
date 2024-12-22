@@ -49,9 +49,9 @@ const IndividualTracks = ({itemShow = IndividualCourseData.length}) => {
                     <i className="flex justify-center items-center w-5 h-5 md:w-7 md:h-7">
                       <img loading="lazy" src={skill.image} alt="" className="" />
                     </i>
-                    <span className="font-light tracking-wider text-[10px] md:text-xs w-14 text-center">
+                    {/* <span className="font-light tracking-wider text-[10px] md:text-xs w-14 text-center">
                       {skill.skill}
-                    </span>
+                    </span> */}
                   </div>
                 </div>
               ))}

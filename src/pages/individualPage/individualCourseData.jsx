@@ -11,19 +11,19 @@ const IndividualCourseData = [
     skills: [
       {
         image: "/SkillsLogos/mongodb.png",
-        skill: "",
+        skill: "MongoDB management",
       },
       {
         image: "/SkillsLogos/express.png",
-        skill: "",
+        skill: "Express.js development",
       },
       {
         image: "/SkillsLogos/react.png",
-        skill: "",
+        skill: "React.js Development",
       },
       {
         image: "/SkillsLogos/node.png",
-        skill: "",
+        skill: "Node.js runtime environment",
       },
     ],
     completed: 30,
@@ -37,19 +37,19 @@ const IndividualCourseData = [
     skills: [
       {
         image: "/SkillsLogos/kotlin.png",
-        skill: "",
+        skill: "Kotlin programming ",
       },
       {
         image: "/SkillsLogos/android.png",
-        skill: "",
+        skill: "Android development",
       },
       {
         image: "/SkillsLogos/jetpack.webp",
-        skill: "",
+        skill: "Jetpack Compose",
       },
       {
         image: "/SkillsLogos/android-studio.png",
-        skill: "",
+        skill: "Android Studio IDE",
       },
     ],
     completed: 0,
@@ -63,19 +63,19 @@ const IndividualCourseData = [
     skills: [
       {
         image: "/SkillsLogos/flutter.png",
-        skill: "",
+        skill: "Flutter development",
       },
       {
         image: "/SkillsLogos/dart.png",
-        skill: "",
+        skill: "Dart programming language",
       },
       {
         image: "/SkillsLogos/android.png",
-        skill: "",
+        skill: "Android development",
       },
       {
         image: "/SkillsLogos/ios.png",
-        skill: "",
+        skill: "IOS development",
       },
     ],
     completed: 0,
