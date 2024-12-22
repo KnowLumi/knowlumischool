@@ -40,7 +40,7 @@ const LearningPage = () => {
       courseDataIndexNumber = 1;
       break;
     case 4654:
-      courseDataIndexNumber = 1;
+      courseDataIndexNumber = 2;
       break;
     default:
       courseDataIndexNumber = 0;

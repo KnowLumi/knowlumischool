@@ -55,7 +55,7 @@ const IndividualCourseData = [
           "How do you initialize a Git repo?",
           "How do you make a commit in Git?",
           "What is the difference between Git and GitHub?",
-          "How do you create branches in Git?"
+          "How do you create branches in Git?",
         ],
       },
       {
@@ -65,8 +65,8 @@ const IndividualCourseData = [
           "How do you create a form in HTML?",
           "What are input types?",
           "How do you validate forms in HTML?",
-          "How do you handle form data?"
-        ]        
+          "How do you handle form data?",
+        ],
       },
       {
         week: "Week 5",
@@ -75,8 +75,8 @@ const IndividualCourseData = [
           "How do you create a Flexbox container?",
           "What is the difference between Flexbox and Grid?",
           "How do you align items with Flexbox?",
-          "What are grid lines in CSS Grid?"
-        ]        
+          "What are grid lines in CSS Grid?",
+        ],
       },
       {
         week: "Week 6",
@@ -85,8 +85,8 @@ const IndividualCourseData = [
           "What is a function?",
           "How do you create a loop in JS?",
           "What are conditionals in JavaScript?",
-          "What is the difference between let, var, and const?"
-        ]        
+          "What is the difference between let, var, and const?",
+        ],
       },
       {
         week: "Week 7",
@@ -95,8 +95,8 @@ const IndividualCourseData = [
           "How do you select an element in JavaScript?",
           "How do you change an element’s content?",
           "How do you add and remove classes?",
-          "What is event handling in JavaScript?"
-        ]        
+          "What is event handling in JavaScript?",
+        ],
       },
       {
         week: "Week 8",
@@ -105,8 +105,8 @@ const IndividualCourseData = [
           "How do you use promises in JavaScript?",
           "What is async/await?",
           "What is destructuring in JS?",
-          "How do you handle errors in promises?"
-        ]        
+          "How do you handle errors in promises?",
+        ],
       },
       {
         week: "Week 9",
@@ -115,8 +115,8 @@ const IndividualCourseData = [
           "How do you set up a basic Node.js server?",
           "What are modules in Node.js?",
           "How do you handle HTTP requests in Node.js?",
-          "What is the purpose of the 'http' module in Node.js?"
-        ]        
+          "What is the purpose of the 'http' module in Node.js?",
+        ],
       },
       {
         week: "Week 10",
@@ -125,8 +125,8 @@ const IndividualCourseData = [
           "How do you set up a basic Express server?",
           "What is a route in Express?",
           "How do you create middleware in Express?",
-          "What is app.use() in Express?"
-        ]        
+          "What is app.use() in Express?",
+        ],
       },
       {
         week: "Week 11",
@@ -135,8 +135,8 @@ const IndividualCourseData = [
           "What is the difference between SQL and NoSQL?",
           "How do you insert data into MongoDB?",
           "How do you query data in MongoDB?",
-          "What is a MongoDB document?"
-        ]        
+          "What is a MongoDB document?",
+        ],
       },
       {
         week: "Week 12",
@@ -145,8 +145,8 @@ const IndividualCourseData = [
           "How do you define a Mongoose schema?",
           "How do you create a Mongoose model?",
           "What is a virtual field in Mongoose?",
-          "How do you set up validation in Mongoose?"
-        ]        
+          "How do you set up validation in Mongoose?",
+        ],
       },
       {
         week: "Week 13",
@@ -155,9 +155,8 @@ const IndividualCourseData = [
           "What is CORS in MERN?",
           "How do you handle API calls in React?",
           "What is JWT and how is it used in MERN?",
-          "How do you deploy a MERN stack app to Heroku?"
-        ]
-        
+          "How do you deploy a MERN stack app to Heroku?",
+        ],
       },
     ],
     completed: 30,
@@ -186,6 +185,115 @@ const IndividualCourseData = [
         skill: "Android Studio IDE",
       },
     ],
+    roadmap: [
+      {
+        week: "Week 1",
+        topics: [
+          "Overview",
+          "Environment Setup",
+          "Hello World Program",
+          "Data Types",
+          "Variables",
+          "Operators",
+          "Input/Output",
+          "Basic",
+        ],
+      },
+      {
+        week: "Week 2",
+        topics: [
+          "if-else",
+          "loops (for, while, do-while)",
+          "when expressions",
+          "labeled/unlabeled break and continue",
+        ],
+      },
+      {
+        week: "Week 3",
+        topics: [
+          "Arrays",
+          "Strings",
+          "Functions (default/named arguments, recursion, higher-order functions, lambdas, inline)",
+        ],
+      },
+      {
+        week: "Week 4",
+        topics: [
+          "Classes",
+          "Objects",
+          "Inheritance",
+          "Abstract Classes",
+          "Interfaces",
+          "Nested/Inner Classes",
+          "Data Classes",
+          "Sealed Classes",
+        ],
+      },
+      {
+        week: "Week 5",
+        topics: [
+          "Generics",
+          "Extension Functions",
+          "Enums",
+          "Operator Overloading",
+          "Null Safety",
+          "Type Checking",
+          "Smart Casting",
+        ],
+      },
+      {
+        week: "Week 6",
+        topics: [
+          "try-catch",
+          "throw",
+          "finally",
+          "Nested Try Blocks",
+          "Regular Expressions",
+          "Error Handling",
+        ],
+      },
+      {
+        week: "Week 7",
+        topics: [
+          "Introduction to Android Studio",
+          "Creating Projects",
+          "Activity Lifecycle",
+          "UI Elements",
+          "View Binding",
+          "Listeners",
+        ],
+      },
+      {
+        week: "Week 8",
+        topics: [
+          "MVVM",
+          "LiveData",
+          "ViewModel",
+          "Coroutines",
+          "Dependency Injection (Hilt/Dagger)",
+        ],
+      },
+      {
+        week: "Week 9",
+        topics: [
+          "Using Kotlin with Java",
+          "Writing Unit Tests",
+          "Mocking",
+          "UI Tests",
+        ],
+      },
+      {
+        week: "Week 10",
+        topics: [
+          "Building a Full-Fledged App",
+          "Optimization",
+          "Performance",
+          "Reflection",
+          "Annotations",
+          "Final Review",
+        ],
+      },
+    ],
     completed: 0,
     isLocked: true,
   },
@@ -212,6 +320,37 @@ const IndividualCourseData = [
         skill: "IOS development",
       },
     ],
+    roadmap: [
+      {
+        week: "Week 1",
+        topics: ["What is Dart?", "Why use Dart for Flutter?"],
+      },
+      {
+        week: "Week 2",
+        topics: ["What are Dart’s data types?", "How to define variables?"],
+      },
+      {
+        week: "Week 3",
+        topics: ["What is a loop?", "Difference between for and while?"],
+      },
+      {
+        week: "Week 4",
+        topics: ["What are parameters?", "What is recursion?"],
+      },
+      {
+        week: "Week 5",
+        topics: ["What is a class?", "How is inheritance implemented?"],
+      },
+      {
+        week: "Week 6",
+        topics: ["Difference between List and Set?"],
+      },
+      {
+        week: "Week 7",
+        topics: ["How does Dart handle errors?"],
+      },
+    ],
+
     completed: 0,
     isLocked: true,
   },
