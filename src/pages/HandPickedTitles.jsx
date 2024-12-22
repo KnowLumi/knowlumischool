@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 // import { FaPhoneAlt, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import aboutbar from "../assets/about_bar1.png";
+import aboutbar2 from "../assets/aboutbar.png"
 // import image_one from "../assets/hero_img_1.jpg"
 import { Button } from "@material-tailwind/react";
 import {
@@ -258,6 +259,14 @@ function HandPickedTitles() {
             </div>
           </div>
         ))}
+      </div>
+
+      <div className="w-full flex justify-end  bg-white mt-6">
+        <img
+          src={aboutbar}
+          className="w-full md:w-fit h-8 md:h-16 "
+          alt="Decorative bar"
+        />
       </div>
 
       {/* Fourth section : Mentorship Program card */}

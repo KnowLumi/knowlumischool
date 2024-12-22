@@ -5,7 +5,7 @@ import "./landing.css";
 const Testimonials = () => {
   return (
     <div className="flex flex-col ">
-      {/* <svg
+      <svg
         width="1280"
         height="197"
         viewBox="0 0 1280 197"
@@ -30,7 +30,7 @@ const Testimonials = () => {
           d="M-15 47.4823C-15 37.5411 -6.94112 29.4822 3 29.4822H115H184.13C190.015 29.4822 195.528 26.6059 198.894 21.7794L208.712 7.70285C212.078 2.87633 217.591 0 223.476 0H386C395.941 0 404 8.05887 404 18V210C404 219.941 395.941 228 386 228H3.00001C-6.94112 228 -15 219.941 -15 210V47.4823Z"
           fill="#010101"
         />
-      </svg> */}
+      </svg>
 
       <div className="bg-black font-archivo flex flex-col z-10 items-center h-full">
         <div className="flex flex-col items-center gap-3 md:gap-6 my-12 mx-16 text-center">
