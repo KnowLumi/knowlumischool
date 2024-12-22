@@ -245,14 +245,14 @@ function HandPickedTitles() {
                       <MdOutlinePhoneCallback />
                     </i>
                   </Button>
-                  <Link to={data.link}>
+                  <a href={data.link}>
                     <Button className="w-60 lg:w-auto md:w-64 rounded-full bg-black flex items-center justify-center gap-3 capitalize font-archivo font-medium  py-2 pr-2 mt-4 md:mt-0">
                       Know More
                       <i className="flex icon w-6 h-6 text-white border border-[#0101010D] bg-[#FFFFFF33] justify-center items-center rounded-full">
                         <MdArrowForward />
                       </i>
                     </Button>
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>

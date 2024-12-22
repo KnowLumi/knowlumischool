@@ -39,6 +39,7 @@ import CardFirstPage from "./pages/CardFirstPage";
 import CardSecondPage from "./pages/CardSecondPage";
 import CardThirdPage from "./pages/CardThirdPage";
 import LearningPage from "./pages/LearningPage";
+import { useEffect } from "react";
 
 export const Context = createContext();
 
@@ -66,6 +67,10 @@ const AboutRouteBody = () => {
 
 function App() {
   const [signedIn, setSignedIn] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  },[])
 
   return (
     <Context.Provider value={[signedIn, setSignedIn]}>
