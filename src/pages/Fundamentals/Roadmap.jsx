@@ -28,43 +28,7 @@ const Roadmap = (props) => {
       <span className="font-light text-sm tracking-wider">
         Here&apos;s your Actionable Roadmap to learn the fundamentals of Coding
       </span>
-      {/* <div className="flex flex-wrap gap-8">
-        {tracks[id]?.roadmap?.map((item, index) => (
-          <div key={`week-${index}`} className="flex flex-col items-center">
-            <div className="roadmap-items h-[9.25rem] md:h-[8.75rem] w-[17.375rem] md:w-[30.375rem] bg-contain z-10 bg-no-repeat">
-              <div className="mt-5 mx-5 flex flex-col gap-3">
-                <div className="flex justify-between items-center">
-                  <span className="font-extrabold text-sm tracking-wider">
-                    {item.week}
-                  </span>
-                  <MdKeyboardArrowDown
-                    className={`w-5 h-5 ${
-                      index === open ? "rotate-180" : ""
-                    } transition-transform cursor-pointer`}
-                    onClick={() => handleOpen(index)}
-                  />
-                </div>
-                <ul className="list-disc pl-5">
-                  {item.topics?.map((topic, i) => (
-                    <li key={i}>{topic}</li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-            <Accordion
-              open={open === index}
-              className="md:w-[26.75rem] w-60 rounded-lg bg-[#88DB1B] -translate-y-11"
-            >
-              <AccordionHeader className="border-0 h-8 rounded-lg text-white">
-                Details
-              </AccordionHeader>
-              <AccordionBody className="font-archivo px-4 text-white">
-                {item.desc}
-              </AccordionBody>
-            </Accordion>
-          </div>
-        ))}
-      </div> */}
+     
       <div className="flex flex-wrap items-center justify-center gap-4">
         {tracks[id]?.roadmap?.map((item, index) => (
           <div key={`week-${index + 1}`} className="flex flex-col items-center">
