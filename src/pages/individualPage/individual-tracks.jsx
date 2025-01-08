@@ -10,7 +10,7 @@ import { Target } from "lucide-react";
 const IndividualTracks = ({itemShow = IndividualCourseData.length}) => {
   const displayCourse = IndividualCourseData.slice(0, itemShow);
   return (
-    <div className="min-h-screen mt-24 bg-gray-100">
+    <div id="courses" className="min-h-screen mt-24 bg-gray-100">
       <h2 className="text-[#88DB1B] text-xl lg:text-5xl font-bold text-center pt-10">
         Courses
       </h2>

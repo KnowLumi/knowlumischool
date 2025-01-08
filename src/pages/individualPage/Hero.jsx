@@ -22,7 +22,7 @@ const Hero = (props) => {
           </span>
         </div>
         <span
-          className="font-medium text-[42px] text-left md:text-7xl md:text-5xl tracking-wide max-w-[30.25rem]"
+          className="font-medium text-[42px] text-left md:text-5xl tracking-wide max-w-[30.25rem]"
         >
           {course.title}
         </span>
@@ -76,12 +76,14 @@ const Hero = (props) => {
         )}
 
         <div className="flex flex-wrap md:justify-left gap-6">
+          <a href="#courses">
           <Button className="rounded-full flex items-center gap-9 capitalize font-archivo font-medium text-[16px] py-2 pr-2 pl-12">
             Enroll Now
             <i className="flex icon w-8 h-8 text-white border border-[#0101010D] bg-[#FFFFFF33] justify-center items-center rounded-full">
               <MdArrowForward />
             </i>
           </Button>
+          </a>
         </div>
       </div>
       <div className="hero-banner w-[19.75rem] h-[18.22rem] md:w-[33.5rem] md:h-[30.75rem] bg-contain bg-no-repeat flex flex-col justify-between z-10">

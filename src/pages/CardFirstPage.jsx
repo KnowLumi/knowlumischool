@@ -91,7 +91,7 @@ const IndividualCourse = () => {
                 <Certificate />
                 <Testimonials />
                 {/* <Process /> */} 
-                <ComparisonTable/>
+                {/* <ComparisonTable/> */}
                 <FirstCoursePageFAQ  />
                 {/* <Fees /> */}
             </div>
