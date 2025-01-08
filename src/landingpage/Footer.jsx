@@ -32,7 +32,7 @@ const Footer = () => {
               <img src={logo1} className="" alt="" />
             </div>
             <p className="text-xs">
-              With KnowLumi, we go beyond learning, empowering you to create
+              With KnowLumi School, we go beyond learning, empowering you to create
               opportunities and achieve your goals.
             </p>
 
@@ -86,7 +86,7 @@ const Footer = () => {
         </div>
         <div className="flex flex-col md:flex-row items-center gap-6 md:gap-0 justify-between mx-8 md:mx-16 py-8">
           <span className="font-semibold opacity-40 text-xs tracking-widest">
-            © Copyright 2024 KnowLumi - All Rights Reserved
+            © Copyright 2024 KnowLumi School - All Rights Reserved
           </span>
           <Button className="bg-white font-bold text-xs lg:text-sm py-2 px-3 md:px-6 rounded-full gap-2 lg:gap-6 flex items-center">
             <MdHdrStrong className="text-[#88DB1B]" />

@@ -30,7 +30,7 @@ import dreamjcareer from "../assets/career-down.mp4";
 const pages = [
   { name: "Home", route: "/" },
   // { name: "About", route: "/about" },
-  { name: "Join Community", route: "/community" },
+  // { name: "Join Community", route: "/community" },
 ];
 
 const faq = [
