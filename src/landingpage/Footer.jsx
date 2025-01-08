@@ -66,12 +66,12 @@ const Footer = () => {
                 <RiYoutubeFill className="w-4 h-4" />
               </a>
             </div>
-            <button className="bg-white w-fit flex rounded-full items-center py-1 pr-1 pl-5 gap-1">
+            {/* <button className="bg-white w-fit flex rounded-full items-center py-1 pr-1 pl-5 gap-1">
               <span className="font-medium text-xs">Drop us a message</span>
               <IconButton className="rounded-full bg-gray-300 w-7 h-7">
                 <BsFillChatLeftFill className="text-black w-2.5 h-2.5" />
               </IconButton>
-            </button>
+            </button> */}
           </div>
           <ul className="flex flex-col pt-6 md:py-14 items-start md:items-end gap-2">
             {footerLinks.map((link, index) => (
