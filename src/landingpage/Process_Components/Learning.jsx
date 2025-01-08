@@ -54,7 +54,7 @@ const Learning = ({ enableScroll }) => {
         </div>
        
         <div className="bg-white rounded-2xl flex flex-wrap w-[200px] md:w-[429px] gap-9 md:gap-0 items-center justify-center md:justify-between py-4 px-7">
-          {tracks[0].skills.map((item, i) => (
+          {tracks[2].skills.map((item, i) => (
             <>
               <div
                 key={`skill_${i}`}

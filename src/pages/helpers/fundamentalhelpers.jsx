@@ -108,6 +108,49 @@ const tracks = [
             }
         ]
 
+    },
+    {
+        title: "Fundamentals",
+        level: "beginner",
+    
+        desc: `At KnowLumi, students engage in personalized learning, foster community connections, and leverage their skills to secure internships, jobs, or start-ups.`,
+        skills: [
+            {
+                image: "/SkillsLogos/html.png",
+                skill: "HTML",
+            },
+            {
+                image: "/SkillsLogos/css.png",
+                skill: "CSS",
+            },
+            {
+                image: "/SkillsLogos/python.png",
+                skill: "Python ",
+            },
+            {
+                image: "/SkillsLogos/github.png",
+                skill: "Github",
+            },
+        ],
+
+        roadmap: [
+            {
+                heading: "lorem ippsum",
+                desc: ["lorem ippsum"],
+            },
+            {
+                heading: "lorem ippsum",
+                desc: ["lorem ippsum"],
+            },
+            {
+                heading: "lorem ippsum",
+                desc: ["lorem ippsum"],
+            },
+            {
+                heading: "lorem ippsum",
+                desc: ["lorem ippsum"],
+            },
+        ]
     }
 ]
 
