@@ -104,7 +104,6 @@ export default Footer;
 const footerLinks = [
   { label: "Home", path: "" },
   { label: "Programs", path: "#explore" },
-  { label: "How Knowlumi works", path: "#howitswork" },
   { label: "Privacy Policy", path: "" },
   { label: "Contact Us", path: "#contact" }
 ];
