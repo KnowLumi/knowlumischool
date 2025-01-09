@@ -30,10 +30,10 @@ const Learning = ({ enableScroll }) => {
         <h1 className="font-normal text-4xl md:text-[42px]">Learning</h1>
       </div>
 
-      <p className="w-[13.25rem] md:w-[28rem] text-xs font-light tracking-wider mt-8">
+      <p className="w-[13.25rem] relative right-3 md:w-[29rem] text-xs font-light tracking-wider mt-8">
         At KnowLumi, students engage in personalized learning, foster community
         connections, and leverage their skills to secure internships, jobs, or
-        start-ups.
+        start-ups .
       </p>
       <div className="flex gap-3.5 items-center mt-4">
         <MdOutlineLocalLibrary className="w-[18px] h-[18px] text-[#88DB1B]" />
@@ -71,7 +71,7 @@ const Learning = ({ enableScroll }) => {
             </>
           ))}
         </div>
-        <div className="flex gap-3.5 items-center mt-4">
+        <div className="flex items-center mt-4 gap-3">
           <svg
             width="19"
             height="18"
@@ -85,7 +85,7 @@ const Learning = ({ enableScroll }) => {
               fill="#88DB1B"
             />
           </svg>
-          <span className="font-light text-sm w-[11.25rem] md:w-full">
+          <span className="font-light text-sm ">
             Assessment - to choose your career track
           </span>
         </div>
@@ -135,7 +135,7 @@ const Learning = ({ enableScroll }) => {
                 <MdHdrStrong className="text-white w-2 h-2" />
                 <span className="font-bold text-[8px] text-white">TRACK 1</span>
               </div>
-              <h2 className="font-normal text-xs">
+              <h2 className="font-normal text-left text-xs">
                 {item.title}
               </h2>
               <div className="flex gap-5">

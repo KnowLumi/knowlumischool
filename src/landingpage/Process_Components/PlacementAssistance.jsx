@@ -5,7 +5,7 @@ import { companies } from "../landing_helpers";
 const PlacementAssistance = () => {
   return (
     <div className="flex flex-col h-fit w-full  md:-translate-y-0 mt-12 md:mt-24">
-      <div className="flex items-center gap-7 -translate-x-12 md:-translate-x-20">
+      <div className="flex items-center gap-7 -translate-x-12 md:-translate-x-20 lg:-mt-16">
         <div className="rounded-full min-h-10 min-w-10 md:min-w-[52px] md:min-h-[52px] bg-[#4258BE] flex justify-center items-center text-white font-extrabold">
           3
         </div>

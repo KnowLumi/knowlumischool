@@ -74,7 +74,7 @@ const Process = forwardRef(({ scrollToIncluded }, ref) => {
             viewBox="0 0 150 18"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className="process-line hidden md:block"
+            className="process-line hidden lg:block"
           >
             <path
               d={processSvg}

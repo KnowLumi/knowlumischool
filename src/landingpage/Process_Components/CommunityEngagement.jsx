@@ -8,8 +8,8 @@ const CommunityEngagement = () => {
   
   return (
     <div className="flex flex-col w-full h-fit md:-translate-y-0 mt-8 md:mt-24">
-      <div className="flex items-center gap-7 -translate-x-12 md:-translate-x-20">
-        <div className="rounded-full min-h-10 min-w-10 md:min-w-[52px] md:min-h-[52px] bg-[#4258BE] flex justify-center items-center text-white font-extrabold">
+      <div className="flex items-center gap-7 -translate-x-12 md:-translate-x-20 -mt-12">
+        <div className="rounded-full  min-h-10 min-w-10 md:min-w-[52px] md:min-h-[52px] bg-[#4258BE] flex justify-center items-center text-white font-extrabold">
           2
         </div>
         <h1 className="font-normal text-4xl md:text-[42px]  md:w-[800px] w-fit">
