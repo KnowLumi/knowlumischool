@@ -79,7 +79,7 @@ const IndividualCourse = () => {
     // }
 
     return (
-        <>
+        <main className='bg-white'>
             <Navigation />
             <div className="mt-[30%] md:mt-[7%] text-center">
                 <Hero tracks={tracks} id={0} course={coursedetails[0]} />
@@ -96,7 +96,7 @@ const IndividualCourse = () => {
                 {/* <Fees /> */}
             </div>
             <Footer />
-        </>
+        </main>
     );
 };
 

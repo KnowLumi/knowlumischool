@@ -18,7 +18,7 @@ import { Button } from "@material-tailwind/react";
 const Footer = () => {
   return (
     <div id="contact" className="w-full flex flex-col font-archivo">
-      <div className="w-full flex justify-end">
+      <div className="w-full flex justify-end bg-transparent">
         <img
           src={footer}
           alt=""

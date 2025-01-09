@@ -70,7 +70,7 @@ const IndividualCourse = () => {
     return (
         <>
             <Navigation />
-            <div className="mt-[30%] md:mt-[7%] text-center">
+            <div className="mt-[30%] md:mt-[7%] text-center bg-white">
                 <Hero tracks={tracks} id={0} course={coursedetails[1]} />
                 {/* <CourseHero course={course}/> */}
                 {/* <IndividualTracks/> */}
