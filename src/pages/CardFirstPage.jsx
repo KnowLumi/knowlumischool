@@ -79,9 +79,9 @@ const IndividualCourse = () => {
     // }
 
     return (
-        <main className='bg-white'>
+        <>
             <Navigation />
-            <div className="mt-[30%] md:mt-[7%] text-center">
+            <div className="mt-[30%] md:mt-[7%] text-center bg-white">
                 <Hero tracks={tracks} id={0} course={coursedetails[0]} />
                 {/* <CourseHero course={course}/> */}
                 <IndividualTracks itemShow={3}/>
@@ -96,7 +96,7 @@ const IndividualCourse = () => {
                 {/* <Fees /> */}
             </div>
             <Footer />
-        </main>
+        </>
     );
 };
 
@@ -173,7 +173,7 @@ export default IndividualCourse;
         );
       }
     return (
-      <div className="w-full py-2 px-2 lg:px-8 mt-8 lg:my-16 flex flex-col items-center bg-[#F7F7F7] font-archivo">
+      <div className="w-full py-2 px-2 lg:px-8 mt-8 lg:my-16 flex flex-col items-center bg-gradient-to-b from-white to-[#FAFAFA] font-archivo">
         <span className="font-bold text-xl text-black opacity-60 mb-3">
           Any Queries?
         </span>
