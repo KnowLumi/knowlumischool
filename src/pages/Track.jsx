@@ -28,7 +28,7 @@ const Track = () => {
                         Experience the new way of learning
                     </h1>
                     <p className="font-light tracking-wider text-[16px] md:w-[55.25rem]">
-                        Learn from Recorded Classes, Tackle Real-Life Case Studies, and
+                         
                         Receive Mentorship from the Top 1% Experts. Become the Talent Every
                         Recruiter Seeks in the Industry!
                     </p>
