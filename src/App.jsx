@@ -1,3 +1,13 @@
+/**
+ * ! This code bases is a headache 
+ * ! use it at your own risk
+ * ! for debugs use search
+ * ! only use this code when you know what you are doing
+ * 
+ */
+
+
+
 import React, { Suspense } from "react";
 import { createContext, useState, useRef } from "react";
 import About from "./landingpage/About";
