@@ -25,52 +25,66 @@ const Tracks = () => {
           boundaries.
         </p>
       </div>
-      <div className="flex flex-wrap gap-7">
+      <div className="flex flex-wrap items-center justify-center gap-6">
         {tracks.map((item, i) => (
-          <div key={`track_${i}`} className="bg-white rounded-xl w-52 py-4 px-3.5 flex flex-col gap-4">
-            <div className="flex items-center w-fit bg-[#88DB1B] rounded-full py-1 px-2 gap-1">
-              <MdHdrStrong className="text-white w-2 h-2" />
-              <span className="font-bold text-[8px] text-white">TRACK {i + 1}</span>
+          <div 
+            key={`track_${i}`}
+            className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col w-96"
+          >
+            {/* Track Number Badge */}
+            <div className="inline-flex items-center self-start bg-[#88DB1B] hover:bg-[#7ac718] transition-colors rounded-full py-2 px-4">
+              <MdHdrStrong className="text-white w-4 h-4" />
+              <span className="font-bold text-sm text-white ml-2">
+                TRACK {i + 1}
+              </span>
             </div>
-            <h2 className="font-normal text-xs">
+
+            <div className="h-60">
+
+            {/* Title */}
+            <h2 className="font-semibold text-base text-gray-800 mt-4 mb-6 flex-grow">
               {item.title}
             </h2>
-            <div className="flex gap-5">
-              <img src={mongo} alt="" className="w-4 h-4" />
-              <img src={node} alt="" className="w-4 h-4" />
-              <img src={reactjs} alt="" className="w-4 h-4" />
+
+            {/* Technology Icons */}
+            <div className="flex items-center gap-6 mb-6">
+              <img src={mongo} alt="MongoDB" className="w-6 h-6 hover:scale-110 transition-transform" />
+              <img src={node} alt="Node.js" className="w-6 h-6 hover:scale-110 transition-transform" />
+              <img src={reactjs} alt="React" className="w-6 h-6 hover:scale-110 transition-transform" />
             </div>
-            <div className="flex flex-col gap-1.5">
-              <div className="flex items-center gap-2">
-                <MdVideoLibrary className="w-3.5 h-3.5 text-[#FF9F1C]" />
-                <span className="font-normal text-[10px] text-[#01010199]">
+
+            {/* Stats */}
+            <div className="space-y-3 mb-6">
+              <div className="flex items-center gap-3 group">
+                <MdVideoLibrary className="w-5 h-5 text-[#FF9F1C] group-hover:text-[#f39518] transition-colors" />
+                <span className="text-sm text-gray-600 group-hover:text-gray-800 transition-colors">
                   41 Recorded Videos
                 </span>
               </div>
-              <div className="flex items-center gap-2">
-                <TbFileFilled className="w-3.5 h-3.5 text-[#FF9F1C]" />
-                <span className="font-normal text-[10px] text-[#01010199]">
-                  4 projects
+              <div className="flex items-center gap-3 group">
+                <TbFileFilled className="w-5 h-5 text-[#FF9F1C] group-hover:text-[#f39518] transition-colors" />
+                <span className="text-sm text-gray-600 group-hover:text-gray-800 transition-colors">
+                  4 Projects
                 </span>
               </div>
             </div>
-            <Link to='/track' state={{ data: (i + 1) }} className="">
-              <button className="flex items-center gap-1 bg-[#88DB1B] rounded font-archivo text-white  capitalize px-3 py-2">
-                <span className=" font-normal text-xs tracking-wide w-fit">
-                  View More
-                </span>
-                <MdKeyboardDoubleArrowRight className="w-3.5 h-3.5 fundamental_arrow" />
+            </div>
+
+            {/* Button */}
+            <Link 
+              to="/track" 
+              state={{ data: i + 1 }}
+              className="mt-auto w-full"
+            >
+              <button className="w-full flex items-center justify-center gap-2 bg-[#88DB1B] hover:bg-[#7ac718] rounded-full text-white py-3 px-6 font-medium text-sm tracking-wide transition-all duration-300 hover:shadow-md">
+                <span>View More</span>
+                <MdKeyboardDoubleArrowRight className="w-4 h-4" />
               </button>
             </Link>
           </div>
         ))}
-
       </div>
-      <p className="font-light text-sm tracking-wider md:w-[46rem]">
-        Worem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate
-        libero et velit interdum, ac aliquet odio mattis. Class aptent taciti
-        sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-      </p>
+   
     </div>
   );
 };
