@@ -49,7 +49,7 @@ const Roadmap = (props) => {
             </div>
             <Accordion
               open={open === index}
-              className="md:w-[26.75rem] lg:w-[26rem] w-60 rounded-lg bg-[#88DB1B] -translate-y-11"
+              className="md:w-[26.75rem] lg:w-[26rem] w-60 rounded-lg bg-[#88DB1B] -translate-y-16"
             >
               <AccordionHeader className="border-0 h-8 rounded-lg">
                 head
