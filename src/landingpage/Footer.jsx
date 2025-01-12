@@ -38,7 +38,7 @@ const Footer = () => {
 
             <div className="flex items-center gap-8 text-black">
               <a
-                href="https://www.instagram.com/knowlumiofficial?igsh=M3d2ZWR6YndhcXJk&utm_source=qr"
+                href="https://www.instagram.com/school.knowlumi?utm_source=qr"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -52,7 +52,7 @@ const Footer = () => {
                 <RiWhatsappFill className="w-4 h-4" />
               </a>
               <a
-                href="https://www.linkedin.com/company/knowlumi1/"
+                href="https://www.linkedin.com/showcase/knowlumi-school/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
