@@ -16,7 +16,7 @@ const Roadmap = (props) => {
   const handleOpen = (value) => setOpen(open === value ? -1 : value);
   const {tracks,  id } = props;
   return (
-    <div className="flex flex-col gap-12 py-6 md:py-9 px-4 md:px-12 mx-6 md:mx-20 bg-white shadow-2xl rounded-3xl">
+    <div className="flex flex-col gap-12 py-6 md:py-9 px-4 md:px-12 mx-6 md:mx-20 bg-white shadow-2xl rounded-3xl mb-12">
       <div className="flex gap-4 items-center">
         <i className="flex justify-center items-center w-11 h-11 bg-[#F3FEE6] rounded-full p-2.5">
           <IoNavigateCircleOutline className="-rotate-45 w-5 h-5" />
