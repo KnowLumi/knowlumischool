@@ -34,12 +34,14 @@ const SkillsCovered = (props) => {
         ))}
       </div>
       <div className="flex flex-col w-fit md:flex-row gap-6 md:gap-11 items-start md:items-center">
-        <Button className="rounded-full flex items-center gap-3 capitalize font-archivo text-sm tracking-widest font-medium text-[16px] bg-black text-white py-2 pr-2 pl-6">
+      <a href="#enrollnow">
+      <Button className="rounded-full flex items-center gap-3 capitalize font-archivo text-sm tracking-widest font-medium text-[16px] bg-black text-white py-2 pr-2 pl-6">
           ENROLL NOW
           <i className="flex w-8 h-8 text-white -rotate-45 border border-[#FFFFFF33] bg-[#FFFFFF4D] justify-center items-center rounded-full">
             <MdArrowForward />
           </i>
         </Button>
+      </a>
         <Button className="rounded-full flex items-center gap-3 font-archivo bg-[#88DB1B] text-white py-2 pr-2 pl-6">
           <span className="text-sm tracking-widest font-medium capitalize">
             Need more info? Download the Brochure

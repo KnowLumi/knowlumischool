@@ -63,7 +63,7 @@ const Roadmap = (props) => {
           </div>
         ))}
       </div>
-      <div className="flex flex-col w-fit md:flex-row gap-11 items-center">
+      <div className="hidden flex-col w-fit md:flex-row gap-11 items-center">
         <Link to="/fundamentals">
           <Button className="rounded-full flex items-center gap-3 capitalize font-archivo text-sm tracking-widest font-medium text-[16px] bg-black text-white py-2 pr-2 pl-6">
             ENROLL NOW

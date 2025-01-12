@@ -17,7 +17,7 @@ const Tracks = () => {
   const displayCourse = IndividualCourseData.slice(0, 3);
 
   return (
-    <div className="flex flex-col mx-6 my-20 px-3 md:m-20 items-center gap-12">
+    <div id="enrollnow" className="flex flex-col mx-6 my-20 px-3 md:m-20 items-center gap-12">
       <div className="flex flex-col gap-6 items-center">
         <h2 className="font-bold text-3xl md:text-4xl tracking-wide text-[#88DB1B]">
           Mastering Tracks
