@@ -90,14 +90,14 @@ const Learning = ({ enableScroll }) => {
           </span>
         </div>
         <div className="flex flex-col w-fit md:flex-row gap-8 items-center">
-          <Link to="/fundamentals">
+          <a href="/fundamentals">
             <Button className="rounded-full flex items-center gap-3 capitalize font-archivo font-medium text-[16px] bg-[#4258BE] text-white py-2 md:py-[3px] pr-2 md:pr-[3px] pl-6">
               Know More
               <i className="flex w-8 h-8 text-[#4258BE] -rotate-45 border border-[#0101010D] bg-white justify-center items-center rounded-full">
                 <MdArrowForward />
               </i>
             </Button>
-          </Link>
+          </a>
           <div className="flex items-center gap-5">
             <div className="flex items-center -space-x-2">
               {new Array(3).fill("").map((_, i) => (
