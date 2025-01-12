@@ -24,7 +24,7 @@ const blogContentHelpers = [
         title: "Launch Your Startup Dream",
         bold: "For Every one",
         description:
-            "Got a startup idea? Whether you're in college or a graduate, our program equips you to transform your vision into a thriving business. From ideation to scaling, we'll guide your entrepreneurial path.",
+            "  Whether you're in college or a graduate, our program equips you to transform your vision into a thriving business. From ideation to scaling, we'll guide your entrepreneurial path.",
         image: ThirdCard,
     },
 
