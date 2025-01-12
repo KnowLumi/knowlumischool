@@ -79,14 +79,15 @@ const LandingPage = () => {
             </p>
 
             <div className="pt-4 flex justify-center items-center">
-              <button
+              <a
+              href="https://knowlumi.com/"
                 className="bg-[#88DB1B] hover:bg-black  text-white flex flex-row justify-center items-center p-3 rounded uppercase group"
               >
                 Find Your Path with KnowLumi
                 <span className="ml-3 group-hover:translate-x-1 transition-transform duration-200">
                   <MdArrowForward className="w-5 h-5" />
                 </span>
-              </button>
+              </a>
             </div>
           </div>
         </div>
