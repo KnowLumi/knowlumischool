@@ -6,7 +6,7 @@ import "./included.css";
 import { Link } from "react-router-dom";
 const Included = forwardRef((props, ref) => {
   return (
-    <div ref={ref} className="flex flex-col items-center w-full min-h-[100vh] my-2">
+    <div id="enrollnow" ref={ref} className="flex flex-col items-center w-full min-h-[100vh] my-2">
       <div className="rect bg-contain md:bg-cover w-80 md:w-[71rem]  h-[8.5rem] md:h-[14.7rem] bg-no-repeat translate-y-24 md:translate-y-48" />
       <div className="flex flex-col items-center gap-8 w-80 md:w-[71rem] z-10 bg-white py-5 px-0 md:px-16 rounded-2xl">
         <h2 className="font-bold text-3xl text-[#4258BE] tracking-wide">

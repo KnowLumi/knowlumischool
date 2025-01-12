@@ -73,12 +73,14 @@ const Hero = (props) => {
 
 
         <div className="flex flex-wrap md:justify-center gap-6">
+          <a href="#enrollnow">
           <Button className="rounded-full flex items-center gap-9 capitalize font-archivo font-medium text-[16px] py-2 pr-2 pl-12">
             Enroll Now
             <i className="flex icon w-8 h-8 text-white border border-[#0101010D] bg-[#FFFFFF33] justify-center items-center rounded-full">
               <MdArrowForward />
             </i>
           </Button>
+          </a>
           <Button className="rounded-full flex items-center gap-9 capitalize bg-white font-archivo font-bold text-[16px] text-black py-2 pr-2 pl-12">
             Try Demo
             <i className="flex w-8 h-8 -rotate-45 text-black border border-[#0101010D] bg-[#01010133] justify-center items-center rounded-full">
