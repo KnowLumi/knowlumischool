@@ -100,12 +100,13 @@ const CommunityEngagement = () => {
         </div>
       </div>
       <div className="flex flex-col md:flex-row w-fit gap-8 items-center mt-9">
+        <a href="https://whatsapp.com/channel/0029VaRvShwGU3BScdXIfB15" target="_blank" rel="noopener noreferrer">
         <Button className="rounded-full flex items-center gap-3 capitalize font-archivo font-medium text-[16px] bg-black text-white py-1 pr-1 pl-6">
           Join Our Community
           <i className="flex w-8 h-8 text-white -rotate-45 border border-[#0101010D] bg-[#FFFFFF4D] justify-center items-center rounded-full">
             <MdArrowForward />
           </i>
-        </Button>
+        </Button></a>
         <div className="flex items-center gap-5">
           <div className="flex items-center -space-x-2">
             {new Array(3).fill("").map((_, i) => (
