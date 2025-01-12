@@ -22,15 +22,16 @@ const CommunityEngagement = () => {
       <div className="mt-9 flex flex-col gap-4">
         <h3 className=" text-left text-[#4258BE] font-semibold text-xl">Hackathons , Ideathons and more 
         </h3>
-        <span className="font-light text-xs w-fit tracking-wider text-black text-left">
+        <span className="font-light text-xs w-fit tracking-wider text-black text-left mb-4">Join a network of like-minded individuals, access mentorship from  seasoned professionals, and embark on a journey where shared success  propels everyone forward.</span>
+         {/* <span className="font-light text-xs w-fit tracking-wider text-black text-left">
         Put your skills to the test and solve real-world challenges in our Hackathons and Ideathons. These events help you:
-        </span>
-        <ul className="text-left font-light text-xs tracking-wider">
+        </span> */}
+        {/* <ul className="text-left font-light text-xs tracking-wider">
         <li className="list-disc">Collaborate with peers and industry leaders.</li>
         <li className="list-disc">Gain hands-on experience and boost your problem-solving abilities.</li>
         <li className="list-disc">Earn rewards and recognition for innovative solutions.</li>
 
-        </ul>
+        </ul>  */}
         <div className="bg-white rounded-2xl p-4 w-56 md:w-[27rem] md:h-[10rem] flex flex-col justify-center">
           <Fade
             arrows={false}
