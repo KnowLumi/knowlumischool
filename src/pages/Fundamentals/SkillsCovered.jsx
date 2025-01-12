@@ -8,6 +8,7 @@ import IndividualCourseData from "../individualPage/individualCourseData";
 
 const SkillsCovered = (props) => {
   const { tracks, id } = props;
+  const skills = tracks[id].skills
 
   return (
     <div className="flex flex-col gap-12 py-6 md:py-9 px-3 md:px-12 md:mx-20 mx-6 my-8 bg-white rounded-3xl">
@@ -20,7 +21,7 @@ const SkillsCovered = (props) => {
         </h3>
       </div>
       <div className="flex flex-col md:flex-row md:flex-wrap gap-2 justify-between items-center">
-        {IndividualCourseData[id].skills.map((skill, index) => (
+        {skills.map((skill, index) => (
           <div
             key={`skill-${index}`}
             className="flex items-center rounded-xl bg-[#F7F7F7] gap-3 md:gap-8 p-3 md:p-4 w-72 md:w-[13.5rem]"

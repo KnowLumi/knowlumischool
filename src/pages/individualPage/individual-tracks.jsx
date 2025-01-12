@@ -194,9 +194,9 @@ const IndividualTracks = ({itemShow = IndividualCourseData.length}) => {
               </Button>
               {/* </Button> */}
 
-              {/* <a href={`/course/title/${item.id}`} className="flex bg-white border border-[#88DB1B] text-[#88DB1B]  justify-center items-center gap-2 w-full rounded-lg capitalize font-archivo font-semibold text-sm py-2.5 px-7">
+              <a href={`/course/title/${item.id}`} className="flex bg-white border border-[#88DB1B] text-[#88DB1B]  justify-center items-center gap-2 w-full rounded-lg capitalize font-archivo font-semibold text-sm py-2.5 px-7">
                 Learn More
-              </a> */}
+              </a>
             </div>
           </div>
         ))}
