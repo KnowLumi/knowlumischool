@@ -33,7 +33,7 @@ const PointIcon = (index) => {
 
 const Program = ({ scrollToIncluded }) => {
   return (
-    <div className="flex flex-col bg-white items-center">
+    <div id="programs" className="flex flex-col bg-white items-center">
       <div className="flex flex-wrap gap-7 justify-center">
         {program.map((item, index) => (
           <div

@@ -62,44 +62,18 @@ const Navigation = () => {
       {/* Explore Our program */}
       <ul className="md:flex gap-8 items-center hidden">
         <div className="relative">
-          <button
-            onClick={handleExploreClick}
+          <a
+           href="/#programs"
             className="bg-black text-white text-sm px-4 py-2 rounded-full hover:bg-gray-800 focus:outline-none flex items-center gap-2"
           >
             Explore&nbsp;<span className="lowercase">our programs</span>
             <FaArrowRight
               className={`transition-transform duration-300 ${isDropdownOpen ? "rotate-90" : "-rotate-45"}`}
             />
-          </button>
+          </a>
           {/* Dropdown Content */}
 
-          <motion.div
-            className="absolute top-full left-0  rounded mt-5 bg-white shadow-lg rounded-lg overflow-hidden z-50"
-            initial="closed"
-            animate={isDropdownOpen ? "open" : "closed"}
-            variants={dropdownVariants}
-          >
-            <div className="flex flex-row ">
-              <ul className="flex flex-col pt-4 py-2 w-[22vw]">
-                {navItems.map((data, index) => (
-                  <li
-                    key={index}
-                    onClick={() => handleDropdownClick(data.itemName)}
-                    className={`px-4 m-2 py-2 rounded-full cursor-pointer flex justify-between items-center transition-transform duration-250 ${activeTab === data.itemName ? "bg-black text-white" : "hover:bg-black hover:text-white"
-                      }`}
-                  >
-                    {data.itemName}
-                    <span>
-                      <CustomArrow className="transition-transform duration-300" />
-                    </span>
-                  </li>
-                ))}
-              </ul>
-              {/* <div className="w-[22vw] border-left border-gray">
-
-              </div> */}
-            </div>
-          </motion.div>
+        
         </div>
         {pages.map((page, index) => (
           <li key={index}>
