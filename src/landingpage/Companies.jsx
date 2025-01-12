@@ -26,9 +26,9 @@ const Companies = () => {
 
   return (
     <div className="">
-      <div className="w-full flex justify-end bg-white">
+      {/* <div className="w-full flex justify-end bg-white">
         <img src={aboutbar} className="w-12 h-12 md:h-16" alt="" />
-      </div>
+      </div> */}
       <div className="flex flex-col items-center font-archivo w-full gap-16 my-24 mt-24">
         <div className="flex flex-col items-center gap-4 px-4">
           <span className="text-[#88DB1B] font-bold text-[20px] leading-5 tracking-wide">

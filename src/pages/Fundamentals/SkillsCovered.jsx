@@ -11,7 +11,7 @@ const SkillsCovered = (props) => {
   const skills = tracks[id].skills
 
   return (
-    <div className="flex flex-col gap-12 py-6 md:py-9 px-3 md:px-12 md:mx-20 mx-6 my-8 bg-white rounded-3xl">
+    <div className="flex flex-col gap-12 py-6 md:py-9 px-3 md:px-12 md:mx-20 mx-6 my-8 shadow-2xl bg-white rounded-3xl">
       <div className="flex gap-4 items-center">
         <i className="flex justify-center items-center w-11 h-11 bg-[#DFDFD799] rounded-full p-2.5">
           <MdDiamond className="w-5 h-5" />
