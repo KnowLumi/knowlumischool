@@ -37,13 +37,23 @@ const CommunityEngagement = () => {
             arrows={false}
             infinite
             autoplay
-            duration={1000}
+            duration={2000}
             easing="linear"
           >
             {community.map((item, index) => (
-              <div
-                key={index}
-                className="bg-cover relative flex flex-col gap-4 md:mx-0 justify-end bg-center object-cover rounded-lg w-48 h-[8.25rem] md:w-[24.5rem] md:h-[9rem]"
+             <div
+             key={index}
+             className="p-5 gap-4  rounded-[24px] flex items-center bg-gray-100"
+             >
+
+              <div className="flex flex-col gap-1 items-center justify-center h-full">
+                {community.map((dotItem, index) => (
+                  <span key={dotItem} 
+                  className={`h-2 w-2 bg-indigo-600 rounded-full ${dotItem === item && "bg-[#4258BE] h-6" }`}/>
+                ))}
+              </div>
+               <div
+                className="bg-cover relative flex flex-col gap-4 md:mx-0 justify-end bg-center object-cover rounded-lg w-48 h-[8.25rem] lg:w-[24.5rem] md:h-[9rem]"
                 style={{ backgroundImage: `url('${item.image}')` }}
               >
                 <div className="flex items-center w-fit rounded-md ml-2.5 mb-2.5 p-2 gap-2 bg-gradient-to-r from-[#FFFFFF24] to-[#FFFFFF2E]">
@@ -53,6 +63,7 @@ const CommunityEngagement = () => {
                   <MdKeyboardDoubleArrowRight className="w-3.5 h-3.5 text-[#88DB1B]" />
                 </div>
               </div>
+             </div>
             ))}
           </Fade>
         </div>
