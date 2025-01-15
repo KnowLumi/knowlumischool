@@ -108,7 +108,7 @@ function HandPickedTitles() {
         </div>
 
         {/* Second Section - Animated */}
-        <div className="w-[50%] h-[80%] p-4 relative flex flex-col justify-center items-center">
+        <div className="w-full lg:w-[50%] h-[80%] p-4 relative flex flex-col justify-center items-center">
           <div className="w-full h-auto">
             <h1 className="text-center text-5xl font-light tracking-tight text-bold mb-2">Workshop</h1>
           </div>
