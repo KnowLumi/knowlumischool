@@ -9,7 +9,7 @@ const PlacementAssistance = () => {
         <div className="rounded-full min-h-10 min-w-10 md:min-w-[52px] md:min-h-[52px] bg-[#4258BE] flex justify-center items-center text-white font-extrabold">
           3
         </div>
-        <h1 className="font-normal text-4xl md:text-[42px] md:w-full w-fit text-left pl-2">
+        <h1 className="font-normal text-4xl md:text-[42px] md:w-full w-fit text-left ">
 
         {/* font-normal text-4xl md:text-[42px]  md:w-[800px] w-fit */}
           Placement Assistance

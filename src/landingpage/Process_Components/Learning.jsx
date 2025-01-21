@@ -27,10 +27,11 @@ const Learning = ({ enableScroll }) => {
         >
           1
         </div>
-        <h1 className="font-normal text-4xl md:text-[42px]">Learning</h1>
+        <h1 className="font-normal text-4xl md:text-[42px] text-left">Learning</h1>
       </div>
-
-      <p className="w-[13.25rem] relative right-3 md:w-[29rem] text-xs font-light tracking-wider mt-8">
+      {/* w-[13.25rem] relative right-3 md:w-[29rem] text-xs font-light tracking-wider mt-8 */}
+      <p className="w-[13.25rem] relative text-left md:w-[29rem] text-xs font-light tracking-wider mt-8">
+      {/* w-52 md:w-[32rem] text-xs font-light tracking-wider mt-6 text-left */}
         At KnowLumi, students engage in personalized learning, foster community
         connections, and leverage their skills to secure internships, jobs, or
         start-ups .
