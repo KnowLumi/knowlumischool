@@ -327,7 +327,7 @@ const IndividualCourseData = [
       },
       {
         week: "Week 2",
-        topics: ["What are Dart’s data types?", "How to define variables?"],
+        topics: ["What are Dart's data types?", "How to define variables?"],
       },
       {
         week: "Week 3",

@@ -116,20 +116,20 @@ const tracks = [
         desc: `At KnowLumi, students engage in personalized learning, foster community connections, and leverage their skills to secure internships, jobs, or start-ups.`,
         skills: [
             {
-                image: "/SkillsLogos/html.png",
-                skill: "HTML",
+                image: "/SkillsLogos/flutter.png",
+                skill: "Flutter development", 
             },
             {
-                image: "/SkillsLogos/css.png",
-                skill: "CSS",
+                image: "/SkillsLogos/dart.png",
+                skill: "Dart programming language",
             },
             {
-                image: "/SkillsLogos/python.png",
-                skill: "Python ",
+                image: "/SkillsLogos/android.png",
+                skill: "Android development",
             },
             {
-                image: "/SkillsLogos/github.png",
-                skill: "Github",
+                image: "/SkillsLogos/ios.png",
+                skill: "IOS development",
             },
         ],
 

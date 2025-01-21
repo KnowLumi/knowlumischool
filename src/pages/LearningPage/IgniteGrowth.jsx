@@ -42,9 +42,9 @@ const IgniteGrowth = () => {
                             />
                         ))}
                     </div>
-                    <span className="font-medium text-[10px] md:text-xs underline">
+                    {/* <span className="font-medium text-[10px] md:text-xs underline">
                         420+ learners
-                    </span>
+                    </span> */}
                 </div>
             </div>
         </div>
