@@ -14,7 +14,7 @@ const IndividualCourseData = [
         image: "/SkillsLogos/mongodb.png",
         skill: "MongoDB management",
       },
-      {
+      { 
         image: "/SkillsLogos/express.png",
         skill: "Express.js development",
       },

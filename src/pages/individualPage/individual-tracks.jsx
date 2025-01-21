@@ -1,3 +1,4 @@
+import React from "react";
 // import { Progress } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
 // import { MdArrowForward, MdLock } from "react-icons/md";
@@ -7,10 +8,14 @@ import { Dot } from "lucide-react";
 import { CircleDotDashed } from "lucide-react";
 import { Target } from "lucide-react";
 
+
 const IndividualTracks = ({itemShow = IndividualCourseData.length}) => {
+
+  const [hidden, setHidden] = React.useState(true);
+
   const displayCourse = IndividualCourseData.slice(0, itemShow);
   return (
-    <div id="courses" className="min-h-screen mt-24 bg-gray-100">
+    <div id="courses" className="min-h-screen mt-24 bg-gray-100 ">
       <h2 className="text-[#88DB1B] text-xl lg:text-5xl font-bold text-center pt-10">
         Courses
       </h2>

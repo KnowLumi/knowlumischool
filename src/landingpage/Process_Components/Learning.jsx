@@ -15,8 +15,14 @@ import reactjs from "./logos/react.png";
 import { Link } from "react-router-dom";
 import { tracks } from "../../pages/helpers/fundamentalhelpers";
 import IndividualCourseData from "../../pages/individualPage/individualCourseData";
+import IndividualTracks from "../../pages/individualPage/individual-tracks";
+
 
 const Learning = ({ enableScroll }) => {
+
+  
+
+
   const newDataStack = IndividualCourseData.slice(-4);
   return (
     <div className="flex flex-col w-full mt-10 md:mt-0">
@@ -118,7 +124,7 @@ const Learning = ({ enableScroll }) => {
           </div>
         </div>
       </div>
-      
+      {/* ======================================= */}
       <div className="flex flex-col gap-4 mt-10 md:-ml-14 md:pl-14">
         <h3 className="text-[#4258BE] font-semibold text-xl text-left">
           Mastering Tracks
@@ -126,7 +132,8 @@ const Learning = ({ enableScroll }) => {
         <span className="font-light text-sm text-left">
         We'll recommend a track based on your assessment, or you can select your own to master the skills that align with your goals.
         </span>
-        <div className="flex flex-wrap gap-[18px]">
+        {/* ///////////////////// */}
+        {/* <div class  Name="flex flex-wrap gap-[18px]">
           {newDataStack.map((item, index) => (
             <div
               key={`Learning_fundamentals_track_${index + 1}`}
@@ -166,7 +173,16 @@ const Learning = ({ enableScroll }) => {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
+
+        {/* ///////////////// */}
+
+
+{/* ================= */}
+<IndividualTracks itemShow={3}/>
+{/* ================= */}
+
+
       </div>
     </div>
   );
