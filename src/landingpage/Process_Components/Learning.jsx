@@ -21,6 +21,7 @@ import IndividualTracksTwo from "../../pages/individualPage/TracksForScndPage";
 
 const Learning = ({ enableScroll }) => {
 
+  const displayCourse = IndividualCourseData.slice(0, 4);
   
 
 
@@ -134,11 +135,11 @@ const Learning = ({ enableScroll }) => {
         We'll recommend a track based on your assessment, or you can select your own to master the skills that align with your goals.
         </span>
         {/* ///////////////////// */}
-        {/* <div class  Name="flex flex-wrap gap-[18px]">
-          {newDataStack.map((item, index) => (
+        <div className="flex flex-wrap gap-[18px]">
+          {displayCourse.map((item, index) => (
             <div
               key={`Learning_fundamentals_track_${index + 1}`}
-              className="bg-white rounded-xl w-[205px] h-[205px] py-4 px-3.5 flex flex-col gap-4"
+              className="bg-white rounded-xl w-[210px] h-[205px] py-4 px-3.5 flex flex-col gap-4"
             >
               <div className="flex items-center w-fit bg-[#88DB1B] rounded-full py-1 px-2 gap-1">
                 <MdHdrStrong className="text-white w-2 h-2" />
@@ -147,22 +148,46 @@ const Learning = ({ enableScroll }) => {
               <h2 className="font-normal text-left text-xs">
                 {item.title}
               </h2>
-              <div className="flex gap-5">
+
+              <div className="flex gap-3 items-center mb-3">
+              {item.skills.map((skill, index) => (
+                <div
+                  key={`skill-${index}`}
+                  className="flex items-center md:justify-between"
+                >
+                  <div className="flex flex-col items-center gap-2">
+                    <i className="flex justify-center items-center w-3 h-3 md:w-4 md:h-4    ">
+                      <img loading="lazy" src={skill.image} alt="" className="" />
+                    </i>
+                    {/* <span className="font-light tracking-wider text-[10px] md:text-xs w-14 text-center">
+                      {skill.skill}
+                    </span> */}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+
+              {/* === */}
+              {/* <div className="flex gap-5">
                 <img src={mongo} alt="" className="w-4 h-4" />
                 <img src={node} alt="" className="w-4 h-4" />
                 <img src={reactjs} alt="" className="w-4 h-4" />
-              </div>
+              </div> */}
+              {/* === */}
+
+
               <div className="flex flex-col gap-1.5">
                 <div className="flex items-center gap-2">
                   <MdVideoLibrary className="w-3.5 h-3.5 text-[#FF9F1C]" />
                   <span className="font-normal text-[10px] text-[#01010199]">
-                    41 Recorded Videos
+                    Live Mentorship
                   </span>
                 </div>
                 <div className="flex items-center gap-2">
                   <TbFileFilled className="w-3.5 h-3.5 text-[#FF9F1C]" />
                   <span className="font-normal text-[10px] text-[#01010199]">
-                    4 projects
+                    Hands On Projects
                   </span>
                 </div>
               </div>
@@ -174,13 +199,13 @@ const Learning = ({ enableScroll }) => {
               </div>
             </div>
           ))}
-        </div> */}
+        </div>
 
         {/* ///////////////// */}
 
 
 {/* ================= */}
-<IndividualTracksTwo itemShow={4}/>
+{/* <IndividualTracksTwo itemShow={3}/> */}
 {/* ================= */}
 
 
