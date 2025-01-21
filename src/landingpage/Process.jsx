@@ -20,7 +20,7 @@ const Process = forwardRef(({ scrollToIncluded }, ref) => {
   return (
     <div ref={ref} className="hidden lg:flex flex-col md:flex-row md:justify-between w-full px-8 md:px-16 mt-2 relative">
       <div className="flex flex-col py-2 relative">
-        <div className="flex flex-col gap-10 md:sticky z-20 left-24 pb-8 top-20 h-fit bg-[#FAFAFA]">
+        <div className="flex flex-col gap-10 md:sticky z-20 left-24 pb-8 top-20 h-fit ">
           <button className="flex items-center w-fit bg-white rounded-full py-2 px-6 gap-4">
             <MdHdrStrong className="text-[#4258BE]" />
             <span className="font-bold text-xs text-[#01010199]">

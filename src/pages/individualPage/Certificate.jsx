@@ -1,4 +1,4 @@
-import certificate from "../../assets/Certificate/certificate.avif";
+import certificate from "../../assets/Certificate/certificate-3.png";
 // import svgItemOne from "../../assets/Certificate/ready.svg";
 // import svgItemTwo from "../../assets/Certificate/share.svg";
 // import svgItemThree from "../../assets/Certificate/compete.svg";
