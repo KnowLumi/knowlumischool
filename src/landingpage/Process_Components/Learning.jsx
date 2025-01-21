@@ -21,7 +21,7 @@ import IndividualTracksTwo from "../../pages/individualPage/TracksForScndPage";
 
 const Learning = ({ enableScroll }) => {
 
-  const displayCourse = IndividualCourseData.slice(0, 4);
+  const displayCourse = IndividualCourseData.slice(0, 3);
   
 
 
@@ -135,15 +135,15 @@ const Learning = ({ enableScroll }) => {
         We'll recommend a track based on your assessment, or you can select your own to master the skills that align with your goals.
         </span>
         {/* ///////////////////// */}
-        <div className="flex flex-wrap gap-[18px] bg-white rounded-xl">
+        <div className="flex flex-wrap gap-[18px] rounded-xl">
           {displayCourse.map((item, index) => (
             <div
               key={`Learning_fundamentals_track_${index + 1}`}
-              className="bg-white rounded-xl w-[210px] h-[205px] py-4 px-3.5 flex flex-col gap-4"
+              className="bg-gray-100 rounded-xl w-[210px] h-[205px] py-4 px-3.5 flex flex-col gap-4"
             >
               <div className="flex items-center w-fit bg-[#88DB1B] rounded-full py-1 px-2 gap-1">
                 <MdHdrStrong className="text-white w-2 h-2" />
-                <span className="font-bold text-[8px] text-white">TRACK 1</span>
+                <span className="font-bold text-[8px] text-white">TRACKS {index+1}</span>
               </div>
               <h2 className="font-normal text-left text-xs">
                 {item.title}
