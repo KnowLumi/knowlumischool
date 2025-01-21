@@ -16,6 +16,7 @@ import { Link } from "react-router-dom";
 import { tracks } from "../../pages/helpers/fundamentalhelpers";
 import IndividualCourseData from "../../pages/individualPage/individualCourseData";
 import IndividualTracks from "../../pages/individualPage/individual-tracks";
+import IndividualTracksTwo from "../../pages/individualPage/TracksForScndPage";
 
 
 const Learning = ({ enableScroll }) => {
@@ -179,7 +180,7 @@ const Learning = ({ enableScroll }) => {
 
 
 {/* ================= */}
-<IndividualTracks itemShow={3}/>
+<IndividualTracksTwo itemShow={4}/>
 {/* ================= */}
 
 

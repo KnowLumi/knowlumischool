@@ -8,49 +8,51 @@ import { CircleDotDashed } from "lucide-react";
 import { Target } from "lucide-react";
 
 
-const IndividualTracks = ({itemShow = IndividualCourseData.length}) => {
+const IndividualTracksTwo = ({itemShow = IndividualCourseData.length}) => {
 
   
 
   const displayCourse = IndividualCourseData.slice(0, itemShow);
   return (
-    <div id="courses" className="min-h-screen mt-24 bg-gray-100 ">
-      <h2 className="text-[#88DB1B] text-xl lg:text-5xl font-bold text-center pt-10">
-        Courses
-      </h2>
+    <div id="courses" className="min-h-screen  ">
+     
       <p className="max-w-2xl text-sm text-center mx-auto mt-3">
         {/* Have you ever felt limited by the resources available for your
         educational journey? KnowLumi breaks down these barriers, offering a
         diverse range of courses and programs that transcend traditional
         boundaries. */}
       </p>
-      <div className="flex flex-wrap max-w-6xl mx-auto gap-5 justify-center mt-7 lg:mt-14">
+      <div className="flex flex-wrap max-w-4xl mx-auto gap-5 justify-center mt-4 lg:mt-4">
         {displayCourse.map((item, i) => (
           <div
             key={`progress_c_${i + 1}`}
-            className="rounded-2xl bg-white mb-12 md:w-[22.5rem] w-[19.75rem] flex flex-col items-start pb-5 px-5"
+            // className="rounded-2xl bg-white mb-12 md:w-[22.5rem] w-[19.75rem] flex flex-col items-start pb-5 px-5"
+
+            className="rounded-2xl bg-white mb-4  md:w-[16rem] w-[16rem] flex flex-col items-start pb-2 px-2"
           >
-            <div className="relative w-[15.5rem] md:w-56 h-[7.75rem] md:h-[9rem] bg-[#88DB1B66] mt-8 mb-4 md:mt-9 ml-3 rounded-xl">
-              <div
+            {/* <div className="relative w-[15.5rem] md:w-56 h-[7.75rem] md:h-[9rem] bg-[#88DB1B66] mt-8 mb-4 md:mt-9 ml-3 rounded-xl"> */}
+
+            <div className="relative w-[6rem] md:w-20 h-[5.0rem] md:h-[4rem] bg-[#88DB1B66] mt-8 mb-4 md:mt-9 ml-3 rounded-xl">
+              <div  
                 style={{ backgroundImage: `url('${item.banner}')` }}
-                className="absolute flex justify-end items-start -translate-x-3  -translate-y-4 bg-contain bg-no-repeat w-72 md:w-96 h-[11.25rem] md:h-[10.8rem]"
+                className="absolute flex justify-end items-start -translate-x-3  -translate-y-4 bg-contain bg-no-repeat w-50 md:w-96 h-[5.0rem] md:h-[5.0rem]"
               ></div>
             </div>
-            <span className="font-normal text-[16px] tracking-wide mt-5 mb-6">
+            <span className="font-normal text-[14px] tracking-wide mt-2 mb-3">
               {item.title}
             </span>
             {/* <span className="text-[#01010199] font-light text-xs my-4">
               {item.desc}
             </span> */}
 
-            <div className="flex gap-4 items-center mb-3">
+            <div className="flex gap-3 items-center mb-3">
               {item.skills.map((skill, index) => (
                 <div
                   key={`skill-${index}`}
                   className="flex items-center md:justify-between"
                 >
                   <div className="flex flex-col items-center gap-2">
-                    <i className="flex justify-center items-center w-5 h-5 md:w-7 md:h-7">
+                    <i className="flex justify-center items-center w-3 h-3 md:w-4 md:h-4    ">
                       <img loading="lazy" src={skill.image} alt="" className="" />
                     </i>
                     {/* <span className="font-light tracking-wider text-[10px] md:text-xs w-14 text-center">
@@ -62,7 +64,7 @@ const IndividualTracks = ({itemShow = IndividualCourseData.length}) => {
             </div>
 
             <div className="flex text-gray-500 mb-2 items-center gap-2">
-              <span className="text-black">Beginner to Advanced</span>
+              <span className="text-black text-[12px]">Beginner to Advanced</span>
               {/* <svg
                 width="49"
                 height="9"
@@ -154,11 +156,11 @@ const IndividualTracks = ({itemShow = IndividualCourseData.length}) => {
               {/* <span>20 reviews</span> */}
             </div>
 
-            <div className="flex items-center justify-between gap-5 mb-3">
+            <div className=" flex flex-col align-left justify-between gap-2 mb-3">
               <div className="flex items-center gap-2 ">
                 <svg
-                  width="16"
-                  height="17"
+                  width="12"
+                  height="12"
                   viewBox="0 0 16 17"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -181,19 +183,19 @@ const IndividualTracks = ({itemShow = IndividualCourseData.length}) => {
                     />
                   </g>
                 </svg>
-                <p className="text-gray-500">Live Mentorship</p>
+                <p className="text-gray-500 text-xs ">Live Mentorship</p>
               </div>
 
-              <div>
-                <span className="text-gray-500 flex space-x-2 items-center"> 
-                <Target className="text-[#88DB1B] h-4" />
+              <div >
+                <span className="text-gray-500 flex space-x-2 items-center text-xs gap-2"> 
+                <Target className="text-[#88DB1B] h-3 w-3" />
                   Hands On Projects</span>
               </div>
             </div>
 
             <div className="flex items-center gap-3 mt-3 w-full">
               {/* <Button className="flex bg-[#88DB1B]  justify-center items-center gap-2 w-full rounded-lg text-white capitalize font-archivo font-semibold text-sm py-2.5 px-7"> */}
-              <a  href={`/course/title/${item.id}`} className="flex bg-[#88DB1B]  justify-center items-center gap-2 w-full rounded-lg text-white capitalize font-archivo font-semibold text-sm py-2.5 px-7">
+              <a  href={`/course/title/${item.id}`} className="flex bg-[#88DB1B]  justify-center items-center gap-2  rounded-lg text-white capitalize font-archivo font-semibold text-sm py-1 px-2">
                 Enroll Now
               </a>
               {/* </Button> */}
@@ -209,4 +211,4 @@ const IndividualTracks = ({itemShow = IndividualCourseData.length}) => {
   );
 }
 
-export default IndividualTracks;
+export default IndividualTracksTwo;
