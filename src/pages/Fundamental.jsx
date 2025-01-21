@@ -15,10 +15,10 @@ const Fundamental = () => {
     return (
         <>
             <Navigation />
-            <Hero tracks={tracks} id={2} />
+            <Hero tracks={tracks} id={0} />
             <ProgramOverview />
-            <SkillsCovered tracks={tracks} id={2} />
-            <Roadmap tracks={tracks} id={2} />
+            <SkillsCovered tracks={tracks} id={0} />
+            <Roadmap tracks={tracks} id={0} />
             <Companies />
             <IgniteGrowth />
             <Tracks />
