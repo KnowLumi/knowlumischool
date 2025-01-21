@@ -29,7 +29,7 @@ const IgniteGrowth = () => {
                         </i>
                     </Button>
                 </Link>
-                <div className="flex items-center gap-5">
+                {/* <div className="flex items-center gap-5">
                     <div className="flex items-center -space-x-2">
                         {new Array(3).fill("").map((_, i) => (
                             <Avatar
@@ -42,10 +42,10 @@ const IgniteGrowth = () => {
                             />
                         ))}
                     </div>
-                    {/* <span className="font-medium text-[10px] md:text-xs underline">
+                    <span className="font-medium text-[10px] md:text-xs underline">
                         420+ learners
-                    </span> */}
-                </div>
+                    </span>
+                </div> */}
             </div>
         </div>
     )

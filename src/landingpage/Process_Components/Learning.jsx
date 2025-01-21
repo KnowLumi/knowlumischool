@@ -63,7 +63,7 @@ const Learning = ({ enableScroll }) => {
         </div>
        
         <div className="bg-white rounded-2xl flex flex-wrap w-[200px] md:w-[429px] gap-9 md:gap-0 items-center justify-center md:justify-between py-4 px-7">
-          {tracks[2].skills.map((item, i) => (
+          {tracks[0].skills.map((item, i) => (
             <>
               <div
                 key={`skill_${i}`}
@@ -135,7 +135,7 @@ const Learning = ({ enableScroll }) => {
         We'll recommend a track based on your assessment, or you can select your own to master the skills that align with your goals.
         </span>
         {/* ///////////////////// */}
-        <div className="flex flex-wrap gap-[18px]">
+        <div className="flex flex-wrap gap-[18px] bg-white rounded-xl">
           {displayCourse.map((item, index) => (
             <div
               key={`Learning_fundamentals_track_${index + 1}`}
