@@ -149,7 +149,7 @@ const Learning = ({ enableScroll }) => {
                 {item.title}
               </h2>
 
-              <div className="flex gap-3 items-center mb-3">
+              <div className="flex gap-3 items-center mb-1 ">
               {item.skills.map((skill, index) => (
                 <div
                   key={`skill-${index}`}

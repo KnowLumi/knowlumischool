@@ -17,7 +17,10 @@ const Tracks = () => {
   const displayCourse = IndividualCourseData.slice(0, 3);
 
   return (
-    <div id="enrollnow" className="flex flex-col mx-6 my-20 px-3 md:m-20 items-center gap-12">
+    <div
+      id="enrollnow"
+      className="flex flex-col mx-6 my-20 px-3 md:m-20 items-center gap-12"
+    >
       <div className="flex flex-col gap-6 items-center">
         <h2 className="font-bold text-3xl md:text-4xl tracking-wide text-[#88DB1B]">
           Mastering Tracks
@@ -56,7 +59,12 @@ const Tracks = () => {
                 >
                   <div className="flex flex-col items-center gap-2">
                     <i className="flex justify-center items-center w-5 h-5 md:w-7 md:h-7">
-                      <img loading="lazy" src={skill.image} alt="" className="" />
+                      <img
+                        loading="lazy"
+                        src={skill.image}
+                        alt=""
+                        className=""
+                      />
                     </i>
                     {/* <span className="font-light tracking-wider text-[10px] md:text-xs w-14 text-center">
                       {skill.skill}
@@ -190,18 +198,26 @@ const Tracks = () => {
               </div>
 
               <div>
-                <span className="text-gray-500 flex space-x-2 items-center"> 
-                <Target className="text-[#88DB1B] h-4" />
-                  Hands On Projects</span>
+                <span className="text-gray-500 flex space-x-2 items-center">
+                  <Target className="text-[#88DB1B] h-4" />
+                  Hands On Projects
+                </span>
               </div>
             </div>
 
             <div className="flex items-center gap-3 mt-3 w-full">
               {/* <Button className="flex bg-[#88DB1B]  justify-center items-center gap-2 w-full rounded-lg text-white capitalize font-archivo font-semibold text-sm py-2.5 px-7"> */}
-              <Button role="button" className="flex bg-[#88DB1B]  justify-center items-center gap-2 w-full rounded-lg text-white capitalize font-archivo font-semibold text-sm py-2.5 px-7">
+              {/* <Button role="button" className="flex bg-[#88DB1B]  justify-center items-center gap-2 w-full rounded-lg text-white capitalize font-archivo font-semibold text-sm py-2.5 px-7">
                 Enroll Now
-              </Button>
+              </Button> */}
               {/* </Button> */}
+
+              <a
+                href={`/course/title/${item.id}`}
+                className="flex bg-[#88DB1B]  justify-center items-center gap-2 w-full rounded-lg text-white capitalize font-archivo font-semibold text-sm py-2.5 px-7"
+              >
+                Enroll Now
+              </a>
 
               {/* <a href={`/course/title/${item.id}`} className="flex bg-white border border-[#88DB1B] text-[#88DB1B]  justify-center items-center gap-2 w-full rounded-lg capitalize font-archivo font-semibold text-sm py-2.5 px-7">
                 Learn More
@@ -210,7 +226,6 @@ const Tracks = () => {
           </div>
         ))}
       </div>
-   
     </div>
   );
 };
