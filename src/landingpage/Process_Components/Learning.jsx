@@ -192,9 +192,9 @@ const Learning = ({ enableScroll }) => {
                 </div>
               </div>
               <div className="flex items-center gap-1">
-                <Link to={`/course/title/${item.id}`} className="text-[#88DB1B] font-normal text-xs">
+                <a href={`/course/title/${item.id}`} className="text-[#88DB1B] font-normal text-xs">
                   Know More
-                </Link>
+                </a>
                 <MdKeyboardDoubleArrowRight className="w-3.5 h-3.5 text-[#FF9F1C]" />
               </div>
             </div>
