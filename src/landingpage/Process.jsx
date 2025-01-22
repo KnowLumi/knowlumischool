@@ -20,7 +20,7 @@ const Process = forwardRef(({ scrollToIncluded }, ref) => {
   return (
     <div ref={ref} className="hidden lg:flex flex-col md:flex-row md:justify-between w-full px-8 md:px-16 mt-2 relative">
       <div className="flex flex-col py-2 relative">
-        <div className="flex flex-col gap-10 md:sticky z-20 left-24 pb-8 top-20 h-fit ">
+        <div className="flex flex-col gap-10 md:sticky z-20 left-24 pb-8 top-20 h-fit bg-white">
           <button className="flex items-center w-fit bg-white rounded-full py-2 px-6 gap-4">
             <MdHdrStrong className="text-[#4258BE]" />
             <span className="font-bold text-xs text-[#01010199]">
@@ -36,7 +36,7 @@ const Process = forwardRef(({ scrollToIncluded }, ref) => {
               and top resources!
             </p>
           </div>
-          <div className="flex flex-wrap justify-center gap-6 w-fit">
+          <div className="flex flex-wrap justify-center gap-6 w-fit ">
             <Button onClick={scrollToIncluded} className="rounded-full bg-black flex items-center gap-3 capitalize font-archivo font-medium text-[16px] py-2 pr-2 pl-6">
               Enroll Now
               <i className="flex icon w-8 h-8 text-white border border-[#0101010D] bg-[#FFFFFF33] justify-center items-center rounded-full">
@@ -57,7 +57,7 @@ const Process = forwardRef(({ scrollToIncluded }, ref) => {
         <div className="w-[329px] h-[608px] hidden md:block mt-20">
         </div>
         {<div className="hidden md:sticky top-[518px] md:flex gap-3.5 items-center z-10 mt-8 transition-transform ease-in">
-          <div className="flex flex-row-reverse md:flex-row gap-3 md:gap-7 py-4 px-6 -rotate-90 md:rotate-0 bg-[#4258BE] rounded-lg">
+          <div className="flex flex-row-reverse md:flex-row gap-3 md:gap-7 py-4 px-6 mt-4 -rotate-90 md:rotate-0 bg-[#4258BE] rounded-lg">
             <img src={cash} className="w-[54px] h-[54px] rotate-90 md:rotate-0 cash" alt="" />
             <div className="flex flex-col md:w-[11.25rem] text-white">
               <h4 className="text-base font-bold leading-6 text-left ">
