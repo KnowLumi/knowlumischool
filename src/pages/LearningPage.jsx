@@ -37,7 +37,7 @@ const LearningPage = () => {
       courseDataIndexNumber = 0;
       break;
     case 4632:
-      courseDataIndexNumber = 2;
+      courseDataIndexNumber = 1;
       break;
     case 4654:
       courseDataIndexNumber = 2;
@@ -66,9 +66,9 @@ const LearningPage = () => {
     <>
       <Navigation />
       {/* <ScrollToTop /> */}
-      <Hero tracks={tracks} id={0} course={newSubCourse} />
+      <Hero tracks={tracks} id={courseDataIndexNumber} course={newSubCourse} />
       <ProgramOverview />
-      <SkillsCovered tracks={tracks} id={courseDataIndexNumber} />
+      <SkillsCovered tracks={IndividualCourseData} id={courseDataIndexNumber} />
       <Roadmap tracks={IndividualCourseData} id={courseDataIndexNumber} />
       <IgniteGrowth />
       {/* {newSet ? "" : <Included />} */}
