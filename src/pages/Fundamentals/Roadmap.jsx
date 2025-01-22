@@ -16,6 +16,7 @@ const Roadmap = (props) => {
   const [open, setOpen] = React.useState(-1);
   const handleOpen = (value) => setOpen(open === value ? -1 : value);
   const {tracks,  id } = props;
+  console.log(tracks[id]?.roadmap[0].heading)
   return (
     <div className="flex flex-col gap-12 py-6 md:py-9 px-4 md:px-12 mx-6 md:mx-20 bg-white shadow-2xl rounded-3xl mb-12">
       <div className="flex gap-4 items-center">
@@ -31,7 +32,7 @@ const Roadmap = (props) => {
       </span>
      
       <div className="flex flex-wrap items-center justify-center gap-4">
-        {tracks[id]?.roadmap?.map((item, index) => (
+        {tracks && tracks[id]?.roadmap?.map((item, index) => (
           <div key={`week-${index + 1}`} className="flex flex-col items-center">
             <div className="roadmap-items h-[9.25rem] md:h-[8.75rem] w-[17.375rem] lg:w-[26rem] md:w-[30.375rem] bg-contain z-10 bg-no-repeat">
               <div className="mt-5 mx-5 flex flex-col gap-3">
