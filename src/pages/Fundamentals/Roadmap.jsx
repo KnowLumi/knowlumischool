@@ -16,7 +16,6 @@ const Roadmap = (props) => {
   const [open, setOpen] = React.useState(-1);
   const handleOpen = (value) => setOpen(open === value ? -1 : value);
   const {tracks,  id } = props;
-  console.log(tracks[id]?.roadmap[0].heading)
   return (
 <>
 {tracks &&     <div className="flex flex-col gap-12 py-6 md:py-9 px-4 md:px-12 mx-6 md:mx-20 bg-white shadow-2xl rounded-3xl mb-12">
