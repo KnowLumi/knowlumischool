@@ -480,58 +480,57 @@ const IndividualCourseData = [
     completed: 0,
     isLocked: true,
   },
+
+
+
   {
-    id: 54752,
-    banner: "/ProgressImages/course3.png",
-    title: "Full-Stack Web Development with MEAN Stack",
-    desc: "Dive into Data Analytics!",
+    id: 4654,
+    banner: courseThree,
+    title: "Learn fundaments",
+    desc: "Build beautiful, fast, and cross-platform mobile applications using Flutter—Google's open-source framework for crafting natively compiled apps for iOS and Android with a single codebase.",
     skills: [
       {
-        image: "/SkillsLogos/html.png",
-        skill: "",
+        image: "/SkillsLogos/flutter.png",
+        skill: "Flutter development",
       },
       {
-        image: "/SkillsLogos/css.png",
-        skill: "",
+        image: "/SkillsLogos/dart.png",
+        skill: "Dart programming language",
       },
       {
-        image: "/SkillsLogos/python.png",
-        skill: "",
+        image: "/SkillsLogos/android.png",
+        skill: "Android development",
       },
       {
-        image: "/SkillsLogos/github.png",
-        skill: "",
+        image: "/SkillsLogos/ios.png",
+        skill: "IOS development",
       },
     ],
+    roadmap: [
+      {
+        week: "HTML",
+        topics: ["HTML Basics","HTML Formatting & Lists","HTML Tables","HTML Links & Images","HTML Form Validation","Advanced HTML Forms","HTML Media"],
+      },
+      {
+        week: "Week 2",
+        topics: ["CSS Basics","CSS Text Styling","CSS Box Model","CSS Flexbox","CSS Animations","CSS Positioning","Complete HTML/CSS Project"],
+      },
+      {
+        week: "Week 3",
+        topics: ["Python Basics","Python Operators","Python Control Flow","Python Functions","Python Lists & Loops","Python List Comprehension","Python Dictionaries","Python Advanced Loops","Complete Python Project"],
+      },
+      {
+        week: "Week 4",
+        topics: ["Git Basics","Git Branching","Git Merge & Conflicts","Git Collaboration","Git Push & Pull","Complete Git Project"],
+      },
+     
+    ],
+
     completed: 0,
     isLocked: true,
   },
-  {
-    id: 545112,
-    banner: "/ProgressImages/course3.png",
-    title: "Full-Stack Web Development with Java",
-    desc: "Dive into Data Analytics!",
-    skills: [
-      {
-        image: "/SkillsLogos/html.png",
-        skill: "",
-      },
-      {
-        image: "/SkillsLogos/css.png",
-        skill: "",
-      },
-      {
-        image: "/SkillsLogos/python.png",
-        skill: "",
-      },
-      {
-        image: "/SkillsLogos/github.png",
-        skill: "",
-      },
-    ],
-    completed: 0,
-    isLocked: true,
-  },
+ 
+ 
 ];
 
 export default IndividualCourseData;

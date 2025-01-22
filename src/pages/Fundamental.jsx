@@ -10,6 +10,7 @@ import Tracks from "./Fundamentals/Tracks";
 import Footer from "../landingpage/Footer";
 
 import { tracks } from "./helpers/fundamentalhelpers";
+import IndividualCourseData from './individualPage/individualCourseData';
 
 const Fundamental = () => {
     return (
@@ -18,7 +19,7 @@ const Fundamental = () => {
             <Hero tracks={tracks} id={0} />
             <ProgramOverview />
             <SkillsCovered tracks={tracks} id={0} />
-            <Roadmap tracks={tracks} id={0} />
+            <Roadmap tracks={IndividualCourseData} id={8} />
             <Companies />
             <IgniteGrowth />
             <Tracks />

@@ -22,25 +22,50 @@ const tracks = [
                 skill: "Github",
             },
         ],
-
         roadmap: [
             {
-                heading: "HTML Basics",
-                desc: ["HTML Basics","HTML Formatting & Lists","HTML Tables","HTML Links & Images","HTML Form Validation","Advanced HTML Forms","HTML Media"],
+                heading: "Introduction to MERN stack (MongoDB, Express.js, React.js, Node.js)",
+                desc: ["Introduction to MERN stack (MongoDB, Express.js, React.js, Node.js)"]
             },
             {
-                heading: "CSS",
-                desc: ["CSS Basics","CSS Text Styling","CSS Box Model","CSS Flexbox","CSS Animations","CSS Positioning","Complete HTML/CSS Project"],
+                heading: "Setting up a development environment",
+                desc: ["Setting up a development environment"]
             },
             {
-                heading: "Python",
-                desc: ["Python Basics","Python Operators","Python Control Flow","Python Functions","Python Lists & Loops","Python List Comprehension","Python Dictionaries","Python Advanced Loops","Complete Python Project"],
+                heading: "Building RESTful APIs with Node.js and Express.js",
+                desc: ["Building RESTful APIs with Node.js and Express.js"]
             },
             {
-                heading: "Git",
-                desc: ["Git Basics","Git Branching","Git Merge & Conflicts","Git Collaboration","Git Push & Pull","Complete Git Project"],
+                heading: "Frontend development with React.js",
+                desc: ["Frontend development with React.js"]
             },
+            {
+                heading: "Integrating React with backend APIs",
+                desc: "Integrating React with backend APIs"
+            },
+            {
+                heading: "Deployment and hosting of web applications",
+                desc: "Deployment and hosting of web applications"
+            }
         ]
+        // roadmap: [
+        //     {
+        //         heading: "HTML Basics",
+        //         desc: ["HTML Basics","HTML Formatting & Lists","HTML Tables","HTML Links & Images","HTML Form Validation","Advanced HTML Forms","HTML Media"],
+        //     },
+        //     {
+        //         heading: "CSS",
+        //         desc: ["CSS Basics","CSS Text Styling","CSS Box Model","CSS Flexbox","CSS Animations","CSS Positioning","Complete HTML/CSS Project"],
+        //     },
+        //     {
+        //         heading: "Python",
+        //         desc: ["Python Basics","Python Operators","Python Control Flow","Python Functions","Python Lists & Loops","Python List Comprehension","Python Dictionaries","Python Advanced Loops","Complete Python Project"],
+        //     },
+        //     {
+        //         heading: "Git",
+        //         desc: ["Git Basics","Git Branching","Git Merge & Conflicts","Git Collaboration","Git Push & Pull","Complete Git Project"],
+        //     },
+        // ]
     },
     {
         title: "Fundamentals",

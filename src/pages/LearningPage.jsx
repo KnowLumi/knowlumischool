@@ -34,13 +34,13 @@ const LearningPage = () => {
   let courseDataIndexNumber = 0;
   switch (courseId) {
     case 4613:
-      courseDataIndexNumber = 1;
+      courseDataIndexNumber = 0;
       break;
     case 4632:
       courseDataIndexNumber = 2;
       break;
     case 4654:
-      courseDataIndexNumber = 3;
+      courseDataIndexNumber = 2;
       break;
     default:
       courseDataIndexNumber = 0;
