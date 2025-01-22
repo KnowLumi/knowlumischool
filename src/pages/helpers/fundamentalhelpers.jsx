@@ -25,20 +25,20 @@ const tracks = [
 
         roadmap: [
             {
-                heading: "lorem ippsum",
-                desc: ["lorem ippsum"],
+                heading: "HTML Basics",
+                desc: ["HTML Basics","HTML Formatting & Lists","HTML Tables","HTML Links & Images","HTML Form Validation","Advanced HTML Forms","HTML Media"],
             },
             {
-                heading: "lorem ippsum",
-                desc: ["lorem ippsum"],
+                heading: "CSS",
+                desc: ["CSS Basics","CSS Text Styling","CSS Box Model","CSS Flexbox","CSS Animations","CSS Positioning","Complete HTML/CSS Project"],
             },
             {
-                heading: "lorem ippsum",
-                desc: ["lorem ippsum"],
+                heading: "Python",
+                desc: ["Python Basics","Python Operators","Python Control Flow","Python Functions","Python Lists & Loops","Python List Comprehension","Python Dictionaries","Python Advanced Loops","Complete Python Project"],
             },
             {
-                heading: "lorem ippsum",
-                desc: ["lorem ippsum"],
+                heading: "Git",
+                desc: ["Git Basics","Git Branching","Git Merge & Conflicts","Git Collaboration","Git Push & Pull","Complete Git Project"],
             },
         ]
     },

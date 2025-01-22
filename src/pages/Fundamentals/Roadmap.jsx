@@ -11,6 +11,7 @@ import {
   Avatar,
   Button,
 } from "@material-tailwind/react";
+import { desc } from "framer-motion/client";
 const Roadmap = (props) => {
   const [open, setOpen] = React.useState(-1);
   const handleOpen = (value) => setOpen(open === value ? -1 : value);
@@ -38,7 +39,7 @@ const Roadmap = (props) => {
                 </div>
               <div className="flex items-center justify-between">
               <span className="font-extrabold text-sm tracking-wider">
-                  What will you learn in {tracks[id]?.roadmap[index]?.week}
+                  {item.heading}
                 </span>
                 <MdKeyboardArrowDown
                     className={`w-5 h-5 ${index === open ? 'rotate-180' : ''} transition-transform cursor-pointer`}
@@ -55,8 +56,8 @@ const Roadmap = (props) => {
                 head
               </AccordionHeader>
               <AccordionBody className="font-archivo px-4 text-white">
-              {item.topics?.map((topic, i) => (
-                    <li key={i}>{topic}</li>
+              {item.desc.map((_,index) => (
+                    <li key={index}>{item.desc[index]}</li>
                   ))}
               </AccordionBody>
             </Accordion>
