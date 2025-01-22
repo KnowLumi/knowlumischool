@@ -71,7 +71,7 @@ const LearningPage = () => {
       <SkillsCovered tracks={tracks} id={courseDataIndexNumber} />
       <Roadmap tracks={IndividualCourseData} id={courseDataIndexNumber} />
       <IgniteGrowth />
-      {newSet ? "" : <Included />}
+      {/* {newSet ? "" : <Included />} */}
       <Enroll />
       {/* <Companies /> */}
       <IndividualTracks itemShow={3} />
