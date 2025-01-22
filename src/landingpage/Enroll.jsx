@@ -5,7 +5,7 @@ import { MdHdrStrong } from "react-icons/md";
 import { IoArrowForwardSharp } from "react-icons/io5";
 const Enroll = () => {
   return (
-    <div className="flex flex-col items-center ">
+    <div className="flex flex-col items-center mt-12">
       {/* <div
         style={{ backgroundImage: `url('${line}')` }}
         className="w-[71rem] h-20 bg-contain bg-no-repeat hidden md:flex flex-col justify-end"
