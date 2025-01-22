@@ -57,7 +57,7 @@ const Roadmap = (props) => {
                 head
               </AccordionHeader>
               <AccordionBody className="font-archivo px-4 text-white">
-              {item.desc.map((_,index) => (
+              {item.desc && item.desc.map((_,index) => (
                     <li key={index}>{item.desc[index]}</li>
                   ))}
               </AccordionBody>
