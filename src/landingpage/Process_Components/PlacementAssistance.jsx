@@ -24,7 +24,7 @@ const PlacementAssistance = () => {
           Referrals to top companies
         </h3>
         <div className="flex items-center gap-2 md:gap-7">
-            {/* <div className="bg-white flex items-center justify-center rounded-2xl w-[8.25rem] h-[72px] border border-[#0101011A]">
+            <div className="bg-white flex items-center justify-center rounded-2xl w-[8.25rem] h-[72px] border border-[#0101011A]">
               <Carousel
                 className="h-fit w-1/2"
                 autoplay
@@ -42,7 +42,7 @@ const PlacementAssistance = () => {
                   />
                 ))}
               </Carousel>
-            </div> */}
+            </div>
           <p className="w-[110px] md:w-[16.5rem] text-[10px] md:text-xs font-light tracking-wider">
             Unlock Referral Opportunities to Top Companies and Propel Your
             Career Forward

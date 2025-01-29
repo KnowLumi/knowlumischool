@@ -16,6 +16,11 @@ import icon5 from "./company_icons/samsung.png";
 import icon6 from "./company_icons/tesla.png";
 import icon7 from "./company_icons/verizonlogo.png";
 
+
+import companylogo1 from "./company_icons/logo-1.png";
+import companylogo2 from "./company_icons/logo-2.png";
+import companylogo3 from "./company_icons/logo-3.png";
+
 import logo1 from "../assets/hat.png";
 import logo2 from "../../public/logo.png";
 
@@ -141,7 +146,8 @@ const program = [
   },
 ];
 
-const companies = [icon1, icon2, icon3, icon4, icon5, icon6, icon7];
+const companies = [companylogo1,companylogo2,companylogo3];
+// const companies = [icon1, icon2, icon3, icon4, icon5, icon6, icon7];
 
 const reviews = [
   {
