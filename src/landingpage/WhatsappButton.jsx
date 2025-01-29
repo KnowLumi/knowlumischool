@@ -15,7 +15,8 @@ const WhatsAppButton = () => {
         className="relative group"
       >
         <a
-          href="https://wa.me/"
+          href="https://wa.me/+918129917406?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20Knowlumi%20School...
+"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center justify-center w-14 h-14 bg-[#25D366] rounded-full shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#25D366]"

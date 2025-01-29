@@ -32,8 +32,8 @@ function HandPickedTitles() {
       description:
         "Take your tech career to the next level with advanced courses tailored for industry success. Master tools and frameworks to stay ahead.",
       image: FirstCard,
-      // link: "/course/1"
-      link: "/coming-soon",
+      link: "/course/1"
+      // link: "/coming-soon",
      },
     {
       id: 2,

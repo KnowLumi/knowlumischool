@@ -15,18 +15,30 @@ const Hero = (props) => {
   const location = useLocation();
   const isFundamentalsPath = location.pathname === "/fundamentals";
 
+  const onEnrollClick = () => {
+    window.open(
+      `https://wa.me/+918129917406?text=Hi%2C%20I%20would%20like%20to%20${course.title}...`,
+      "_blank"
+    );
+  };
+
+  const onDemoClick = () => {
+    window.open(
+      `https://wa.me/+918129917406?text=Hi%2C%20I%20would%20like%20to%20have%20a%20demo%20to%20${course.title}...`,
+      "_blank"
+    );
+  };
   return (
     <div className="md:mx-20 px-6 mt-24 gap-8 flex md:flex-row flex-col justify-between">
       <div className="flex flex-col gap-9">
         <div className="flex items-center w-fit bg-white rounded-full py-2 px-6 gap-4">
           <MdHdrStrong className="text-[#88DB1B]" />
-          <span className="font-bold text-xs text-[#01010199]">
-            LEARNING
-          </span>
+          <span className="font-bold text-xs text-[#01010199]">LEARNING</span>
         </div>
         <span
-          className={`font-medium text-[42px] ${isFundamentalsPath ? "md:text-7xl" : "md:text-5xl"
-            } tracking-wide max-w-[30.25rem]`}
+          className={`font-medium text-[42px] ${
+            isFundamentalsPath ? "md:text-7xl" : "md:text-5xl"
+          } tracking-wide max-w-[30.25rem]`}
         >
           {course.title}
         </span>
@@ -43,9 +55,7 @@ const Hero = (props) => {
           </div>
           <div className="flex gap-3.5 items-center mt-5">
             <MdFreeCancellation className="w-5 h-5 text-[#88DB1B]" />
-            <span className="font-light text-sm">
-            Hands On Project
-            </span>
+            <span className="font-light text-sm">Hands On Project</span>
           </div>
         </div>
 
@@ -71,17 +81,20 @@ const Hero = (props) => {
           ))}
         </div> */}
 
-
         <div className="flex flex-wrap md:justify-center gap-6">
           <a href="#enrollnow">
-          <Button className="rounded-full flex items-center gap-9 capitalize font-archivo font-medium text-[16px] py-2 pr-2 pl-12">
-            Enroll Now
-            <i className="flex icon w-8 h-8 text-white border border-[#0101010D] bg-[#FFFFFF33] justify-center items-center rounded-full">
-              <MdArrowForward />
-            </i>
-          </Button>
+            <Button
+              className="rounded-full flex items-center gap-9 capitalize font-archivo font-medium text-[16px] py-2 pr-2 pl-12"
+              onClick={onEnrollClick}
+            >
+              Enroll Now
+              <i className="flex icon w-8 h-8 text-white border border-[#0101010D] bg-[#FFFFFF33] justify-center items-center rounded-full">
+                <MdArrowForward />
+              </i>
+            </Button>
           </a>
-          <Button className="rounded-full flex items-center gap-9 capitalize bg-white font-archivo font-bold text-[16px] text-black py-2 pr-2 pl-12">
+          <Button className="rounded-full flex items-center gap-9 capitalize bg-white font-archivo font-bold text-[16px] text-black py-2 pr-2 pl-12"
+            onClick={onDemoClick}>
             Try Demo
             <i className="flex w-8 h-8 -rotate-45 text-black border border-[#0101010D] bg-[#01010133] justify-center items-center rounded-full">
               <MdArrowForward />
@@ -110,7 +123,12 @@ const Hero = (props) => {
               </i>
             </Button>
           </div>
-          <img loading="lazy" src={bars} className="md:h-9 h-6 mr-16 md:mr-32" alt="" />
+          <img
+            loading="lazy"
+            src={bars}
+            className="md:h-9 h-6 mr-16 md:mr-32"
+            alt=""
+          />
         </div>
       </div>
     </div>
