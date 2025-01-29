@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 // import { FaPhoneAlt, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import aboutbar from "../assets/about_bar1.png";
-import aboutbar2 from "../assets/aboutbar.png"
+import aboutbar2 from "../assets/aboutbar.png";
 // import image_one from "../assets/hero_img_1.jpg"
 import { Button } from "@material-tailwind/react";
 import {
@@ -12,13 +12,13 @@ import {
 } from "react-icons/md";
 // import { Link } from "react-router-dom";
 // import WorkshopCard from "../landingpage/WorkshopCard";
-import FirstCard from "/Images/first-card.jpg"
-import SecondCard from "/Images/second-card.jpg"
-import ThirdCard from "/Images/third-card.jpg"
-import TimeIcon from "../landingpage/IconsJSX/TimeIcon"
-import DateIcon from "../landingpage/IconsJSX/DateIcon"
-import VenueIcon from "../landingpage/IconsJSX/VenueIcon"
-import FullDay from "../landingpage/IconsJSX/FullDay"
+import FirstCard from "/Images/first-card.jpg";
+import SecondCard from "/Images/second-card.jpg";
+import ThirdCard from "/Images/third-card.jpg";
+import TimeIcon from "../landingpage/IconsJSX/TimeIcon";
+import DateIcon from "../landingpage/IconsJSX/DateIcon";
+import VenueIcon from "../landingpage/IconsJSX/VenueIcon";
+import FullDay from "../landingpage/IconsJSX/FullDay";
 import { Link } from "react-router-dom";
 
 function HandPickedTitles() {
@@ -32,9 +32,9 @@ function HandPickedTitles() {
       description:
         "Take your tech career to the next level with advanced courses tailored for industry success. Master tools and frameworks to stay ahead.",
       image: FirstCard,
-      link: "/course/1"
-      
-    },
+      // link: "/course/1"
+      link: "/coming-soon",
+     },
     {
       id: 2,
       title: "Skill Up While You Study",
@@ -42,7 +42,7 @@ function HandPickedTitles() {
       description:
         "Still in college? Turn your years of study into real-world skills with hands-on courses in software development. Learn to create, innovate, and lead in tech, starting now!",
       image: SecondCard,
-      link: "/course/2"
+      link: "/course/2",
     },
     {
       id: 3,
@@ -51,9 +51,8 @@ function HandPickedTitles() {
       description:
         "  Whether you're in college or a graduate, our program equips you to transform your vision into a thriving business. From ideation to scaling, we'll guide your entrepreneurial path.",
       image: ThirdCard,
-      link: "/coming-soon"
+      link: "/coming-soon",
     },
-
   ];
 
   useEffect(() => {
@@ -67,7 +66,6 @@ function HandPickedTitles() {
   const goToSlide = (index) => {
     setCurrentIndex(index);
   };
-
 
   return (
     <div id="explore" className="bg-white min-h-screen">
@@ -110,81 +108,88 @@ function HandPickedTitles() {
         {/* Second Section - Animated */}
         <div className="w-full lg:w-[50%] h-[80%] p-4 relative flex flex-col justify-center items-center">
           <div className="w-full h-auto">
-            <h1 className="text-center text-5xl font-light tracking-tight text-bold mb-2">Workshop</h1>
+            <h1 className="text-center text-5xl font-light tracking-tight text-bold mb-2">
+              Workshop
+            </h1>
           </div>
           <AnimatePresence mode="wait">
-            {blogContent.map((blog, index) =>
-              index === currentIndex ? ( // Render only the card matching the current index
-                <motion.div
-                  key={blog.id || index}
-                  initial={{ opacity: 0, x: 100 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -100 }}
-                  transition={{ duration: 0.5 }}
-                  className="w-full max-w-xl mx-auto flex justify-center items-center mt-[15%] md:mt-4"
-                >
-                  <div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-md overflow-hidden">
-                    {/* Dynamic Image */}
-                    <div className="relative bg-gray-100 h-48 flex justify-center items-center">
-                      <img
-                        src={blog.image} // Use the dynamic image from `blogContent`
-                        alt={blog.title}
-                        className="object-cover w-full h-full"
-                      />
+            {blogContent.map(
+              (blog, index) =>
+                index === currentIndex ? ( // Render only the card matching the current index
+                  <motion.div
+                    key={blog.id || index}
+                    initial={{ opacity: 0, x: 100 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -100 }}
+                    transition={{ duration: 0.5 }}
+                    className="w-full max-w-xl mx-auto flex justify-center items-center mt-[15%] md:mt-4"
+                  >
+                    <div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-md overflow-hidden">
+                      {/* Dynamic Image */}
+                      <div className="relative bg-gray-100 h-48 flex justify-center items-center">
+                        <img
+                          src={blog.image} // Use the dynamic image from `blogContent`
+                          alt={blog.title}
+                          className="object-cover w-full h-full"
+                        />
+                      </div>
+
+                      <div className="p-4">
+                        {/* Dynamic Heading */}
+                        <div className="flex items-center justify-between mb-2">
+                          <span className="text-2xl font-bold text-black">
+                            {blog.title}
+                          </span>
+                        </div>
+
+                        {/* Dynamic Subheading */}
+                        <p className="text-red-600 text-sm font-medium mb-4">
+                          8 hours left at this price
+                        </p>
+
+                        {/* Register Button */}
+                        <div className="flex flex-col gap-3">
+                          <button className="w-full bg-black text-white py-2 rounded hover:bg-gray-700 transition">
+                            Register Now
+                          </button>
+                        </div>
+
+                        {/* Dynamic Features Section */}
+                        <div className="mt-4">
+                          <h3 className="text-gray-700 font-semibold mb-2">
+                            More details:
+                          </h3>
+                          <ul className="text-sm text-gray-600 space-y-1">
+                            <li className="flex items-center">
+                              <span className="w-5 h-5 flex items-center justify-center mr-2">
+                                <TimeIcon />
+                              </span>
+                              11 AM
+                            </li>
+                            <li className="flex items-center">
+                              <span className="w-5 h-5 flex items-center justify-center mr-2">
+                                <DateIcon />
+                              </span>
+                              28 January 2025
+                            </li>
+                            <li className="flex items-center">
+                              <span className="w-5 h-5 flex items-center justify-center mr-2">
+                                <VenueIcon />
+                              </span>
+                              Kochi
+                            </li>
+                            <li className="flex items-center">
+                              <span className="w-5 h-5 flex items-center justify-center mr-2">
+                                <FullDay />
+                              </span>
+                              Full Day Workshop
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
                     </div>
-
-                    <div className="p-4">
-                      {/* Dynamic Heading */}
-                      <div className="flex items-center justify-between mb-2">
-                        <span className="text-2xl font-bold text-black">{blog.title}</span>
-                      </div>
-
-                      {/* Dynamic Subheading */}
-                      <p className="text-red-600 text-sm font-medium mb-4">
-                        8 hours left at this price
-                      </p>
-
-                      {/* Register Button */}
-                      <div className="flex flex-col gap-3">
-                        <button className="w-full bg-black text-white py-2 rounded hover:bg-gray-700 transition">
-                          Register Now
-                        </button>
-                      </div>
-
-                      {/* Dynamic Features Section */}
-                      <div className="mt-4">
-                        <h3 className="text-gray-700 font-semibold mb-2">More details:</h3>
-                        <ul className="text-sm text-gray-600 space-y-1">
-                          <li className="flex items-center">
-                            <span className="w-5 h-5 flex items-center justify-center mr-2">
-                              <TimeIcon />
-                            </span>
-                            11 AM
-                          </li>
-                          <li className="flex items-center">
-                            <span className="w-5 h-5 flex items-center justify-center mr-2">
-                              <DateIcon />
-                            </span>
-                            28 January 2025
-                          </li>
-                          <li className="flex items-center">
-                            <span className="w-5 h-5 flex items-center justify-center mr-2">
-                              <VenueIcon />
-                            </span>
-                            Kochi
-                          </li>
-                          <li className="flex items-center">
-                            <span className="w-5 h-5 flex items-center justify-center mr-2">
-                              <FullDay />
-                            </span>
-                            Full Day Workshop
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
-              ) : null // Hide other cards
+                  </motion.div>
+                ) : null // Hide other cards
             )}
           </AnimatePresence>
 
@@ -194,8 +199,9 @@ function HandPickedTitles() {
               <motion.button
                 key={index}
                 onClick={() => goToSlide(index)}
-                className={`w-3 h-3 rounded-full ${index === currentIndex ? "bg-black" : "bg-gray-300"
-                  }`}
+                className={`w-3 h-3 rounded-full ${
+                  index === currentIndex ? "bg-black" : "bg-gray-300"
+                }`}
                 initial={{ scale: 1 }}
                 animate={{
                   scale: index === currentIndex ? 1.3 : 1,
@@ -206,14 +212,14 @@ function HandPickedTitles() {
             ))}
           </div>
         </div>
-
-
       </div>
       <div id="programs"></div>
 
       {/* Third Section */}
       <div className="w-full flex flex-col justify-center align-center md:mt-[10rem]">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-center mb-4">Programs</h1>
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-center mb-4">
+          Programs
+        </h1>
       </div>
       <div className="flex flex-col md:flex-row flex-wrap items-center justify-center mt-8">
         {blogContent.map((data, index) => (
@@ -286,4 +292,3 @@ function HandPickedTitles() {
 }
 
 export default HandPickedTitles;
-

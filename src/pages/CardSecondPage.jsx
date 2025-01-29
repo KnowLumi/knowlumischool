@@ -74,13 +74,13 @@ const IndividualCourse = () => {
                 <Hero tracks={tracks} id={0} course={coursedetails[1]} />
                 {/* <CourseHero course={course}/> */}
                 {/* <IndividualTracks/> */}
-                <LearnerCount title={"Mentors"} />
-                <Alumini />
+                {/* <LearnerCount title={"Mentors"} /> */}
+                {/* <Alumini /> */}
                 {/* How Knowlumi Works */}
                 <Process />
                 <Certificate />
                 <Included />
-                <Testimonials />
+                {/* <Testimonials /> */}
                 <FaqSection itemShow={3} />
                 {/* <Fees /> */}
             </div>

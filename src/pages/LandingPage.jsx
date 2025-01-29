@@ -58,7 +58,7 @@ const LandingPage = () => {
         {/* <Enroll /> */}
         <About />
         <Program scrollToIncluded={scrollToIncluded} />
-        <Testimonials />
+        {/* <Testimonials /> */}
         <FaqSection />
         
         <div className=" flex flex-col items-center justify-center px-4 py-16">
