@@ -23,14 +23,14 @@ const IndividualCourse = () => {
     // const courseId = parseInt(id, 10);
 
     const coursedetails = [
-        {
+        {/*
             id: 1,
             title: "Level Up After Graduation",
             bold: "For Graduates & Beyond",
             description:
                 "Take your tech career to the next level with advanced courses tailored for industry success. Master tools and frameworks to stay ahead.",
             image: FirstCard,
-        },
+        */},
         {
             id: 2,
             title: "Skill Up While You Study",
