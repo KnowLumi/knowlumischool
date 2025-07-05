@@ -8,18 +8,15 @@ import sub2 from "../assets/hero_img_2.jpg";
 import sub3 from "../assets/hero_img_3.jpg";
 import sub4 from "../assets/hero_img_4.jpg";
 
-import icon1 from "./company_icons/apple.png";
+import icon1 from "./company_icons/swiggy.png";
 import icon2 from "./company_icons/google.png";
-import icon3 from "./company_icons/icbc.png";
+import icon3 from "./company_icons/amazon-logo.png";
 import icon4 from "./company_icons/microsoft.png";
-import icon5 from "./company_icons/samsung.png";
-import icon6 from "./company_icons/tesla.png";
-import icon7 from "./company_icons/verizonlogo.png";
+import icon5 from "./company_icons/reliance.png";
+import icon6 from "./company_icons/accenture.png";
+import icon7 from "./company_icons/razorpay.png";;
 
 
-import companylogo1 from "./company_icons/logo-1.png";
-import companylogo2 from "./company_icons/logo-2.png";
-import companylogo3 from "./company_icons/logo-3.png";
 
 import logo1 from "../assets/hat.png";
 import logo2 from "../../public/logo.png";
@@ -146,8 +143,8 @@ const program = [
   },
 ];
 
-const companies = [companylogo1,companylogo2,companylogo3];
-// const companies = [icon1, icon2, icon3, icon4, icon5, icon6, icon7];
+//const companies = [companylogo1,companylogo2,companylogo3];
+ const companies = [icon1, icon2, icon3, icon4, icon5, icon6, icon7];
 
 const reviews = [
   {
