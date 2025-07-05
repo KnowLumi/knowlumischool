@@ -41,7 +41,7 @@ const IndividualCourse = () => {
             description:
                 " Elevate your career with advanced, industry-focused courses. Stay ahead of the curve by mastering the latest tools and frameworks that employers demand.",
             image: FirstCard,
-        }, 
+        },
         {
             id: 2,
             title: "Skill Up While You Study",

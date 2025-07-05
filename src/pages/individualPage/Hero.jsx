@@ -95,7 +95,18 @@ const Hero = (props) => {
           </div>
         </div>
         <div className="flex flex-col gap-2 items-end mx-3">
-          
+          <div className="flex items-center gap-3 md:gap-6 p-2 gradbg w-fit mb-6 rounded-full">
+            <img loading="lazy" src={learners} className="md:h-8 h-5" alt="" />
+            <span className="text-white font-semibold text-[10px] md:text-xs tracking-wider">
+              420+ Learners
+            </span>
+            <Button className="rounded-full flex w-fit items-center gap-3 bg-white border border-[#0101011A] capitalize font-archivo font-medium text-[10px] md:text-[16px] text-black py-1 pr-1 pl-4">
+              View Demo
+              <i className="flex md:w-8 md:h-8 w-6 h-6 text-black bg-[#0101011A] justify-center items-center rounded-full">
+                <MdSlowMotionVideo />
+              </i>
+            </Button>
+          </div>
           <img loading="lazy" src={bars} className="md:h-9 h-6 mr-16 md:mr-32" alt="" />
         </div>
       </div>

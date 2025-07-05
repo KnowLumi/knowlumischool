@@ -92,10 +92,10 @@ const Navigation = () => {
         <NavMenu />
       ) : (
         <Link to="/signin">
-          {/*<Button className="hidden md:block capitalize font-archivo font-semibold bg-black rounded-full text-sm py-1.5 px-4">
+          <Button className="hidden md:block capitalize font-archivo font-semibold bg-black rounded-full text-sm py-1.5 px-4">
             Login/Sign Up
-          </Button>*/}
-        </Link> 
+          </Button>
+        </Link>
       )}
 
       {/* Mobile Drawer */}
