@@ -1,4 +1,4 @@
-import React from 'react';
+{/*import React from 'react';
 import KnowLumiLogo from "/Images/knowlumi-brand.svg"
 
 const WorkshopCard = () => {
@@ -46,7 +46,7 @@ const WorkshopCard = () => {
                                         loading="lazy"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white"></div>
-                                </div> */}
+                                </div> 
                                 <img className='p-4' src={KnowLumiLogo} alt="First Image" />
                             </div>  
                             <div className="container w-full bg-white text-black px-3 py-3 rounded-lg overflow-hidden relative z-2">
@@ -64,4 +64,4 @@ const WorkshopCard = () => {
     );
 };
 
-export default WorkshopCard;
+export default WorkshopCard; */}

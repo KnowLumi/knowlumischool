@@ -86,7 +86,7 @@ const Included = forwardRef((props, ref) => {
                         &#8377; 5000/-
                       </span>
                       <span className="font-light text-xs tracking-wider">
-                        Non-refundable Upfront Fee
+                        One-Time Registration Fee
                       </span>
                     </div>
                   </div>
@@ -96,11 +96,11 @@ const Included = forwardRef((props, ref) => {
                     </span>
                     <div className="flex flex-col gap-2">
                       <span className="text-[#4258BE] font-semibold text-2xl md:text-3xl p-0">
-                        12% of Annual CTC
+                        &#8377; 1250/- Per Month
                       </span>
                       <div className="flex items-center gap-1">
                         <span className="font-light text-xs tracking-wider">
-                          Pay after you get a job
+                        For 20 Months — No Extra Fee
                         </span>
                         <MdInfo className="w-3.5 h-3.5" />
                       </div>
