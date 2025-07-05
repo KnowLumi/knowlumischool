@@ -14,7 +14,7 @@ import {
 // import WorkshopCard from "../landingpage/WorkshopCard";
 import FirstCard from "/Images/first-card.jpg";
 import SecondCard from "/Images/second-card.jpg";
-import ThirdCard from "/Images/third-card.jpg"; 
+import ThirdCard from "/Images/third-card.jpg";
 import TimeIcon from "../landingpage/IconsJSX/TimeIcon";
 import DateIcon from "../landingpage/IconsJSX/DateIcon";
 import VenueIcon from "../landingpage/IconsJSX/VenueIcon";
@@ -25,7 +25,16 @@ function HandPickedTitles() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const blogContent = [
-   
+    {
+      id: 1,
+      title: "Level Up After Graduation",
+      bold: "For Graduates & Beyond",
+      description:
+        "Take your tech career to the next level with advanced courses tailored for industry success. Master tools and frameworks to stay ahead.",
+      image: FirstCard,
+      link: "/course/1"
+      // link: "/coming-soon",
+     },
     {
       id: 2,
       title: "Skill Up While You Study",
@@ -35,7 +44,15 @@ function HandPickedTitles() {
       image: SecondCard,
       link: "/course/2",
     },
-   
+    {
+      id: 3,
+      title: "Launch Your Startup Dream",
+      bold: "For Every one",
+      description:
+        "  Whether you're in college or a graduate, our program equips you to transform your vision into a thriving business. From ideation to scaling, we'll guide your entrepreneurial path.",
+      image: ThirdCard,
+      link: "/coming-soon",
+    },
   ];
 
   useEffect(() => {
@@ -86,18 +103,19 @@ function HandPickedTitles() {
               </i>
             </Button>
           </a> */}
-        {/*
-        Second Section - Animated
+        </div>
+
+        {/* Second Section - Animated */}
         <div className="w-full lg:w-[50%] h-[80%] p-4 relative flex flex-col justify-center items-center">
           <div className="w-full h-auto">
             <h1 className="text-center text-5xl font-light tracking-tight text-bold mb-2">
               Workshop
-            </h1> 
-          </div> 
+            </h1>
+          </div>
           <AnimatePresence mode="wait">
             {blogContent.map(
               (blog, index) =>
-                index === currentIndex ? (
+                index === currentIndex ? ( // Render only the card matching the current index
                   <motion.div
                     key={blog.id || index}
                     initial={{ opacity: 0, x: 100 }}
@@ -107,27 +125,36 @@ function HandPickedTitles() {
                     className="w-full max-w-xl mx-auto flex justify-center items-center mt-[15%] md:mt-4"
                   >
                     <div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-md overflow-hidden">
+                      {/* Dynamic Image */}
                       <div className="relative bg-gray-100 h-48 flex justify-center items-center">
                         <img
-                          src={blog.image}
+                          src={blog.image} // Use the dynamic image from `blogContent`
                           alt={blog.title}
                           className="object-cover w-full h-full"
                         />
                       </div>
+
                       <div className="p-4">
+                        {/* Dynamic Heading */}
                         <div className="flex items-center justify-between mb-2">
                           <span className="text-2xl font-bold text-black">
                             {blog.title}
                           </span>
                         </div>
+
+                        {/* Dynamic Subheading */}
                         <p className="text-red-600 text-sm font-medium mb-4">
                           8 hours left at this price
-                        </p> 
+                        </p>
+
+                        {/* Register Button */}
                         <div className="flex flex-col gap-3">
                           <button className="w-full bg-black text-white py-2 rounded hover:bg-gray-700 transition">
                             Register Now
                           </button>
                         </div>
+
+                        {/* Dynamic Features Section */}
                         <div className="mt-4">
                           <h3 className="text-gray-700 font-semibold mb-2">
                             More details:
@@ -162,11 +189,9 @@ function HandPickedTitles() {
                       </div>
                     </div>
                   </motion.div>
-                ) : null
+                ) : null // Hide other cards
             )}
-          </AnimatePresence> 
-        </div>
-        */}
+          </AnimatePresence>
 
           {/* Dots Navigation */}
           <div className="flex mt-4 gap-2">
@@ -175,7 +200,7 @@ function HandPickedTitles() {
                 key={index}
                 onClick={() => goToSlide(index)}
                 className={`w-3 h-3 rounded-full ${
-                  index === currentIndex ? "bg-white" : "bg-white"
+                  index === currentIndex ? "bg-black" : "bg-gray-300"
                 }`}
                 initial={{ scale: 1 }}
                 animate={{

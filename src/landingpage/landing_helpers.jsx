@@ -15,6 +15,11 @@ import icon4 from "./company_icons/microsoft.png";
 import icon5 from "./company_icons/samsung.png";
 import icon6 from "./company_icons/tesla.png";
 import icon7 from "./company_icons/verizonlogo.png";
+import icon8 from "./company_icons/razorpay.png";
+import icon9 from "./company_icons/jio.png";
+import icon10 from "./company_icons/accenture.png";
+import icon11 from "./company_icons/swiggy.png";
+import icon12 from "./company_icons/amazon.png";
 
 
 import companylogo1 from "./company_icons/logo-1.png";
@@ -146,8 +151,8 @@ const program = [
   },
 ];
 
-const companies = [companylogo1,companylogo2,companylogo3];
-// const companies = [icon1, icon2, icon3, icon4, icon5, icon6, icon7];
+//const companies = [companylogo1,companylogo2,companylogo3];
+const companies = [icon2, icon4, icon12,icon10,icon11,icon9];
 
 const reviews = [
   {

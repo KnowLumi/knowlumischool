@@ -2,6 +2,15 @@ import { Carousel, Badge, Avatar, Button } from "@material-tailwind/react";
 import { freeAddons } from "./process_helpers";
 import { MdArrowForward } from "react-icons/md";
 import { companies } from "../landing_helpers";
+
+import akshithImg from "./Mentors_png/Akshith Bharadwaj.jpeg";
+
+
+import icon4 from "./../company_icons/microsoft.png";
+
+
+
+
 const PlacementAssistance = () => {
   return (
     <div className="flex flex-col h-fit w-full  md:-translate-y-0 mt-12 md:mt-24">
@@ -81,7 +90,8 @@ const PlacementAssistance = () => {
                   <Badge
                     content={
                       <img
-                        src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1480&amp;q=80"
+                        src={icon4}
+                        alt="mentor pik"
                         className=" rounded-full"
                       />
                     }
@@ -90,22 +100,22 @@ const PlacementAssistance = () => {
                     className="bg-white w-9 h-9"
                   >
                     <Avatar
-                      src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1480&amp;q=80"
+                      src={akshithImg}
                       alt="profile picture"
                       size="xl"
                     />
                   </Badge>
                   <div className="flex flex-col p-3.5 gap-3.5">
                     <span className="text-sm font-semibold leading-4 tracking-wider text-left w-16 h-6">
-                      John Samuel
+                      Akshith-bharadwaj
                     </span>
                     <span className="text-xs font-medium leading-4 tracking-wider text-left text-[#01010199]">
-                      Swiggy
+                      Microsoft
                     </span>
                   </div>
                 </div>
                 <span className="text-xs italic pt-3 mt-3 border-t-2 text-[#010101] font-normal leading-4 tracking-wider text-left">
-                  Senior Product designer
+                  Software Engineer 
                 </span>
               </div>
               <div className="flex flex-col h-40 bg-white rounded-xl px-7 py-5">
