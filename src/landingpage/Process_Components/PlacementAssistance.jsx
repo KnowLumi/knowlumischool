@@ -12,7 +12,7 @@ const PlacementAssistance = () => {
         <h1 className="font-normal text-4xl md:text-[42px] md:w-full w-fit text-left ">
 
         {/* font-normal text-4xl md:text-[42px]  md:w-[800px] w-fit */}
-          Placement Assistance
+          Placement Assistanc
         </h1>
       </div>
       <p className="w-[13.25rem] md:w-[31.875rem] text-xs font-light tracking-wider text-left mt-8">
