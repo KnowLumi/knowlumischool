@@ -8,12 +8,7 @@ import sub2 from "../assets/hero_img_2.jpg";
 import sub3 from "../assets/hero_img_3.jpg";
 import sub4 from "../assets/hero_img_4.jpg";
 
-import icon1 from "./company_icons/swiggy.png";
-import icon2 from "./company_icons/google.png";
-import icon4 from "./company_icons/microsoft.png";
-import icon5 from "./company_icons/reliance.png";
-import icon6 from "./company_icons/accenture.png";
-import icon7 from "./company_icons/razorpay.png";;
+
 
 
 
